@@ -50,13 +50,13 @@ Welcome to an enchanting adventure where mathematics meets magic, and data tells
 ## 🙏 Acknowledgments
 
 This workshop builds upon the excellent work of:
-- [**Girls in Data Science**](https://katieburak.github.io/girls-in-DS/) workshop by Dr. Katie Burak, Jenny Lee, and Mona Zhu
+- [**Girls in Data Science**](https://katieburak.github.io/girls-in-DS/) workshop by Dr. Katie Burak, Jenny Lee, and Mona Zhu. Original materials available at [https://github.com/katieburak/girls-in-DS](https://github.com/katieburak/girls-in-DS)
 - [**Data Science: A First Introduction**](https://datasciencebook.ca/) by Dr. Tiffany Timbers, Dr. Trevor Campbell, and Dr. Melissa Lee
 - [**ModernDive**](https://moderndive.com/index.html) by Dr. Chester Ismay and Dr. Albert Y. Kim
 
 ## 📜 License
 
-This project is licensed under the Creative Commons License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the Creative Commons Attribution 4.0 International License - see the [LICENSE.md](LICENSE.md) file for details.
 
 ---
 

@@ -129,6 +129,22 @@ This camp follows a **learn-through-play** approach with these key principles:
 - 🎉 End-of-camp showcase for families
 - 📜 Personalized certificates with achievements
 
+## 📖 Attribution and Inspiration
+
+This workshop is an original adaptation inspired by several excellent educational resources:
+
+### Girls in Data Science Workshop
+- **Original Authors**: Dr. Katie Burak, Jenny Lee, and Mona Zhu
+- **Source**: [https://katieburak.github.io/girls-in-DS/](https://katieburak.github.io/girls-in-DS/)
+- **Repository**: [https://github.com/katieburak/girls-in-DS](https://github.com/katieburak/girls-in-DS)
+- **Adaptations Made**: Age-appropriate modifications for 10-14 year olds, extended from data analysis focus to include programming fundamentals, AI/ML concepts, and ethics discussions
+
+### Other Key Resources
+- **Data Science: A First Introduction**: Conceptual frameworks adapted for younger learners
+- **ModernDive**: Statistical thinking approaches simplified for middle school level
+
+**Important**: This workshop is a derivative work that builds upon and adapts concepts from these sources while creating original content suitable for a younger audience and different learning objectives.
+
 ---
 
 ## 📂 Guide Sections
