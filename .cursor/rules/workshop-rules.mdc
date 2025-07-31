@@ -1,0 +1,70 @@
+---
+alwaysApply: true
+---
+
+# Data Science for Kids Summer Camp - Cursor Rules
+
+## Workshop Overview
+This repository contains materials for a 5-day, 3-hour per day, Data Science for Kids summer camp designed for ages 10-14. The workshop introduces fundamental data science concepts through hands-on activities, storytelling, and creative projects using R programming.
+
+## Core Philosophy
+- **Learning through play**: Use toys, games, and creative projects to make abstract concepts concrete
+- **Peer collaboration**: Encourage pair programming and team challenges
+- **Story-driven learning**: Frame technical concepts within magical, engaging narratives
+- **Incremental complexity**: Build from simple concepts to more advanced topics gradually
+- **Visual and kinesthetic learning**: Combine physical activities, beatiful visuals with digital programming
+
+## Age-Appropriate Language Guidelines
+- Use simple, clear language avoiding technical jargon
+- Frame complex concepts as magical or game-like scenarios
+- Provide analogies using familiar concepts (toys, animals, magic)
+- Include emoji and visual cues in code comments
+- Use storytelling to explain abstract concepts
+
+### Naming Conventions
+- Use snake_case for all file and folder names
+- Prefix activity files with day number: `day01-activity-name.R`
+- Include age-appropriate descriptions: `magic-forest-variables.R`
+
+### Comment Guidelines
+- Start every script with a magical story setup
+- Use emoji to indicate different types of comments
+- 🔮 = Learning objective
+- 🎯 = Activity goal
+- 💡 = Pro tip or hint
+- 🐛 = Common mistake to avoid
+- ✨ = Creative extension idea
+
+## Activity Design Principles
+
+### Physical Activities
+- Use props: stuffed animals (e.g., cows), candy, toys
+- Create physical representations of abstract concepts
+- Include movement and hands-on manipulation
+- Design for small group collaboration (2-3 students)
+
+### Digital Activities
+- Start with visual, immediate feedback
+- Use colorful, engaging graphics
+- Include sound effects or animations where possible
+- Provide clear success indicators
+
+## Safety and Inclusion
+- Ensure all activities are accessible to different learning styles
+- Provide multiple difficulty levels for each activity
+- Include diverse examples and characters in stories
+- Create a supportive, failure-positive environment
+- Have backup offline activities for technical issues
+
+## Technical Requirements
+- R and RStudio installation guides should be available
+- Online R compiler alternatives for accessibility
+- ChatGPT account setup instructions (optional)
+- Backup plans for technical difficulties
+
+## Resource Attribution
+Always include attribution for:
+- Original activity sources
+- Dataset sources
+- Image and story credits
+- Educational resource inspirations
