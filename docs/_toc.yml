@@ -1,0 +1,44 @@
+format: jb-book
+root: index
+title: "Data Science for Kids"
+
+parts:
+- caption: "🚀 Getting Started"
+  chapters:
+  - file: setup/index
+    title: "Setup Instructions"
+    sections:
+    - file: setup/posit-cloud-setup
+      title: "Posit Cloud Setup"
+    - file: setup/claude-setup
+      title: "Claude AI Setup"
+    - file: setup/local-rstudio-setup
+      title: "Local R Setup"
+    - file: setup/online-alternatives
+      title: "Online Alternatives"
+
+- caption: "📚 Daily Activities"
+  chapters:
+  - file: day01/README
+    title: "🌟 Day 1: Programming Magic"
+  - file: day02/README
+    title: "📊 Day 2: Data Storytelling"
+  - file: day03/README
+    title: "🐄 Day 3: Statistics Safari"
+  - file: day04/README
+    title: "🤖 Day 4: Machine Learning"
+  - file: day05/README
+    title: "🧠 Day 5: AI & Neural Networks"
+
+- caption: "👩‍🏫 For Instructors"
+  chapters:
+  - file: instructor-guide/index
+    title: "Instructor Guide"
+    sections:
+    - file: instructor-guide/setup-checklist
+      title: "Setup Checklist"
+
+- caption: "📖 Resources"
+  chapters:
+  - file: resources/index
+    title: "Additional Resources"
