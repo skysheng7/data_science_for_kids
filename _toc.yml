@@ -1,0 +1,23 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: docs/index
+parts:
+- caption: Notes
+  chapters:
+  - file: docs/day01/README
+  - file: docs/day02/README
+  - file: docs/day03/README
+  - file: docs/day04/README
+  - file: docs/day05/README
+- caption: Technology Setup
+  chapters:
+  - file: docs/setup/index
+  - file: docs/setup/posit-cloud-setup
+  - file: docs/setup/claude-setup
+  - file: docs/setup/local-rstudio-setup
+  - file: docs/setup/online-alternatives
+- caption: References
+  chapters:
+  - file: docs/references/index

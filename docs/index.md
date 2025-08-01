@@ -21,11 +21,11 @@ Welcome to an enchanting adventure where mathematics meets magic, and data tells
 
 | Day | Theme | Key Concepts | Magic Activity |
 |-----|-------|--------------|----------------|
-| **[Day 1](day01/)** | 🌟 Basic Programming Magic | Variables, data types, loops | Magic Forest Word Reorganizer |
-| **[Day 2](day02/)** | 📊 Data Storytelling | Functions, data wrangling, visualization | Team Data Detective Project |
-| **[Day 3](day03/)** | 🐄 Statistics Safari | Mean, sampling, confidence intervals | Candy Bag Sampling Adventure |
-| **[Day 4](day04/)** | 🤖 Machine Learning Quest | KNN, training, testing | Physical Board Game Classification |
-| **[Day 5](day05/)** | 🧠 AI & Neural Networks | Neural networks, ethics, future | String & Neuron Connection Game |
+| **[1](day01/)** | 🌟 Basic Programming Magic | Variables, data types, loops | Magic Forest Word Reorganizer |
+| **[2](day02/)** | 📊 Data Storytelling | Functions, data wrangling, visualization | Team Data Detective Project |
+| **[3](day03/)** | 🐄 Statistics Safari | Mean, sampling, confidence intervals | Candy Bag Sampling Adventure |
+| **[4](day04/)** | 🤖 Machine Learning Quest | KNN, training, testing | Physical Board Game Classification |
+| **[5](day05/)** | 🧠 AI & Neural Networks | Neural networks, ethics, future | String & Neuron Connection Game |
 
 ## 🚀 Quick Start Guide
 
@@ -34,11 +34,6 @@ Welcome to an enchanting adventure where mathematics meets magic, and data tells
 1. **[Set up Posit Cloud](setup/posit-cloud-setup.md)** - Our magical coding environment (recommended!)
 2. **[Create Claude account](setup/claude-setup.md)** - Your AI programming assistant
 3. **[Backup: Local R Setup](setup/local-rstudio-setup.md)** - For offline adventures
-
-### For Instructors
-
-- **[Instructor Guide](instructor-guide/)** - Complete setup and teaching instructions
-- **[Setup Checklist](instructor-guide/setup-checklist.md)** - Pre-camp preparation guide
 
 ## 🎒 What Students Need
 
@@ -49,17 +44,11 @@ Welcome to an enchanting adventure where mathematics meets magic, and data tells
 
 ## 👩‍🏫 Meet Your Instructor
 
-**Sky (Kehan) Sheng** is a PhD candidate at UBC conducting interdisciplinary research in animal welfare science, data science, and AI bias. With experience as a Teaching Assistant for UBC's Master of Data Science program and mentoring many students, Sky is passionate about making data science accessible and fun for young learners.
+[**Sky (Kehan) Sheng**](http://www.skysheng.io/) is a PhD candidate at UBC conducting interdisciplinary research in animal welfare science, data science, and AI bias. With experience as a Teaching Assistant for UBC's Master of Data Science program and mentoring many students, Sky is passionate about making data science accessible and fun for young learners.
 
 ## 🙏 Acknowledgments
 
 This workshop builds upon the excellent work of:
-- [**Girls in Data Science**](https://katieburak.github.io/girls-in-DS/) workshop by Dr. Katie Burak, Jenny Lee, and Mona Zhu
-- [**Data Science: A First Introduction**](https://datasciencebook.ca/) by Dr. Tiffany Timbers, Dr. Trevor Campbell, and Dr. Melissa Lee
-- [**ModernDive**](https://moderndive.com/index.html) by Dr. Chester Ismay and Dr. Albert Y. Kim
-
----
-
-**Ready to begin your magical data science journey?** 🌟
-
-[🚀 Start with Day 1](day01/) | [⚙️ Setup Instructions](setup/) | [👩‍🏫 Instructor Guide](instructor-guide/)
+- **Girls in Data Science** workshop by Dr. Katie Burak, Jenny Lee, and Mona Zhu {cite}`Burak2023GirlsDS`
+- **Data Science: A First Introduction** by Dr. Tiffany Timbers, Dr. Trevor Campbell, and Dr. Melissa Lee {cite}`Timbers2022DSFirst`
+- **ModernDive** by Dr. Chester Ismay and Dr. Albert Y. Kim {cite}`Ismay2019ModernDive`

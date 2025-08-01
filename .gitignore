@@ -6,6 +6,7 @@ girls-in-DS-main/
 # Jupyter Book build files
 docs/_build/
 docs/.jupyter_cache/
+_build/
 
 # Jupyter Notebook checkpoints
 .ipynb_checkpoints/

@@ -1,0 +1,39 @@
+# Book settings
+# Learn more at https://jupyterbook.org/customize/config.html
+
+title: Data Science for Kids
+author: Sky Sheng
+copyright: "2025"
+logo: images/logo.png
+only_build_toc_files: true # only build the files listed under _toc.yml
+
+# Force re-execution of notebooks on each build.
+# See https://jupyterbook.org/content/execute.html
+execute:
+  execute_notebooks: force
+
+# Define the name of the latex output file for PDF builds
+latex:
+  latex_documents:
+    targetname: data_science_for_kids.tex
+
+# add a bibtex file so that we can create citations
+bibtex_bibfiles:
+  - docs/references/references.bib
+
+# For citation style
+sphinx:
+  config:
+    bibtex_reference_style: author_year
+    
+
+# Information about where the book exists on the web
+repository:
+  url: https://github.com/skysheng7/data_science_for_kids.git  # Online location of your book
+  branch: main  # Which branch of the repository should be used when creating links (optional)
+
+# Add GitHub buttons to your book
+# See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
+html:
+  use_issues_button: true
+  use_repository_button: true
