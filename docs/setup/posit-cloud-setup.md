@@ -5,15 +5,7 @@ title: Posit Cloud Setup
 
 # 🔮 Posit Cloud Setup Guide
 
-Posit Cloud is our magical coding environment where you'll write R code in your web browser - no installation needed!
-
-## 🌟 Why Posit Cloud?
-
-- ✅ **No installation** - works in any web browser
-- ✅ **Pre-installed packages** - everything you need is ready
-- ✅ **Easy sharing** - your instructor can help you instantly
-- ✅ **Professional tool** - used by real data scientists
-- ✅ **Free** - no cost for our camp activities
+Posit Cloud is our magical coding environment where you'll write R code in your web browser - no installation needed! It's free, professional, easy to share with others, and has everything pre-installed for our data science adventures.
 
 ## 📋 Step-by-Step Setup
 
@@ -49,9 +41,9 @@ Your instructor will share a workspace link that looks like:
 - **📁 Files Panel** (top right): See your project files
 - **💻 Console** (bottom left): Where you run R code
 - **📊 Plots** (bottom right): Where your graphs appear
-- **📝 Editor** (top left): Where you write longer programs
+- **📝 Editor** (top left): Where you write longer code & programs
 
-### Quick Tips for Young Coders
+### Quick Tips for You
 
 - 💡 **Save often**: Click the save button or use Ctrl+S
 - 🔍 **Use the help**: Type `?function_name` to learn about functions
@@ -67,24 +59,10 @@ Your instructor will share a workspace link that looks like:
 
 ### "My code isn't working!"
 - ✅ Check for typos (R is case-sensitive!)
-- ✅ Make sure you pressed Enter after typing
 - ✅ Ask a friend or instructor for help
 
 ### "Everything is slow!"
 - ✅ Close other browser tabs
 - ✅ Make sure you have good internet connection
-- ✅ Tell your instructor - they can help optimize
 
-## 🚀 Next Steps
 
-Once your setup is complete:
-
-1. 📚 Explore the [Day 1 activities](../day01/)
-2. 🤖 Set up [Claude AI](claude-setup.md) as your coding assistant
-3. 🎮 Start your data science adventure!
-
----
-
-**Having trouble?** Don't worry! Ask your instructor, a friend, or check our [troubleshooting guide](../resources/troubleshooting.md).
-
-[← Back to Setup](index.md) | [Set up Claude →](claude-setup.md) | [Start Day 1 →](../day01/)

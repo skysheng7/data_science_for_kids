@@ -39,6 +39,6 @@ Welcome to the setup guide for our the camp! Choose your adventure path below.
 
 **New to programming?** Start with [Posit Cloud](posit-cloud-setup.md) - it's designed to be beginner-friendly!
 
-**Need help?** Check our [troubleshooting guide](../resources/troubleshooting.md) or ask your instructor.
+**Need help?** Ask your instructor or teaching assisstants!
 
 [← Back to Home](../) | [Start Day 1 →](../day01/)

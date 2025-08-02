@@ -7,7 +7,7 @@ title: Home
 
 > *A 5-day adventure with a magical otter who sees the future in data! For young explorers aged 10-14.*
 
-Welcome, young data detectives! Meet the Otter Oracle, a friendly hacker who can look into a magical crystal ball to see stories hidden in data. Join us to learn the otter's secrets and become a data wizard yourself!
+Welcome, young data detectives! Meet the Otter Oda, a friendly hacker who can look into a magical crystal ball to see stories hidden in data. Join us to learn the otter's secrets and become a data wizard yourself!
 
 ## 🗓️ 5-Day Adventure Plan
 
