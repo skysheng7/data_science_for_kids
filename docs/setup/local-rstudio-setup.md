@@ -141,9 +141,3 @@ Once your setup is complete:
 2. 🎨 Try creating your first plot
 3. 📚 Explore the [Day 1 activities](../day01/)
 4. 🤖 Consider setting up [Claude AI](claude-setup.md) as your coding helper
-
----
-
-**Having trouble?** Don't worry! Our [troubleshooting guide](../resources/troubleshooting.md) has solutions for common issues, or you can stick with [Posit Cloud](posit-cloud-setup.md) which requires no installation.
-
-[← Back to Setup](index.md) | [Try Posit Cloud Instead ←](posit-cloud-setup.md) | [Start Day 1 →](../day01/)

@@ -21,7 +21,3 @@ Today we'll dive into the exciting world of machine learning! You'll understand 
 ## 📚 Today's Magical Concepts
 
 *Content will be added soon!*
-
----
-
-[← Day 3](../day03/) | [Day 5 →](../day05/)

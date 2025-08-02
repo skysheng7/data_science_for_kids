@@ -21,7 +21,3 @@ Today we'll learn how to be data detectives! We'll discover how functions work, 
 ## 📚 Today's Magical Concepts
 
 *Content will be added soon!*
-
----
-
-[← Day 1](../day01/) | [Day 3 →](../day03/)

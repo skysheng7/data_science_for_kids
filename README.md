@@ -57,9 +57,3 @@ This workshop builds upon the excellent work of:
 ## 📜 License
 
 This project is licensed under the Creative Commons Attribution 4.0 International License - see the [LICENSE.md](LICENSE.md) file for details.
-
----
-
-**Ready to begin your magical data science journey?** 🌟
-
-[🚀 Start with Day 1](docs/day01/) | [⚙️ Setup Instructions](docs/setup/) | [👩‍🏫 Instructor Guide](docs/instructor-guide/)

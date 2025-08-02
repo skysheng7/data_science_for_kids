@@ -179,8 +179,4 @@ Write 3 sentences about:
 
 ---
 
-**Ready to start your magical programming journey?** 🌟
-
-[⚙️ Setup First](../setup/) | [🎯 Begin Activities](activities/) | [📚 Day 2 Preview →](../day02/)
-
 *Remember: Every expert programmer started exactly where you are today. Have fun, be curious, and don't be afraid to make mistakes - that's how we learn!* ✨

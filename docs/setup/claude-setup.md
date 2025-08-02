@@ -135,9 +135,3 @@ Now that Claude is set up:
 2. 📚 Start with [Day 1 activities](../day01/)
 3. 🤖 Practice asking Claude questions about the code you're learning
 4. 🎯 Remember: Claude is a helper, not a replacement for thinking!
-
----
-
-**Ready to code with your AI buddy?** Head over to [Day 1](../day01/) and start your magical data science journey!
-
-[← Back to Setup](index.md) | [Set up Posit Cloud ←](posit-cloud-setup.md) | [Start Day 1 →](../day01/)

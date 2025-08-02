@@ -21,7 +21,3 @@ On our final day, we'll explore the cutting-edge world of neural networks and AI
 ## 📚 Today's Magical Concepts
 
 *Content will be added soon!*
-
----
-
-[← Day 4](../day04/) | [🎉 Camp Complete!](../resources/certificate.md)

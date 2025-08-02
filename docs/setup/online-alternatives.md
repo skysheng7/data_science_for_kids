@@ -119,5 +119,3 @@ For any alternative platform:
 ---
 
 **Remember:** The goal is learning data science concepts, not mastering any specific platform. Use whatever works best for you!
-
-[← Back to Setup](index.md) | [Try Posit Cloud ←](posit-cloud-setup.md) | [Local Install ←](local-rstudio-setup.md)
