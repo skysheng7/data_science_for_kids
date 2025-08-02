@@ -23,7 +23,14 @@ Posit Cloud is our magical online coding environment where you'll write R code i
 ### Step 2: Join Our Camp Workspace
 
 Here is the workspace link we will use during this camp. It's called "data_playground":
-`https://posit.cloud/spaces/624374/join?access_code=DPo4bWWzbmekRHTREK_nW0M8Sjmpjmjd3gXKHLFO`
+```
+https://posit.cloud/spaces/624374/join?access_code=DPo4bWWzbmekRHTREK_nW0M8Sjmpjmjd3gXKHLFO`
+```
+
+If the above link is too long, try this shorter one:
+```
+https://shorturl.at/iM1Hk
+```
 
 1. 🔗 Click the workspace link from your instructor
 2. 🎯 Click **"Join Workspace"**
