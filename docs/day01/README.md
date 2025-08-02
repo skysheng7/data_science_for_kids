@@ -19,9 +19,25 @@ Today we'll embark on our first adventure into the magical world of R programmin
 - 🔄 Control program flow with if-else and loops
 - 🎨 Create beautiful mosaic art with code
 
+## 🗿 Building Our Magical World
+
+Before we can start our programming adventure, we need to set up our magical coding environment! Think of this like building a castle where all our R magic will live.
+
+### 🔮 Step 1: Create Your Coding Castle
+Head over to our [Posit Cloud Setup Guide](../setup/posit-cloud-setup.md) and create your castle.
+
+💡 **Important**: Complete the Posit Cloud setup before continuing with today's activities. This is where all your magical data science adventures will start!
+
+Once you have your coding castle ready, come back here to start learning the fundamental spells of R programming! ✨
+
+
+
+
+
+## DELETE below
 ## 📚 Today's Magical Concepts
 
-### 🌅 Morning Session (1.5 hours)
+### 🌅 1.5 hours
 
 #### 1. 🎯 What is Data Science?
 *Discover how data science helps us understand the world around us*
@@ -38,7 +54,7 @@ Today we'll embark on our first adventure into the magical world of R programmin
 #### 5. 🏷️ Data Types Island
 *Explore the different types of data R can understand*
 
-### 🌞 Afternoon Session (1.5 hours)
+### 🌞 1.5 hours
 
 #### 6. 📦 Packages: Community Magic
 *Discover the power of open-source collaboration*
