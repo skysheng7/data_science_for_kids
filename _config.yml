@@ -4,7 +4,7 @@
 title: Data Science for Kids
 author: Sky Sheng
 copyright: "2025"
-logo: images/logo.png
+logo: images/logo2.png
 only_build_toc_files: true # only build the files listed under _toc.yml
 
 # Force re-execution of notebooks on each build.

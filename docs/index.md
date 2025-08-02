@@ -5,9 +5,9 @@ title: Home
 
 # 🌟 Data Science for Kids Summer Camp
 
-> *A magical 5-day journey into the world of data science for young explorers aged 10-14*
+> *A 5-day adventure with a magical otter who sees the future in data! For young explorers aged 10-14.*
 
-Welcome to an enchanting adventure where mathematics meets magic, and data tells stories! This summer camp introduces fundamental data science concepts through hands-on activities, storytelling, and creative projects using R programming.
+Welcome, young data detectives! Meet the Otter Oracle, a friendly hacker who can look into a magical crystal ball to see stories hidden in data. Join us to learn the otter's secrets and become a data wizard yourself!
 
 ## 🗓️ 5-Day Adventure Plan
 

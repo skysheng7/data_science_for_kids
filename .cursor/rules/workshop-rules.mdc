@@ -6,6 +6,12 @@ alwaysApply: false
 ## Workshop Overview
 This repository contains materials for a 5-day, 3-hour per day, Data Science for Kids summer camp designed for ages 10-14. The workshop introduces fundamental data science concepts through hands-on activities, storytelling, and creative projects using R programming.
 
+## Workshop Theme: A magical otter who is a data science wizard!
+- **Mascot**: An otter who is a friendly hacker with magical data powers.
+
+## Workshop Note Style
+- Write notes in a simple, clear, easy to understand way, DO NOT write more than necessary
+
 ## Core Philosophy
 - **Learning through play**: Use toys, games, and creative projects to make abstract concepts concrete
 - **Peer collaboration**: Encourage pair programming and team challenges
@@ -15,7 +21,6 @@ This repository contains materials for a 5-day, 3-hour per day, Data Science for
 
 ## Age-Appropriate Language Guidelines
 - Use simple, clear language avoiding technical jargon
-- Write in a simple, clear, easy to understand way, DO NOT write more than necessary
 - Frame complex concepts as magical or game-like scenarios
 - Provide analogies using familiar concepts (toys, animals, magic)
 - Include emoji and visual cues in code comments

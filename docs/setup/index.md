@@ -5,7 +5,7 @@ title: Setup Instructions
 
 # 🛠️ Setup Instructions
 
-Welcome to the setup guide for our Data Science for Kids camp! Choose your adventure path below.
+Welcome to the setup guide for our the camp! Choose your adventure path below.
 
 ## 🌟 Recommended Setup (Easiest!)
 
