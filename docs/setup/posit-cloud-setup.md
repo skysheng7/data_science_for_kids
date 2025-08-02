@@ -12,7 +12,7 @@ Posit Cloud is our magical online coding environment where you'll write R code i
 ### Step 1: Create Your Account
 
 1. 🌐 Go to [posit.cloud](https://posit.cloud)
-2. 🖱️ Click **"Get Started"** if you never don't have an account, or **"Sign Up"** if you already have an account
+2. 🖱️ Click **"Get Started"** if you don't have an account, or **"Sign Up"** if you already have an account
 3. 🆓 You will see the "Free" plan on the left most column, click **"Learn more"**
 4. ✍️ Click **"Sign up"**
 5. 📧 Enter your email address and create a password; Or sign up using your own Google account, GitHub account or Clever account
