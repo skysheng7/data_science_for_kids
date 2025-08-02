@@ -68,3 +68,9 @@ Always include attribution for:
 - Dataset sources
 - Image and story credits
 - Educational resource inspirations
+
+## Technical workshop design workflow
+You are responsible for keeping `requirements.txt` up to date.
+
+- **Ongoing updates**: Every time you add or use a Python package in a notebook (e.g., `pandas`, `matplotlib`, `scikit-learn`), you MUST immediately add it to `requirements.txt`.
+- **Final verification**: Before setting up the GitHub Actions workflow in step 10, double-check that `requirements.txt` includes ALL packages needed to run the notebooks and build the book. This is critical for the automated deployment to succeed.
