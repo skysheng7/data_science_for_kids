@@ -15,6 +15,7 @@ This repository contains materials for a 5-day, 3-hour per day, Data Science for
 
 ## Age-Appropriate Language Guidelines
 - Use simple, clear language avoiding technical jargon
+- Write in a simple, clear, easy to understand way, DO NOT write more than necessary
 - Frame complex concepts as magical or game-like scenarios
 - Provide analogies using familiar concepts (toys, animals, magic)
 - Include emoji and visual cues in code comments

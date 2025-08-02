@@ -230,7 +230,6 @@ You can change your bibliography style to be (ask human user for preferences if 
 - unsrtalpha: Use alphanumeric reference labels, citations are sorted by order of appearance.
 
 5.2.  **Add the references file to `_toc.yml`**. 
-
     ```yaml
       chapters:
       - file: docs/references/index
@@ -242,26 +241,41 @@ You can change your bibliography style to be (ask human user for preferences if 
       - docs/references/references.bib
     ```
     
-5.4. (Optional) **Set a citation style** in `_config.yml`
+5.4. **Set a citation style** in `_config.yml`
     ```yaml
     sphinx:
       config:
         bibtex_reference_style: author_year
     ```
 
-### 6. Build Book
+### 6. Manage `requirements.txt`
+
+You are responsible for keeping `requirements.txt` up to date.
+
+- **Initial check**: Make sure `jupyter-book` is in `requirements.txt`.
+- **Ongoing updates**: Every time you add or use a Python package in a notebook (e.g., `pandas`, `matplotlib`, `scikit-learn`), you MUST immediately add it to `requirements.txt`.
+- **Final verification**: Before setting up the GitHub Actions workflow in step 10, double-check that `requirements.txt` includes ALL packages needed to run the notebooks and build the book. This is critical for the automated deployment to succeed.
+
+Example `requirements.txt`:
+```
+jupyter-book
+pandas
+matplotlib
+```
+
+### 7. Build Book
 ```bash
 jupyter-book build .
 ```
 
-### 7. Connect to Github
+### 8. Connect to Github
 
 If the user hasn't created a GitHub repository yet, or if the current project isn't connected to Git, assist them in creating a GitHub Repository using GitHub MCP:
 ```bash
 # Use mcp_github_create_repository tool
 ```
 
-### 8. After local directory is connect through Git, Push to GitHub
+### 9. After local directory is connect through Git, Push to GitHub
 ```bash
 git init
 git add .
@@ -270,41 +284,88 @@ git remote add origin https://github.com/username/repository-name.git
 git push -u origin main
 ```
 
-### 9. Deploy to gh-pages Branch
-```bash
-pip install ghp-import
-ghp-import -n -p -f _build/html
-```
+### 10. Set up Automatic Deployment with GitHub Actions
 
-### 10. Enable GitHub Pages
-Ask the human user to:
-- Go to their repository on GitHub
-- Click Settings → Pages
-- Under "Source", select "Deploy from a branch"
-- Choose "gh-pages" branch and "/ (root)" folder
-- Click Save
+Inform the user that the following steps will set up automatic deployment using GitHub Actions, which requires them to host their book on GitHub Pages.
 
+1.  **Create a workflow file**:
+    -   Create a directory named `.github/workflows` in the project root.
+    -   Inside that directory, create a file named `deploy.yml`.
+    -   Copy and paste the following content into `deploy.yml`:
 
-### 11. Updating Your Book
+    ```yaml
+    name: deploy-book
 
-When the user wants to update their book after making changes:
+    # Run this when the master or main branch changes
+    on:
+      push:
+        branches:
+        - master
+        - main
 
-1.  **Re-build the book:**
-    ```bash
-    jupyter-book build .
+    # This job installs dependencies, builds the book, and deploys the book on github pages
+    jobs:
+      deploy-book:
+        runs-on: ubuntu-latest
+        permissions:
+          pages: write
+          id-token: write
+        steps:
+        - uses: actions/checkout@v4
+
+        # Install dependencies
+        - name: Set up Python 3.11
+          uses: actions/setup-python@v5
+          with:
+            python-version: '3.11'
+            cache: pip # Implicitly uses requirements.txt for cache key
+
+        - name: Install dependencies
+          run: pip install -r requirements.txt
+
+        # (optional) Cache your executed notebooks between runs
+        # if you have config:
+        # execute:
+        #   execute_notebooks: cache
+        - name: cache executed notebooks
+          uses: actions/cache@v4
+          with:
+            path: _build/.jupyter_cache
+            key: jupyter-book-cache-${{ hashFiles('requirements.txt') }}
+
+        # Build the book
+        - name: Build the book
+          run: |
+            jupyter-book build .
+
+        # Upload the book's HTML as an artifact
+        - name: Upload artifact
+          uses: actions/upload-pages-artifact@v3
+          with:
+            path: "_build/html"
+
+        # Deploy the book's HTML to GitHub Pages
+        - name: Deploy to GitHub Pages
+          id: deployment
+          uses: actions/deploy-pages@v4
     ```
-2.  **Deploy the updated book to GitHub Pages:**
-    ```bash
-    ghp-import -n -p -f _build/html
-    ```
 
-###
+### 11. Enable GitHub Pages
+
+After the repository is pushed to GitHub, ask the human user to perform the following steps:
+
+1.  Go to their repository on GitHub.
+2.  Click **Settings** → **Pages**.
+3.  Under "Build and deployment", set the "Source" to **GitHub Actions**.
+
+The book will be published at the URL shown on that page after the workflow runs successfully.
+
+### 12. Updating Your Book
+
+To update the book, the user only needs to push their changes to the `main` or `master` branch on GitHub. The GitHub Action will handle the rest.
 
 ## Troubleshooting
 - Build fails: Run `jupyter-book build . -v` for verbose output
 - Missing files: Check all files in `_toc.yml` exist
 - GitHub Pages not working: Check if gh-pages branch exists and Pages is configured correctly
 - If unsure about any step: Ask the human user for clarification
-
-## Done!
-Your Jupyter Book will be live at the specified URL.
