@@ -284,6 +284,20 @@ Ask the human user to:
 - Choose "gh-pages" branch and "/ (root)" folder
 - Click Save
 
+
+### 11. Updating Your Book
+
+When the user wants to update their book after making changes:
+
+1.  **Re-build the book:**
+    ```bash
+    jupyter-book build .
+    ```
+2.  **Deploy the updated book to GitHub Pages:**
+    ```bash
+    ghp-import -n -p -f _build/html
+    ```
+
 ## Troubleshooting
 - Build fails: Run `jupyter-book build . -v` for verbose output
 - Missing files: Check all files in `_toc.yml` exist
