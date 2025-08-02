@@ -1,5 +1,5 @@
 ---
-alwaysApply: false
+alwaysApply: true
 ---
 # Data Science for Kids Summer Camp - Cursor Rules
 
@@ -28,11 +28,10 @@ This repository contains materials for a 5-day, 3-hour per day, Data Science for
 
 ### Naming Conventions
 - Use snake_case for all file and folder names
-- Prefix activity files with day number: `day01-activity-name.R`
-- Include age-appropriate descriptions: `magic-forest-variables.R`
+- Prefix activity files with day number: `day01_activity_name.R`
 
 ### Comment Guidelines
-- Start every script with a magical story setup
+- Start every script with a magical story setup following the theme of otter wizard
 - Use emoji to indicate different types of comments
 - 🔮 = Learning objective
 - 🎯 = Activity goal
