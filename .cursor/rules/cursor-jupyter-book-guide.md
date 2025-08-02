@@ -298,6 +298,8 @@ When the user wants to update their book after making changes:
     ghp-import -n -p -f _build/html
     ```
 
+###
+
 ## Troubleshooting
 - Build fails: Run `jupyter-book build . -v` for verbose output
 - Missing files: Check all files in `_toc.yml` exist
