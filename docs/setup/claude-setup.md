@@ -5,38 +5,36 @@ title: Claude AI Setup
 
 # 🤖 Claude AI Setup Guide
 
-Meet Claude, your friendly AI programming assistant! Claude can help you understand code, debug problems, and learn new concepts.
+Meet Claude (created by a company called Anthropic), your friendly AI programming assistant! Claude can help you understand code, debug problems, and learn new concepts. 
 
-## 🌟 Why Use Claude for Programming?
-
-- 🧠 **Smart helper**: Explains code in kid-friendly language
-- 🔍 **Debug buddy**: Helps find and fix coding mistakes
-- 💡 **Creative partner**: Suggests fun project ideas
-- 📚 **Patient teacher**: Answers questions without judgment
-- 🛡️ **Safe to use**: Designed with safety guidelines
+💡 **Instructor Disclaimer**: Your instructor has no connection to Anthropic (the company that makes Claude). We're using Claude because many programmers and data scientists from the technology industry agree it's the best AI tools for programming, writing and explaining things clearly!
 
 ## 📋 Step-by-Step Setup
 
 ### Step 1: Create Your Account
 
 1. 🌐 Go to [claude.ai](https://claude.ai)
-2. 🖱️ Click **"Get Started"** or **"Sign Up"**
-3. 📧 Enter your email address
-4. 📱 You might need a phone number for verification
-5. ✅ Verify your account (check email and/or phone)
+2. 🖱️ Click **"Continue with Google"** if you wish to sign up using your Google account. Or enter your email address to sign up through emails.
+3. ✅ Verify your account (check email sent from Anthropic)
 
 ### Step 2: Start Your First Conversation
 
-1. 💬 Click **"Start new conversation"**
+1. 💬 You will see a conversation box where you can ask Claude questions
 2. 🎯 Try this first message:
    ```
    Hi Claude! I'm learning R programming in a kids' data science camp. 
-   Can you help me understand what this code does?
+   Can you help me understand what this code does? What does the "<-" mean?
    
-   print("Hello world!")
+   ```R
+   a <- 1
+   b <- 2
+   c <- 2 * (a+b)
+
+   print(c+1)
+   ```
    ```
 3. 📖 Read Claude's explanation
-4. 🎉 You're ready to code with Claude!
+4. 🎉 You're ready to learn and code with Claude!
 
 ## 🎯 How to Ask Claude for Help
 
@@ -53,26 +51,9 @@ Meet Claude, your friendly AI programming assistant! Claude can help you underst
 - "Can you help me write code to [specific task]?"
 
 **For Learning New Things:**
-- "What's a fun way to practice R loops?"
+- "What's a fun way to practice for loops in R?"
 - "Can you show me how to make colorful graphs?"
 - "What are some cool things I can do with data?"
-
-### 📝 Example Conversation
-
-**You:** "Hi Claude! I have this R code but I get an error. Can you help?
-
-```r
-x <- c(1, 2, 3, 4, 5)
-mean(X)
-```
-
-**Claude:** "I see the issue! You created a variable called `x` (lowercase), but you're trying to use `X` (uppercase). R is case-sensitive, so it thinks these are different variables. Try changing the last line to:
-
-```r
-mean(x)
-```
-
-This should work perfectly!"
 
 ## 🛡️ Safety Guidelines
 
@@ -83,13 +64,13 @@ This should work perfectly!"
 - ✅ Ask about data science careers
 
 ### 🟡 Yellow Light (Check with Instructor)
-- ⚠️ Asking for homework answers (learn, don't copy!)
-- ⚠️ Requesting personal information about others
-- ⚠️ Discussing topics unrelated to coding
+- ⚠️ Asking for homework answers (you are in charge of your own learning journey now, great power comes with great responsibility!)
 
 ### 🔴 Red Light (Never Do)
 - ❌ Share personal information (address, phone, etc.)
+- ❌ Requesting personal information about others
 - ❌ Ask Claude to do all your work for you
+- ❌ Copy and paste the code/answer Claude give you without thinking, validating yourself
 - ❌ Use Claude for non-educational purposes during camp
 
 ## 💡 Pro Tips for Young Programmers
@@ -118,20 +99,15 @@ Perfect workflow for our camp:
 - Make sure you're using a valid email address
 
 **"Claude isn't understanding my question"**
-- Try being more specific about your problem
+- Try being more specific about your problem, explain to Claude like explaining to your a friend
+- Try create a new conversation window using the orange "+" button on the top left, sometimes the AI get confused when your conversation with it gets too long
 - Include your actual R code in your question
+- Include the complete error messages in your question
 - Ask your instructor for help phrasing the question
 
 **"Claude gave me code that doesn't work"**
 - Double-check you copied the code exactly
-- AI isn't perfect - it's learning too!
+- AI isn't perfect - that's why you are the one in charge to decide what is right and wrong!
 - Ask your instructor to help debug
 
-## 🚀 Next Steps
 
-Now that Claude is set up:
-
-1. 🔗 Keep both Posit Cloud and Claude open in different browser tabs
-2. 📚 Start with [Day 1 activities](../day01/)
-3. 🤖 Practice asking Claude questions about the code you're learning
-4. 🎯 Remember: Claude is a helper, not a replacement for thinking!

@@ -22,18 +22,13 @@ Welcome to the setup guide for our the camp! Choose your adventure path below.
 - Free account creation
 - Ask for coding help
 
-## 🏠 Backup Options
+## 🏠 Install R Studio at Home
 
 ### [💻 Local R Studio Setup](local-rstudio-setup.md)
 *For offline adventures or advanced users*
 - Download and install R + RStudio
 - Package installation guide
 - Troubleshooting common issues
-
-### [🌐 Online R Compilers](online-alternatives.md)
-*Emergency backup options*
-- replit.com R environment
-- Other web-based R platforms
 
 ---
 

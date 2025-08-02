@@ -43,7 +43,12 @@ https://shorturl.at/iM1Hk
    💡 **Important**: When you open this project, Posit Cloud automatically creates your own permanent copy! This means you can make changes, play around, and save your work - it's all yours to keep and access later.
 
 2. 🖱️ Under the **"Console"** tab (top left)
-3. ⌨️ Type: `print("Hello, magical data world!")`
+3. ⌨️ Type: 
+```
+print("Hello, magical data world!")
+```
+
+Feel free to print out anything else you would like to try!
 4. ⏎ Press Enter
 5. 🎉 You should see your message appear!
 
