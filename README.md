@@ -28,13 +28,7 @@ Welcome to an enchanting adventure where mathematics meets magic, and data tells
 
 1. **[Set up Posit Cloud](docs/setup/posit-cloud-setup.md)** - Our magical coding environment (recommended!)
 2. **[Create Claude account](docs/setup/claude-setup.md)** - Your AI programming assistant
-3. **[Backup: Local R Setup](docs/setup/local-rstudio-setup.md)** - For offline adventures
-
-### For Instructors
-
-- **[Instructor Guide](docs/instructor-guide/)** - Complete setup and teaching instructions
-- **[Materials Checklist](docs/instructor-guide/materials-needed.md)** - Physical props and supplies needed
-- **[Setup Checklist](docs/instructor-guide/setup-checklist.md)** - Pre-camp preparation guide
+3. **[Local R Setup](docs/setup/local-rstudio-setup.md)** - For offline adventures
 
 ## 🎒 What Students Need
 
@@ -45,7 +39,7 @@ Welcome to an enchanting adventure where mathematics meets magic, and data tells
 
 ## 👩‍🏫 Meet Your Instructor
 
-**Sky (Kehan) Sheng** is a PhD candidate at UBC conducting interdisciplinary research in animal welfare science, data science, and AI bias. With experience as a Teaching Assistant for UBC's Master of Data Science program and mentoring many students, Sky is passionate about making data science accessible and fun for young learners.
+**Sky (Kehan) Sheng** is a PhD candidate at UBC conducting interdisciplinary research in animal welfare science, data science, and AI bias. Sky is passionate about making data science and AI accessible and fun for young learners.
 
 ## 🙏 Acknowledgments
 
