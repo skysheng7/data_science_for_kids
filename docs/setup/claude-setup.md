@@ -7,7 +7,11 @@ title: Claude AI Setup
 
 Meet Claude (created by a company called Anthropic), your friendly AI programming assistant! Claude can help you understand code, debug problems, and learn new concepts. 
 
-💡 **Instructor Disclaimer**: Your instructor has no connection to Anthropic (the company that makes Claude). We're using Claude because many programmers and data scientists from the technology industry agree it's the best AI tools for programming, writing and explaining things clearly!
+💡 **Instructor Disclaimer**: Your instructor has no connection to Anthropic (the company that makes Claude). We're using Claude because many programmers and data scientists from the technology industry agree it's the best AI tools for programming, writing and explaining things clearly (as of the time when this camp is created)!
+
+## 🛑 Age limit
+
+Claude only allows user to register for an account if they are > 18 years old. You will need to **set up this account under the supervision of your parents**. We will use Claude together in the classroom **under the supervision of the instructor**.
 
 ## 📋 Step-by-Step Setup
 
