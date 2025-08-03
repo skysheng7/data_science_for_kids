@@ -81,7 +81,7 @@ Claude only allows user to register for an account if they are > 18 years old. Y
 ## 💡 Pro Tips for Talking with AI
 
 1. **🎯 Be specific**: Instead of "my code is broken," explain what you were trying to do, communicate to AI in a clear, specific way like talking to another human
-2. **💙 Be polite and thankful**: Research shows that when you talk to AI in a polite, encouraging way, like saying "thank you", "please", "good job!", the performance of AI increases
+2. **💙 Be polite and say "Thank you"**: Research shows that when you talk to AI in a polite, encouraging way, like saying "thank you", "please", "good job!", the performance of AI increases
 3. **➕ New conversation**: Create a new conversation window everytime you have a new question or a new task. AI can get confused when your conversation with it gets too long
 4. **📋 Share your code**: Copy and paste your R code so Claude can see the exact problem. It's even better if you can wrap your code inside of the 3 tick marks like this (AI understands that code are inside of the 3 tick marks):
 ```markdown
