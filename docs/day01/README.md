@@ -19,6 +19,34 @@ Today we'll embark on our first adventure into the magical world of R programmin
 - 🔄 Control program flow with if-else and loops
 - 🎨 Create beautiful mosaic art with code
 
+---
+
+## 👋 Let's Get to Know Each Other!
+
+![Hello GIF](https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3MngzNnRhN3lzNmhrd3Mxb2hhM200bThiaGN0YXh2bXVlNWdtZm0xYiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/26FPwppc3RioM4z6w/giphy.gif)
+
+#### 🎨 Two Truths and a Creative Lie
+*Duration: 10 minutes*
+
+**How to Play:**
+1. **For small groups** of 4-5 people. Try to sit with people you don't know very well!
+
+2. **Each person shares 3 things about themselves:**
+   - ✅ **Two TRUE things** (real facts about you)
+   - 🎭 **One CREATIVE LIE** (something fun and silly that you made up)
+
+3. **Examples to get you started:**
+   - "I have a pet turtle named Mr. Speedy"
+   - "I can speak three languages"
+   - "I once ate 15 pancakes in one sitting"
+   - "My favorite color changes every Tuesday"
+
+4. **Guess the lie!** After each person shares, everyone else tries to figure out which one is the creative lie.
+
+5. **Reveal and laugh!** Share which was the lie and tell the real story behind your truths.
+
+---
+
 ## 🗿 Building Our Magical World
 
 Before we can start our programming adventure, we need to set up our magical coding environment! Think of this like building a castle where all our R magic will live.
@@ -26,12 +54,111 @@ Before we can start our programming adventure, we need to set up our magical cod
 ### 🔮 Step 1: Create Your Coding Castle
 Head over to our [Posit Cloud Setup Guide](../setup/posit-cloud-setup.md) and create your castle.
 
-💡 **Important**: Complete the Posit Cloud setup before continuing with today's activities. This is where all your magical data science adventures will start!
+💡 **Important**: Complete the Posit Cloud setup before continuing with today's activities. This is where all your magical data science adventures will start! ✨
 
-Once you have your coding castle ready, come back here to start learning the fundamental spells of R programming! ✨
+### ☁️ Step 2: Learning more about Posit Cloud (same as R Studio interface)
 
+🎯 The Magic Interface
 
+- **📝 Editor (top left):** Your magical scroll for writing longer R spells (code).
+- **🔮 Console (bottom left):** Cast spells (code) here and see the magic happen instantly!
+- **🌳 Environment (top right):** All the magical creatures (variables, data) you create will live here.
+- **🗺️ Files & Plots (bottom right):** Find your project files and see the beautiful plots/graphs you create.
 
+![R Studio Interface](../../images/r_studio_explain.png)
+
+### 📜 Step 3: Write Your First Magical scroll ✨
+
+Ready to write your first piece of R code? We call them scripts, but think of them as magical scrolls!
+
+**1. Create Your Scroll**
+- In the top-menu, click **File** -> **New File** -> **R Script**.
+- A blank page will appear. This is where you'll write your spell!
+
+**2. Save Your Scroll**
+- Click the blue save icon (💾).
+- Name your file `my_first_spell.R` (or any other name you like) and click **Save**.
+
+**3. Write Your Spell**
+- Copy and paste the code below into your new scroll:
+```R
+# set variable a to have the value of 1
+a <- 1
+
+# set variable b to have the value of 2
+b <- 2
+
+# set variable c to have the value of (a + b)
+c <- a + b
+
+# print out the value of c
+print(c)
+```
+
+**4. Cast Your Spell!**
+
+There are a few ways to run your code:
+
+- **Run one line at a time:**
+  - Click on the line of code you want to run.
+  - Click the **Run** button, or press `Ctrl+Enter` (Windows) or `Cmd+Enter` (Mac).
+  - This is great for testing your spell line-by-line!
+
+- **Run a chunk of code:**
+  - Highlight the lines you want to run with your mouse.
+  - Click the **Run** button at the top-right of your script editor.
+  - You will see the result in the **Console** below.
+
+- **Run the whole script (Source):**
+  - Click the **Source** button to run everything in your file at once. It's like casting a big, powerful spell!
+  - You should see the number `3` appear in the console. You just did magic with code!
+
+---
+
+## ✨ Magical Tips & Tricks
+
+- 💡 **Save your work often!** Click the save icon or press `Ctrl+S` (Windows) / `Cmd+S` (Mac).
+- 🐛 **Errors are okay!** They are just clues to help you learn and fix your spell.
+- 🌈 **Make your code colorful!** Rainbow parentheses help you see where code blocks start and end. Here's how to turn them on:
+  1. Go to **Tools** -> **Global Options**.
+  2. Click **Code** on the left.
+  3. Go to the **Display** tab on the top.
+  4. Check the box for **Use rainbow parentheses**.
+  5. Click **Apply**!
+- 📝 **Name things like a wizard!** Good names help you remember what your magical creatures (variables) do:
+  - Use `snake_case` or `kabab-case` (like `my_age` or `favorite-color`)
+  - Always start with a letter, never a number (✅ `age1` ❌ `1age`)
+  - Only use lowercase letters, numbers, and `-` or `_`
+  - Make names short but meaningful (this is hard but important!)
+
+---
+
+## 🆘 Troubleshooting
+
+#### "object 'my_variable' not found"
+**What it means:** You tried to use a magical creature (variable) that R doesn't know about.
+
+**Why it happens:**
+- You forgot to create your variable first (like `my_variable <- 10`)
+- You have a typo in the name
+
+**The Fix:** Run the line that creates your variable first, then check your spelling!
+
+#### Case-Sensitivity Chaos
+**What it means:** R thinks `MyData` and `mydata` are totally different things.
+
+**Why it happens:** R is picky about capital letters.
+
+**The Fix:** Always spell your variables exactly the same way - capitals matter!
+
+#### Missing Parentheses or Quotes: ( or "
+**What it means:** You opened something but forgot to close it.
+
+**Why it happens:** Easy to forget!
+
+**The Fix:** Count your `(` and `)`, and your `"` marks. The rainbow parentheses we turned on help you see which ones match!
+
+---
 
 
 ## DELETE below
