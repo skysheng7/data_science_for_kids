@@ -25,7 +25,7 @@ Claude only allows user to register for an account if they are > 18 years old. Y
 
 1. 💬 You will see a conversation box where you can ask Claude questions
 2. 🎯 Try this first message:
-   ```markdown
+   ````
    Hi Claude! I'm learning R programming in a kids' data science camp. 
    Can you help me understand what this code does? What does the "<-" mean?
    
@@ -37,7 +37,7 @@ Claude only allows user to register for an account if they are > 18 years old. Y
       print(c+1)
       ```
 
-   ```
+   ````
 3. 📖 Read Claude's explanation
 4. 🎉 You're ready to learn and code with Claude!
 
@@ -83,14 +83,14 @@ Claude only allows user to register for an account if they are > 18 years old. Y
 1. **🎯 Be specific**: Instead of "my code is broken," explain what you were trying to do, communicate to AI in a clear, specific way like talking to another human
 2. **💙 Be polite and say "Thank you"**: Research shows that when you talk to AI in a polite, encouraging way, like saying "thank you", "please", "good job!", the performance of AI increases
 3. **➕ New conversation**: Create a new conversation window everytime you have a new question or a new task. AI can get confused when your conversation with it gets too long
-4. **📋 Share your code**: Copy and paste your R code so Claude can see the exact problem. It's even better if you can wrap your code inside of the 3 tick marks like this (AI understands that code are inside of the 3 tick marks):
-```markdown
+4. **📋 Share your code**: Copy and paste your R code so Claude can see the exact problem. It's even better if you can wrap your code inside of the 3 tick marks like this:
+````
 
    ```
    INSERT YOUR CODE HERE
    ```
 
-```
+````
 5. **🫨 Debug errors**: If you encounter errors that you don't know how to fix, copy and paste the entire error message to Claude and asks it to explain the problem
 6. **🤔 Ask "why"**: Don't just ask for fixes - ask Claude to explain why something works
 7. **🎮 Make it fun**: Ask Claude to suggest creative coding challenges

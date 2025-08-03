@@ -17,7 +17,6 @@ parts:
   - file: docs/setup/posit-cloud-setup
   - file: docs/setup/claude-setup
   - file: docs/setup/local-rstudio-setup
-  - file: docs/setup/online-alternatives
 - caption: References
   chapters:
   - file: docs/references/index

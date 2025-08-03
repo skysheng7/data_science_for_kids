@@ -15,7 +15,7 @@ Welcome to the setup guide for our the camp! Choose your adventure path below.
 - Same interface as professional data scientists
 - All packages pre-installed
 
-## 🤖 AI Assistant Setup
+## 🤖 AI Assistant Setup with Parents
 
 ### [💬 Claude AI Setup](claude-setup.md)
 *Your friendly programming helper*
