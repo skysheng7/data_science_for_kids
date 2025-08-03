@@ -39,7 +39,7 @@ Welcome to an enchanting adventure where mathematics meets magic, and data tells
 
 ## 👩‍🏫 Meet Your Instructor
 
-**Sky (Kehan) Sheng** is a PhD candidate at UBC conducting interdisciplinary research in animal welfare science, data science, and AI bias. Sky is passionate about making data science and AI accessible and fun for young learners.
+**Sky (Kehan) Sheng** is a PhD candidate at UBC conducting interdisciplinary research in data science, AI bias, and animal welfare science. Sky is passionate about making data science and AI accessible and fun for young learners.
 
 ## 🙏 Acknowledgments
 
