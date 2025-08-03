@@ -23,7 +23,7 @@ Today we'll embark on our first adventure into the magical world of R programmin
 
 ## 👋 Let's Get to Know Each Other!
 
-![Hello GIF](https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3MngzNnRhN3lzNmhrd3Mxb2hhM200bThiaGN0YXh2bXVlNWdtZm0xYiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/26FPwppc3RioM4z6w/giphy.gif)
+<img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3MngzNnRhN3lzNmhrd3Mxb2hhM200bThiaGN0YXh2bXVlNWdtZm0xYiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/26FPwppc3RioM4z6w/giphy.gif" alt="Hello GIF" style="width: 100%; height: auto;">
 
 #### 🎨 Two Truths and a Creative Lie
 *Duration: 10 minutes*
@@ -113,9 +113,7 @@ There are a few ways to run your code:
   - Click the **Source** button to run everything in your file at once. It's like casting a big, powerful spell!
   - You should see the number `3` appear in the console. You just did magic with code!
 
----
-
-## ✨ Magical Tips & Tricks
+### ✨ Magical Tips & Tricks
 
 - 💡 **Save your work often!** Click the save icon or press `Ctrl+S` (Windows) / `Cmd+S` (Mac).
 - 🐛 **Errors are okay!** They are just clues to help you learn and fix your spell.
@@ -131,9 +129,7 @@ There are a few ways to run your code:
   - Only use lowercase letters, numbers, and `-` or `_`
   - Make names short but meaningful (this is hard but important!)
 
----
-
-## 🆘 Troubleshooting
+### 🆘 Troubleshooting
 
 #### "object 'my_variable' not found"
 **What it means:** You tried to use a magical creature (variable) that R doesn't know about.
