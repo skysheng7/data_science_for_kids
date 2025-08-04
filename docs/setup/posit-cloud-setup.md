@@ -49,8 +49,12 @@ print("Hello, magical data world!")
 ```
 
 Feel free to print out anything else you would like to try!
+
 4. ⏎ Press Enter
+
 5. 🎉 You should see your message appear!
+
+<img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3dGYwbzBkZDZ3bWF4eHh6dDUwMzBqdWhxcWo4ajIyMzI0YWh5OG11eCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/TXJiSN8vCERuE/giphy.gif" alt="celebrate2" style="width: 100%; height: auto;">
 
 ## 🆘 Troubleshooting
 

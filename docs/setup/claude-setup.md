@@ -107,6 +107,8 @@ Perfect workflow for our camp:
 5. 💻 Apply what you learned back in Posit Cloud
 6. 🎉 Celebrate your new understanding!
 
+<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOGlrdG0yZWU0cWh4b2pqdHN0NnJoMXF1Y3JhdnQwYmhycGsxcDJ6MSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/mBj4vm2vKTOXhoQ0jc/giphy.gif" alt="happy" style="width: 100%; height: auto;">
+
 ## 🆘 Troubleshooting
 
 **"I can't create an account"**
@@ -124,5 +126,6 @@ Perfect workflow for our camp:
 - Double-check you copied the code exactly
 - AI isn't perfect - that's why you are the one in charge to decide what is right and wrong!
 - Ask your instructor to help debug
+
 
 

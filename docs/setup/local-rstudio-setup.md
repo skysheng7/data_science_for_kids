@@ -110,3 +110,5 @@ Good news! You can use both:
 - ☁️ **Posit Cloud** for camp activities and collaboration
 - 📤 **Export projects** from cloud to local when camp ends
 - 📥 **Import projects** from local to cloud if needed
+
+<img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3dTJtNXpmYnY2eW9kb3FhbnV0OXpwbW11em81NzVuZjhxbjlobGI3eCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/HyanD1KpfzPiw/giphy.gif" alt="celebrate3" style="width: 100%; height: auto;">
