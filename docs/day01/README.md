@@ -314,7 +314,6 @@ In 1947, computer scientist Grace Hopper found an actual moth stuck in a the pow
 
 ![bug](../../images/bug.png)
 
-
 ---
 
 ## 3. 🪄 Making Magical Decisions: If-Else Adventures
