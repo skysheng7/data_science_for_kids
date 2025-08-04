@@ -3,7 +3,7 @@ layout: default
 title: Day 1 - Basic Programming Magic
 ---
 
-# 🏔️ Day 1: Basic Programming Magic in R
+# 🏰 Day 1: Basic Programming Magic in R
 
 *Welcome to the Magic Forest where Oda the Data Otter teaches you the secret spells of programming!*
 

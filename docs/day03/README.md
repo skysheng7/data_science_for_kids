@@ -3,7 +3,7 @@ layout: default
 title: Day 3 - Statistics Safari
 ---
 
-# 🐄 Day 3: Introduction to Frequentist Statistics
+# 🌿 Day 3: Introduction to Frequentist Statistics
 
 *Welcome to Statistics Safari where we measure cow heights and count strawberry candies!*
 

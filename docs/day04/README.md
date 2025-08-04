@@ -3,7 +3,7 @@ layout: default
 title: Day 4 - Machine Learning Quest
 ---
 
-# 🤖 Day 4: Introduction to Machine Learning
+# 🪄 Day 4: Introduction to Machine Learning
 
 *Welcome to the Machine Learning Quest where algorithms learn to make predictions!*
 

@@ -3,7 +3,7 @@ layout: default
 title: Day 2 - Data Storytelling
 ---
 
-# 📊 Day 2: Data Wrangling and Visualization
+# 🎨 Day 2: Data Wrangling and Visualization
 
 *Welcome to the Data Detective Academy where datasets tell amazing stories!*
 

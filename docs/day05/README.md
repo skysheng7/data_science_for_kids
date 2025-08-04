@@ -3,7 +3,7 @@ layout: default
 title: Day 5 - AI & Neural Networks
 ---
 
-# 🧠 Day 5: Neural Networks and AI Ethics
+# 🧙‍♀️ Day 5: Neural Networks and AI Ethics
 
 *Welcome to the AI Academy where we explore neural networks and discuss the future of artificial intelligence!*
 
