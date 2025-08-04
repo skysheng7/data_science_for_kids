@@ -48,8 +48,6 @@ https://shorturl.at/iM1Hk
 print("Hello, magical data world!")
 ```
 
-Feel free to print out anything else you would like to try!
-
 4. ⏎ Press Enter
 
 5. 🎉 You should see your message appear!

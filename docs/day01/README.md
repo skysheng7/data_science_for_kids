@@ -47,19 +47,19 @@ Today we'll embark on our first adventure into the magical world of R programmin
 
 ---
 
-## 🗿 Building Our Magical World
+## 1. 🗿 Building Our Magical World
 *Duration: 35 minutes*
 
 Before we can start our programming adventure, we need to set up our magical coding environment! Think of this like building a castle where all our R magic will live.
 
-### 🔮 Step 1: Create Your Coding Castle
+### 🏰 Step 1: Create Your Coding Castle
 Head over to our [Posit Cloud Setup Guide](../setup/posit-cloud-setup.md) and create your castle.
 
 💡 **Important**: Complete the Posit Cloud setup before continuing with today's activities. This is where all your magical data science adventures will start! ✨
 
 ### ☁️ Step 2: Learning more about Posit Cloud (same as R Studio interface)
 
-🎯 The Magic Interface
+*The Magic Interface*
 
 - **📝 Editor (top left):** Your magical scroll for writing longer R spells (code).
 - **🔮 Console (bottom left):** Cast spells (code) here and see the magic happen instantly!
@@ -68,7 +68,36 @@ Head over to our [Posit Cloud Setup Guide](../setup/posit-cloud-setup.md) and cr
 
 ![R Studio Interface](../../images/r_studio_explain.png)
 
-### 📜 Step 3: Write Your First Magical scroll ✨
+### 🖨️ Step 3: Practice Print Statement
+
+🎈 **Activity: Magical Print Adventure!**
+
+Time to practice your first spell - the `print()` command! This magical spell makes words appear on your screen.
+
+**How to cast the spell:**
+1. In the Console (bottom left), type: `print("Write down what you want to say!")`
+2. Press **Enter** and watch the magic happen! ✨
+
+**Some print ideas:**
+- `print("My name is [YOUR NAME]")`
+- `print("🦦 Oda the Data Otter says hi!")`
+- `print("Fun fact: Otters hold hands when they sleep!")`
+- `print("✨ I can make the computer talk to me! ✨")`
+- `print("🎉 This is my first day as a data scientist! 🎉")`
+
+**💡 Pro Tips:**
+- Don't forget the quotation marks " " around your text!
+- You can use emojis to make your messages more fun
+- Each print statement creates a new line
+
+**🐛 Common Mistake:** 
+- Forgetting the quotation marks - R needs them to know it's text!
+- Forgetting the right parenthesis - R needs () both, like minions has 2 arms, it needs 2 arms to hug your sentence!
+
+<img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3YWk2aHhkZTNyaHNubm9tbHRod3o2eGY2a3lzaGxuZTN1bGt6bmVpeCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/VNNyo3QioK6re/giphy.gif" alt="minion2arm" style="width: 100%; height: auto;">
+
+
+### 📜 Step 4: Write Your First Magical scroll ✨
 
 Ready to write your first piece of R code? We call them scripts, but think of them as magical scrolls!
 
@@ -118,11 +147,172 @@ There are a few ways to run your code:
 
 ---
 
+## 2. 🧙‍♀️ Understanding Your First Magical Scroll
 
+Great job creasting your first magical scroll! But what exactly happened? Let's break down the magic step by step.
+
+### 2.1 💬 Comments: Messages to Future You
+
+First, notice the lines that start with `#`. These are called **comments**:
+
+```R
+# set variable a to have the value of 1
+```
+
+💡 **What are comments?**
+- Comments are notes you write to yourself (and others) to explain what your code does
+- The computer ignores everything after the `#` symbol
+- Think of them as sticky notes on your magical scrolls!
+
+💡 **Why use comments?**
+- They help you remember what you were thinking
+- They help others understand your magic
+- They make finding and fixing mistakes easier!
+
+🎈 **Try this:** 
+- Add a comment to your spell that says what the final answer should be!
+- Add a comment at the begining of the magical scroll to sign your name:
+```R
+# This magical scroll belongs to: YOUR NAME
+```
+
+### 2.2 🏷️ Variables: Magical Storage Boxes
+
+The real magic happens with **variables**. Think of variables as magical storage boxes with labels:
+
+```R
+a <- 1    # Put the number 1 in a box labeled "a"
+b <- 2    # Put the number 2 in a box labeled "b"
+c <- a + b # Take what's in box "a" and "b", add them, put result in box "c"
+```
+
+The `<-` symbol is like an arrow pointing into the box. It means "store this value here."
+
+### 2.3 🏷️ Variable Naming: Like Naming Your Pet!
+
+In everyday life, we give names to complicated things to make talking easier. Instead of saying "that furry animal with 4 legs that barks and wags its tail," we just say "dog!" 
+
+In R, we do the same thing with data - we give it names so we can use it easily later.
+
+```R
+result <- 3*2 + 5
+result
+# [1] 11
+```
+
+When R runs this code, it first calculates `3*2 + 5` (which equals 11), then stores that number in a box labeled `result`.
+
+**🎯 Variable Naming Rules:**
+- Can use letters (A-Z, a-z), numbers, underscores (_), and dots (.)
+- **Cannot start with a number** (like `2cats` ❌)
+- **Cannot have spaces** (use `my_cat` not `my cat` ❌)
+- **Case matters** - `Result` and `result` are different!
+
+**💡 Good naming style (like good pet names!):**
+- Use lowercase letters: `my_age` ✅
+- Use underscores for spaces: `favorite_color` ✅  
+- Make names meaningful: `student_count` ✅ (not just `a`, or `b` ❌)
+
+### 2.4 🌊 Data Types: The Four Magical Islands
+
+Just like Oda's ocean has different islands, R has different types of data:
+
+1. **🔢 Integer Island** - Whole numbers (1, 5, 100)
+2. **🔢 Numeric Island** - Decimal numbers (1.5, 3.14, 2.7)  
+3. **📝 Character Island** - Words and letters ("hello", "Oda")
+4. **✅ Logical Island** - True or False (TRUE, FALSE)
+
+#### 🎈 Activity: Data Islands Adventure!
+
+Time to explore the data islands! We'll divide the room in half and create a magical data world.
+
+**Setup:**
+- **Half the room = Variable Boxes**
+  - students get empty boxes
+  - ‼️ TODO: Please write your own variable names on the box
+- **Half the room = Values** (will get cards after forming islands)
+
+##### **Round 1: Form the Data Islands**
+1. **Value students form four islands in different corners:**
+   - Integer Island (whole numbers)
+   - Numeric Island (decimal numbers)  
+   - Character Island (words)
+   - Logical Island (TRUE/FALSE)
+2. **Instructor gives out blank value cards to each island**
+3. **Students write their own values based on their island type:**
+   - Integer Island: whole numbers (e.g., 1, 5, 10, 25)
+   - Numeric Island: decimal numbers (e.g., 1.5, 3.14, 2.7, 5.8)
+   - Character Island: words (e.g., "Oda", "magic", "otter", "data")
+   - Logical Island: TRUE or FALSE
+
+##### **Round 2: Variable Assignment**
+1. **Instructor calls out assignments:** e.g., "box_1 gets assigned the value 5!"
+2. **Value students find their matching Variable student** and link arms
+3. **Practice saying:** "I am [variable name] and I store [value]!"
+
+##### **Round 3: Magical Calculations**
+1. **Instructor holds a calculation box** labeled `result`
+2. **Simple addition:** "Add up all students from Integer Island!"
+3. **Variable + Value pairs come together and hold hands**
+4. **Instructor gets the final answer** and becomes e.g., `result <- 41`
+
+##### **Round 4: Variable Updates**
+1. **Update a variable:** "box_1, please throw away your old value, you now store 100."
+2. **Repeat the calculation** - different result!
+3. **Important lesson:** Variables can change, calculations give new results!
+
+##### **Round 5: Order of Operations Magic**
+1. **Big calculation:** `result <- 4 + 3*4`
+2. **Show the steps:**
+   - First: `3*4` students hold hands → make 12
+   - Then: `4 + 12` → make 16  
+   - Finally: assign 16 to `result`
+3. **Key lesson:** Multiplication happens before addition, before value assignment to variables!
+
+
+### 2.5 💥 Errors
+
+🐛 **Don't worry - Everyone makes mistakes when coding!**
+
+R is like learning a new language! Just like human languages, R has rules. But R is different from human languages in two important ways:
+
+1. **The rules are simple** - You can learn most of them in just a few weeks!
+2. **The rules are strict** - Unlike humans who can understand you even with small mistakes, computers need you to follow the rules exactly.
+
+Even Oda the Otter makes mistakes when casting data spells! When you forget something in your code, R will show you an error message to help you fix it.
+
+**🎈 Let's try making a mistake on purpose:**
+
+In the Console, try typing this **broken** spell:
+```R
+print("My favorite number is " + 1)
+```
+
+**What happened?** 
+- R shows you an error message like "non-numeric argument to binary operator"
+- This means you can't add text ("My favorite number is ") and numbers (1) together - they're different types!
+
+**How to fix it:**
+```R
+print("My favorite number is 1")  # ✨ Now it works!
+```
+
+**💡 Common Beginner Mistakes:**
+- Forgetting the closing `)` parenthesis
+- Forgetting quotation marks `"`
+- Mixing up different data types
+
+**🎯 The Most Important Skill: Debugging!**
+Learning to find problems, fix them, and move on is one of the MOST important skill in coding. Even your instructor makes errors every day! The secret is:
+1. **Find the problem** (read the error message)
+2. **Fix it** (make the change)
+3. **Move on** (keep coding!)
+
+This skill will make you a coding superhero! 🦸‍♀️🦸‍♂️
 
 ---
 
-### ✨ Magical Tips & Tricks
+## 3. ✨ Magical Tips & Tricks
 
 - 💡 **Save your work often!** Click the save icon or press `Ctrl+S` (Windows) / `Cmd+S` (Mac).
 - 🐛 **Errors are okay!** They are just clues to help you learn and fix your spell.
@@ -138,7 +328,7 @@ There are a few ways to run your code:
   - Only use lowercase letters, numbers, and `-` or `_`
   - Make names short but meaningful (this is hard but important!)
 
-### 🆘 Troubleshooting
+## 4. 🆘 Troubleshooting
 
 #### "object 'my_variable' not found"
 - **What it means:** You tried to use a magical creature (variable) that R doesn't know about.

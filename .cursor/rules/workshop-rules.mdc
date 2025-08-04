@@ -36,11 +36,12 @@ This repository contains materials for a 5-day, 3-hour per day, Data Science for
 ### Comment Guidelines
 - Start every script with a magical story setup following the theme of otter wizard
 - Use emoji to indicate different types of comments
-- 🔮 = Learning objective
-- 🎯 = Activity goal
+- 🎯 = Learning objective
+- 🎈 = Activity
 - 💡 = Pro tip or hint
 - 🐛 = Common mistake to avoid
 - ✨ = Creative extension idea
+- 🎉 = Congradulations
 
 ## Activity Design Principles
 
