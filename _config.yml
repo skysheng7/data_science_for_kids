@@ -7,6 +7,12 @@ copyright: "2025"
 logo: images/logo2.png
 only_build_toc_files: true # only build the files listed under _toc.yml
 
+# Exclude directories and files from build
+exclude_patterns:
+  - girls-in-DS-main/**
+  - .virtual_documents/**
+  - .ipynb_checkpoints/**
+
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
 execute:
