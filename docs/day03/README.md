@@ -20,4 +20,4 @@ Today we'll explore the fascinating world of statistics using hands-on activitie
 
 ## 📚 Today's Magical Concepts
 
-*Content will be added soon!*
+*Content will be added when the camp starts!*

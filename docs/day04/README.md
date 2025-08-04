@@ -20,4 +20,4 @@ Today we'll dive into the exciting world of machine learning! You'll understand 
 
 ## 📚 Today's Magical Concepts
 
-*Content will be added soon!*
+*Content will be added when the camp starts!*

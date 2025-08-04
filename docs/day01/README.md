@@ -135,27 +135,21 @@ There are a few ways to run your code:
 ### 🆘 Troubleshooting
 
 #### "object 'my_variable' not found"
-**What it means:** You tried to use a magical creature (variable) that R doesn't know about.
-
-**Why it happens:**
-- You forgot to create your variable first (like `my_variable <- 10`)
-- You have a typo in the name
-
-**The Fix:** Run the line that creates your variable first, then check your spelling!
+- **What it means:** You tried to use a magical creature (variable) that R doesn't know about.
+- **Why it happens:**
+  - You forgot to create your variable first (like `my_variable <- 10`)
+  - You have a typo in the name
+- **The Fix:** Run the line that creates your variable first, then check your spelling!
 
 #### Case-Sensitivity Chaos
-**What it means:** R thinks `MyData` and `mydata` are totally different things.
-
-**Why it happens:** R is picky about capital letters.
-
-**The Fix:** Always spell your variables exactly the same way - capitals matter!
+- **What it means:** R thinks `MyData` and `mydata` are totally different things.
+- **Why it happens:** R is picky about capital letters.
+- **The Fix:** Always spell your variables exactly the same way - capitals matter!
 
 #### Missing Parentheses or Quotes: ( or "
-**What it means:** You opened something but forgot to close it.
-
-**Why it happens:** Easy to forget!
-
-**The Fix:** Count your `(` and `)`, and your `"` marks. The rainbow parentheses we turned on help you see which ones match!
+- **What it means:** You opened something but forgot to close it.
+- **Why it happens:** Easy to forget!
+- **The Fix:** Count your `(` and `)`, and your `"` marks. The rainbow parentheses we turned on help you see which ones match!
 
 ---
 
@@ -269,55 +263,6 @@ for (i in 1:5) {
 colors <- c("red", "blue", "green", "purple")
 plot(1:10, 1:10, col = colors, pch = 19, cex = 3)
 ```
-
-## 🎒 Materials Needed
-
-### For Students:
-- 💻 Laptop with internet connection
-- 🔗 Posit Cloud account (set up in advance)
-- 🤖 Claude AI account (optional but recommended)
-- ✏️ Notebook and pencil for planning
-
-### For Instructor:
-- 📊 Projector for code demonstrations
-- 🧸 Physical props for data type explanations
-- 📋 Printed backup activities (in case of tech issues)
-- ⏰ Timer for activities
-
-## 🎯 Success Indicators
-
-By the end of Day 1, students should be able to:
-
-- ✅ Write and run basic R code in Posit Cloud
-- ✅ Explain what variables are and create their own
-- ✅ Identify different data types in R
-- ✅ Write a simple for loop
-- ✅ Use if-else statements for basic decisions
-- ✅ Create a colorful plot or pattern
-- ✅ Help a classmate debug simple code issues
-- ✅ Feel excited about tomorrow's data adventures!
-
-## 🌟 Homework & Extensions
-
-### 🎯 Required Reflection (10 minutes):
-Write 3 sentences about:
-1. What was your favorite part of today?
-2. What was the most challenging concept?
-3. What are you excited to learn tomorrow?
-
-### ✨ Optional Extensions:
-- Modify your mosaic art with different colors or patterns
-- Create a for loop that counts down from 10 to 1
-- Think of three things in your daily life that involve "data"
-- Explore additional plot types in R (with parent/guardian)
-
-## 🔗 Quick Links
-
-- 📂 [Activities Folder](activities/) - All today's coding files
-- 📊 [Datasets Folder](datasets/) - Data files for today's activities  
-- ✅ [Solutions Folder](solutions/) - Sample solutions (for instructors)
-- 🆘 [Troubleshooting Guide](../resources/troubleshooting.md) - Common issues and fixes
-- 🤖 [Ask Claude for Help](../setup/claude-setup.md) - AI assistant guidance
 
 ---
 

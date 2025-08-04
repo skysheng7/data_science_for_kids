@@ -20,4 +20,4 @@ Today we'll learn how to be data detectives! We'll discover how functions work, 
 
 ## 📚 Today's Magical Concepts
 
-*Content will be added soon!*
+*Content will be added when the camp starts!*
