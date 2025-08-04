@@ -312,7 +312,10 @@ This skill will make you a coding superhero! 🦸‍♀️🦸‍♂️
 
 In 1947, computer scientist Grace Hopper found an actual moth stuck in a the powerful computer Mark II at Harvard, which caused the computer to break down! She taped it in her logbook and wrote "First actual case of bug being found." Since then, we call computer problems "bugs" and fixing them "debugging"! 🐛
 
-![bug](../../images/bug.png)
+```{image} ../../images/bug.png
+:alt: bug
+:width: 60%
+```
 
 ---
 
@@ -455,7 +458,7 @@ if (my_favorite_number > 5) {
 }
 ```
 
-#### 🎈 Activity: Try It Yourself!
+##### 🎈 Activity: Try It Yourself!
 1. Change `my_favorite_number` to different values (try 3, 10, 1)
 2. Run the code each time - what happens?
 3. **Challenge:** Can you predict the message before running it?
@@ -476,7 +479,7 @@ if (favorite_color == "red") {
 }
 ```
 
-#### 🎈 Activity: Customize Your Color Magic!
+##### 🎈 Activity: Customize Your Color Magic!
 1. Change `favorite_color` to your actual favorite color
 2. If your color isn't there, what message do you get?
 3. **Extension:** Add your favorite color with a special message!
@@ -497,40 +500,265 @@ if (mystery_number < 10) {
 }
 ```
 
-### 3.3 🧠 Understanding Decision Logic
+##### 🎈 Activity: Number Range Challenge!
+1. Try these mystery numbers: 5, 25, 75, 150
+2. **Predict first:** Which otter will you get for each number?
+3. **Challenge:** What happens if you use 0 or negative numbers?
 
-#### The Magical Comparison Symbols:
+#### ✨ Spell 4: AND Condition Magic (Both Things Must Be True!)
+```R
+# 🎭 Oda's perfect day detector
+temperature <- 25
+weather <- "sunny"
+
+if (temperature > 20 & weather == "sunny") {
+  print("🏖️ Perfect day for swimming and playing!")
+  print("🦦 Oda is super happy!")
+} else {
+  print("🏠 Maybe it's a good day to stay inside and code!")
+}
+```
+
+##### 🎈 Activity: Weather Wizard!
+1. Try these combinations and see what Oda does:
+   - `temperature <- 15` and `weather <- "sunny"`
+   - `temperature <- 25` and `weather <- "rainy"`
+   - `temperature <- 30` and `weather <- "sunny"`
+
+#### ✨ Spell 5: OR Condition Magic (Either Thing Can Be True!)
+```R
+# 🍎 Oda's snack time detector
+snack <- "apple"
+
+if (snack == "apple" | snack == "banana" | snack == "carrot") {
+  print("🥰 Yummy! Oda loves healthy snacks!")
+  print("💪 This will give me energy for coding!")
+} else if (snack == "cookie" | snack == "candy") {
+  print("🍪 Sweet treat! But just a little bit!")
+} else {
+  print("🤔 Hmm, Oda isn't sure about this snack...")
+}
+```
+
+##### 🎈 Activity: Snack Sorter!
+1. Test with these snacks: "apple", "cookie", "pizza", "banana"
+2. **Extension:** Add your favorite snack to one of the categories!
+3. **Question:** What happens if you type "Apple" with a capital A?
+
+#### ✨ Spell 6: Age Group Sorter (Like the Physical Activity!)
+```R
+# 🎂 Oda's age group magic (just like our shirt color game!)
+age <- 4
+
+if (age < 6) {
+  print("🐣 Little explorer - just starting the adventure!")
+} else if (age >= 6 & age <= 9) {
+  print("🧸 Young adventurer - ready for fun!")
+} else if (age >= 10 & age <= 14) {
+  print("🧙‍♀️ Data wizard in training - that's you!")
+} else if (age >= 15 & age <= 18) {
+  print("🚀 Teen tech master - almost ready to rule the world!")
+} else {
+  print("🎓 Wise adult - teaching the next generation!")
+}
+```
+
+##### 🎈 Activity: Age Detective Challenge!
+1. Try your real age and see what message you get!
+2. Try ages: 5, 8, 12, 16, 25
+3. Family Fun: Try your family members' ages!
+
+#### ✨ Spell 7: Multiple Actions Spell (Do Several Things!)
+```R
+# 🎪 Oda's magic show with multiple tricks
+magic_word <- "abracadabra"
+
+if (magic_word == "abracadabra") {
+  print("✨ *Sparkles appear in the air*")
+  print("🎩 *A rabbit pops out of the hat*")
+  print("🌟 *The crowd cheers loudly*")
+  print("🦦 Oda takes a bow!")
+} else if (magic_word == "alakazam") {
+  print("💥 *Thunder sound effect*")
+  print("🎆 *Colorful fireworks explode*")
+  print("🦦 Oda does a backflip!")
+} else {
+  print("😅 Oops! That's not a magic word Oda knows...")
+  print("💡 Try 'abracadabra' or 'alakazam'!")
+}
+```
+
+##### 🎈 Activity: Build Your Own Magic Show!
+1. Try both magic words and see the different shows!
+2. **Creative Challenge:** Add a third magic word with your own magic show!
+3. **Question:** Why do we use multiple `print()` statements?
+
+![spell](https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3bGtnbzd4cHdtbW80dTlpaTN3bDU3dHZpbzMxNmpxbGtmc29oOXQzMiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/jnhXd7KT8UTk5WIgiV/giphy.gif)
+
+#### ✨ Spell 8: No Else Challenge (Sometimes Nothing Happens!)
+```R
+# 🏆 Oda's achievement unlocked detector
+points <- 85
+
+if (points >= 100) {
+  print("🏆 LEGENDARY! You're a coding master!")
+}
+
+if (points >= 75) {
+  print("⭐ AWESOME! You're doing great!")
+}
+
+if (points >= 50) {
+  print("👍 GOOD JOB! Keep practicing!")
+}
+
+# Notice: No "else" - you might get multiple messages!
+print(paste("🎯 You have", points, "points total!"))
+```
+
+##### 🎈 Activity: Achievement Hunter!
+1. Try these point values: 30, 60, 80, 120
+2. **Question:** Why might someone get multiple achievement messages?
+3. **Challenge:** What's the minimum points to get all three achievements?
+
+<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZHIzaXRidmk4NTQ1aW1ueHY2c25iYXEwM2Y2Y3JydHViNTJhNHhtNCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/2gZ6JM7dyL8r2YZGzM/giphy.gif" alt="celebrate" style="width: 100%; height: auto;">
+
+### 3.3 🎯 The Magic of Code Order!
+
+#### 💡 Why Sequence Matters in Magic Spells!
+Just like Oda must perform her magic spells in the right order, **the sequence of code matters!** Let's discover why with some magical experiments!
+
+#### ✨ Spell 9A: Order Matters - The Racing Game!
+```R
+# 🏁 Oda's magical racing game - Position matters!
+position <- 2
+
+# Version 1: Check from FIRST place to LAST place
+if (position == 1) {
+  print("🥇 GOLD MEDAL! You're the champion!")
+} else if (position == 2) {
+  print("🥈 SILVER MEDAL! Amazing job!")
+} else if (position == 3) {
+  print("🥉 BRONZE MEDAL! Great effort!")
+} else {
+  print("👏 Good race! Keep practicing!")
+}
+```
+
+#### ✨ Spell 9B: Wrong Order - The Broken Magic!
+```R
+# ⚠️ What happens if we check from LAST place to FIRST place?
+position <- 2
+
+# Version 2: This might not work as expected!
+if (position >= 1) {  
+  print("👏 Good race! Keep practicing!")
+} else if (position == 1) {  
+  print("🥇 GOLD MEDAL! You're the champion!")
+} else if (position == 2) {  
+  print("🥈 SILVER MEDAL! Amazing job!")
+}
+```
+
+##### 🎈 Activity: Code Detective!
+1. Try both versions with position = 1, 2, and 3
+2. **Question:** Why does Version 2 always say "Good race!" even for 1st place?
+3. **Discovery:** Which conditions will NEVER run in Version 2 and why?
+
+#### ✨ Spell 10: String Detective (Text Comparison Magic!)
+```R
+# 🔍 Oda is trying to find a old friend of her, whose name is Mike
+name <- "Mike"
+
+if  (nchar(name) <= 4){
+  print("📝 You have a nice short name!")
+} else if (name == "mike" | name == "Mike" | name == "Michael" | name == "michael"){
+  print("👥 Hi Mike, long time no see! I've caught some clams today! 🌊 🐚 🦪")
+} else if (nchar(name) >= 8) {
+  print("📚 Wow! You have a beautifully long name!")
+} else {
+  print("✨ You have a perfectly medium-sized name!")
+}
+
+# Bonus: Count the letters in your name!
+print(paste("🔢 Your name has", nchar(name), "letters!"))
+```
+
+##### 🎈 Activity: Name Explorer!
+1. Try your real name and see what category you get!
+2. Try these names: "Jo", "Elizabeth", "Sam", "Christopher"
+3. **Question:** What does `nchar()` do? Try it with different words!
+4. **Challenge:** Why can't Oda ever find Mike? Can you fix this code so that Oda can find Mike?
+
+![what](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNG9ocWlpcW1vMXJsazQ4MGRzOGswa2psMjNlYWtmYzF6a3ZjNHFyaSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/SqmkZ5IdwzTP2/giphy.gif)
+
+#### 🎉 **Congratulations! You're a Decision-Making Wizard!**
+
+#### ✨ **Creative Extension Ideas:**
+- Create a "What should I wear today?" decision tree using temperature ranges
+- Build a "What's my spirit animal?" quiz using age ranges
+- Make a "How many hours of sleep do I need?" advisor using age groups
+- Design a "What sport should I try?" recommender using height ranges
+
+
+### 3.4 🧠 Understanding Decision Logic
+
+#### The Magical Comparison and Condition Symbols:
 - `==` means "is exactly equal to" (like twin otters! 🦦 == 🦦)
 - `>` means "is greater than" (elephant is larger than otter 🐘 > 🦦)
 - `<` means "is less than" (mouse is smaller than otter! 🐭 < 🦦)
 - `>=` means "greater than or equal to" 
 - `<=` means "less than or equal to"
 - `!=` means "is NOT equal to" (otters are different from birds! 🦦 != 🐧)
+- `|` means "or" (I would like to meet Mr. Fish or Mrs. Oda today: 🐟 or 🦦)
+- `&` means "and" (I like otter and elephant 🐘 & 🦦)
 
-#### 💡 Important Rules:
-1. **Use `==` for comparison, not `=`** 
-   - `=` assigns a value (like `<-`)
-   - `==` checks if two things are the same
-2. **Conditions go in parentheses:** `if (condition)`
-3. **Actions go in curly braces:** `{ action }`
-4. **Only ONE path gets chosen** - just like our physical game!
+#### ✨ Spell 11: Temperature Zone Detective (Real World >= <= Examples!)
+```R
+# 🌡️ Oda's temperature zone detector
+temperature <- 22  # In Celsius
 
-### 3.4 🎮 Challenge: Build Your Own Decision Tree!
+if (temperature <= 0) {
+  print("🧊 FREEZING! Time for hot cocoa and warm blankets!")
+  print("🦦 Oda is wearing a thick winter coat!")
+} else if (temperature >= 1 & temperature <= 10) {
+  print("🥶 COLD! Perfect sweater weather!")
+} else if (temperature >= 11 & temperature <= 20) {
+  print("😊 COOL! Great for a light jacket!")
+} else if (temperature >= 21 & temperature <= 30) {
+  print("☀️ WARM! Perfect for playing outside!")
+} else if (temperature >= 31) {
+  print("🔥 HOT! Time for swimming and ice cream!")
+  print("🦦 Oda jumps in the river to cool off!")
+} else {
+  print("🤔 Something seems fishy with this temperature...")
+}
+```
+
+##### 🎈 Activity: Weather Station!
+1. Try these temperatures: -5, 5, 15, 25, 35
+2. **Real World:** Check today's actual temperature and see what Oda says!
+3. **Question:** Why do we use `>=` and `<=` instead of just `>` and `<`?
+4. **Errors:** What input would cause R to generate errors?
+
+### 3.5 🎮 Challenge: Build Your Own Decision Tree!
 
 Create a magical creature classifier! Copy this code and fill in the blanks:
 
+#### ✨ Spell 12: Magical creature detector!
+
 ```R
 # 🦄 Magical Creature Classifier
-creature_size <- "medium"  # Try: "tiny", "medium", "huge"
+creature_size <- 50   # Size in cm - Try: 10, 50, 200
 creature_color <- "purple" # Try: "purple", "gold", "rainbow"
 
-if (creature_size == "tiny") {
+if (creature_size <= 20) {
   if (creature_color == "purple") {
     print("🧚‍♀️ You found a tiny fairy!")
   } else {
     print("🐛 You found a magical bug!")
   }
-} else if (creature_size == "medium") {
+} else if (creature_size >= 21 & creature_size <= 100) {
   if (creature_color == "purple") {
     print("🦄 You found a unicorn!")
   } else if (creature_color == "gold") {
@@ -538,17 +766,23 @@ if (creature_size == "tiny") {
   } else {
     print("🦦 You found Oda the Otter!")
   }
-} else {
+} else if (creature_size >= 101) {
   print("👹 You found a friendly giant!")
 }
+
 ```
 
-**🎯 Your Mission:**
-1. Try different combinations of `creature_size` and `creature_color`
-2. Add a new size option ("enormous") with your own magical creature
+##### 🎈 Activity: Create your own creature:**
+1. Try different combinations of `creature_size` (15, 50, 150) and `creature_color`
+2. Add a new size range (maybe 101-300 for "large" creatures) with your own magical creature
 3. Add a new color option with your own special message
+4. **Challenge:** What happens if you use negative numbers or zero for size?
 
-### 3.5 🐛 Common Mistakes & How to Fix Them
+##### 🎈 Activity: Have your friends try to find creatures in your code!
+
+![Code Order Magic](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ3Vob2t6dHU4dmU4OWsyZDZsM2RhZGN4ODJiM3ZqcGVxazZ2MDRzbSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/1pA8TwX8atOCnAtTbV/giphy.gif)
+
+### 3.6 🐛 Common Mistakes & How to Fix Them
 
 **Mistake 1:** Using `=` instead of `==`
 ```R
@@ -582,14 +816,20 @@ if (x > 5) { ... }
 **💡 Pro Tips:**
 - Test your conditions with simple values first
 - Use meaningful variable names: `student_age` not just `x`
-- **Every `if` should have an `else`** - always have a backup plan!
-- When in doubt, add more parentheses and braces
+- Use `==` for comparison, not `=`
+   - `=` assigns a value (like `<-`)
+   - `==` checks if two things are the same
+- Conditions go in parentheses: `if (condition)`
+- Actions go in curly braces: `{ action }`
+- Only ONE path gets chosen - just like our physical game!
 
 🎉 **Congratulations!** You've learned how to make your code think and decide! This is one of the most powerful tools in programming - you can now create interactive programs that respond differently based on input!
 
+![Code Order Magic](https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3c2ZmZXRwbHhsdmhuazU5Ym9xZGNwcWhibHFka2Z5eG9lOHJpcWhxYyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/hEIuLmpW9DmGA/giphy.gif)
+
 ---
 
-## 5. ✨ Magical Tips & Tricks
+## 4. ✨ More Magical Tips & Tricks
 
 - 💡 **Save your work often!** Click the save icon or press `Ctrl+S` (Windows) / `Cmd+S` (Mac).
 - 🐛 Errors are okay! They are just clues to help you learn and fix your spell.
@@ -605,7 +845,7 @@ if (x > 5) { ... }
   - Only use lowercase letters, numbers, and `-` or `_`
   - Make names short but meaningful (this is hard but important!)
 
-## 6. 🆘 Troubleshooting
+## 5. 🆘 Troubleshooting
 
 #### "object 'my_variable' not found"
 - What it means: You tried to use a magical creature (variable) that R doesn't know about.
@@ -623,119 +863,6 @@ if (x > 5) { ... }
 - What it means: You opened something but forgot to close it.
 - Why it happens: Easy to forget!
 - The Fix: Count your `(` and `)`, and your `"` marks. The rainbow parentheses we turned on help you see which ones match!
-
----
-
-
-## DELETE below
-## 📚 Today's Magical Concepts
-
-### 🌅 1.5 hours
-
-#### 1. 🎯 What is Data Science?
-*Discover how data science helps us understand the world around us*
-
-#### 2. 🖥️ First Lines of Code
-*Write your magical "Hello World!" and see R come alive*
-
-#### 3. 📝 Comments: Leaving Notes for Future You
-*Learn why commenting is like leaving breadcrumbs in the forest*
-
-#### 4. 🎲 Variables: Magic Containers
-*Store numbers, words, and lists in R's magical containers*
-
-#### 5. 🏷️ Data Types Island
-*Explore the different types of data R can understand*
-
-### 🌞 1.5 hours
-
-#### 6. 📦 Packages: Community Magic
-*Discover the power of open-source collaboration*
-
-#### 7. 🔀 If-Else: Making Decisions
-*Teach your code to make choices*
-
-#### 8. 🔄 For Loops: Repetition Magic
-*Make R repeat tasks efficiently*
-
-#### 9. 🎮 Class Challenge: Word Reorganizer
-*Team up to create and solve word puzzles*
-
-#### 10. 🎨 Individual Project: Mosaic Art
-*Create beautiful art using programming*
-
-## 🎪 Activities & Challenges
-
-### 🏝️ Activity 1: Data Type Island
-*Duration: 20 minutes*
-
-Explore an imaginary island where different data types live in different regions. You'll categorize R objects and learn how R "thinks" about different kinds of information.
-
-**What you'll learn:**
-- Numbers (integers and decimals)
-- Text (characters and strings)
-- True/False values (logical)
-- Lists and vectors
-
-**Files:** `activities/data-type-island.R`
-
-### 🔄 Activity 2: Loop Adventures
-*Duration: 25 minutes*
-
-Practice writing for loops through three magical examples that demonstrate the power of repetition in programming.
-
-**What you'll learn:**
-- Basic for loop syntax
-- Using print() statements
-- Debugging incomplete code
-- Problem-solving strategies
-
-**Files:** `activities/loop-adventures.R`
-
-### 🎯 Class Challenge: Magic Forest Word Reorganizer
-*Duration: 30 minutes*
-
-**Part 1:** Given a magical story sentence, use a for loop to reorganize the words and create a word list.
-
-**Part 2:** Challenge a classmate to write code that restores your scrambled words back into the original story!
-
-**Example Story:**
-*"In the Magic Forest, a smart rabbit and a tiny dragon became friends, built a flying boat out of leaves, and sailed through the sky to save a sleepy bear cub who was stuck on a candy cloud."*
-
-**Files:** `activities/magic-forest-challenge.R`
-
-### 🎨 Individual Project: Mosaic Art Creator
-*Duration: 45 minutes*
-
-Create stunning digital mosaic art using R programming! You'll use loops, variables, and creativity to generate colorful patterns.
-
-**What you'll create:**
-- Geometric patterns
-- Color gradients
-- Repeating designs
-- Your own artistic vision
-
-**Files:** `activities/mosaic-art-project.R`
-
-## 📊 Sample Code Preview
-
-Here's a sneak peek at some magic you'll learn today:
-
-```r
-# 🔮 Creating magical variables
-wizard_name <- "Hermione"
-spell_power <- 95
-is_magical <- TRUE
-
-# 🌟 A simple for loop
-for (i in 1:5) {
-  print(paste("Casting spell number", i))
-}
-
-# 🎨 The beginning of art creation
-colors <- c("red", "blue", "green", "purple")
-plot(1:10, 1:10, col = colors, pch = 19, cex = 3)
-```
 
 ---
 
