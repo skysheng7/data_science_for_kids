@@ -5,19 +5,17 @@ title: Day 1 - Basic Programming Magic
 
 # 🏔️ Day 1: Basic Programming Magic in R
 
-*Welcome to the Magic Forest where variables come alive and loops create endless possibilities!*
+*Welcome to the Magic Forest where Oda the Data Otter teaches you the secret spells of programming!*
 
 ## 🔮 Learning Journey Overview
 
-Today we'll embark on our first adventure into the magical world of R programming! By the end of today, you'll be casting spells with code and creating your very own digital art.
+Today we'll join Oda on our first adventure into the magical world of R programming! By the end of today, you'll be casting spells with code and making smart decisions like a real data wizard.
 
 ### 🎯 Learning Objectives
 - 🔤 Write your first lines of R code
 - 📝 Understand comments and why they're important
 - 🎲 Master variables and data types
-- 📦 Explore packages and open-source magic
-- 🔄 Control program flow with if-else and loops
-- 🎨 Create beautiful mosaic art with code
+- 🔄 Control program flow and have computers make decisions using if-else conditions
 
 ---
 
@@ -95,7 +93,6 @@ Some print ideas:
 - Forgetting the right parenthesis - R needs () both, like minions has 2 arms, it needs 2 arms to hug your sentence!
 
 <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3YWk2aHhkZTNyaHNubm9tbHRod3o2eGY2a3lzaGxuZTN1bGt6bmVpeCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/VNNyo3QioK6re/giphy.gif" alt="minion2arm" style="width: 100%; height: auto;">
-
 
 ### 📜 Step 4: Write Your First Magical scroll ✨
 
@@ -222,6 +219,9 @@ Just like Oda's ocean has different islands 🏝️, R has different types of da
 3. **📝 Character Island** - Words and letters ("hello", "Oda", "let's go swim!")
 4. **✅ Logical Island** - True or False (TRUE, FALSE)
 
+
+<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMGN0NjM4eXJoMzMwYXNhaWlndThicWp0MTFzc20zeWpqY2s0aXpnYiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/3o6Ztor9XxwVdm1S4U/giphy.gif" alt="minion2arm" style="width: 100%; height: auto;">
+
 #### 🎈 Activity: Data Islands Adventure!
 
 Time to explore the data islands! We'll divide the room in half and create a magical data world.
@@ -274,6 +274,8 @@ Setup:
 
 🐛 **Don't worry - Everyone makes mistakes when coding!**
 
+![error](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExb24wdXFlNG9rZ3U3Z3FxOHo2a2o5dXpnMnM0ZzZzMmpmNXBmeW1vbSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/YAlhwn67KT76E/giphy.gif)
+
 R is like learning a new language! Just like human languages, R has rules. But R is different from human languages in two important ways:
 
 1. *The rules are simple* - You can learn most of them in just a few weeks!
@@ -316,6 +318,40 @@ In 1947, computer scientist Grace Hopper found an actual moth stuck in a the pow
 :alt: bug
 :width: 60%
 ```
+
+#### **💡 Pro Tips:**
+- 💾 **Save your work often!** Click the save icon or press `Ctrl+S` (Windows) / `Cmd+S` (Mac).
+- 🐛 Errors are okay! They are just clues to help you learn and fix your spell.
+- 🌈 Make your code colorful! Rainbow parentheses help you see where code blocks start and end. Here's how to turn them on:
+  1. Go to **Tools** -> **Global Options**.
+  2. Click **Code** on the left.
+  3. Go to the **Display** tab on the top.
+  4. Check the box for **Use rainbow parentheses**.
+  5. Click **Apply**!
+- 📝 Name things like a wizard! Good names help you remember what your magical creatures (variables) do:
+  - Use `snake_case` or `kabab-case` (like `my_age` or `favorite-color`)
+  - Always start with a letter, never a number (✅ `age1` ❌ `1age`)
+  - Only use lowercase letters, numbers, and `-` or `_`
+  - Make names short but meaningful (this is hard but important!)
+
+#### **🆘 Troubleshooting**
+
+##### "object 'my_variable' not found"
+- What it means: You tried to use a magical creature (variable) that R doesn't know about.
+- Why it happens:
+  - You forgot to create your variable first (like `my_variable <- 10`)
+  - You have a typo in the name
+- The Fix: Run the line that creates your variable first, then check your spelling!
+
+##### Case-Sensitivity Chaos
+- What it means: R thinks `MyData` and `mydata` are totally different things.
+- Why it happens: R is picky about capital letters.
+- The Fix: Always spell your variables exactly the same way - capitals matter!
+
+##### Missing Parentheses or Quotes: ( or "
+- What it means: You opened something but forgot to close it.
+- Why it happens: Easy to forget!
+- The Fix: Count your `(` and `)`, and your `"` marks. The rainbow parentheses we turned on help you see which ones match!
 
 ---
 
@@ -487,7 +523,7 @@ if (favorite_color == "red") {
 #### ✨ Spell 3: Number Range Detective
 ```R
 # 🔍 Oda's number detective game
-mystery_number <- 15
+mystery_number <- 4
 
 if (mystery_number < 10) {
   print("🐣 Tiny number - like a baby otter!")
@@ -504,6 +540,8 @@ if (mystery_number < 10) {
 1. Try these mystery numbers: 5, 25, 75, 150
 2. **Predict first:** Which otter will you get for each number?
 3. **Challenge:** What happens if you use 0 or negative numbers?
+
+![tiny](https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3aHgwZ2luazJuZnEzbzJjNzhsbWd1eDVoaWtsNjBoMXp6em03dzVubSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Ie9XYbEyw5YrP1J5QB/giphy.gif)
 
 #### ✨ Spell 4: AND Condition Magic (Both Things Must Be True!)
 ```R
@@ -829,40 +867,140 @@ if (x > 5) { ... }
 
 ---
 
-## 4. ✨ More Magical Tips & Tricks
+## 4. 📋 Pro Tips Cheatsheet
 
-- 💡 **Save your work often!** Click the save icon or press `Ctrl+S` (Windows) / `Cmd+S` (Mac).
-- 🐛 Errors are okay! They are just clues to help you learn and fix your spell.
-- 🌈 Make your code colorful! Rainbow parentheses help you see where code blocks start and end. Here's how to turn them on:
-  1. Go to **Tools** -> **Global Options**.
-  2. Click **Code** on the left.
-  3. Go to the **Display** tab on the top.
-  4. Check the box for **Use rainbow parentheses**.
-  5. Click **Apply**!
-- 📝 Name things like a wizard! Good names help you remember what your magical creatures (variables) do:
-  - Use `snake_case` or `kabab-case` (like `my_age` or `favorite-color`)
-  - Always start with a letter, never a number (✅ `age1` ❌ `1age`)
-  - Only use lowercase letters, numbers, and `-` or `_`
-  - Make names short but meaningful (this is hard but important!)
+Here are all the helpful tricks and important knowledge you learned today to become a coding wizard! 🧙‍♀️
 
-## 5. 🆘 Troubleshooting
+### 💾 **Saving Your Work**
+- Save often! Click the save icon or press `Ctrl+S` (Windows) / `Cmd+S` (Mac)
 
-#### "object 'my_variable' not found"
-- What it means: You tried to use a magical creature (variable) that R doesn't know about.
-- Why it happens:
-  - You forgot to create your variable first (like `my_variable <- 10`)
-  - You have a typo in the name
-- The Fix: Run the line that creates your variable first, then check your spelling!
+### 📝 **Writing Clean Code**
+- Always use quotation marks `" "` around text
+- Each print statement creates a new line
+- Add comments to explain your own logic to others and your future self
+- Use the `#` symbol to make comments - R ignores everything after it
 
-#### Case-Sensitivity Chaos
-- What it means: R thinks `MyData` and `mydata` are totally different things.
-- Why it happens: R is picky about capital letters.
-- The Fix: Always spell your variables exactly the same way - capitals matter!
+### 📦 **Understanding Variables (Magical Storage Boxes)**
+- Variables are like labeled storage boxes that hold your data
+- The `<-` symbol is like an arrow pointing into the box (variable) that stores this value: `my_age <- 10`
+- You can change what's in the box anytime: `my_age_next_year <- 11`
+- Variables make calculations easier: `my_age_next_year <- my_age + 1` instead of remembering numbers
 
-#### Missing Parentheses or Quotes: ( or "
-- What it means: You opened something but forgot to close it.
-- Why it happens: Easy to forget!
-- The Fix: Count your `(` and `)`, and your `"` marks. The rainbow parentheses we turned on help you see which ones match!
+### 🏷️ **Naming Variables Like a Wizard**
+- Use `snake_case` (lower case characters separated by `_`, like `my_age` or `favorite_color`)
+- Always start with a letter, never a number (✅ `age1` ❌ `1age`)
+- Only use lowercase letters, numbers, and `_` or `-`
+- Make names short but meaningful
+- Use meaningful names: `student_age` not `a`, or `b`
+- Case matters! `Result` and `result` are different things to R
+
+### 🌊 **The Four Basic Data Type Islands**
+1. **🔢 Integer** - Whole numbers (1, 5, 100)
+2. **🧮 Numeric** - Decimal numbers (1.5, 3.14, 2.7)  
+3. **📝 Character** - Words and letters ("hello", "Oda", "let's go swim!")
+4. **✅ Logical** - True or False (TRUE, FALSE)
+
+### ⚡ **Code Order Magic - Sequence Matters!**
+- **Important:** The order of your code, like the sequence of if-else conditions matters!
+- R checks conditions from top to bottom and stops at the first TRUE one
+- Always check specific conditions first, then general ones
+- Example: Check `if (x == 1)` before `if (x >= 1)` or the second one will never run!
+- Think like Oda's magic spells - they must be cast in the right order! ✨
+
+### 🌈 **Making Code Pretty**
+- Turn on rainbow parentheses to see code blocks better:
+  1. Go to **Tools** → **Global Options**
+  2. Click **Code** → **Display** tab
+  3. Check **Use rainbow parentheses**
+  4. Click **Apply**!
+
+### 🔍 **Decision Making Magic (Comparison Symbols)**
+- `==` means "is exactly equal to" (like twin otters! 🦦 == 🦦)
+  - Use `==` for comparison, not `=`
+  - `=` assigns a value (like `<-`)
+- `>` means "is greater than" (elephant is larger than otter 🐘 > 🦦)
+- `<` means "is less than" (mouse is smaller than otter! 🐭 < 🦦)
+- `>=` means "greater than or equal to" 
+- `<=` means "less than or equal to"
+- `!=` means "is NOT equal to" (otters are different from birds! 🦦 != 🐧)
+- `|` means "or" (I would like to meet Mr. Fish or Mrs. Oda today: 🐟 or 🦦)
+- `&` means "and" (I like otter and elephant 🐘 & 🦦)
+
+### 🎯 **If-Else Structure Rules**
+- Put conditions in parentheses: `if (condition)`
+- Put actions in curly braces: `{ action }`
+- Test your conditions with simple values first
+- Remember: Only ONE path gets chosen in your if-else condition cluster!
+- You can have multiple actions in each condition block
+- "else" is optional - sometimes you only want something to happen under certain conditions
+
+### 🔢 **Order of Operations (Math Rules)**
+- R follows math rules: multiplication and division happen before addition and subtraction
+- Example: `4 + 3*4` = `4 + 12` = `16` (not `7*4` = `28`)
+- Use parentheses to change the order: `(4 + 3)*4` = `7*4` = `28`
+
+### 🐛 **Dealing with Errors**
+- Errors are okay! They're just clues to help you learn. Even teachers make errors every day!
+- Debugging is one of the most important coding skills
+- Try to understand where your bug comes from → fix it → move on!
+- Run your code line by line to find where problems start
+
+---
+
+## 5. 🆘 Troubleshooting Cheatsheet
+
+When things go wrong, here's how to fix them! 🔧
+
+### 🔤 **Text and Print Problems**
+**Problem:** Forgetting quotation marks
+- **Fix:** Put `" "` around all text
+- **Example:** ✅ `print("Hello!")`, ❌ `print(Hello!)`
+
+**Problem:** Forgetting closing parenthesis
+- **Fix:** Count your `(` and `)` - they need to match!
+- **Example:** ✅ `print("Hi!")`, ❌ `print("Hi!"`
+
+**Problem:** Mixing text and numbers wrong
+- **Fix:** Don't try to add text + numbers
+- **✅:** `print("My age is 5")`
+- **❌:** `print("My age is " + 5)`
+
+### 🏷️ **Variable Problems**
+**Problem:** "object 'my_variable' not found"
+- **What it means:** You tried to use a variable R doesn't know about
+- **Fix:** Create your variable first: `my_variable <- 10`
+- **Fix:** Check your spelling - did you type it exactly the same?
+
+**Problem:** Case-sensitivity chaos
+- **What it means:** R thinks `MyData` and `mydata` are different
+- **Fix:** Always spell variables exactly the same way - capitals matter!
+
+### 🤔 **Decision Making Problems**
+**Problem:** Using `=` instead of `==`
+- **✅:** `if (x == 5)` - this compares values
+- **❌:** `if (x = 5)` - this tries to assign a value
+
+**Problem:** Forgetting curly braces
+- **❌ Hard to read:** `if (x > 5) print("big")`
+- **✅ Better:** `if (x > 5) { print("big") }`
+
+**Problem:** Missing parentheses around conditions
+- **✅:** `if (x > 5) { ... }`
+- **❌ :** `if x > 5 { ... }`
+
+### 🔧 **Quick Fixes**
+**Problem:** Missing quotes or parentheses
+- **Fix:** Count your `"` marks and `()` - they need to match
+- **Tip:** Rainbow parentheses help you see which ones go together!
+
+**Problem:** Code doesn't work as expected
+- **Fix:** Run your code line by line to find where it breaks
+- **Fix:** Check that you spelled everything exactly the same way
+
+### 💡 **Remember**
+- Making mistakes is how we learn!
+- When stuck, check: spelling, quotation marks, and parentheses
+- Ask for help - coding is more fun together! 🦦✨
 
 ---
 
