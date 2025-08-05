@@ -132,24 +132,24 @@ Let's learn how to make R repeat actions automatically! We'll start by printing 
 **🎪 Example Inspiration (but make it your own!):**
 
 **🍪 Example #1: Cookie Factory Assembly Line**
-- **Setup:** 3 people are stations, 2 person is the "cookie dough," 1 person is the loop counter
-- **Loop Counter says:** "Starting iteration 1!"
-- **Station 1:** "Mixing flour!" (stirring motion)
-- **Station 2:** "Adding sugar!" (sprinkling motion)  
-- **Station 3:** "Baking cookie!" (oven motion)
-- **Cookie dough 1** walks through all 4 stations, then goes to back of line --> cookie 1 ready!
-- **Loop Counter says:** "Starting iteration 2!" and repeat --> Cookie dough 2 ready!
-- **After 2 cookies:** Everyone shouts "Cookie factory loop complete!"
+- Setup: 3 people are stations, 2 person is the "cookie dough," 1 person is the loop counter
+- Loop Counter says: "Starting iteration 1!"
+- Station 1: "Mixing flour!" (stirring motion)
+- Station 2: "Adding sugar!" (sprinkling motion)  
+- Station 3: "Baking cookie!" (oven motion)
+- Cookie dough 1 walks through all 4 stations, then goes to back of line --> cookie 1 ready!
+- Loop Counter says: "Starting iteration 2!" and repeat --> Cookie dough 2 ready!
+- After 2 cookies: Everyone shouts "Cookie factory loop complete!"
 
 **🐰 Example #2: Human Computer Instructions**
-- **Setup:** 1 person is the "code," 4-5 people are individual "computer action actors"
-- **Code calls out:** "For i in 1 to 3, execute these actions in sequence:"
-- **Code calls out:** "Iteration 1! Sarah - jump like a rabbit! Tom - spin around! Lisa - clap 2 times! Mike - roar like a lion!"
-- **Each actor** performs their specific action when called: Sarah hops, Tom spins, Lisa claps, Mike roars
-- **Code calls out:** "Iteration 2! Sarah - jump like a rabbit! Tom - spin around! Lisa - clap 2 times! Mike - roar like a lion!"
-- **Same actors** repeat their same actions in the same order
-- **Code calls out:** "Iteration 3! Sarah - jump like a rabbit! Tom - spin around! Lisa - clap 2 times! Mike - roar like a lion!"
-- **After iteration 3:** Code says "Loop complete!" and all actors freeze
+- Setup: 1 person is the "code," 4-5 people are individual "computer action actors"
+- Code calls out: "For i in 1 to 3, execute these actions in sequence:"
+- Code calls out: "Iteration 1! Sarah - jump like a rabbit! Tom - spin around! Lisa - clap 2 times! Mike - roar like a lion!"
+- Each actor performs their specific action when called: Sarah hops, Tom spins, Lisa claps, Mike roars
+- Code calls out: "Iteration 2! Sarah - jump like a rabbit! Tom - spin around! Lisa - clap 2 times! Mike - roar like a lion!"
+- Same actors repeat their same actions in the same order
+- Code calls out: "Iteration 3! Sarah - jump like a rabbit! Tom - spin around! Lisa - clap 2 times! Mike - roar like a lion!"
+- After iteration 3: Code says "Loop complete!" and all actors freeze
 
 **🎨 Creative Ideas to Spark Your Imagination:**
 - Sports training routines (jumping jacks, running laps, passing balls)
@@ -160,12 +160,6 @@ Let's learn how to make R repeat actions automatically! We'll start by printing 
 **⏰ Timeline:**
 - **Planning & Practice (20 minutes):** Brainstorm your loop idea, assign roles, and rehearse
 - **Performances (10 minutes):** Each group performs for 1-2 minutes
-
-**🎯 What Makes a Great Loop Performance:**
-1. **Clear repetition** - audience can see the loop happening
-2. **Visible counter** - someone tracks iterations (1, 2, 3...)
-3. **Consistent actions** - same steps happen each time
-4. **Creative twist** - your unique spin on the concept!
 
 **🎉 Performance Guidelines:**
 - Start by announcing: "Our loop is in iteration X!"
