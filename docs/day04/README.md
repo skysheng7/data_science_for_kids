@@ -1,27 +1,27 @@
 ---
 layout: default
-title: Day 4 - Machine Learning Quest
+title: Day 4 - Statistics Ocean
 ---
 
-# 🪄 Day 4: Introduction to Machine Learning
+# 🌊 Day 4: Statistics Ocean
 
-*Welcome to the Magical Machine Learning Wrold where computers learn to make predictions based on their neighbours!*
+*Join Oda the Data Otter as she dives deep into the magical Statistics Ocean, where colorful data reveals the secrets of mean, median, and sampling!*
 
-```{image} ../../images/knn.png
-:alt: knn
+```{image} ../../images/stat.png
+:alt: stat
 :width: 50%
 ```
 
 ## 🔮 Learning Journey Overview
 
-Today we'll dive into the exciting world of machine learning! You'll understand training and testing, explore K-Nearest Neighbors through physical board games, and build your own classification models.
+Today we'll explore the fascinating world of statistics using hands-on activities with toy animals and colorful data. You'll learn how to measure central tendencies, understand sampling, and discover the magic of confidence intervals.
 
 ### 🎯 Learning Objectives
-- 🧠 Understand what machine learning is
-- 🎯 Learn about training and testing data
-- 🔍 Master K-Nearest Neighbors (KNN)
-- ⚖️ Discover the importance of standardization
-- 🎮 Apply ML concepts through hands-on activities
+- 📏 Understand mean, median, and mode through hands-on activities
+- 🎯 Learn about sampling and variability with physical experiments
+- 🔄 Explore bootstrapping concepts with data resampling
+- 📊 Calculate and interpret confidence intervals
+- 🧪 Conduct basic hypothesis testing with real scenarios
 
 ## 📚 Today's Magical Concepts
 

@@ -1,23 +1,23 @@
 ---
 layout: default
-title: Day 2 - Data Storytelling
+title: Day 2 - Loops and Magic Libraries
 ---
 
-# 🎨 Day 2: Data Wrangling and Visualization
+# 🪄 Day 2: Loops and Magic Libraries
 
-*Oda the Data Otter discovers how to make data dance with loops and paint beautiful stories with code!*
+*Oda the Data Otter learns to repeat magic spells and discovers R's treasure box of helpful tools!*
 
-```{image} ../../images/viz.png
-:alt: vis
+```{image} ../../images/loop.png
+:alt: loop
 :width: 50%
 ```
 
 ## 🎯 Learning Objectives
-- Master for loops to repeat magical actions
-- Discover open-source packages and get help from the R community
-- Wrangle messy data into clean, organized datasets
-- Create stunning visualizations that tell compelling stories
-- Work as a team to solve real data mysteries
+- 🔄 Master for loops to repeat magical actions automatically
+- 📚 Discover what open-source means and how packages work
+- 🆘 Learn how to get help using the `?` function
+- 🎨 Create your first simple visualizations with ggplot2
+- 🗂️ Understand what dataframes are with simple examples
 
 ## 1. Ice Breaker: Human Decision Tree Builder
 *Duration: 15 minutes*
@@ -81,7 +81,7 @@ if (age >= 12) {
 <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZmFvOTFlYW5zemsza3Rjd2N2ZTN6enp5eHBvYzB4d24xMTcydmwybiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Ta2eHM043vhVS/giphy.gif" alt="hello2" style="width: 100%; height: auto;">
 
 ## 2. Magic Loops: Making R Repeat Spells
-*Duration: 75 minutes*
+*Duration: 85 minutes*
 
 🎭 **Imagine you're a chef baking 10 cookies.** Instead of repeat the actions, "mix flour, add sugar, bake", 10 separate times, you create a robot and repeat this procedure for you 10 times! That's exactly what for loops do - they let us repeat code without typing it over and over.
 
@@ -186,8 +186,8 @@ Let's learn how to make R repeat actions automatically! We'll start by printing 
 
 ✨ **Challenge:** Create beautiful art using loops and programming patterns - from simple stars to colorful grids and even Christmas trees!
 
-### 2.5 🤯 Challenging Magic -- Spell 4: Story Scrambler Challenge
-*Duration: 15 minutes*
+### 2.5 🤯 Challenging Magic -- Spell 4: Story Scrambler Challenge (Optional)
+*Duration: 20 minutes (excluded from time in chapter 2)*
 
 📁 **Find this spell in Posit Cloud:** Look for the file `day02_spell04_story_scrambler.R` in your project files!
 
@@ -195,7 +195,7 @@ Let's learn how to make R repeat actions automatically! We'll start by printing 
 
 ```{image} ../../images/forest.png
 :alt: forest
-:width: 60%
+:width: 100%
 ```
 
 #### 🎈 Activity: Secret Message Encoder & Decoder
@@ -213,141 +213,157 @@ Create secret codes to share with friends using mini messages like "Meet me at t
 - Use `i:1` for backwards loops, `1:i` for forward loops
 - `c()` creates or adds to lists: `new_list <- c(old_list, new_item)`
 
-## 3. Package Power: Unlocking R's Magic Toolbox
-*Duration: 30 minutes*
+## 3. Magic Libraries: R's Treasure Chest of Tools
+*Duration: 45 minutes*
 
-### 3.1 Spell 5: Open-Source Magic
-*Duration: 15 minutes*
-
-#### 🎈 Activity: Package Explorer
+### 3.1 Spell 5: What is Open-Source Magic?
+*Duration: 10 minutes*
 
 📁 **Find this spell in Posit Cloud:** Look for the file `day02_spell05_packages.R` in your project files!
 
-🌟 **What is Open-Source?** It's like a giant library where thousands of friendly wizards share their best spells for free! Anyone can use them, improve them, and share them back.
+#### 🎈 Activity: Understanding Open-Source
 
-Discover what open-source means and how to get help from the R community.
+🌟 **What is Open-Source?** Imagine if all the world's best chefs shared their secret recipes for free, and anyone could use them, improve them, and share them back! That's exactly what open-source means in the coding world.
 
-### 3.2 Spell 6: ggplot2 Meets Loops
+🎪 **Think of it like this:**
+- 📚 **Giant Free Library:** Thousands of friendly programmers create useful tools and share them for free
+- 🤝 **Community Help:** When you have problems, people help each other solve them
+- 🎁 **Always Free:** You never have to pay to use these amazing tools!
+
+### 3.2 Spell 6: Getting Help with the Magic `?`
+*Duration: 10 minutes*
+
+📁 **Find this spell in Posit Cloud:** Look for the file `day02_spell06_getting_help.R` in your project files!
+
+#### 🎈 Activity: The Help Detective
+
+🆘 **The Magic Question Mark:** In R, when you don't know how something works, just type `?` before the function name!
+
+```R
+# Want to know how print() works?
+?print
+
+# Curious about the mean() function?
+?mean
+```
+
+💡 **What you'll see:**
+- **Description:** What the function does
+- **Usage:** How to use it
+- **Examples:** Real examples you can try!
+
+### 3.3 Spell 7: Your First Package - ggplot2
+*Duration: 10 minutes*
+
+📁 **Find this spell in Posit Cloud:** Look for the file `day02_spell07_first_package.R` in your project files!
+
+#### 🎈 Activity: Installing Your First Magic Tool
+
+📦 **What is a Package?** Think of packages like apps on your phone - each one adds new powers to R!
+
+```R
+# Step 1: Install the package (like downloading an app)
+install.packages("ggplot2")
+
+# Step 2: Load the package (like opening the app)
+library(ggplot2)
+```
+
+🎨 **Meet ggplot2:** This package is like a magical paintbrush that helps us create beautiful pictures with data!
+
+### 3.4 Spell 8: Your First Plot (No Data Yet!)
 *Duration: 15 minutes*
 
-#### 🎈 Activity: Loop-Powered Visualizations
+📁 **Find this spell in Posit Cloud:** Look for the file `day02_spell08_first_plot.R` in your project files!
 
-📁 **Find this spell in Posit Cloud:** Look for the file `day02_spell06_loops_and_plots.R` in your project files!
+#### 🎈 Activity: Drawing Without Data
 
-🎨 **Magic Combo:** Combine for loops with ggplot2 to create multiple beautiful visualizations automatically! It's like having a robot artist that paints dozens of pictures for you!
+🎭 **Let's start simple:** We can make plots even without complicated data! We'll use simple lists of information.
 
-## 4. Data Wrangling: Taming Wild Datasets
-*Duration: 50 minutes*
+```R
+# Simple lists (these are called vectors)
+animals <- c("cat", "dog", "rabbit", "hamster", "fish")
+counts <- c(3, 5, 2, 1, 4)
 
-### 4.1 Spell 7: Loading Data Magic
-*Duration: 15 minutes*
+# Your first ggplot2 magic spell!
+ggplot() + 
+  geom_col(aes(x = animals, y = counts))
+```
 
-#### 🎈 Activity: Reading Real Datasets
+🔮 **What does this code do?**
+- `c()` creates a simple list
+- `ggplot()` starts the magic
+- `geom_col()` creates bars
+- `aes()` tells R what goes where (x and y axes)
 
-📁 **Find this spell in Posit Cloud:** Look for the file `day02_spell07_loading_data.R` in your project files!
+✨ **Challenge:** Try changing the animals or numbers and see what happens!
 
-📊 **Data is everywhere!** From sports scores to weather patterns, we'll learn how to bring real datasets into R and explore what secrets they hold.
-
-### 4.2 Spell 8: Data Transformation Spells
+## 4. Introducing Dataframes: R's Magic Tables
 *Duration: 20 minutes*
 
-#### 🎈 Activity: Clean and Transform
+### 4.1 Spell 9: What is a Dataframe?
+*Duration: 20 minutes*
 
-📁 **Find this spell in Posit Cloud:** Look for the file `day02_spell08_data_wrangling.R` in your project files!
+📁 **Find this spell in Posit Cloud:** Look for the file `day02_spell09_dataframes.R` in your project files!
 
-🔧 **The Data Toolkit:** Master the essential data wrangling functions:
-- `select()` - Pick specific columns (like choosing ingredients)
-- `filter()` - Find specific rows (like finding red candies in a jar)
-- `mutate()` - Create new columns (like calculating totals)
-- `group_by()` - Group similar data (like sorting by color)
-- `summarize()` - Calculate summaries (like counting each group)
+#### 🎈 Activity: Building Your First Data Table
 
-### 4.3 Spell 9: Pipeline Magic
-*Duration: 15 minutes*
+🗂️ **What is a Dataframe?** Think of it like a super simple spreadsheet - it has rows and columns, just like a table you might make for organizing your Pokemon cards or book collection!
 
-#### 🎈 Activity: Chain Commands with Pipes
+```R
+# Let's create a simple dataframe about pets
+pets <- data.frame(
+  name = c("Fluffy", "Buddy", "Whiskers"),
+  type = c("cat", "dog", "cat"),
+  age = c(3, 5, 2)
+)
 
-📁 **Find this spell in Posit Cloud:** Look for the file `day02_spell09_piping.R` in your project files!
+# Look at our dataframe
+print(pets)
+```
 
-🌊 **The Magic Pipeline:** Learn the magical `%>%` operator to chain commands together smoothly - like water flowing through pipes!
+🔮 **What you'll see:**
+```
+     name type age
+1  Fluffy  cat   3
+2   Buddy  dog   5
+3 Whiskers  cat   2
+```
 
-<img src="PLACEHOLDER_GIF_URL" alt="Data flowing through pipes" style="width: 100%; height: auto;">
+💡 **Understanding the parts:**
+- **Columns:** `name`, `type`, `age` (like categories)
+- **Rows:** Each pet gets one row (like one card in your collection)
+- **data.frame():** The magic function that creates tables
 
-## 5. Data Storytelling: Painting with Numbers
-*Duration: 35 minutes*
+✨ **Challenge:** Create your own dataframe about your favorite foods, movies, or friends!
 
-### 5.1 Spell 10: Histogram Stories
-*Duration: 12 minutes*
-
-#### 🎈 Activity: Distribution Detective
-
-📁 **Find this spell in Posit Cloud:** Look for the file `day02_spell10_histograms.R` in your project files!
-
-📊 **Shape Detective:** Create histograms to reveal hidden patterns in data distributions. Is the data shaped like a mountain, a valley, or something else?
-
-### 5.2 Spell 11: Scatter Plot Adventures
-*Duration: 12 minutes*
-
-#### 🎈 Activity: Relationship Explorer
-
-📁 **Find this spell in Posit Cloud:** Look for the file `day02_spell11_scatter_plots.R` in your project files!
-
-🔍 **Relationship Hunter:** Discover relationships between variables using scatter plots. Do tall people have bigger feet? Let's find out!
-
-### 5.3 Spell 12: Bar Chart Champions
-*Duration: 11 minutes*
-
-#### 🎈 Activity: Category Comparison
-
-📁 **Find this spell in Posit Cloud:** Look for the file `day02_spell12_bar_charts.R` in your project files!
-
-🏆 **Category Champions:** Compare categories and groups using powerful bar charts. Which group wins the data competition?
-
-## 6. Team Project: Data Mystery Solvers
-*Duration: 30 minutes*
-
-### 6.1 Spell 13: Collaborative Data Investigation
-*Duration: 30 minutes*
-
-#### 🎈 Activity: Partner Data Storytelling
-
-📁 **Find this spell in Posit Cloud:** Look for the file `day02_spell13_team_project.R` in your project files!
-
-🕵️‍♀️ **Data Detectives Unite!** Work with a teammate to:
-1. Pick a dataset from the datasets folder
-2. Use data wrangling and visualization to answer the research question
-3. Present your findings to the class
-
-✨ **Challenge:** Create the most creative visualization that tells a compelling story!
-
-<img src="PLACEHOLDER_GIF_URL" alt="Kids collaborating on data project" style="width: 100%; height: auto;">
-
-## 7. 📋 Pro Tips Cheatsheet
+## 5. 📋 Pro Tips Cheatsheet
 
 ### For Loops
 - Use `for (i in 1:10)` to repeat actions 10 times
 - Always use curly braces `{}` for multiple commands
 - `print()` shows results inside loops
+- Think of `i` as a magical counter that changes each time
 
-### Data Wrangling
-- `select()` picks columns: `select(data, column1, column2)`
-- `filter()` picks rows: `filter(data, age > 10)`
-- `mutate()` creates columns: `mutate(data, new_col = old_col * 2)`
-- Pipe `%>%` chains commands: `data %>% filter() %>% select()`
+### Packages & Getting Help
+- `install.packages("package_name")` downloads new tools
+- `library(package_name)` loads tools for use
+- Type `?function_name` to get help on any function
+- Open-source means free tools shared by friendly programmers
 
-### Visualizations
+### Simple Plotting with ggplot2
 - `ggplot()` starts every plot
-- `aes()` maps data to visual elements
-- `geom_histogram()` for distributions
-- `geom_point()` for scatter plots
-- `geom_bar()` for categories
+- `geom_col()` creates bar charts
+- `aes(x = , y = )` tells R what goes on each axis
+- `c()` creates simple lists of data
 
-### Getting Help
-- Type `?function_name` in console for help
-- Use `library(package_name)` to load packages
-- R community is friendly and helpful!
+### Dataframes
+- `data.frame()` creates tables with rows and columns
+- Think of dataframes like spreadsheets or card collections
+- Each column is a category (like name, age, type)
+- Each row is one item (like one person or one pet)
 
-## 8. 🆘 Troubleshooting Cheatsheet
+## 6. 🆘 Troubleshooting Cheatsheet
 
 ### Common Loop Problems
 🐛 **Error: "object not found"**
@@ -360,15 +376,25 @@ Discover what open-source means and how to get help from the R community.
 - **Why it happens:** Every `{` needs a matching `}`
 - **The Fix:** Count your braces and add the missing one
 
-### Data Wrangling Issues
+### Package Problems
 🐛 **Error: "could not find function"**
 - **What it means:** Package not loaded
 - **Why it happens:** Forgot to run `library()`
-- **The Fix:** Load the package first: `library(dplyr)`
+- **The Fix:** Load the package first: `library(ggplot2)`
 
-### Plotting Problems
+🐛 **Error: "there is no package called..."**
+- **What it means:** Package not installed
+- **Why it happens:** Need to download the package first
+- **The Fix:** Run `install.packages("package_name")` first
+
+### Simple Plotting Problems
 🐛 **Plot doesn't show**
 - **What it means:** Code ran but no plot appeared
-- **Why it happens:** Missing `print()` or plot not saved
-- **The Fix:** Make sure to run the complete ggplot command
+- **Why it happens:** Missing parts of the ggplot command
+- **The Fix:** Make sure you have `ggplot() + geom_something()`
+
+🐛 **Error in ggplot: "object not found"**
+- **What it means:** R can't find your data
+- **Why it happens:** Variable name is wrong or not created
+- **The Fix:** Check if you created your data with `c()` or `data.frame()`
 

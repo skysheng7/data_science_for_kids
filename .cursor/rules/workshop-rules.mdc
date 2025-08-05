@@ -63,6 +63,9 @@ In README files, always instruct users:
 - Days 2-5: Students write more code themselves
 - Introduce ONE new concept at a time
 - Use minimal packages and functions to avoid overload
+- When introducing any new function, package, or concept, provide clear explanations in simple language
+   - Include explanatory comments directly in the code
+   - Add the same explanations to the Pro Tips section of the README file in the appropriate section
 - Use `...` placeholders for student fill-ins
 - Code structure: Example first, then practice questions
 - Difficulty levels:

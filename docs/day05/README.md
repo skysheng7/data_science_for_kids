@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Day 5 - AI & Neural Networks
+title: Day 5 - Machine Learning & AI
 ---
 
-# 🧙‍♀️ Day 5: Neural Networks and AI Ethics
+# 🧙‍♀️ Day 5: Machine Learning & AI
 
-*Welcome to the AI Academy where we explore the future of artificial intelligence!*
+*Welcome to the AI Academy where Oda the Data Otter discovers machine learning magic and explores the ethical future of artificial intelligence!*
 
 ```{image} ../../images/logo1.png
 :alt: logo1
@@ -14,14 +14,15 @@ title: Day 5 - AI & Neural Networks
 
 ## 🔮 Learning Journey Overview
 
-On our final day, we'll explore the cutting-edge world of neural networks and AI! You'll build physical neural networks with strings, program with AI assistance, and engage in important discussions about AI ethics and the future.
+On our final day, we'll explore the exciting world of machine learning and AI! You'll master K-Nearest Neighbors through physical board games, build classification models, and engage in important discussions about AI ethics and the future.
 
 ### 🎯 Learning Objectives
-- 🕸️ Understand neural network basics
-- 🤖 Explore different types of AI
-- 💬 Learn to collaborate with AI tools
-- ⚖️ Discuss AI ethics and bias
-- 🔮 Envision the future of technology
+- 🧠 Understand what machine learning is and how computers learn
+- 🎯 Learn about training and testing data through hands-on activities
+- 🔍 Master K-Nearest Neighbors (KNN) with physical games
+- 🤖 Explore different types of AI and their applications
+- ⚖️ Discuss AI ethics, bias, and responsible technology use
+- 🔮 Envision the future of AI and your role in it
 
 ## 📚 Today's Magical Concepts
 
