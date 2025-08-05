@@ -7,6 +7,8 @@ title: Day 4 - Machine Learning Quest
 
 *Welcome to the Machine Learning Quest where algorithms learn to make predictions!*
 
+<img src="../../images/knn.png" alt="knn" style="width: 50%; height: auto;">
+
 ## 🔮 Learning Journey Overview
 
 Today we'll dive into the exciting world of machine learning! You'll understand training and testing, explore K-Nearest Neighbors through physical board games, and build your own classification models.

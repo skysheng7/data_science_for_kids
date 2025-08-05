@@ -7,6 +7,10 @@ title: Day 1 - Basic Programming Magic
 
 *Welcome to the Magic Forest where Oda the Data Otter teaches you the secret spells of programming!*
 
+<img src="../../images/logo2.png" alt="Oda the Data Otter Logo" style="width: 50%; height: auto;">
+
+
+
 ## 🔮 Learning Journey Overview
 
 Today we'll join Oda on our first adventure into the magical world of R programming! By the end of today, you'll be casting spells with code and making smart decisions like a real data wizard.
@@ -16,6 +20,7 @@ Today we'll join Oda on our first adventure into the magical world of R programm
 - 📝 Understand comments and why they're important
 - 🎲 Master variables and data types
 - 🔄 Control program flow and have computers make decisions using if-else conditions
+
 
 ---
 

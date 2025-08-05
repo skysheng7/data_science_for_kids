@@ -18,7 +18,7 @@ Each day folder must contain:
 ### 1.2 README.md Structure & Numbering
 Use hierarchical numbering throughout:
 1. Title with magical theme (Don't change title, I already wrote it down for each README file for each day)
-2. Learning objectives with 🎯
+2. Learning objectives with 🎯. Each bullet point under learning objectives should start with an emoji
 3. Ice breaker activity (10 min) with time estimation
 4. Main activities with spells (numbered sections)
    4.1 Section 1 (*Duration: X minutes*)

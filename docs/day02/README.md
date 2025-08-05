@@ -7,6 +7,8 @@ title: Day 2 - Data Storytelling
 
 *Oda the Data Otter discovers how to make data dance with loops and paint beautiful stories with code!*
 
+<img src="../../images/viz.png" alt="visualization" style="width: 50%; height: auto;">
+
 ## 🎯 Learning Objectives
 - Master for loops to repeat magical actions
 - Discover open-source packages and get help from the R community

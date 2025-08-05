@@ -7,6 +7,8 @@ title: Day 5 - AI & Neural Networks
 
 *Welcome to the AI Academy where we explore neural networks and discuss the future of artificial intelligence!*
 
+<img src="../../images/logo1.png" alt="AI" style="width: 50%; height: auto;">
+
 ## 🔮 Learning Journey Overview
 
 On our final day, we'll explore the cutting-edge world of neural networks and AI! You'll build physical neural networks with strings, program with AI assistance, and engage in important discussions about AI ethics and the future.

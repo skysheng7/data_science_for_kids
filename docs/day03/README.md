@@ -7,6 +7,9 @@ title: Day 3 - Statistics Safari
 
 *Welcome to Statistics Safari where we measure cow heights and count strawberry candies!*
 
+
+<img src="../../images/logo3.png" alt="stat" style="width: 50%; height: auto;">
+
 ## 🔮 Learning Journey Overview
 
 Today we'll explore the fascinating world of statistics using hands-on activities with toy cows and bags of candy. You'll learn how to measure central tendencies, understand sampling, and discover the magic of bootstrapping.
