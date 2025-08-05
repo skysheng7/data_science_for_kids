@@ -22,7 +22,7 @@ title: Day 3 - Data Storytelling
 ## 1. Ice Breaker: Data Detective Challenge
 *Duration: 15 minutes*
 
-🎈 **Activity:** Work in pairs to examine a mystery dataset snippet and write down 3 questions you'd want to investigate. Share your detective instincts with the class!
+🎈 **Activity:** 
 
 ## 2. Data Loading: Bringing Real Data to Life
 *Duration: 20 minutes*
