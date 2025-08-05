@@ -683,7 +683,7 @@ print(paste("🎯 You have", points, "points total!"))
 Just like Oda must perform her magic spells in the right order, **the sequence of code matters!** Let's discover why with some magical experiments!
 
 #### ✨ Spell 9A: Order Matters - The Racing Game!
-📁 **Find this spell in Posit Cloud:** Look for the file `day01_spell09_code_order.R` in your project files!
+📁 **Find this spell in Posit Cloud:** Look for the file `day01_spell09A_code_order.R` in your project files!
 
 ```R
 # 🏁 Oda's magical racing game - Position matters!
@@ -702,6 +702,9 @@ if (position == 1) {
 ```
 
 #### ✨ Spell 9B: Wrong Order - The Broken Magic!
+
+📁 **Find this spell in Posit Cloud:** Look for the file `day01_spell09B_code_order.R` in your project files!
+
 ```R
 # ⚠️ What happens if we check from LAST place to FIRST place?
 position <- 2
