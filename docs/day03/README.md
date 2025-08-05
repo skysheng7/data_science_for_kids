@@ -3,12 +3,14 @@ layout: default
 title: Day 3 - Statistics Safari
 ---
 
-# 🌿 Day 3: Introduction to Frequentist Statistics
+# 🌊 Day 3: Statistics Ocean Adventure with Oda
 
-*Welcome to Statistics Safari where we measure cow heights and count strawberry candies!*
+*Join Oda the Data Otter as she dives deep into the magical Statistics Ocean, where colorful clams hold the secrets of mean, median, and mode!*
 
-
-<img src="../../images/logo3.png" alt="stat" style="width: 50%; height: auto;">
+```{image} ../../images/stat.png
+:alt: stat
+:width: 50%
+```
 
 ## 🔮 Learning Journey Overview
 

@@ -5,11 +5,13 @@ title: Day 1 - Basic Programming Magic
 
 # 🏰 Day 1: Basic Programming Magic in R
 
-*Welcome to the Magic Forest where Oda the Data Otter teaches you the secret spells of programming!*
-
-<img src="../../images/logo2.png" alt="Oda the Data Otter Logo" style="width: 50%; height: auto;">
+*Welcome to the Magic Castle where Oda the Otter teaches you the secret spells of programming!*
 
 
+```{image} ../../images/logo2.png
+:alt: logo2
+:width: 50%
+```
 
 ## 🔮 Learning Journey Overview
 

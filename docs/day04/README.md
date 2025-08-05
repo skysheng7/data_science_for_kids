@@ -5,9 +5,12 @@ title: Day 4 - Machine Learning Quest
 
 # 🪄 Day 4: Introduction to Machine Learning
 
-*Welcome to the Machine Learning Quest where algorithms learn to make predictions!*
+*Welcome to the Magical Machine Learning Wrold where computers learn to make predictions based on their neighbours!*
 
-<img src="../../images/knn.png" alt="knn" style="width: 50%; height: auto;">
+```{image} ../../images/knn.png
+:alt: knn
+:width: 50%
+```
 
 ## 🔮 Learning Journey Overview
 

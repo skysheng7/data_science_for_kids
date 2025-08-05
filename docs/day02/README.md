@@ -7,7 +7,10 @@ title: Day 2 - Data Storytelling
 
 *Oda the Data Otter discovers how to make data dance with loops and paint beautiful stories with code!*
 
-<img src="../../images/viz.png" alt="visualization" style="width: 50%; height: auto;">
+```{image} ../../images/viz.png
+:alt: vis
+:width: 50%
+```
 
 ## 🎯 Learning Objectives
 - Master for loops to repeat magical actions
@@ -16,124 +19,250 @@ title: Day 2 - Data Storytelling
 - Create stunning visualizations that tell compelling stories
 - Work as a team to solve real data mysteries
 
-## 1. Ice Breaker: Data Detective Mystery Box
-*Duration: 10 minutes*
+## 1. Ice Breaker: Human Decision Tree Builder
+*Duration: 15 minutes*
 
-🎈 **Activity:** Grab a mystery box with random objects. Work with a partner to categorize and count items. We'll use this experience to understand how we organize and analyze data!
+🎈 **Activity:** Work in groups of 3-4 to interview each other, draw a decision tree, and write if-else code that sorts each group member into a unique category! This refreshes Day 1's if-else magic while preparing us for data exploration.
 
-<img src="PLACEHOLDER_GIF_URL" alt="Detective searching through mystery box" style="width: 100%; height: auto;">
+**How to Play:**
+1. Discovery Questions *(4 min)*: Share with your group:
+   - What do you have in common with some (but not all) group members?
+   - What makes you different from everyone else in your group?
+   
+   Example discoveries:
+   - "Sarah loves math, but Sky and Jamie prefer art"
+   - "Only Sky has a pet, the rest of us don't have any"
+   - "Sky and Sarah are 12+, but Jamie is 11"
+
+2. Find Your Split Points *(5 min)*:
+   - What question divides your group into 2 roughly equal parts?
+   - Within each part, what question separates people further?
+   - Can you create a path where everyone ends up alone?
+
+3. Draw & Code *(5 min)*:
+   
+**Simple Example Decision Tree:**
+```
+                    Age >= 12?
+                   /          \
+                YES            NO
+               /                \
+        Love math?           Jamie (11)
+       /        \            "Young Explorer"
+     YES        NO
+    /            \
+Sarah (12)    Sky (28)
+"Math Wizard"  "Pet Lover"
+```
+
+**Corresponding R Code:**
+```R
+# Test with each person's info!
+name <- "Sarah"     # Try "Sarah", "Sky", "Jamie"
+age <- 12           # Sarah: 12, Sky: 13, Jamie: 11  
+loves_math <- TRUE  # Sarah: TRUE, Sky: FALSE, Jamie: FALSE
+has_pet <- FALSE    # Sarah: FALSE, Sky: TRUE, Jamie: FALSE
+
+if (age >= 12) {
+  if (loves_math == TRUE) {
+    print("Sarah: 🧮 Math Wizard!")      # Sarah lands here
+  } else {
+    print("Sky: 🐈 Pet Lover!")        # Sky lands here  
+  }
+} else {
+  print("Jamie: 🌟 Young Explorer!")     # Jamie lands here
+}
+```
+
+4. **Reflect (1 min):** 
+   - Does everyone get their own category? 
+   - What surprised you about your group's similarities and differences?
+
+<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZmFvOTFlYW5zemsza3Rjd2N2ZTN6enp5eHBvYzB4d24xMTcydmwybiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Ta2eHM043vhVS/giphy.gif" alt="hello2" style="width: 100%; height: auto;">
 
 ## 2. Magic Loops: Making R Repeat Spells
 *Duration: 45 minutes*
 
-### Spell 1: Basic Loop Magic
-#### 🎈 Activity: Printing Practice
+🎭 **Imagine you're a chef baking 10 cookies.** Instead of repeat the actions, "mix flour, add sugar, bake", 10 separate times, you create a robot and repeat this procedure for you 10 times! That's exactly what for loops do - they let us repeat code without typing it over and over.
+
+🔮 **The Magic Formula:** `for (number in 1:10) { # do something }`
+- `number` is like a counter that changes each time (number = 1, then 2, then 3...)
+- `1:10` means "count from 1 to 10"
+- Everything inside `{}` get executed 10 times!
+
+```R
+for (number in 1:10){
+    print(paste("🍪 Making Cookie #", number))
+    print("🥛 Mix flour")
+    print("🍯 Add sugar")
+    print("🔥 Bake")
+    print("") # add an empty line before we start making the next cookie!
+}
+```
+
+<img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3djRrMWlzbnBzZGkzY3d2N3Rld2RpeTF6aGdkdWp0Z29pbGhueDV2eiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/VbIAPdxKhv9jG/giphy.gif" alt="ginger" style="width: 100%; height: auto;">
+
+### 2.1 Spell 1: Basic Loop Magic
+*Duration: 15 minutes*
 
 📁 **Find this spell in Posit Cloud:** Look for the file `day02_spell01_basic_loops.R` in your project files!
 
-Let's learn how to make R repeat actions automatically!
+Let's learn how to make R repeat actions automatically! We'll start by printing messages and watching our counter change.
 
-### Spell 2: Loop Detective Challenge
-#### 🎈 Activity: Fix the Broken Code
+#### 🎈 Activity: Printing Practice
+
+💡 **Pro Tips from this spell:**
+- Think of `i` as a magical counter that changes each time!
+- The loop runs once for each number in the range you give it
+- Use `c()` to create collections of items like animals or names
+- `paste()` is great for gluing strings and numbers together
+
+### 2.2 Spell 2: Loop Detective Challenge
+*Duration: 15 minutes*
 
 📁 **Find this spell in Posit Cloud:** Look for the file `day02_spell02_loop_debugging.R` in your project files!
 
-Debug incomplete code and fill in the blanks to make loops work perfectly.
+#### 🎈 Activity: Fix the Broken Code
 
-### Spell 3: Story Scrambler Challenge
-#### 🎈 Activity: Word Rearrangement Game
+🕵️ **Detective Mission:** Someone cast incomplete loop spells! Your job is to debug the broken code and fill in the blanks to make loops work perfectly. Follow the clues and fix the missing pieces!
+
+### 2.3 Spell 3: Story Scrambler Challenge
+*Duration: 15 minutes*
 
 📁 **Find this spell in Posit Cloud:** Look for the file `day02_spell03_story_scrambler.R` in your project files!
 
-**Step 1:** Use a for loop to scramble this magical sentence: *"In the Magic Forest, a smart rabbit and a tiny dragon became friends, built a flying boat out of leaves, and sailed through the sky to save a sleepy bear cub who was stuck on a candy cloud."*
+📚 **The Magic Story:** *"In the Magic Forest, a smart rabbit and a tiny dragon became friends, built a flying boat out of leaves, and sailed through the sky to save a sleepy bear cub who was stuck on a candy cloud."*
 
-**Step 2:** Challenge a classmate to write a loop that restores the original story!
+```{image} ../../images/forest.png
+:alt: forest
+:width: 60%
+```
 
-✨ **Challenge:** Create mosaic art using loops and programming patterns.
+#### 🎈 Activity: Secret Message Encoder & Decoder
 
-<img src="PLACEHOLDER_GIF_URL" alt="Colorful mosaic art pattern" style="width: 100%; height: auto;">
+🕵️ **Turn yourself into a data spy!** Learn two secret encoding methods:
+- **Method 1:** Reverse word order (like reading backwards to confuse enemies!)
+- **Method 2:** Every-other-word scramble (mix odd and even positioned words!)
+
+Create secret codes to share with friends using mini messages like "Meet me at the playground after school" or "The password is rainbow unicorn."
+
+💡 **Pro Tips from this spell:**
+- `length()` tells you how many items are in a list
+- `%%` finds remainders (great for finding odd/even numbers!)
+- `paste(words, collapse = " ")` joins words back into sentences
+- Use `i:1` for backwards loops, `1:i` for forward loops
+- `c()` creates or adds to lists: `new_list <- c(old_list, new_item)`
+
+### 2.4 Spell 4: Art with Loops
+*Duration: 15 minutes*
+
+📁 **Find this spell in Posit Cloud:** Look for the file `day02_spell04_art_with_loops.R` in your project files!
+
+#### 🎈 Activity: Creative Programming Patterns
+
+✨ **Challenge:** Create beautiful art using loops and programming patterns - from simple stars to colorful grids and even Christmas trees!
 
 ## 3. Package Power: Unlocking R's Magic Toolbox
 *Duration: 30 minutes*
 
-### Spell 4: Open-Source Magic
+### 3.1 Spell 5: Open-Source Magic
+*Duration: 15 minutes*
+
 #### 🎈 Activity: Package Explorer
 
-📁 **Find this spell in Posit Cloud:** Look for the file `day02_spell04_packages.R` in your project files!
+📁 **Find this spell in Posit Cloud:** Look for the file `day02_spell05_packages.R` in your project files!
+
+🌟 **What is Open-Source?** It's like a giant library where thousands of friendly wizards share their best spells for free! Anyone can use them, improve them, and share them back.
 
 Discover what open-source means and how to get help from the R community.
 
-### Spell 5: ggplot2 Meets Loops
+### 3.2 Spell 6: ggplot2 Meets Loops
+*Duration: 15 minutes*
+
 #### 🎈 Activity: Loop-Powered Visualizations
 
-📁 **Find this spell in Posit Cloud:** Look for the file `day02_spell05_loops_and_plots.R` in your project files!
+📁 **Find this spell in Posit Cloud:** Look for the file `day02_spell06_loops_and_plots.R` in your project files!
 
-Combine for loops with ggplot2 to create multiple visualizations automatically!
+🎨 **Magic Combo:** Combine for loops with ggplot2 to create multiple beautiful visualizations automatically! It's like having a robot artist that paints dozens of pictures for you!
 
 ## 4. Data Wrangling: Taming Wild Datasets
 *Duration: 50 minutes*
 
-### Spell 6: Loading Data Magic
+### 4.1 Spell 7: Loading Data Magic
+*Duration: 15 minutes*
+
 #### 🎈 Activity: Reading Real Datasets
 
-📁 **Find this spell in Posit Cloud:** Look for the file `day02_spell06_loading_data.R` in your project files!
+📁 **Find this spell in Posit Cloud:** Look for the file `day02_spell07_loading_data.R` in your project files!
 
-Learn how to bring datasets into R and explore what's inside.
+📊 **Data is everywhere!** From sports scores to weather patterns, we'll learn how to bring real datasets into R and explore what secrets they hold.
 
-### Spell 7: Data Transformation Spells
+### 4.2 Spell 8: Data Transformation Spells
+*Duration: 20 minutes*
+
 #### 🎈 Activity: Clean and Transform
 
-📁 **Find this spell in Posit Cloud:** Look for the file `day02_spell07_data_wrangling.R` in your project files!
+📁 **Find this spell in Posit Cloud:** Look for the file `day02_spell08_data_wrangling.R` in your project files!
 
-Master the essential data wrangling functions:
-- `select()` - Pick specific columns
-- `filter()` - Find specific rows
-- `mutate()` - Create new columns
-- `group_by()` - Group similar data
-- `summarize()` - Calculate summaries
+🔧 **The Data Toolkit:** Master the essential data wrangling functions:
+- `select()` - Pick specific columns (like choosing ingredients)
+- `filter()` - Find specific rows (like finding red candies in a jar)
+- `mutate()` - Create new columns (like calculating totals)
+- `group_by()` - Group similar data (like sorting by color)
+- `summarize()` - Calculate summaries (like counting each group)
 
-### Spell 8: Pipeline Magic
+### 4.3 Spell 9: Pipeline Magic
+*Duration: 15 minutes*
+
 #### 🎈 Activity: Chain Commands with Pipes
 
-📁 **Find this spell in Posit Cloud:** Look for the file `day02_spell08_piping.R` in your project files!
+📁 **Find this spell in Posit Cloud:** Look for the file `day02_spell09_piping.R` in your project files!
 
-Learn the magical `%>%` operator to chain commands together smoothly.
+🌊 **The Magic Pipeline:** Learn the magical `%>%` operator to chain commands together smoothly - like water flowing through pipes!
 
 <img src="PLACEHOLDER_GIF_URL" alt="Data flowing through pipes" style="width: 100%; height: auto;">
 
 ## 5. Data Storytelling: Painting with Numbers
 *Duration: 35 minutes*
 
-### Spell 9: Histogram Stories
+### 5.1 Spell 10: Histogram Stories
+*Duration: 12 minutes*
+
 #### 🎈 Activity: Distribution Detective
 
-📁 **Find this spell in Posit Cloud:** Look for the file `day02_spell09_histograms.R` in your project files!
+📁 **Find this spell in Posit Cloud:** Look for the file `day02_spell10_histograms.R` in your project files!
 
-Create histograms to reveal hidden patterns in data distributions.
+📊 **Shape Detective:** Create histograms to reveal hidden patterns in data distributions. Is the data shaped like a mountain, a valley, or something else?
 
-### Spell 10: Scatter Plot Adventures
+### 5.2 Spell 11: Scatter Plot Adventures
+*Duration: 12 minutes*
+
 #### 🎈 Activity: Relationship Explorer
 
-📁 **Find this spell in Posit Cloud:** Look for the file `day02_spell10_scatter_plots.R` in your project files!
+📁 **Find this spell in Posit Cloud:** Look for the file `day02_spell11_scatter_plots.R` in your project files!
 
-Discover relationships between variables using scatter plots.
+🔍 **Relationship Hunter:** Discover relationships between variables using scatter plots. Do tall people have bigger feet? Let's find out!
 
-### Spell 11: Bar Chart Champions
+### 5.3 Spell 12: Bar Chart Champions
+*Duration: 11 minutes*
+
 #### 🎈 Activity: Category Comparison
 
-📁 **Find this spell in Posit Cloud:** Look for the file `day02_spell11_bar_charts.R` in your project files!
+📁 **Find this spell in Posit Cloud:** Look for the file `day02_spell12_bar_charts.R` in your project files!
 
-Compare categories and groups using powerful bar charts.
+🏆 **Category Champions:** Compare categories and groups using powerful bar charts. Which group wins the data competition?
 
 ## 6. Team Project: Data Mystery Solvers
 *Duration: 30 minutes*
 
-### Spell 12: Collaborative Data Investigation
+### 6.1 Spell 13: Collaborative Data Investigation
+*Duration: 30 minutes*
+
 #### 🎈 Activity: Partner Data Storytelling
 
-📁 **Find this spell in Posit Cloud:** Look for the file `day02_spell12_team_project.R` in your project files!
+📁 **Find this spell in Posit Cloud:** Look for the file `day02_spell13_team_project.R` in your project files!
 
-Work with a teammate to:
+🕵️‍♀️ **Data Detectives Unite!** Work with a teammate to:
 1. Pick a dataset from the datasets folder
 2. Use data wrangling and visualization to answer the research question
 3. Present your findings to the class

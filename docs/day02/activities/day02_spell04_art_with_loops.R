@@ -1,0 +1,90 @@
+# 🔮 Day 2 - Spell 4: Art with Loops
+
+# 🎈 Activity: Creating Patterns and Art with Programming
+
+# 🎨 Art Challenge 1: Simple patterns
+# Let's create patterns using loops and symbols
+
+print("--- Simple Star Pattern ---")
+for (row in 1:5) {
+  stars <- ""
+  for (col in 1:row) {
+    stars <- paste(stars, "⭐", sep="")
+  }
+  print(stars)
+}
+
+# 🎨 Art Challenge 2: Colorful symbol patterns
+# Create a pattern using different symbols
+print("\n--- Rainbow Pattern ---")
+symbols <- c("🔴", "🟠", "🟡", "🟢", "🔵", "🟣")
+
+for (row in 1:6) {
+  line <- ""
+  for (col in 1:row) {
+    symbol_index <- col %% 6 + 1
+    line <- paste(line, symbols[symbol_index], sep="")
+  }
+  print(line)
+}
+
+# 🎨 Art Challenge 3: Grid patterns
+# Create a rectangular grid with alternating symbols
+print("\n--- Grid Art ---")
+symbols <- c("⭐", "🌙", "☀️", "💫")
+
+for (row in 1:4) {
+  line <- ""
+  for (col in 1:6) {
+    symbol_index <- (row + col) %% 4 + 1
+    line <- paste(line, symbols[symbol_index], sep="")
+  }
+  print(line)
+}
+
+# ✨ Your Turn: Create your own pattern!
+# Fill in the blanks to make a Christmas tree pattern
+print("\n--- Christmas Tree Pattern ---")
+for (row in 1:5) {
+  # Add spaces for centering
+  spaces <- ""
+  for (space in 1:(5-row)) {
+    spaces <- paste(spaces, " ", sep="")
+  }
+  
+  # Add stars for the tree
+  stars <- ""
+  for (star in 1:(2*row-1)) {
+    stars <- paste(stars, "🎄", sep="")
+  }
+  
+  # Print the complete line
+  print(paste(spaces, stars, sep=""))
+}
+
+# Add the tree trunk
+print("    🪵")
+
+# 🎨 Advanced Challenge: Number patterns
+print("\n--- Number Triangle ---")
+for (row in 1:5) {
+  line <- ""
+  for (col in 1:row) {
+    line <- paste(line, col, sep=" ")
+  }
+  print(line)
+}
+
+# ✨ Bonus Challenge: Create your own artistic pattern
+# Use any symbols you like and create something unique!
+print("\n--- Your Creative Pattern ---")
+# Write your own loop art here:
+# for (row in 1:...) {
+#   ...
+# }
+
+# 💡 Memory Tip: 
+# - Use nested loops (loop inside loop) for 2D patterns
+# - %% operator helps create repeating patterns
+# - paste() with sep="" joins symbols without spaces
+# - Try different symbols: ⭐🌙☀️💫🔴🟠🟡🟢🔵🟣🎄🪵

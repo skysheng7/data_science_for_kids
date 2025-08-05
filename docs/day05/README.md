@@ -5,9 +5,12 @@ title: Day 5 - AI & Neural Networks
 
 # 🧙‍♀️ Day 5: Neural Networks and AI Ethics
 
-*Welcome to the AI Academy where we explore neural networks and discuss the future of artificial intelligence!*
+*Welcome to the AI Academy where we explore the future of artificial intelligence!*
 
-<img src="../../images/logo1.png" alt="AI" style="width: 50%; height: auto;">
+```{image} ../../images/logo1.png
+:alt: logo1
+:width: 50%
+```
 
 ## 🔮 Learning Journey Overview
 
@@ -22,4 +25,5 @@ On our final day, we'll explore the cutting-edge world of neural networks and AI
 
 ## 📚 Today's Magical Concepts
 
+- why Oda is called Oda, because the first woman programmer Ada, and her vision about machine, computers, AI
 *Content will be added when the camp starts!*

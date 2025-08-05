@@ -15,7 +15,7 @@ Welcome, young data detectives! Meet the Otter Oda, a friendly hacker who can lo
 |-----|-------|--------------|
 | **[1](day01/README.md)** | 🏰 Basic Programming Magic | Variables, data types, if-else conditions |
 | **2** | 🎨 Data Storytelling | Loops, functions, data wrangling, visualization |
-| **3** | 🌿 Statistics Safari | Mean, sampling, confidence intervals |
+| **3** | 🌊 Statistics Ocean | Mean, sampling, confidence intervals |
 | **4** | 🪄 Machine Learning Quest | KNN, training, testing |
 | **5** | 🧙‍♀️ AI | AI, AI ethics, future |
 

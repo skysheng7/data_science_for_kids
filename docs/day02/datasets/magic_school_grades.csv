@@ -1,0 +1,9 @@
+student_name,house,grade,magic_score,potion_score,flying_score,has_pet
+Luna,Fire,3,85,90,75,TRUE
+Max,Water,4,92,85,88,FALSE
+Zara,Earth,3,78,95,70,TRUE
+Finn,Air,5,95,80,92,TRUE
+Nova,Fire,4,88,85,95,FALSE
+Sage,Water,3,82,90,78,TRUE
+Rio,Earth,5,90,92,85,FALSE
+Kai,Air,4,86,88,90,TRUE

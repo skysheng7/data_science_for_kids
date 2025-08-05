@@ -1,0 +1,109 @@
+# 🔮 Day 2 - Spell 3: Story Scrambler Challenge
+
+# 🎈 Activity: Secret Message Encoder & Decoder
+# 🕵️ Turn yourself into a data spy! Create secret codes and decode messages!
+
+# 📚 The Magic Story to scramble:
+original_story <- "In the Magic Forest, a smart rabbit and a tiny dragon became friends, built a flying boat out of leaves, and sailed through the sky to save a sleepy bear cub who was stuck on a candy cloud."
+
+# First, let's split the story into individual words
+# Note: unlist(strsplit()) is a magical spell that splits a string into a list of words
+story_words <- unlist(strsplit(original_story, " "))
+print("🔤 Original story words:")
+print(story_words)
+print(paste("📊 Total words:", length(story_words)))
+
+########################################################
+# 🎯 Challenge 1: Reverse Word Order Spy Code
+# 🔄 Like reading a sentence backwards to confuse enemies!
+
+print("\n🚀 === CHALLENGE 1: REVERSE SPY CODE ===")
+
+# Step 1: Create reversed word list
+reversed_words <- c()
+for (i in length(story_words):1) {
+  reversed_words <- c(reversed_words, story_words[i])  
+}
+
+# Step 2: Print the reversed story
+print("🔒 ENCODED (Backwards):")
+reversed_story <- paste(reversed_words, collapse = " ")
+print(...)  # TODO Fill in: what should we print?
+
+# Step 3: Restore original order  
+original_words <- c()
+for (i in length(reversed_words):1) {
+  original_words <- c(original_words, reversed_words[...])  # TODO Fill in: what goes here in ...?
+}
+print("\n🔓 DECODED (Original Order):")
+original_restored <- paste(original_words, collapse = " ")
+print(...)  # TODO Fill in: what should we print?
+
+########################################################
+# 🎯 Challenge 2: Every-Other-Word Spy Code
+# 🔀 Mix up words by putting odd positions first, then even positions!
+
+print("\n🚀 === CHALLENGE 2: EVERY-OTHER-WORD SPY CODE ===")
+
+# Step 1: Create empty lists for odd and even positioned words
+odd_words <- c()
+even_words <- c()
+
+# Step 2: Separate words by position (odd vs even)
+for (i in 1:length(story_words)) {
+  # Note: %% is the "remainder" operator (great for finding odd/even numbers!)
+  if (i %% 2 == 1) {  # Odd positions (1, 3, 5, etc.)
+    odd_words <- c(odd_words, story_words[...])  # Fill in: what goes here?
+  } else {  # Even positions (2, 4, 6, etc.)
+    even_words <- c(even_words, story_words[...])  # Fill in: what goes here?
+  }
+}
+
+# Step 3: Create encoded message (odds + separator + evens)
+encoded_words <- c(odd_words, "---", even_words)
+print("🔒 ENCODED (Every-other-word):")
+encoded_story <- paste(encoded_words, collapse = " ")
+print(encoded_story)  
+
+# Step 4: Decode back to original (combine odd and even in correct order)
+decoded_words <- c()
+for (i in 1:max(length(odd_words), length(even_words))) {
+  if (i <= length(odd_words)) {
+    decoded_words <- c(decoded_words, odd_words[...])  # Fill in: what goes here?
+  }
+  if (i <= length(even_words)) {
+    decoded_words <- c(decoded_words, even_words[...])  # Fill in: what goes here?
+  }
+}
+
+print("🔓 DECODED (Original Order):")
+decoded_story <- paste(decoded_words, collapse = " ")
+print(...)  # Fill in: what should we print?
+
+########################################################
+# 🎮 Bonus: Try Your Own Secret Messages!
+# 🤐 Create secret codes to share with friends!
+
+print("\n🎮 === BONUS: YOUR SECRET MESSAGES ===")
+
+# Try these mini stories or create your own!
+mini_secret1 <- "Meet me at the playground after school."
+mini_secret2 <- "I found the hidden treasure map."
+mini_secret3 <- "The password is rainbow unicorn."
+
+# Your turn: Pick one of the mini secrets and encode it!
+my_secret <- "..."  # Fill in: choose one of the mini_secret messages above
+
+# Split your secret into words
+my_words <- unlist(strsplit(my_secret, " "))
+
+# Encode using Method 1 (Reverse) or Method 2 (Every-other-word)
+# Write your encoding code here:
+
+
+# 💡 Memory Tips: 
+# - length() tells you how many items are in a list
+# - %% finds remainders (i %% 2 == 1 means odd numbers)
+# - paste(words, collapse = " ") joins words back into a sentence, seperating by " "
+# - Use i:1 for backwards loops, 1:i for forward loops
+# - c() creates or adds to lists: new_list <- c(old_list, new_item)

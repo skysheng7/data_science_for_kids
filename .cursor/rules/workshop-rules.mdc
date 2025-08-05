@@ -43,6 +43,7 @@ Use hierarchical numbering throughout:
 ## 2. Spell Activities Format
 
 ### 2.1 Spell Numbering & Structure
+- Always use emojis to make things fun and in the theme of magical otter who is a data wizard
 - in README.md file: **Number each spell:** `### Spell 1: Descriptive Name`, `### Spell 2: Another Name`
 - in README.md file: **Always follow with activity:** `#### 🎈 Activity: Activity Name`
 - If there is a spell in README.md file, always create a corresponding R script with file name: `dayXX_spellYY_descriptive_name.R`

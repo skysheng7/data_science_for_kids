@@ -1,0 +1,11 @@
+creature_type,location,time_of_day,weather,rarity_score,photographer_level
+Dragon,Thunder_Mountain,Evening,Stormy,9,4
+Unicorn,Enchanted_Forest,Dawn,Sunny,8,3
+Fairy,Crystal_Cave,Night,Cloudy,6,2
+Troll,Mystic_Lake,Morning,Rainy,4,1
+Centaur,Enchanted_Forest,Afternoon,Sunny,7,3
+Dragon,Crystal_Cave,Night,Stormy,10,5
+Unicorn,Mystic_Lake,Dawn,Sunny,9,4
+Fairy,Enchanted_Forest,Evening,Cloudy,5,2
+Phoenix,Thunder_Mountain,Morning,Sunny,10,5
+Griffin,Crystal_Cave,Afternoon,Cloudy,8,3
