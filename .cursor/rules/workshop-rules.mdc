@@ -17,7 +17,7 @@ Each day folder must contain:
 
 ### 1.2 README.md Structure & Numbering
 Use hierarchical numbering throughout:
-1. Title with magical theme
+1. Title with magical theme (Don't change title, I already wrote it down for each README file for each day)
 2. Learning objectives with 🎯
 3. Ice breaker activity (10 min) with time estimation
 4. Main activities with spells (numbered sections)
@@ -29,9 +29,10 @@ Use hierarchical numbering throughout:
 
 ### 1.3 Time Estimation Requirements
 - Add time estimation at the beginning of each major section
+- Add time estimation at the beginning of each subsection (2.1, 2.2, etc.)
 - Format: *Duration: X minutes*
 - Include total time for ice breaker (10 min)
-- Estimate realistic time for each main chapter/section
+- Estimate realistic time for each main chapter/section and subsections
 
 ### 1.4 GIF Integration
 - Include relevant GIFs throughout the content

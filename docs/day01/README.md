@@ -51,13 +51,16 @@ How to Play:
 Before we can start our programming adventure, we need to set up our magical coding environment! Think of this like building a castle where all our R magic will live.
 
 ### 🏰 Step 1: Create Your Coding Castle
+*Duration: 10 minutes*
+
 Head over to our [Posit Cloud Setup Guide](../setup/posit-cloud-setup.md) and create your castle.
 
 💡 **Important**: Complete the Posit Cloud setup before continuing with today's activities. This is where all your magical data science adventures will start! ✨
 
 ### ☁️ Step 2: Learning more about Posit Cloud (same as R Studio interface)
+*Duration: 5 minutes*
 
-*The Magic Interface*
+**The Magic Interface**
 
 - **📝 Editor (top left):** Your magical scroll for writing longer R spells (code).
 - **🔮 Console (bottom left):** Cast spells (code) here and see the magic happen instantly!
@@ -67,6 +70,7 @@ Head over to our [Posit Cloud Setup Guide](../setup/posit-cloud-setup.md) and cr
 ![R Studio Interface](../../images/r_studio_explain.png)
 
 ### 🖨️ Step 3: Practice Print Statement
+*Duration: 10 minutes*
 
 #### 🎈 Activity: Magical Print Adventure!
 
@@ -95,6 +99,7 @@ Some print ideas:
 <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3YWk2aHhkZTNyaHNubm9tbHRod3o2eGY2a3lzaGxuZTN1bGt6bmVpeCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/VNNyo3QioK6re/giphy.gif" alt="minion2arm" style="width: 100%; height: auto;">
 
 ### 📜 Step 4: Write Your First Magical scroll ✨
+*Duration: 10 minutes*
 
 Ready to write your first piece of R code? We call them scripts, but think of them as magical scrolls!
 
@@ -145,10 +150,12 @@ There are a few ways to run your code:
 ---
 
 ## 2. 🧙‍♀️ Understanding Your First Magical Scroll
+*Duration: 35 minutes*
 
 Great job creasting your first magical scroll! But what exactly happened? Let's break down the magic step by step.
 
 ### 2.1 💬 Comments: Messages to Future You
+*Duration: 5 minutes*
 
 First, notice the lines that start with `#`. These are called **comments**:
 
@@ -174,6 +181,7 @@ First, notice the lines that start with `#`. These are called **comments**:
 ```
 
 ### 2.2 🏷️ Variables: Magical Storage Boxes
+*Duration: 5 minutes*
 
 The real magic happens with **variables**. Think of variables as magical storage boxes with labels:
 
@@ -186,6 +194,7 @@ c <- a + b # Take what's in box "a" and "b", add them, put result in box "c"
 The `<-` symbol is like an arrow pointing into the box. It means "store this value here."
 
 ### 2.3 🏷️ Variable Naming: Like Naming Your Pet!
+*Duration: 5 minutes*
 
 In everyday life, we give names to complicated things to make talking easier. Instead of saying "that furry animal with 4 legs that barks and wags its tail," we just say "dog!" 
 
@@ -211,6 +220,7 @@ When R runs this code, it first calculates `3*2 + 5` (which equals 11), then sto
 - Make names meaningful: `student_count` ✅ (not just `a`, or `b` ❌)
 
 ### 2.4 🌊 Data Types: The Four Magical Islands
+*Duration: 15 minutes*
 
 Just like Oda's ocean has different islands 🏝️, R has different types of data. Here are 4 data types that Oda commonly use in her otterly beautiful data adventures :
 
@@ -271,6 +281,7 @@ Setup:
 
 
 ### 2.5 💥 Errors
+*Duration: 5 minutes*
 
 🐛 **Don't worry - Everyone makes mistakes when coding!**
 
@@ -356,12 +367,12 @@ In 1947, computer scientist Grace Hopper found an actual moth stuck in a the pow
 ---
 
 ## 3. 🪄 Making Magical Decisions: If-Else Adventures
-*Duration: 25 minutes*
+*Duration: 95 minutes*
 
 Welcome to the next magical part of programming - teaching your code to make decisions! Just like Oda the Otter decides whether to swim upstream or downstream based on the current, our code can make choices too! 🦦✨
 
 ### 3.1 🎈 Activity: The Magic Color Decision Game
-*Duration: 10 minutes*
+*Duration: 15 minutes*
 
 Before we write code, let's experience how decision-making works for humans using our voice and body!
 
@@ -479,6 +490,7 @@ if (shirt_color == "black") {
 - Only ONE path gets chosen - just like only one group of people did each action!
 
 ### 3.2 🖥️ Coding Magic: Teaching R to Make Decisions
+*Duration: 40 minutes*
 
 Now let's teach R the same decision-making magic! In your R script, try these spells:
 
@@ -678,6 +690,7 @@ print(paste("🎯 You have", points, "points total!"))
 <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZHIzaXRidmk4NTQ1aW1ueHY2c25iYXEwM2Y2Y3JydHViNTJhNHhtNCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/2gZ6JM7dyL8r2YZGzM/giphy.gif" alt="celebrate" style="width: 100%; height: auto;">
 
 ### 3.3 🎯 The Magic of Code Order!
+*Duration: 15 minutes*
 
 #### 💡 Why Sequence Matters in Magic Spells!
 Just like Oda must perform her magic spells in the right order, **the sequence of code matters!** Let's discover why with some magical experiments!
@@ -763,6 +776,7 @@ print(paste("🔢 Your name has", nchar(name), "letters!"))
 
 
 ### 3.4 🧠 Understanding Decision Logic
+*Duration: 5 minutes*
 
 #### The Magical Comparison and Condition Symbols:
 - `==` means "is exactly equal to" (like twin otters! 🦦 == 🦦)
@@ -805,6 +819,7 @@ if (temperature <= 0) {
 4. **Errors:** What input would cause R to generate errors?
 
 ### 3.5 🎮 Challenge: Build Your Own Decision Tree!
+*Duration: 15 minutes*
 
 Create a magical creature classifier! Copy this code and fill in the blanks:
 
@@ -847,6 +862,7 @@ if (creature_size <= 20) {
 ![Code Order Magic](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ3Vob2t6dHU4dmU4OWsyZDZsM2RhZGN4ODJiM3ZqcGVxazZ2MDRzbSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/1pA8TwX8atOCnAtTbV/giphy.gif)
 
 ### 3.6 🐛 Common Mistakes & How to Fix Them
+*Duration: 5 minutes*
 
 **Mistake 1:** Using `=` instead of `==`
 ```R
