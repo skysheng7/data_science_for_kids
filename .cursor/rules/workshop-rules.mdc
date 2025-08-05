@@ -13,7 +13,7 @@ Each day folder must contain:
 - `README.md` - Main lesson content with activities
 - `activities/` - Individual spell files (`dayXX_spellYY_name.R`)
 - `solutions/` - Single solutions file including solutions to all spells in different R scripts in activities (`dayXX_spell_solutions.md`)
-- `datasets/` - Data files (Days 2-5 only, not Day 1)
+- `datasets/` - Data files (Days 3-5 only)
 
 ### 1.2 README.md Structure & Numbering
 Use hierarchical numbering throughout:
@@ -63,8 +63,9 @@ In README files, always instruct users:
 - Days 2-5: Students write more code themselves
 - Introduce ONE new concept at a time
 - Use minimal packages and functions to avoid overload
+- Use "########################################################" to seperate each code chunk (different questions/challenges)
 - When introducing any new function, package, or concept, provide clear explanations in simple language
-   - Include explanatory comments directly in the code
+   - Include explanatory comments directly as comments in the code scripts
    - Add the same explanations to the Pro Tips section of the README file in the appropriate section
 - Use `...` placeholders for student fill-ins
 - Code structure: Example first, then practice questions
@@ -72,6 +73,25 @@ In README files, always instruct users:
    - Beginner: Code structure with gaps
    - Intermediate: Code structure with 1 or a few lines for them to write
    - Advanced: Students write entire blocks
+
+### 2.4 Age-Appropriate Complexity Guidelines (CRITICAL)
+**Target Age: 10-14 years old - Keep concepts VERY simple!**
+
+#### Day-by-Day Complexity Limits:
+- **Day 1:** Variables, basic data types, simple if-else only
+- **Day 2:** For loops, packages, basic ggplot2 with simple vectors, simple dataframes only
+- **Day 3:** Data loading, basic dplyr functions, pipelines, intermediate visualizations
+- **Day 4:** Statistics concepts with hands-on activities
+- **Day 5:** Basic ML concepts and AI ethics discussions
+
+
+#### What to AVOID:
+- Complex nested operations
+- Multiple new packages in one spell
+- Advanced statistical concepts without hands-on activities
+- More than 3 new R functions per spell
+- Long code blocks without comments
+- Abstract concepts without physical analogies
 
 ## 3. Solutions & Answer Keys
 
@@ -116,7 +136,34 @@ Expected Output:
 - Frame complex concepts as magical or game-like scenarios
 - Use Oda the Data Otter theme throughout: Oda is a data science wizard, a friendly hacker with magical data powers
 
-### 5.2 Use Emojis in README Files and Code
+### 5.2 Explanation Structure for New Concepts (MANDATORY)
+**Every time you introduce something new, follow this pattern:**
+
+1. **Start with "What is X?"** - Give the simplest possible definition
+2. **Use a relatable analogy** - Compare to something kids know (toys, apps, games)
+3. **Show simple example** - Demonstrate with very basic code
+4. **Explain what happens** - Tell them exactly what the output will be
+5. **Add comments in code** - Explain every line that's new
+6. **Summarize with emoji** - End with a 💡 key learning point
+
+**Example Pattern:**
+```R
+# 💡 What is a Package?
+# Think of packages like apps on your phone - each one adds new powers to R!
+
+# Step 1: Install the package (like downloading an app)
+install.packages("ggplot2")
+
+# Step 2: Load the package (like opening the app)
+library(ggplot2)
+
+# 💡 Key Learning: 
+# - Packages are like apps that add new powers to R
+# - install.packages() downloads them once
+# - library() opens them each time you want to use them
+```
+
+### 5.3 Use Emojis in README Files and Code
 - 🎯 Learning objective
 - 🎈 Activity instruction (ALWAYS use for activities)
 - 💡 Pro tip

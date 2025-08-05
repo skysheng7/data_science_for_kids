@@ -1,0 +1,63 @@
+# 🔮 Day 2 - Spell 8: What is a Dataframe?
+
+########################################################
+# 🎯 Challenge 1: Create your first dataframe
+print("🐾 Creating a dataframe about pets!")
+
+# Create a simple dataframe about pets
+pets <- data.frame(
+  name = c("Fluffy", "Buddy", "Whiskers"),
+  type = c("cat", "dog", "cat"),
+  age = c(3, 5, 2)
+)
+
+# Look at our dataframe
+print(pets)
+
+########################################################
+# 🎯 Challenge 2: Create your own dataframe
+print("\n👫 Creating a dataframe about your friends!")
+
+# Make a dataframe about your friends (change the data to match your real friends!)
+friends <- data.frame(
+  name = c("Sky", "...", "..."),
+  favorite_color = c("...", "...", "gre...en"),
+  age = c(28, ..., ...)
+)
+
+print(friends)
+
+
+########################################################
+# 🎯 Challenge 3: Let's explore our dataframes
+print("\n🔍 Exploring our data:")
+
+# How many rows and columns?
+print(paste("Pets dataframe has", nrow(pets), "rows and", ncol(pets), "columns"))
+print(paste("Friends dataframe has", nrow(friends), "rows and", ncol(friends), "columns"))
+
+# What are the column names?
+print(paste("Pet columns:", paste(names(pets), collapse = ", ")))
+print(paste("Friend columns:", paste(names(friends), collapse = ", ")))
+
+# Questions to think:
+# What does nrow() and ncol() do?
+# What does names() do?
+# What does paste() do?
+# Hint: Try using the help system (?) you learned in Spell 5!
+
+########################################################
+# ✨ Challenge 4: Create your own dataframe!
+# Pick a topic you're interested in and create a dataframe with at least 3 columns and 3 rows
+
+# my_topic <- data.frame(
+#   column1 = c("___", "___", "___"),
+#   column2 = c("___", "___", "___"),
+#   column3 = c(___, ___, ___)
+# )
+# print(my_topic)
+
+# 💡 **Understanding the parts:**
+# - **Columns:** `name`, `type`, `age` (like categories)
+# - **Rows:** Each pet gets one row (like one card in your collection)
+# - **data.frame():** The magic function that creates tables
