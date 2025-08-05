@@ -33,4 +33,3 @@ print(paste("🎯 You have", points, "points total!"))
 # - Why do we get multiple messages for high scores?
 # - How is this different from if-else-if chains?
 # - What's the minimum points needed for each achievement level?
-# - What happens if you have 49 points?

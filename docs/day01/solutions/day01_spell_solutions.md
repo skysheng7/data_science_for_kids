@@ -41,11 +41,16 @@ if (favorite_color == "red") {
   print("🌊 You love calm and peaceful vibes!")
 } else if (favorite_color == "green") {
   print("🌱 You enjoy nature and growing things!")
-} else if (favorite_color == "purple") {
-  print("💜 You love magic and mystery!")
+} else if (favorite_color == "purple") { # NEW line added to include a new color purple
+  print("💜 You love magic and mystery!") # NEW line added
 } else {
   print("✨ You have a unique and magical taste!")
 }
+```
+
+**Expected Output:**
+```
+[1] "💜 You love magic and mystery!"
 ```
 
 ---
@@ -84,6 +89,28 @@ if (favorite_color == "red") {
 - **Only weather good but temperature bad**: No perfect day (need BOTH conditions)
 - **Why need BOTH true**: AND (&) requires ALL conditions to be true
 
+**3. 🎯 Experiment: Try creating your own perfect day conditions:** Example output:
+
+```R
+temperature <- 25
+weather <- "sunny"
+wind_speed <- 60
+
+if ((temperature > 20) & (weather == "sunny") & (wind_speed < 10)) {
+  print("🏖️ Perfect day for swimming and playing!")
+  print("🦦 Oda is super happy!")
+} else if (wind_speed > 50){
+  print("💨 Wow I'm being blown away, hide in the bunk!")
+}else {
+  print("🏠 Maybe it's a good day to stay inside and code!")
+}
+```
+
+**Expected Output:**
+```
+[1] "💨 Wow I'm being blown away, hide in the bunk!"
+```
+*(Because wind_speed = 60, which is > 50, so the first condition fails and the second condition is true)*
 ---
 
 ## ✨ Spell 5: OR Condition Magic - Solutions
@@ -116,6 +143,11 @@ if (snack == "apple" | snack == "banana" | snack == "carrot") {
 }
 ```
 
+**Expected Output:**
+```
+[1] "🧀 Protein power! Great for brain fuel!"
+```
+
 ---
 
 ## ✨ Spell 6: Age Group Sorter - Solutions
@@ -136,6 +168,55 @@ if (snack == "apple" | snack == "banana" | snack == "carrot") {
 **3. Why use >= and <=?**
 - To include the boundary ages (like exactly 6 or exactly 14)
 - Makes sure no ages "fall through the cracks"
+
+**4. 🎯 Challenge Solution: Age-Based Activity Sorter**
+```R
+# 🎯 Oda's Age-Based Activity Sorter - Perfect activities for each age group!
+age <- 12  # Try different ages: 4, 7, 13, 16, 25
+
+if (age < 6) {
+  print("🐣 Little Explorer Activities:")
+  print("🧸 Play with building blocks and stuffed animals")
+  print("📚 Listen to picture book stories") 
+  print("🎨 Finger painting and simple crafts")
+  print("🎵 Sing-along songs and nursery rhymes")
+} else if (age >= 6 & age <= 9) {
+  print("🧸 Young Adventurer Activities:")
+  print("🎮 Simple board games and puzzles")
+  print("⚽ Team sports like soccer or basketball")
+  print("🔬 Basic science experiments")
+  print("🎭 Drama and pretend play")
+} else if (age >= 10 & age <= 14) {
+  print("🧙‍♀️ Data Wizard Activities:")
+  print("💻 Learn coding and computer programming!")
+  print("🎸 Learn musical instruments")
+  print("📱 Create digital art and videos")
+  print("🧩 Complex strategy games and escape rooms")
+} else if (age >= 15 & age <= 18) {
+  print("🚀 Teen Tech Master Activities:")
+  print("🚗 Learn to drive and gain independence")
+  print("💼 Part-time jobs and internships")
+  print("🎓 Prepare for college and career planning")
+  print("🌍 Volunteer work and community service")
+} else {
+  print("🎓 Wise Adult Activities:")
+  print("👨‍🏫 Teach and mentor the next generation")
+  print("💰 Career advancement and financial planning")
+  print("🌿 Hobbies like gardening, cooking, or travel")
+}
+
+print(paste("🎂 Perfect activities for someone who is", age, "years old!"))
+```
+
+**Expected Output (for age = 12):**
+```
+[1] "🧙‍♀️ Data Wizard Activities:"
+[1] "💻 Learn coding and computer programming!"
+[1] "🎸 Learn musical instruments"
+[1] "📱 Create digital art and videos"
+[1] "🧩 Complex strategy games and escape rooms"
+[1] "🎂 Perfect activities for someone who is 12 years old!"
+```
 
 ---
 
@@ -177,6 +258,13 @@ if (magic_word == "abracadabra") {
 }
 ```
 
+**Expected Output:**
+```
+[1] "🐰 *Magic rabbits hop everywhere*"
+[1] "🌈 *Rainbow appears in the sky*"
+[1] "🦦 Oda waves her magic wand!"
+```
+
 ---
 
 ## ✨ Spell 8: No Else Challenge - Solutions
@@ -185,8 +273,8 @@ if (magic_word == "abracadabra") {
 
 **1. Test point values:**
 - `points <- 30`: Only "🎯 You have 30 points total!" (no achievements met)
-- `points <- 60`: "👍 GOOD JOB!" + total points (≥50 condition met)
-- `points <- 80`: "⭐ AWESOME!" + "👍 GOOD JOB!" + total points (≥75 and ≥50 met)
+- `points <- 60`: "👍 GOOD JOB! Keep practicing!" + total points (≥50 condition met)
+- `points <- 80`: "⭐ AWESOME! You're doing great!" + "👍 GOOD JOB! Keep practicing!" + total points (≥75 and ≥50 met)
 - `points <- 120`: All three achievements + total points (≥100, ≥75, ≥50 all met)
 
 **2. Why multiple achievement messages?**
@@ -205,17 +293,17 @@ if (magic_word == "abracadabra") {
 
 **1. Compare both versions:**
 
-**Version 1 (Correct):**
+**Version 9A (Correct):**
 - `position <- 1`: "🥇 GOLD MEDAL!"
 - `position <- 2`: "🥈 SILVER MEDAL!"  
 - `position <- 3`: "🥉 BRONZE MEDAL!"
 
-**Version 2 (Wrong):**
-- `position <- 1`: "👏 Good race!" (WRONG!)
-- `position <- 2`: "👏 Good race!" (WRONG!)
-- `position <- 3`: "👏 Good race!" (WRONG!)
+**Version 9B (Wrong):**
+- `position <- 1`: "👏 Good race! Keep practicing!" (WRONG!)
+- `position <- 2`: "👏 Good race! Keep practicing!" (WRONG!)
+- `position <- 3`: "👏 Good race! Keep practicing!" (WRONG!)
 
-**2. Why Version 2 always says "Good race!"**
+**2. Why Version 9B always says "Good race!"**
 - First condition `position >= 1` is TRUE for positions 1, 2, and 3
 - R stops at the first TRUE condition and never checks the others
 
@@ -267,6 +355,13 @@ if (name == "mike" | name == "Mike" | name == "Michael" | name == "michael"){
 print(paste("🔢 Your name has", nchar(name), "letters!"))
 ```
 
+**Expected Output:**
+```
+[1] "👥 Hi Mike, long time no see! I've caught some clams today! 🌊 🐚 🦪"
+[1] "🔢 Your name has 4 letters!"
+```
+*(Now Oda can find Mike because we check for his name BEFORE checking the length!)*
+
 ---
 
 ## ✨ Spell 11: Temperature Zone Detective - Solutions
@@ -288,6 +383,7 @@ print(paste("🔢 Your name has", nchar(name), "letters!"))
 **3. Edge cases:**
 - `temperature <- 0`: "🧊 FREEZING!" (0 ≤ 0 is true)
 - `temperature <- 21`: "☀️ WARM!" (21 ≥ 21 is true)
+- `temperature <- 20.5`: "🤔 Something seems fishy with this temperature..."
 
 
 ---
@@ -349,6 +445,75 @@ if (creature_size <= 20) {
 
 print(paste("📏 Your creature is", creature_size, "cm tall and", creature_color, "colored!"))
 ```
+
+**Expected Output:**
+```
+[1] "🐺 You found a silver wolf!"
+[1] "📏 Your creature is 150 cm tall and silver colored!"
+```
+*(Because creature_size = 150 falls in the 101-200 range, and creature_color = "silver" matches the wolf condition)*
+
+**5. SUPER CHALLENGE: Flying Ability Extension**
+```R
+# 🚀 ULTIMATE Magical Creature Classifier with Flying Abilities!
+creature_size <- 50      # Size in cm
+creature_color <- "gold" # Try different colors  
+creature_ability <- "flying"  # Try: "flying", "swimming", "invisible"
+
+if (creature_size <= 20) {
+  if (creature_color == "purple") {
+    if (creature_ability == "flying") {
+      print("🧚‍♀️✈️ You found a flying tiny fairy!")
+      print("💫 She can sprinkle magic dust from the sky!")
+    } else if (creature_ability == "invisible") {
+      print("🧚‍♀️👻 You found an invisible tiny fairy!")
+      print("🔍 You can only see sparkles where she flies!")
+    } else {
+      print("🧚‍♀️ You found a tiny fairy!")
+    }
+  } else {
+    print("🐛 You found a magical bug!")
+  }
+} else if (creature_size >= 21 & creature_size <= 100) {
+  if (creature_color == "gold") {
+    if (creature_ability == "flying") {
+      print("🐉✈️ You found a flying baby dragon!")
+      print("🔥 It breathes fire while soaring through the clouds!")
+    } else if (creature_ability == "swimming") {
+      print("🐉🌊 You found a swimming baby dragon!")
+      print("💧 It can breathe underwater and shoots water blasts!")
+    } else {
+      print("🐉 You found a baby dragon!")
+    }
+  } else if (creature_color == "purple") {
+    if (creature_ability == "flying") {
+      print("🦄✈️ You found a flying unicorn!")
+      print("🌈 It leaves rainbow trails in the sky!")
+    } else {
+      print("🦄 You found a unicorn!")
+    }
+  } else {
+    print("🦦 You found Oda the Otter!")
+  }
+} else if (creature_size >= 101) {
+  if (creature_ability == "flying") {
+    print("👹✈️ You found a flying friendly giant!")
+    print("☁️ The ground shakes when it lands!")
+  } else {
+    print("👹 You found a friendly giant!")
+  }
+}
+
+print(paste("📏 Your creature is", creature_size, "cm tall,", creature_color, "colored, and has", creature_ability, "ability!"))
+```
+
+**Expected Output:**
+```
+[1] "🐉✈️ You found a flying baby dragon!"
+[1] "🔥 It breathes fire while soaring through the clouds!"
+[1] "📏 Your creature is 50 cm tall, gold colored, and has flying ability!"
+```
+*(Because creature_size = 50, creature_color = "gold", and creature_ability = "flying" all match the flying baby dragon conditions)*
 
 ---
 

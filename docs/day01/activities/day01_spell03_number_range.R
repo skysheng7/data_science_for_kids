@@ -26,5 +26,4 @@ if (mystery_number < 10) {
 # mystery_number <- -5   # What about negative numbers?
 
 # 🤔 Think about it: 
-# - Why do we check smaller numbers first?
-# - What would happen if we switched the order?
+# - Why do we check smaller numbers first? What would happen if we switched the order?

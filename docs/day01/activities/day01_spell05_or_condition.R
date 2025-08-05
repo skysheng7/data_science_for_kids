@@ -33,4 +33,3 @@ if (snack == "apple" | snack == "banana" | snack == "carrot") {
 # 🤔 Think about it:
 # - Why does "Apple" vs "apple" matter?
 # - How is OR different from AND?
-# - Can you add a new category for your favorite snacks?
