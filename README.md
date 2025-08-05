@@ -14,13 +14,14 @@ Welcome to an enchanting adventure where mathematics meets magic, and data tells
 
 ## 🗓️ 5-Day Adventure Plan
 
-| Day | Theme | Key Concepts | Magic Activity |
-|-----|-------|--------------|----------------|
-| **[1](docs/day01/)** | 🌟 Basic Programming Magic | Variables, data types, loops | Magic Forest Word Reorganizer |
-| **[2](docs/day02/)** | 📊 Data Storytelling | Functions, data wrangling, visualization | Team Data Detective Project |
-| **[3](docs/day03/)** | 🐄 Statistics Safari | Mean, sampling, confidence intervals | Candy Bag Sampling Adventure |
-| **[4](docs/day04/)** | 🤖 Machine Learning Quest | KNN, training, testing | Physical Board Game Classification |
-| **[5](docs/day05/)** | 🧠 AI & Neural Networks | Neural networks, ethics, future | String & Neuron Connection Game |
+| Day | Theme | Key Concepts |
+|-----|-------|--------------|
+| **[1](docs/day01/)** | 🏰 Basic Programming Magic | Variables, data types, if-else conditions |
+| **[2](docs/day02/)** | 🎨 Data Storytelling | Loops, functions, data wrangling, visualization |
+| **[3](docs/day03/)** | 🌿 Statistics Safari | Mean, sampling, confidence intervals |
+| **[4](docs/day04/)** | 🪄 Machine Learning Quest | KNN, training, testing |
+| **[5](docs/day05/)** | 🧙‍♀️ AI | AI, AI ethics, future |
+
 
 ## 🚀 Quick Start Guide
 
