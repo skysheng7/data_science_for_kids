@@ -81,7 +81,7 @@ if (age >= 12) {
 <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZmFvOTFlYW5zemsza3Rjd2N2ZTN6enp5eHBvYzB4d24xMTcydmwybiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Ta2eHM043vhVS/giphy.gif" alt="hello2" style="width: 100%; height: auto;">
 
 ## 2. Magic Loops: Making R Repeat Spells
-*Duration: 45 minutes*
+*Duration: 75 minutes*
 
 🎭 **Imagine you're a chef baking 10 cookies.** Instead of repeat the actions, "mix flour, add sugar, bake", 10 separate times, you create a robot and repeat this procedure for you 10 times! That's exactly what for loops do - they let us repeat code without typing it over and over.
 
@@ -117,7 +117,60 @@ Let's learn how to make R repeat actions automatically! We'll start by printing 
 - Use `c()` to create collections of items like animals or names
 - `paste()` is great for gluing strings and numbers together
 
-### 2.2 Spell 2: Loop Detective Challenge
+### 2.2 🏃‍♀️ Physical Activity: Human For Loop Theater
+*Duration: 30 minutes*
+
+🎭 **Now that you understand loops, let's BE the loops!** Time to get creative and invent your own human loop performance!
+
+#### 🎈 Activity: Design Your Own Loop Performance
+
+**🌟 Your Mission:** Work in groups of 5-6 to create and perform an original human for loop! You can use the examples below for inspiration, but we want to see YOUR creative ideas!
+
+**🎪 Example Inspiration (but make it your own!):**
+
+**🍪 Example #1: Cookie Factory Assembly Line**
+- **Setup:** 3 people are stations, 2 person is the "cookie dough," 1 person is the loop counter
+- **Loop Counter says:** "Starting iteration 1!"
+- **Station 1:** "Mixing flour!" (stirring motion)
+- **Station 2:** "Adding sugar!" (sprinkling motion)  
+- **Station 3:** "Baking cookie!" (oven motion)
+- **Cookie dough 1** walks through all 4 stations, then goes to back of line --> cookie 1 ready!
+- **Loop Counter says:** "Starting iteration 2!" and repeat --> Cookie dough 2 ready!
+- **After 2 cookies:** Everyone shouts "Cookie factory loop complete!"
+
+**🐰 Example #2: Human Computer Instructions**
+- **Setup:** 1 person is the "code," 4-5 people are individual "computer action actors"
+- **Code calls out:** "For i in 1 to 3, execute these actions in sequence:"
+- **Code calls out:** "Iteration 1! Sarah - jump like a rabbit! Tom - spin around! Lisa - clap 2 times! Mike - roar like a lion!"
+- **Each actor** performs their specific action when called: Sarah hops, Tom spins, Lisa claps, Mike roars
+- **Code calls out:** "Iteration 2! Sarah - jump like a rabbit! Tom - spin around! Lisa - clap 2 times! Mike - roar like a lion!"
+- **Same actors** repeat their same actions in the same order
+- **Code calls out:** "Iteration 3! Sarah - jump like a rabbit! Tom - spin around! Lisa - clap 2 times! Mike - roar like a lion!"
+- **After iteration 3:** Code says "Loop complete!" and all actors freeze
+
+**🎨 Creative Ideas to Spark Your Imagination:**
+- Sports training routines (jumping jacks, running laps, passing balls)
+- Morning routines (brush teeth, eat breakfast, get dressed)
+- Art creation (draw, color, cut, paste)
+- Music performances (clap, stomp, sing, repeat)
+
+**⏰ Timeline:**
+- **Planning & Practice (20 minutes):** Brainstorm your loop idea, assign roles, and rehearse
+- **Performances (10 minutes):** Each group performs for 1-2 minutes
+
+**🎯 What Makes a Great Loop Performance:**
+1. **Clear repetition** - audience can see the loop happening
+2. **Visible counter** - someone tracks iterations (1, 2, 3...)
+3. **Consistent actions** - same steps happen each time
+4. **Creative twist** - your unique spin on the concept!
+
+**🎉 Performance Guidelines:**
+- Start by announcing: "Our loop is in iteration X!"
+- End with: "Loop complete!" or something creative
+
+<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExc2d4eXNtc2kxYjIweTM4NDJwODJ5aHM4OWpsOXYyMmUxcGkwb3BwYiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/l3fQueO8cHyZl2Pvi/giphy.gif" alt="performance" style="width: 100%; height: auto;">
+
+### 2.3 Spell 2: Loop Detective Challenge
 *Duration: 15 minutes*
 
 📁 **Find this spell in Posit Cloud:** Look for the file `day02_spell02_loop_debugging.R` in your project files!
@@ -126,10 +179,19 @@ Let's learn how to make R repeat actions automatically! We'll start by printing 
 
 🕵️ **Detective Mission:** Someone cast incomplete loop spells! Your job is to debug the broken code and fill in the blanks to make loops work perfectly. Follow the clues and fix the missing pieces!
 
-### 2.3 Spell 3: Story Scrambler Challenge
+### 2.4 Spell 3: Art with Loops
+*Duration: 20 minutes*
+
+📁 **Find this spell in Posit Cloud:** Look for the file `day02_spell03_art_with_loops.R` in your project files!
+
+#### 🎈 Activity: Creative Programming Patterns
+
+✨ **Challenge:** Create beautiful art using loops and programming patterns - from simple stars to colorful grids and even Christmas trees!
+
+### 2.5 🤯 Challenging Magic -- Spell 4: Story Scrambler Challenge
 *Duration: 15 minutes*
 
-📁 **Find this spell in Posit Cloud:** Look for the file `day02_spell03_story_scrambler.R` in your project files!
+📁 **Find this spell in Posit Cloud:** Look for the file `day02_spell04_story_scrambler.R` in your project files!
 
 📚 **The Magic Story:** *"In the Magic Forest, a smart rabbit and a tiny dragon became friends, built a flying boat out of leaves, and sailed through the sky to save a sleepy bear cub who was stuck on a candy cloud."*
 
@@ -152,15 +214,6 @@ Create secret codes to share with friends using mini messages like "Meet me at t
 - `paste(words, collapse = " ")` joins words back into sentences
 - Use `i:1` for backwards loops, `1:i` for forward loops
 - `c()` creates or adds to lists: `new_list <- c(old_list, new_item)`
-
-### 2.4 Spell 4: Art with Loops
-*Duration: 15 minutes*
-
-📁 **Find this spell in Posit Cloud:** Look for the file `day02_spell04_art_with_loops.R` in your project files!
-
-#### 🎈 Activity: Creative Programming Patterns
-
-✨ **Challenge:** Create beautiful art using loops and programming patterns - from simple stars to colorful grids and even Christmas trees!
 
 ## 3. Package Power: Unlocking R's Magic Toolbox
 *Duration: 30 minutes*

@@ -59,12 +59,16 @@ In README files, always instruct users:
 - List the exact R script name for each spell
 - Make it easy for students to locate files
 
-### 2.3 Code Scaffolding Strategy
-- **Days 2-5:** Have students write more code themselves
-- Use placeholders like `...` where they fill in code
-- **Beginner sections:** Provide complete working examples
-- **Intermediate sections:** Provide structure with gaps to fill
-- **Challenging & advanced sections:** Students write entire blocks or multiple lines
+### 2.3 Code style
+- Days 2-5: Students write more code themselves
+- Introduce ONE new concept at a time
+- Use minimal packages and functions to avoid overload
+- Use `...` placeholders for student fill-ins
+- Code structure: Example first, then practice questions
+- Difficulty levels:
+   - Beginner: Code structure with gaps
+   - Intermediate: Code structure with 1 or a few lines for them to write
+   - Advanced: Students write entire blocks
 
 ## 3. Solutions & Answer Keys
 
