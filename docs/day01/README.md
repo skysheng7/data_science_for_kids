@@ -483,6 +483,8 @@ if (shirt_color == "black") {
 Now let's teach R the same decision-making magic! In your R script, try these spells:
 
 #### ✨ Spell 1: Simple If-Else Magic
+📁 **Find this spell in Posit Cloud:** Look for the file `day01_spell01_simple_if_else.R` in your project files!
+
 ```R
 # 🔮 Oda's first decision spell
 my_favorite_number <- 7
@@ -500,6 +502,8 @@ if (my_favorite_number > 5) {
 3. **Challenge:** Can you predict the message before running it?
 
 #### ✨ Spell 2: Multiple Choices (If-ElseIf-Else)
+📁 **Find this spell in Posit Cloud:** Look for the file `day01_spell02_multiple_choices.R` in your project files!
+
 ```R
 # 🌈 Oda's color mood detector
 favorite_color <- "blue"
@@ -521,6 +525,8 @@ if (favorite_color == "red") {
 3. **Extension:** Add your favorite color with a special message!
 
 #### ✨ Spell 3: Number Range Detective
+📁 **Find this spell in Posit Cloud:** Look for the file `day01_spell03_number_range.R` in your project files!
+
 ```R
 # 🔍 Oda's number detective game
 mystery_number <- 4
@@ -544,6 +550,8 @@ if (mystery_number < 10) {
 ![tiny](https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3aHgwZ2luazJuZnEzbzJjNzhsbWd1eDVoaWtsNjBoMXp6em03dzVubSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Ie9XYbEyw5YrP1J5QB/giphy.gif)
 
 #### ✨ Spell 4: AND Condition Magic (Both Things Must Be True!)
+📁 **Find this spell in Posit Cloud:** Look for the file `day01_spell04_and_condition.R` in your project files!
+
 ```R
 # 🎭 Oda's perfect day detector
 temperature <- 25
@@ -564,6 +572,8 @@ if (temperature > 20 & weather == "sunny") {
    - `temperature <- 30` and `weather <- "sunny"`
 
 #### ✨ Spell 5: OR Condition Magic (Either Thing Can Be True!)
+📁 **Find this spell in Posit Cloud:** Look for the file `day01_spell05_or_condition.R` in your project files!
+
 ```R
 # 🍎 Oda's snack time detector
 snack <- "apple"
@@ -584,6 +594,8 @@ if (snack == "apple" | snack == "banana" | snack == "carrot") {
 3. **Question:** What happens if you type "Apple" with a capital A?
 
 #### ✨ Spell 6: Age Group Sorter (Like the Physical Activity!)
+📁 **Find this spell in Posit Cloud:** Look for the file `day01_spell06_age_groups.R` in your project files!
+
 ```R
 # 🎂 Oda's age group magic (just like our shirt color game!)
 age <- 4
@@ -607,6 +619,8 @@ if (age < 6) {
 3. Family Fun: Try your family members' ages!
 
 #### ✨ Spell 7: Multiple Actions Spell (Do Several Things!)
+📁 **Find this spell in Posit Cloud:** Look for the file `day01_spell07_multiple_actions.R` in your project files!
+
 ```R
 # 🎪 Oda's magic show with multiple tricks
 magic_word <- "abracadabra"
@@ -634,6 +648,8 @@ if (magic_word == "abracadabra") {
 ![spell](https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3bGtnbzd4cHdtbW80dTlpaTN3bDU3dHZpbzMxNmpxbGtmc29oOXQzMiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/jnhXd7KT8UTk5WIgiV/giphy.gif)
 
 #### ✨ Spell 8: No Else Challenge (Sometimes Nothing Happens!)
+📁 **Find this spell in Posit Cloud:** Look for the file `day01_spell08_no_else.R` in your project files!
+
 ```R
 # 🏆 Oda's achievement unlocked detector
 points <- 85
@@ -667,6 +683,8 @@ print(paste("🎯 You have", points, "points total!"))
 Just like Oda must perform her magic spells in the right order, **the sequence of code matters!** Let's discover why with some magical experiments!
 
 #### ✨ Spell 9A: Order Matters - The Racing Game!
+📁 **Find this spell in Posit Cloud:** Look for the file `day01_spell09_code_order.R` in your project files!
+
 ```R
 # 🏁 Oda's magical racing game - Position matters!
 position <- 2
@@ -704,6 +722,8 @@ if (position >= 1) {
 3. **Discovery:** Which conditions will NEVER run in Version 2 and why?
 
 #### ✨ Spell 10: String Detective (Text Comparison Magic!)
+📁 **Find this spell in Posit Cloud:** Look for the file `day01_spell10_string_detective.R` in your project files!
+
 ```R
 # 🔍 Oda is trying to find a old friend of her, whose name is Mike
 name <- "Mike"
@@ -752,6 +772,8 @@ print(paste("🔢 Your name has", nchar(name), "letters!"))
 - `&` means "and" (I like otter and elephant 🐘 & 🦦)
 
 #### ✨ Spell 11: Temperature Zone Detective (Real World >= <= Examples!)
+📁 **Find this spell in Posit Cloud:** Look for the file `day01_spell11_temperature_zones.R` in your project files!
+
 ```R
 # 🌡️ Oda's temperature zone detector
 temperature <- 22  # In Celsius
@@ -784,6 +806,7 @@ if (temperature <= 0) {
 Create a magical creature classifier! Copy this code and fill in the blanks:
 
 #### ✨ Spell 12: Magical creature detector!
+📁 **Find this spell in Posit Cloud:** Look for the file `day01_spell12_magical_creatures.R` in your project files!
 
 ```R
 # 🦄 Magical Creature Classifier
