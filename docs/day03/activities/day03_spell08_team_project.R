@@ -1,220 +1,120 @@
-# 🔮 Day 2 - Spell 12: Collaborative Data Investigation
+# 🔮 Day 3 - Spell 8: Team Data Detective Project
 
-# 🎈 Activity: Partner Data Storytelling
-# 🕵️‍♀️ Data Detectives Unite! Work with a teammate to solve data mysteries!
+# Work with a partner to solve a data mystery!
+# Use all your new data magic skills together
 
-# Load all our magical tools
-library(ggplot2)
+########################################################
+# 🕵️‍♀️ Mission: Choose Your Mystery!
+
+# Pick ONE mystery to solve with your partner:
+# 1. Magical Pets Mystery
+# 2. Creature Sightings Mystery  
+# 3. Magic School Mystery
+
+########################################################
+# Step 1: Load your detective toolkit
+
 library(dplyr)
-library(readr)
+library(ggplot2)
 
-print("🎉 Welcome to the Team Data Detective Challenge!")
-print("Your mission: Pick a dataset, investigate it, and tell its story!")
-
-# 📁 Available Datasets (choose one for your investigation)
-print("\n📁 Available Mystery Datasets:")
-
-# Dataset 1: Magical Pet Adoption Center
-pet_adoption <- data.frame(
-  pet_id = 1:50,
-  pet_type = sample(c("Dragon", "Unicorn", "Phoenix", "Griffin", "Pegasus"), 50, replace = TRUE),
-  age_months = sample(1:120, 50),
-  adoption_fee = sample(50:500, 50),
-  days_at_center = sample(1:365, 50),
-  is_adopted = sample(c(TRUE, FALSE), 50, replace = TRUE, prob = c(0.7, 0.3)),
-  magic_level = sample(1:100, 50),
-  friendliness = sample(1:10, 50)
-)
-
-# Dataset 2: Magic School Exam Results  
-exam_results <- data.frame(
-  student_id = 1:100,
-  house = sample(c("Fire", "Water", "Earth", "Air"), 100, replace = TRUE),
-  study_hours = sample(0:40, 100),
-  previous_grade = sample(c("A", "B", "C", "D"), 100, replace = TRUE, prob = c(0.2, 0.3, 0.3, 0.2)),
-  exam_score = sample(40:100, 100),
-  has_tutor = sample(c(TRUE, FALSE), 100, replace = TRUE, prob = c(0.3, 0.7)),
-  favorite_subject = sample(c("Potions", "Charms", "Defense", "Transfiguration"), 100, replace = TRUE)
-)
-
-# Dataset 3: Magical Creature Sightings
-creature_sightings <- data.frame(
-  sighting_id = 1:75,
-  creature_type = sample(c("Dragon", "Unicorn", "Fairy", "Troll", "Centaur"), 75, replace = TRUE),
-  location = sample(c("Enchanted_Forest", "Crystal_Cave", "Mystic_Lake", "Thunder_Mountain"), 75, replace = TRUE),
-  time_of_day = sample(c("Dawn", "Morning", "Afternoon", "Evening", "Night"), 75, replace = TRUE),
-  weather = sample(c("Sunny", "Rainy", "Cloudy", "Stormy"), 75, replace = TRUE),
-  rarity_score = sample(1:10, 75),
-  photographer_level = sample(1:5, 75)
-)
-
-print("1. 🐾 Pet Adoption Center - Which pets get adopted fastest?")
-print("2. 📚 Magic School Exams - What helps students get better grades?")
-print("3. 🌟 Creature Sightings - Where and when are magical creatures spotted?")
+print("🔍 Detective toolkit loaded!")
+print("👫 Ready to solve mysteries with your partner!")
 
 ########################################################
+# Mystery Option 1: Magical Pets Investigation
 
-# 🎯 STEP 1: Choose Your Dataset (uncomment ONE)
-print("\n🎯 STEP 1: Choose your dataset!")
-print("Uncomment (remove #) from ONE of these lines:")
+print("🐾 MYSTERY 1: The Case of the Magical Pets")
+print("Questions to solve:")
+print("- Which pet has the highest magic level?")
+print("- Are older pets more magical?")
+print("- What's the most common pet type?")
 
-# my_data <- pet_adoption
-# my_data <- exam_results  
-# my_data <- creature_sightings
+# Load the data
+pets_data <- read.csv("datasets/magical_pets.csv")
 
-# For demonstration, let's use pet adoption
-my_data <- pet_adoption
-print("📊 Preview of chosen dataset:")
-print(head(my_data))
+# Start your investigation here!
+print("🔍 First, let's peek at our evidence:")
+head(pets_data)
 
-########################################################
-
-# 🎯 STEP 2: Explore Your Data
-print("\n🎯 STEP 2: Explore your data!")
-
-print("Dataset dimensions:")
-print(paste("Rows:", nrow(my_data), "| Columns:", ncol(my_data)))
-
-print("Column names:")
-print(names(my_data))
-
-print("Data summary:")
-print(summary(my_data))
+# YOUR DETECTIVE WORK HERE:
+# Use filter(), select(), group_by(), summarize()
+# Create at least one visualization
 
 ########################################################
+# Mystery Option 2: Creature Sightings Investigation
 
-# 🎯 STEP 3: Ask Research Questions
-print("\n🎯 STEP 3: Brainstorm research questions with your partner!")
-print("Example questions for pet adoption data:")
-print("- Which pet types are most popular?")
-print("- Do older pets take longer to get adopted?") 
-print("- Does adoption fee affect adoption success?")
-print("- Which pets have the highest magic levels?")
-print("- Is there a relationship between friendliness and adoption?")
+print("👾 MYSTERY 2: The Case of the Mysterious Creatures")
+print("Questions to solve:")
+print("- Which location has the most creature sightings?")
+print("- What's the rarest creature?")
+print("- Which creature type appears most often?")
 
-# Write your research question here:
-research_question <- "Which pet types are adopted most quickly?"
-print(paste("🔍 Our research question:", research_question))
+# Uncomment these lines if you choose this mystery:
+# creatures_data <- read.csv("datasets/creature_sightings.csv")
+# print("🔍 Evidence from creature sightings:")
+# head(creatures_data)
 
-########################################################
-
-# 🎯 STEP 4: Data Wrangling
-print("\n🎯 STEP 4: Clean and prepare your data!")
-
-# Example analysis for pet adoption
-adopted_pets <- my_data %>%
-  filter(is_adopted == TRUE)
-
-adoption_summary <- my_data %>%
-  group_by(pet_type) %>%
-  summarize(
-    total_pets = n(),
-    adopted_count = sum(is_adopted),
-    adoption_rate = round(mean(is_adopted) * 100, 1),
-    avg_days_to_adopt = round(mean(days_at_center[is_adopted]), 1),
-    avg_magic_level = round(mean(magic_level), 1)
-  ) %>%
-  arrange(desc(adoption_rate))
-
-print("📊 Adoption Summary by Pet Type:")
-print(adoption_summary)
-
-# Your turn: Create your own summary
-# my_summary <- my_data %>%
-#   group_by(...) %>%
-#   summarize(
-#     ... = ...,
-#     ... = ...
-#   )
+# YOUR DETECTIVE WORK HERE:
 
 ########################################################
+# Mystery Option 3: Magic School Investigation
 
-# 🎯 STEP 5: Create Visualizations
-print("\n🎯 STEP 5: Create compelling visualizations!")
+print("🏫 MYSTERY 3: The Case of the Magic School Grades")
+print("Questions to solve:")
+print("- Which subject do students struggle with most?")
+print("- Who are the top students?")
+print("- What's the average grade in each subject?")
 
-# Visualization 1: Bar chart of adoption rates
-viz1 <- ggplot(adoption_summary, aes(x = reorder(pet_type, adoption_rate), y = adoption_rate)) +
-  geom_bar(stat = "identity", fill = "lightblue") +
-  coord_flip() +
-  labs(title = "Adoption Rates by Pet Type",
-       x = "Pet Type", y = "Adoption Rate (%)") +
-  theme_minimal()
+# Uncomment these lines if you choose this mystery:
+# school_data <- read.csv("datasets/magic_school_grades.csv")
+# print("🔍 Evidence from magic school:")
+# head(school_data)
 
-print(viz1)
-
-# Visualization 2: Scatter plot of age vs days at center
-viz2 <- ggplot(my_data, aes(x = age_months, y = days_at_center, color = is_adopted)) +
-  geom_point(size = 3, alpha = 0.7) +
-  scale_color_manual(values = c("TRUE" = "green", "FALSE" = "red")) +
-  labs(title = "Pet Age vs Time at Adoption Center",
-       x = "Age (months)", y = "Days at Center", color = "Adopted") +
-  theme_minimal()
-
-print(viz2)
-
-# Your turn: Create your own visualization
-# my_viz <- ggplot(my_data, aes(x = ..., y = ...)) +
-#   geom_...() +
-#   labs(title = "...", x = "...", y = "...") +
-#   theme_minimal()
+# YOUR DETECTIVE WORK HERE:
 
 ########################################################
+# Step 2: Investigation Template
 
-# 🎯 STEP 6: Tell Your Story
-print("\n🎯 STEP 6: Prepare your presentation!")
-print("With your partner, prepare to share:")
-print("1. Your research question")
-print("2. What you discovered in the data")
-print("3. Your most interesting visualization")
-print("4. One surprising finding")
-print("5. What you would investigate next")
+# Use this template for ANY mystery you choose:
 
-# Summary findings template
-print("\n📝 Our Findings:")
-print("Research Question: Which pet types are adopted most quickly?")
-print("Key Discovery: [Fill in what you found]")
-print("Surprising Finding: [Something unexpected]")
-print("Recommendation: [What should the adoption center do?]")
+# 1. EXPLORE: Look at your data
+# head(your_data)
+# names(your_data)
+# summary(your_data)
 
-########################################################
+# 2. FILTER: Find specific clues
+# important_clues <- filter(your_data, some_condition)
 
-# 🎯 STEP 7: Bonus Challenges
-print("\n✨ Bonus Challenges (if time allows):")
-print("🌟 Create a correlation matrix between numeric variables")
-print("🌟 Make a multi-panel plot showing different aspects")
-print("🌟 Add trend lines to your scatter plots")
-print("🌟 Create a stacked bar chart")
-print("🌟 Calculate and display summary statistics")
+# 3. SELECT: Pick important information
+# key_info <- select(important_clues, important_columns)
 
-# Example bonus: Correlation matrix
-if("corrplot" %in% rownames(installed.packages())) {
-  library(corrplot)
-  numeric_data <- my_data %>% select_if(is.numeric)
-  cor_matrix <- cor(numeric_data)
-  print("🔢 Correlation Matrix:")
-  print(round(cor_matrix, 2))
-}
+# 4. GROUP AND SUMMARIZE: Count and calculate
+# summary_stats <- your_data %>%
+#   group_by(some_group) %>%
+#   summarize(count = n(), average = mean(some_number))
+
+# 5. VISUALIZE: Create a plot to show your findings
+# mystery_plot <- ggplot(your_data, aes(x = ..., y = ...)) +
+#   geom_point() +  # or geom_col() or geom_histogram()
+#   labs(title = "Your Discovery Title",
+#        x = "X-axis label",
+#        y = "Y-axis label")
 
 ########################################################
+# Step 3: Present Your Findings!
 
-# 🎯 Presentation Template
-print("\n🎤 Presentation Template:")
-print("👋 'Hi everyone! We investigated [dataset name]'")
-print("❓ 'Our research question was: [question]'") 
-print("📊 'We found that [key finding]'")
-print("😮 'The most surprising thing was [surprise]'")
-print("📈 'This chart shows [explain your best visualization]'")
-print("💡 'Based on our analysis, we recommend [recommendation]'")
-print("🤔 'Next, we'd like to investigate [future question]'")
+# When you're done investigating:
+# 1. What did you discover?
+# 2. What does your visualization show?
+# 3. What story does your data tell?
 
-# Save your work
-print("\n💾 Don't forget to save your work!")
-print("Save your visualizations and be ready to share!")
+print("🎉 Great detective work!")
+print("👥 Share your findings with the class!")
 
-# 💡 Memory Tip:
-# - Good data stories answer specific questions
-# - Always explore your data before making visualizations
-# - The best insights often come from combining multiple views
-# - Simple, clear visualizations are usually the most powerful
-# - Practice explaining your findings in simple terms
-# - Every dataset has stories waiting to be discovered!
+########################################################
+# 💡 Detective Tips:
+# - Work together! Two detectives are better than one
+# - Ask lots of questions about your data
+# - Try different visualizations to see patterns
+# - Don't be afraid to experiment
+# - The best discoveries often come from unexpected questions!

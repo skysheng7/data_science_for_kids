@@ -28,3 +28,7 @@ On our final day, we'll explore the exciting world of machine learning and AI! Y
 
 - why Oda is called Oda, because the first woman programmer Ada, and her vision about machine, computers, AI
 *Content will be added when the camp starts!*
+
+
+- ice breaker
+    - students randomly get different colored (3 color) stickernote, and they spread out randomly across the entire school. I will then walk myself to a random place, and try to label my color based on who are closest to me (change k of course)

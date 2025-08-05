@@ -1,81 +1,73 @@
-# 🔮 Day 3 - Spell 3: Grouping and Summarizing
+# 🔮 Day 3 - Spell 3: Grouping and Counting Magic
 
-# 🎈 Activity: Finding Patterns in Groups
-# 🔍 Learn to group data and calculate summaries for each group!
+# Learn to sort data into groups and count things!
+# Like sorting candy by color and counting each pile
 
-# Load our data toolkit
+########################################################
+# Step 1: Load data and tools
+
 library(dplyr)
-
-# Let's load our creature data (make sure you've run Spell 1 first!)
-creature_data <- read.csv("datasets/creature_sightings.csv")
-
-print("🐉 Our creature data:")
-head(creature_data)
-
-# 🎯 Challenge 1: Group by creature type and calculate totals
-print("\n📊 Grouping creatures by type:")
-
-creature_summary <- creature_data %>%
-  group_by(creature_type) %>%
-  summarize(
-    total_sightings = sum(count),
-    average_per_sighting = mean(count),
-    number_of_locations = n()
-  )
-
-print(creature_summary)
+pets_data <- read.csv("datasets/magical_pets.csv")
+print("🎉 Ready to group and count!")
 
 ########################################################
+# Step 2: GROUP BY Magic - Sort into piles
 
-# 🎯 Challenge 2: Group by location
-print("\n🌍 Grouping creatures by location:")
+# 💡 What is GROUP BY?
+# It's like sorting your candy by color - all reds together, all blues together!
 
-location_summary <- creature_data %>%
-  group_by(location) %>%
-  summarize(
-    total_creatures = sum(count),
-    different_types = n_distinct(creature_type),
-    most_common_count = max(count)
-  )
+# Group pets by their type and count how many of each
+pet_counts <- pets_data %>%
+  group_by(pet_type) %>%
+  summarize(count = n())
 
-print(location_summary)
-
-########################################################
-
-# 🎯 Challenge 3: Multiple grouping variables
-print("\n🔍 Grouping by both creature type AND location:")
-
-detailed_summary <- creature_data %>%
-  group_by(creature_type, location) %>%
-  summarize(
-    total_count = sum(count),
-    avg_count = mean(count),
-    .groups = "drop"  # This removes the grouping
-  )
-
-print(detailed_summary)
-
-# 💡 Understanding the functions:
-print("\n🔮 Understanding our grouping functions:")
-print("- group_by(): Groups data by categories")
-print("- summarize(): Calculates summaries for each group")
-print("- sum(): Adds up all numbers")
-print("- mean(): Calculates the average")
-print("- n(): Counts how many rows in each group")
-print("- n_distinct(): Counts unique values")
-print("- max(): Finds the highest number")
+print("📊 How many of each pet type:")
+print(pet_counts)
 
 ########################################################
+# Step 3: MUTATE Magic - Create new information
 
-# ✨ Challenge: Create your own grouping summary!
-print("\n📝 Your turn to group and summarize!")
+# 💡 What is MUTATE?
+# It's like adding a new sticker to each trading card
+# You create something new based on what's already there!
 
-# Try to find:
-# 1. Which location has the most diverse creatures?
-# 2. Which creature type appears in the most locations?
-# 3. What's the average sighting count for each location?
+# Add a column for age in human years (divide by 10)
+pets_with_human_age <- mutate(pets_data, 
+                             human_age = age_years / 10)
 
-# Hint: Use the functions you learned above!
+print("👶 Pets with human age:")
+print(pets_with_human_age)
 
-print("🎉 Great job learning to find patterns in groups!")
-print("🔄 Next, we'll learn how to chain these operations together smoothly!")
+########################################################
+# Step 4: More grouping examples
+
+# Find the average magic level for each pet type
+magic_by_type <- pets_data %>%
+  group_by(pet_type) %>%
+  summarize(average_magic = mean(magic_level))
+
+print("⚡ Average magic by pet type:")
+print(magic_by_type)
+
+########################################################
+# 🎈 Your turn to practice!
+
+# Challenge 1: Create a new column called "magic_category"
+# If magic_level > 50, it should say "High", otherwise "Low"
+# YOUR CODE HERE:
+# pets_with_category <- mutate(pets_data, 
+#                             magic_category = ...)
+
+# Challenge 2: Group by magic_category and count
+# YOUR CODE HERE:
+# magic_counts <- pets_with_category %>%
+#   group_by(...) %>%
+#   summarize(...)
+
+########################################################
+# 💡 Memory Tip:
+# group_by() = sort into groups (like sorting candy)
+# summarize() = count or calculate for each group
+# mutate() = add new information to each row
+# n() = counts how many items in each group
+# mean() = calculates the average

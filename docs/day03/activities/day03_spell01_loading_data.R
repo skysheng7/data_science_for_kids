@@ -1,118 +1,65 @@
-# 🔮 Day 2 - Spell 6: Loading Data Magic
+# 🔮 Day 3 - Spell 1: Loading Data Magic
 
-# 🎈 Activity: Reading Real Datasets
-# 📊 Data is everywhere! Let's learn how to bring it into R
-
-# Load helpful packages
-library(readr)    # For reading CSV files
-library(dplyr)    # For exploring data
+# Welcome young data wizard! Today we learn to open data treasure chests!
+# Think of CSV files like boxes full of interesting information
 
 ########################################################
-# 🎯 Challenge 1: Create and save sample data
-# First, let's create some magical data to work with!
+# Step 1: Load our magical toolbox
+# These are like apps that give R new powers!
 
-magical_pets <- data.frame(
-  pet_name = c("Sparkles", "Thunder", "Whiskers", "Flame", "Bubbles", "Shadow"),
-  pet_type = c("Unicorn", "Dragon", "Cat", "Phoenix", "Fish", "Wolf"),
-  age_years = c(150, 300, 3, 75, 1, 8),
-  magic_level = c(85, 95, 20, 90, 15, 60),
-  favorite_treat = c("Rainbow cookies", "Gold coins", "Fish", "Spicy peppers", "Magic algae", "Moon berries")
-)
+library(readr)  # Helps us read CSV files
+library(dplyr)  # Helps us explore data
 
-print("🐾 Our Magical Pets Dataset:")
-print(magical_pets)
-
-# Save this data to a CSV file (we'll practice reading it back!)
-write.csv(magical_pets, "magical_pets.csv", row.names = FALSE)
-print("✅ Data saved to magical_pets.csv")
+print("✨ Toolbox loaded! Ready for data magic!")
 
 ########################################################
+# Step 2: Open our first data treasure chest
 
-# 🎯 Challenge 2: Read the data back from the file
-# This is how you'd normally load data that someone else created
+# 💡 What are we doing?
+# Loading data from a CSV file (comma-separated values)
+# It's like opening a digital treasure chest full of information!
 
-print("\n📁 Reading data from file...")
-loaded_pets <- read.csv("magical_pets.csv")
-print("✅ Data loaded successfully!")
-print(loaded_pets)
-
-# 🔍 Explore what's in our dataset
-print("\n🔍 Dataset Exploration:")
-print(paste("Number of rows (pets):", nrow(loaded_pets)))
-print(paste("Number of columns (attributes):", ncol(loaded_pets)))
-print("Column names:")
-print(names(loaded_pets))
-
-# See the structure of the data
-print("\n📋 Data Structure:")
-str(loaded_pets)
-
-# Get a summary of the data
-print("\n📊 Data Summary:")
-summary(loaded_pets)
+pets_data <- read.csv("datasets/magical_pets.csv")
+print("🎉 Data treasure chest opened!")
 
 ########################################################
+# Step 3: Let's peek inside our treasure chest
 
-# 🎯 Challenge 3: Explore different data types
-print("\n🎨 Understanding Data Types:")
-
-# Text data (character)
-print("Text columns:")
-text_cols <- sapply(loaded_pets, is.character)
-print(names(loaded_pets)[text_cols])
-
-# Number data (numeric)
-print("Number columns:")
-numeric_cols <- sapply(loaded_pets, is.numeric)
-print(names(loaded_pets)[numeric_cols])
+# Look at the first few rows (like peeking into the box)
+print("👀 First peek at our magical pets:")
+head(pets_data)
 
 ########################################################
+# Step 4: Count our treasures
 
-# 🎯 Challenge 4: Practice with built-in datasets
-# R comes with practice datasets! Let's explore one
-print("\n🌸 Built-in Dataset: iris (flower data)")
-data(iris)  # Load the iris dataset
-print("First 6 rows of iris data:")
-print(head(iris))
+# How many pets do we have? (count the rows)
+num_pets <- nrow(pets_data)
+print(paste("🐾 Total magical pets:", num_pets))
 
-print("\nDataset info:")
-print(paste("Rows:", nrow(iris)))
-print(paste("Columns:", ncol(iris)))
-print("Column names:")
-print(names(iris))
+# How many details about each pet? (count the columns)
+num_details <- ncol(pets_data)
+print(paste("📋 Details per pet:", num_details))
 
 ########################################################
+# Step 5: What kind of details do we have?
 
-# ✨ Advanced Challenge: Load different file types
-# Create data in different formats
-
-# JSON-style data (as text for now)
-json_pets <- '{"pets": [{"name": "Stardust", "type": "Pegasus", "age": 25}]}'
-print("\n🌟 JSON data structure:")
-print(json_pets)
+# Show the column names (what information we have about each pet)
+print("📝 Information we have about each pet:")
+names(pets_data)
 
 ########################################################
+# 🎈 Your turn to explore!
 
-# 🎯 Your Turn: Create your own dataset!
-# Fill in the blanks to create data about your favorite things
-my_favorites <- data.frame(
-  item = c("...", "...", "..."),           # Your favorite things
-  category = c("...", "...", "..."),       # What type they are
-  rating = c(..., ..., ...),               # Rate them 1-10
-  years_liked = c(..., ..., ...)           # How long you've liked them
-)
+# Try loading another dataset:
+# creatures_data <- read.csv("datasets/creature_sightings.csv")
 
-print("\n⭐ Your Favorites Dataset:")
-print(my_favorites)
+# YOUR CODE HERE - uncomment the line above and explore!
 
-# Save your dataset
-write.csv(my_favorites, "my_favorites.csv", row.names = FALSE)
-print("✅ Your data saved to my_favorites.csv")
 
-# 💡 Memory Tip:
-# - read.csv() loads CSV files into R
-# - write.csv() saves data from R to CSV files  
-# - nrow() counts rows, ncol() counts columns
-# - names() shows column names
-# - head() shows first few rows
-# - summary() gives overview of each column
+########################################################
+# 💡 Memory Tip: 
+# read.csv() = opens data files
+# head() = shows first few rows  
+# nrow() = counts rows
+# ncol() = counts columns
+# names() = shows column names

@@ -1,278 +1,365 @@
 ---
 layout: default
-title: Day 3 - Data Storytelling
+title: Day 3 - Data Storytelling Adventures
 ---
 
-# 🎨 Day 3: Data Storytelling
+# 🎨 Day 3: Data Storytelling Adventures with Oda the Data Otter
 
-*Oda the Data Otter discovers how to wrangle messy data into clean datasets and paint beautiful stories with advanced visualizations!*
+*Today, Oda the magical data otter teaches us how to wrangle messy data and paint beautiful pictures with numbers! We'll become data detectives and storytellers!*
 
 ```{image} ../../images/viz.png
-:alt: vis
+:alt: viz
 :width: 50%
 ```
-
 ## 🎯 Learning Objectives
-- 📊 Load and explore real datasets from CSV files
-- 🔧 Master essential data wrangling functions (select, filter, mutate, group_by, summarize)
-- 🌊 Learn the magical pipeline operator `%>%` to chain commands
-- 📈 Create advanced visualizations: histograms, scatter plots, and bar charts
-- 🕵️‍♀️ Work as a team to solve real data mysteries and tell compelling stories
 
-## 1. Ice Breaker: Data Detective Challenge
-*Duration: 15 minutes*
+By the end of today, you'll be magical data wizards who can:
+- 📂 Load real data from CSV files (like opening a treasure chest!)
+- 🔧 Use data tools to clean and organize information
+- 🌊 Chain commands together with the magical pipe operator
+- 📊 Create three types of data stories: histograms, scatter plots, and bar charts
+- 👥 Work as a team to solve real data mysteries
 
-🎈 **Activity:** 
+## 1. Ice Breaker: Stuffed Animal Data Sorting Game
+*Duration: 10 minutes*
 
-## 2. Data Loading: Bringing Real Data to Life
-*Duration: 20 minutes*
+🎈 **Activity: The Great Animal Sort**
+
+Let's start with a physical data game! We have a collection of stuffed animals that need organizing.
+
+**What you'll need:** Various stuffed animals (different types, colors, sizes)
+
+**How to play:**
+1. Spread all stuffed animals on tables
+2. **SELECT operation:** Pick only the bears from all animals
+3. **FILTER operation:** Keep only the red bears
+4. **GROUP BY operation:** Sort all animals by type (cats together, dogs together, etc.)
+5. **SUMMARIZE operation:** Count how many of each type we have
+
+**🎯 Learning connection:** These are the exact same operations we'll do with data in R!
+
+<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMWpsYTV5ZmFvb2ZnbWJ5Njhsb3JwajZxeXJ2ZnpxOXFzNW5lODhmbSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/VgSjnwSoqiPjRRIJ1F/giphy.gif" alt="Kids sorting stuffed animals by categories" style="width: 60%; height: auto;">
+
+## 2. Data Loading Magic
+*Duration: 25 minutes*
 
 ### 2.1 Spell 1: Reading CSV Files
-*Duration: 20 minutes*
+*Duration: 25 minutes*
 
 📁 **Find this spell in Posit Cloud:** Look for the file `day03_spell01_loading_data.R` in your project files!
 
-#### 🎈 Activity: Reading Real Datasets
+#### 🎈 Activity: Opening Data Treasure Chests
 
-📊 **Data is everywhere!** From sports scores to weather patterns, we'll learn how to bring real datasets into R and explore what secrets they hold.
+**💡 What is a CSV file?**
+Think of CSV files like digital treasure chests that hold data! Just like you can open a toy box to see all your toys, we can open CSV files to see all the data inside.
 
-🔮 **What is a CSV file?** Think of it like a digital spreadsheet that any program can read - it's like the universal language for data!
+CSV stands for "Comma Separated Values" - it's like writing a list where commas separate each piece of information.
+
+**🔍 Let's explore our magical datasets:**
 
 ```R
-# The magic command to read data
-creature_data <- read.csv("datasets/creature_sightings.csv")
+# Step 1: Load the treasure chest (read the data)
+pets_data <- read.csv("datasets/magical_pets.csv")
 
-# Look at the first few rows
-head(creature_data)
+# Step 2: Peek inside (look at first few rows)
+head(pets_data)
 
-# See the structure of our data
-str(creature_data)
+# Step 3: Count our treasures (check size)
+nrow(pets_data)  # How many pets?
+ncol(pets_data)  # How many details about each pet?
 ```
 
-💡 **Pro Tips from this spell:**
-- `read.csv()` reads data from CSV files
-- `head()` shows the first 6 rows
-- `str()` shows the structure (columns and data types)
+**🎮 Physical Activity:** Before we code, let's practice with real objects!
+- Pass around a clipboard with a "data table" drawn on paper
+- Each row represents one stuffed animal, each column represents a property (name, type, color)
 
-## 3. Data Wrangling: Taming Wild Datasets
-*Duration: 60 minutes*
+<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMWpsYTV5ZmFvb2ZnbWJ5Njhsb3JwajZxeXJ2ZnpxOXFzNW5lODhmbSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/QxZ0nbcVgMlPlnfZos/giphy.gif" alt="challenge" style="width: 60%; height: auto;">
 
-### 3.1 Spell 2: Data Transformation Magic
+## 3. Data Wrangling Adventures
+*Duration: 75 minutes*
+
+### 3.1 Spell 2: Select and Filter Magic
 *Duration: 25 minutes*
 
 📁 **Find this spell in Posit Cloud:** Look for the file `day03_spell02_data_wrangling.R` in your project files!
 
-#### 🎈 Activity: Clean and Transform
+#### 🎈 Activity: Choosing What We Want
 
-🔧 **The Data Toolkit:** Master the essential data wrangling functions:
-- `select()` - Pick specific columns (like choosing ingredients)
-- `filter()` - Find specific rows (like finding red candies in a jar)
-- `mutate()` - Create new columns (like calculating totals)
-- `group_by()` - Group similar data (like sorting by color)
-- `summarize()` - Calculate summaries (like counting each group)
+**💡 What is SELECT?**
+SELECT is like choosing which toys you want to play with from your toy box. You don't need ALL your toys, just the ones for today's game!
+
+**💡 What is FILTER?**
+FILTER is like finding only the red cars from all your toy cars. You keep only the ones that match what you're looking for!
 
 ```R
-library(dplyr)  # Load our data wrangling toolkit
+# Load our data toolbox
+library(dplyr)
 
-# Select only the columns we want
-selected_data <- select(creature_data, creature_type, location, count)
+# SELECT: Pick only the columns we want (like choosing specific toys)
+selected_data <- select(pets_data, pet_name, pet_type)
 
-# Filter for only forest creatures
-forest_creatures <- filter(creature_data, location == "forest")
-
-# Create a new column for rarity
-with_rarity <- mutate(creature_data, 
-                      rarity = ifelse(count <= 2, "rare", "common"))
+# FILTER: Keep only certain rows (like finding only dragons)
+dragons_only <- filter(pets_data, pet_type == "Dragon")
 ```
 
-💡 **Pro Tips from this spell:**
-- Always load `dplyr` with `library(dplyr)` first
-- Use `==` for equals (not `=`)
-- `ifelse()` creates conditional columns
+**🎮 Physical Game: Human Filter and Select**
+- Give each child a card with pet information
+- Call out "SELECT only pet names!" - kids hold up cards showing only names
+- Call out "FILTER for only cats!" - only kids with cat cards stand up
 
-### 3.2 Spell 3: Grouping and Summarizing
-*Duration: 20 minutes*
+
+<img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3N2Y0MzJia281OWU4ZmFlbHJpdTJzeGJ2cXMyczQ1NW45eGVoaWczeSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/3oz8xElsKyL1Pdostq/giphy.gif" alt="Kids sorting colorful candy by groups" style="width: 100%; height: auto;">
+
+
+### 3.2 Spell 3: Mutate and Group Magic
+*Duration: 25 minutes*
 
 📁 **Find this spell in Posit Cloud:** Look for the file `day03_spell03_grouping.R` in your project files!
 
-#### 🎈 Activity: Finding Patterns in Groups
+#### 🎈 Activity: Creating New Information
 
-🔍 **Group Detective Work:** Learn to group data and calculate summaries for each group!
+**💡 What is MUTATE?**
+MUTATE is like adding a new sticker to each of your trading cards. You're creating something new based on what's already there!
+
+**💡 What is GROUP BY?**
+GROUP BY is like sorting your candy by color - all the red ones together, all the blue ones together!
 
 ```R
-# Group by creature type and calculate totals
-creature_summary <- creature_data %>%
-  group_by(creature_type) %>%
-  summarize(
-    total_sightings = sum(count),
-    average_per_sighting = mean(count),
-    number_of_locations = n()
-  )
+# MUTATE: Add new information (like calculating age in human years)
+pets_with_human_age <- mutate(pets_data, 
+                             human_age = age_years / 10)
+
+# GROUP BY and SUMMARIZE: Count how many of each type
+pet_summary <- pets_data %>%
+  group_by(pet_type) %>%
+  summarize(count = n())
 ```
 
+**🎮 Candy Sorting Activity:**
+- Give each team different colored candies
+- Practice GROUP BY: sort by color
+- Practice SUMMARIZE: count each color group
+
+
 ### 3.3 Spell 4: Pipeline Magic
-*Duration: 15 minutes*
+*Duration: 25 minutes*
 
 📁 **Find this spell in Posit Cloud:** Look for the file `day03_spell04_piping.R` in your project files!
 
-#### 🎈 Activity: Chain Commands with Pipes
+#### 🎈 Activity: Chaining Commands Like Magic
 
-🌊 **The Magic Pipeline:** Learn the magical `%>%` operator to chain commands together smoothly - like water flowing through pipes!
+**💡 What is the Pipe %>%?**
+The pipe (%>%) is like a magical slide that passes your data from one function to the next! It's like saying "first do this, THEN do that, THEN do this other thing!"
+
+
+<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZzNoN3NobHE1MzRoN2l5OHRtNHYwbTZrYjBvYzU0a2R5NDhncnowaCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/JunL6dl3Xw3ok/giphy.gif" alt="sequence" style="width: 100%; height: auto;">
+
+Think of it like making a sandwich:
+1. Take bread %>%
+2. Add peanut butter %>%
+3. Add jelly %>%
+4. Add top slice
 
 ```R
-# Instead of this messy code:
-step1 <- filter(creature_data, count >= 2)
-step2 <- select(step1, creature_type, location, count)
-step3 <- arrange(step2, desc(count))
+# Instead of many steps:
+step1 <- filter(pets_data, age_years > 5)
+step2 <- select(step1, pet_name, pet_type)
+final <- arrange(step2, pet_name)
 
-# We can write this beautiful pipeline:
-clean_data <- creature_data %>%
-  filter(count >= 2) %>%
-  select(creature_type, location, count) %>%
-  arrange(desc(count))
+# We can chain it all together:
+magic_pipeline <- pets_data %>%
+  filter(age_years > 5) %>%
+  select(pet_name, pet_type) %>%
+  arrange(pet_name)
 ```
 
-💡 **Pro Tips from this spell:**
-- `%>%` means "then do this"
-- Read pipelines like recipes: first this, then this, then this
-- Much cleaner than creating many temporary variables
+**🎮 Human Pipeline Game:**
+- Kids line up and pass a ball down the line
+- Each person does one "operation" (like adding a sticker, changing color, etc.)
+- The ball transforms as it moves through the "pipeline"
 
-## 4. Advanced Data Storytelling: Painting with Numbers
-*Duration: 45 minutes*
+## 4. Data Storytelling with Pictures
+*Duration: 60 minutes*
 
 ### 4.1 Spell 5: Histogram Stories
-*Duration: 15 minutes*
+*Duration: 20 minutes*
 
 📁 **Find this spell in Posit Cloud:** Look for the file `day03_spell05_histograms.R` in your project files!
 
-#### 🎈 Activity: Distribution Detective
+#### 🎈 Activity: Shape Detective
 
-📊 **Shape Detective:** Create histograms to reveal hidden patterns in data distributions. Is the data shaped like a mountain, a valley, or something else?
+**💡 What is a Histogram?**
+A histogram is like looking at the shape of your data! Imagine you have a pile of blocks - some stacks are tall, some are short. A histogram shows you the shape of these piles!
 
 ```R
 library(ggplot2)
 
-ggplot(creature_data, aes(x = count)) +
-  geom_histogram(bins = 10, fill = "purple", alpha = 0.7) +
-  labs(title = "Distribution of Creature Counts",
-       x = "Number of Creatures Spotted",
-       y = "Frequency")
+# Create a histogram to see the shape of pet ages
+ggplot(pets_data, aes(x = age_years)) +
+  geom_histogram(bins = 5, fill = "purple", color = "black") +
+  labs(title = "How Old Are Our Magical Pets?",
+       x = "Age in Years",
+       y = "Number of Pets")
 ```
 
+**🎮 Physical Histogram:**
+- Use building blocks to create histograms of student heights, favorite colors, etc.
+- Stack blocks to show counts in each category
+
+
 ### 4.2 Spell 6: Scatter Plot Adventures
-*Duration: 15 minutes*
+*Duration: 20 minutes*
 
 📁 **Find this spell in Posit Cloud:** Look for the file `day03_spell06_scatter_plots.R` in your project files!
 
-#### 🎈 Activity: Relationship Explorer
+#### 🎈 Activity: Relationship Detective
 
-🔍 **Relationship Hunter:** Discover relationships between variables using scatter plots. Do taller creatures have more magic power? Let's find out!
+**💡 What is a Scatter Plot?**
+A scatter plot is like looking for patterns between two things! Like asking "Do taller kids have bigger feet?" Each dot represents one person showing both their height AND foot size.
 
 ```R
-ggplot(magical_creatures, aes(x = height, y = magic_power)) +
-  geom_point(size = 3, color = "blue") +
-  labs(title = "Height vs Magic Power",
-       x = "Height (cm)",
-       y = "Magic Power Level")
+# Look for relationship between age and magic level
+ggplot(pets_data, aes(x = age_years, y = magic_level)) +
+  geom_point(size = 4, color = "blue") +
+  labs(title = "Do Older Pets Have More Magic?",
+       x = "Age in Years",
+       y = "Magic Level")
 ```
 
+**🎮 Human Scatter Plot:**
+- Use tape to make x and y axes on the floor
+- Kids position themselves based on two measurements (height vs. shoe size)
+- Look for patterns in where people stand!
+
+
 ### 4.3 Spell 7: Bar Chart Champions
-*Duration: 15 minutes*
+*Duration: 20 minutes*
 
 📁 **Find this spell in Posit Cloud:** Look for the file `day03_spell07_bar_charts.R` in your project files!
 
-#### 🎈 Activity: Category Comparison
+#### 🎈 Activity: Category Competition
 
-🏆 **Category Champions:** Compare categories and groups using powerful bar charts. Which creature type wins the sighting competition?
+**💡 What is a Bar Chart?**
+A bar chart is like having a competition! Each bar shows how much each team has. Longer bars win! It's perfect for comparing different groups.
 
 ```R
-creature_totals <- creature_data %>%
-  group_by(creature_type) %>%
-  summarise(total_count = sum(count))
+# Count each type of pet
+pet_counts <- pets_data %>%
+  group_by(pet_type) %>%
+  summarize(total = n())
 
-ggplot(creature_totals, aes(x = creature_type, y = total_count)) +
-  geom_col(fill = "orange") +
-  labs(title = "Total Sightings by Creature Type",
-       x = "Creature Type",
-       y = "Total Sightings") +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+# Create a bar chart
+ggplot(pet_counts, aes(x = pet_type, y = total)) +
+  geom_col(fill = "orange", color = "black") +
+  labs(title = "Which Pet Type is Most Popular?",
+       x = "Pet Type",
+       y = "Number of Pets")
 ```
 
-## 5. Team Project: Data Mystery Solvers
+**🎮 Human Bar Chart:**
+- Teams line up behind their category signs
+- The longest line "wins" - you can see the comparison instantly!
+
+## 5. Team Data Detective Project
 *Duration: 40 minutes*
 
-### 5.1 Spell 8: Collaborative Data Investigation
+### 5.1 Spell 8: Data Mystery Solving
 *Duration: 40 minutes*
 
 📁 **Find this spell in Posit Cloud:** Look for the file `day03_spell08_team_project.R` in your project files!
 
-#### 🎈 Activity: Partner Data Storytelling
+#### 🎈 Activity: Partner Data Investigation
 
-🕵️‍♀️ **Data Detectives Unite!** Work with a teammate to:
-1. Pick a dataset from the datasets folder
-2. Use data wrangling and visualization to answer a research question
-3. Present your findings to the class
+**🕵️‍♀️ Mission: Solve a Data Mystery!**
 
-✨ **Challenge:** Create the most creative visualization that tells a compelling story!
+Work with a partner to become data detectives! Choose one mystery to solve:
 
-**Sample Research Questions:**
-- Which magical pet is most popular in different age groups?
-- What subjects do students struggle with most at Magic School?
-- Which creatures are found in which locations?
+**Mystery Options:**
+1. **Magical Pets Mystery:** Which magical pet has the highest magic level? Are older pets more magical?
+2. **Creature Sightings Mystery:** Which location has the most creature sightings? What's the rarest creature?
+3. **Magic School Mystery:** Which subject do students struggle with most? Who are the top students?
+
+**Your Detective Tools:**
+- Use `select()` to pick important clues
+- Use `filter()` to focus on specific evidence  
+- Use `group_by()` and `summarize()` to count and calculate
+- Create at least one visualization to show your findings
+
+**🎯 Investigation Steps:**
+1. Load your chosen dataset
+2. Explore it with `head()` and `str()`
+3. Use data wrangling to find clues
+4. Create a visualization to tell your story
+5. Present your findings to the class!
+
+✨ **Challenge:** Create the most creative visualization that clearly shows your discovery!
+
+<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMG16eWNjNDNwMGsyNjBmeGw1YWM3OWo5eHQ3MG56N3Nlczl0MjhkdyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/1yMNGNC87fkmDKdwQj/giphy.gif" alt="Kids working together on computers like detectives" style="width: 60%; height: auto;">
 
 ## 6. 📋 Pro Tips Cheatsheet
 
-### Data Loading
-- `read.csv("filename.csv")` loads data from CSV files
-- `head()` shows first few rows
-- `str()` shows data structure
-- Always check your data after loading!
+### Data Loading Essentials
+- `read.csv("filename.csv")` opens data files like treasure chests
+- `head(data)` shows first 6 rows (peek inside the chest)
+- `nrow(data)` counts how many rows (how many items)
+- `ncol(data)` counts how many columns (how many details per item)
+- Always check your data after loading it!
 
 ### Data Wrangling with dplyr
-- `select()` picks columns: `select(data, column1, column2)`
-- `filter()` picks rows: `filter(data, age > 10)`
-- `mutate()` creates columns: `mutate(data, new_col = old_col * 2)`
-- `group_by()` groups data: `group_by(data, category)`
-- `summarize()` calculates summaries: `summarize(count = n())`
+- `library(dplyr)` loads your data toolbox (don't forget this!)
+- `select(data, column1, column2)` picks specific columns
+- `filter(data, condition)` keeps only rows that match
+- `mutate(data, new_col = calculation)` creates new columns
+- `group_by(data, category)` sorts into groups
+- `summarize(count = n())` counts items in each group
 
 ### Pipeline Magic
-- `%>%` chains commands: `data %>% filter() %>% select()`
-- Read like a recipe: "take data, then filter, then select"
-- Much cleaner than many temporary variables
+- `%>%` means "then do this next"
+- `data %>% filter() %>% select()` chains commands together
+- Read like instructions: "take data, then filter, then select"
+- Much cleaner than creating lots of temporary variables
 
-### Advanced Visualizations
-- `geom_histogram()` for distributions
-- `geom_point()` for scatter plots  
-- `geom_col()` for bar charts
-- Always add clear titles with `labs()`
+### Visualization Basics
+- `library(ggplot2)` loads the plotting toolbox
+- `geom_histogram()` shows data shapes and distributions
+- `geom_point()` shows relationships between two things
+- `geom_col()` compares categories and groups
+- Always add titles with `labs(title = "My Title")`
 
 ## 7. 🆘 Troubleshooting Cheatsheet
 
-### Data Loading Issues
+### Data Loading Problems
 🐛 **Error: "cannot open file"**
-- **What it means:** R can't find your file
-- **Why it happens:** Wrong file path or filename
-- **The Fix:** Check file exists in datasets folder
-
-### Data Wrangling Problems
-🐛 **Error: "could not find function"**
-- **What it means:** Package not loaded
-- **Why it happens:** Forgot to run `library(dplyr)`
-- **The Fix:** Load the package first: `library(dplyr)`
+- **What it means:** R can't find your data file
+- **Why it happens:** File name is wrong or file isn't where you think it is
+- **The Fix:** Check that file exists in datasets folder, check spelling
 
 🐛 **Error: "object not found"**
-- **What it means:** Column name doesn't exist
-- **Why it happens:** Typo in column name
-- **The Fix:** Check exact column names with `names(data)`
+- **What it means:** You're trying to use something that doesn't exist
+- **Why it happens:** Forgot to run the code that creates the object
+- **The Fix:** Run the `read.csv()` line first to load your data
+
+### Function Problems
+🐛 **Error: "could not find function"**
+- **What it means:** R doesn't know what command you're trying to use
+- **Why it happens:** Forgot to load the package
+- **The Fix:** Run `library(dplyr)` or `library(ggplot2)` first
+
+🐛 **Error: "object not found" in functions**
+- **What it means:** Column name doesn't exist in your data
+- **Why it happens:** Typo in column name or wrong dataset
+- **The Fix:** Check column names with `names(data)` and fix spelling
 
 ### Pipeline Problems
-🐛 **Error with `%>%`**
-- **What it means:** Pipeline broken
-- **Why it happens:** Missing package or syntax error
-- **The Fix:** Make sure `dplyr` is loaded, check each step
+🐛 **Pipeline not working**
+- **What it means:** Something wrong in the chain of commands
+- **Why it happens:** Forgot to load dplyr, or syntax error
+- **The Fix:** Load `library(dplyr)` first, check each step works alone
 
 ### Plotting Issues
-🐛 **Error: "object not found" in ggplot**
-- **What it means:** Variable doesn't exist in data
-- **Why it happens:** Wrong variable name or data not loaded
-- **The Fix:** Check variable names with `names(data)`
+🐛 **Blank plot or error in ggplot**
+- **What it means:** Variable doesn't exist or ggplot2 not loaded
+- **Why it happens:** Wrong variable name or forgot `library(ggplot2)`
+- **The Fix:** Load ggplot2 first, check variable names match exactly
+
+💡 **Remember:** When you get an error, read it carefully! The error message usually tells you exactly what's wrong and how to fix it.
