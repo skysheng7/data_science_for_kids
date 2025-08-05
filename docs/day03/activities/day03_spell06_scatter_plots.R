@@ -40,6 +40,8 @@ print("🔍 What do you see?")
 print("Do taller creatures tend to have bigger wingspans?")
 print("Are there any outliers (creatures that don't follow the pattern)?")
 
+########################################################
+
 # 🎯 Challenge 2: Adding creature names to points
 print("\n2️⃣ Adding Labels to Points:")
 
@@ -62,6 +64,8 @@ power_speed <- ggplot(magical_creatures, aes(x = ..., y = ...)) +
 
 print(power_speed)
 
+########################################################
+
 # 🎯 Challenge 3: Color-coding by categories
 print("\n3️⃣ Color-coding by Creature Type:")
 
@@ -82,6 +86,8 @@ size_by_age <- ggplot(magical_creatures, aes(x = magic_power, y = flying_speed, 
 
 print(size_by_age)
 
+########################################################
+
 # 🎯 Challenge 4: Multiple relationships in one plot
 print("\n4️⃣ Complex Relationships:")
 
@@ -96,6 +102,8 @@ complex_plot <- ggplot(magical_creatures, aes(x = height_cm, y = wingspan_cm,
   theme_minimal()
 
 print(complex_plot)
+
+########################################################
 
 # ✨ Advanced Challenge: Adding trend lines
 print("\n✨ Advanced Challenge - Trend Lines:")
@@ -120,6 +128,8 @@ age_magic_trend <- ggplot(magical_creatures, aes(x = age_years, y = magic_power)
   theme_minimal()
 
 print(age_magic_trend)
+
+########################################################
 
 # 🎯 Challenge 5: Correlation investigation
 print("\n5️⃣ Correlation Investigation:")

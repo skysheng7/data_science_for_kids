@@ -18,17 +18,20 @@ if (points >= 50) {
 # Notice: No "else" - you might get multiple messages!
 print(paste("🎯 You have", points, "points total!"))
 
+########################################################
 # 🎈 Activity: Achievement Hunter!
 # 1. Try these point values: 30, 60, 80, 120
 # 2. **Question:** Why might someone get multiple achievement messages?
 # 3. **Challenge:** What's the minimum points to get all three achievements?
 
+########################################################
 # ✨ Test different point values:
 # points <- 30   # How many achievements?
 # points <- 60   # How many now?
 # points <- 80   # Multiple achievements?
 # points <- 120  # All achievements?
 
+########################################################
 # 🤔 Think about these questions:
 # - Why do we get multiple messages for high scores?
 # - How is this different from if-else-if chains?

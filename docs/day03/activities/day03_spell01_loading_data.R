@@ -7,6 +7,7 @@
 library(readr)    # For reading CSV files
 library(dplyr)    # For exploring data
 
+########################################################
 # 🎯 Challenge 1: Create and save sample data
 # First, let's create some magical data to work with!
 
@@ -24,6 +25,8 @@ print(magical_pets)
 # Save this data to a CSV file (we'll practice reading it back!)
 write.csv(magical_pets, "magical_pets.csv", row.names = FALSE)
 print("✅ Data saved to magical_pets.csv")
+
+########################################################
 
 # 🎯 Challenge 2: Read the data back from the file
 # This is how you'd normally load data that someone else created
@@ -48,6 +51,8 @@ str(loaded_pets)
 print("\n📊 Data Summary:")
 summary(loaded_pets)
 
+########################################################
+
 # 🎯 Challenge 3: Explore different data types
 print("\n🎨 Understanding Data Types:")
 
@@ -60,6 +65,8 @@ print(names(loaded_pets)[text_cols])
 print("Number columns:")
 numeric_cols <- sapply(loaded_pets, is.numeric)
 print(names(loaded_pets)[numeric_cols])
+
+########################################################
 
 # 🎯 Challenge 4: Practice with built-in datasets
 # R comes with practice datasets! Let's explore one
@@ -74,6 +81,8 @@ print(paste("Columns:", ncol(iris)))
 print("Column names:")
 print(names(iris))
 
+########################################################
+
 # ✨ Advanced Challenge: Load different file types
 # Create data in different formats
 
@@ -81,6 +90,8 @@ print(names(iris))
 json_pets <- '{"pets": [{"name": "Stardust", "type": "Pegasus", "age": 25}]}'
 print("\n🌟 JSON data structure:")
 print(json_pets)
+
+########################################################
 
 # 🎯 Your Turn: Create your own dataset!
 # Fill in the blanks to create data about your favorite things

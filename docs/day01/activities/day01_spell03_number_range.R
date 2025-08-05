@@ -12,11 +12,13 @@ if (mystery_number < 10) {
   print("🚀 Huge number - like a space otter!")
 }
 
+########################################################
 # 🎈 Activity: Number Range Challenge!
 # 1. Try these mystery numbers: 5, 25, 75, 150
 # 2. **Predict first:** Which otter will you get for each number?
 # 3. **Challenge:** What happens if you use 0 or negative numbers?
 
+########################################################
 # ✨ Test these values:
 # mystery_number <- 5    # What otter type?
 # mystery_number <- 25   # What about this?
@@ -25,5 +27,6 @@ if (mystery_number < 10) {
 # mystery_number <- 0    # What happens with zero?
 # mystery_number <- -5   # What about negative numbers?
 
+########################################################
 # 🤔 Think about it: 
 # - Why do we check smaller numbers first? What would happen if we switched the order?

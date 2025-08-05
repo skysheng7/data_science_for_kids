@@ -19,12 +19,14 @@ if (temperature <= 0) {
   print("🤔 Something seems fishy with this temperature...")
 }
 
+########################################################
 # 🎈 Activity: Weather Station!
 # 1. Try these temperatures: -5, 5, 15, 25, 35
 # 2. **Real World:** Check today's actual temperature and see what Oda says!
 # 3. **Question:** Why do we use `>=` and `<=` instead of just `>` and `<?
 # 4. **Errors:** What input would cause R to generate errors?
 
+########################################################
 # ✨ Test different temperatures:
 # temperature <- -5   # Freezing cold?
 # temperature <- 5    # Cold weather?
@@ -32,6 +34,7 @@ if (temperature <= 0) {
 # temperature <- 25   # Warm day?
 # temperature <- 35   # Very hot?
 
+########################################################
 # 🤔 Think about these questions:
 # - What happens at exactly 0 degrees?
 # - What happens at exactly 21 degrees?
@@ -39,6 +42,7 @@ if (temperature <= 0) {
 # - What would happen if we used only > and <?
 # - Which condition would 20.5 degrees fall into?
 
+########################################################
 # 🌡️ Real World Challenge:
 # Look up today's temperature in your city and test it!
 # What does Oda recommend for today's weather?

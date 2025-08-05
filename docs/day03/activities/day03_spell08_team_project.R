@@ -52,6 +52,8 @@ print("1. 🐾 Pet Adoption Center - Which pets get adopted fastest?")
 print("2. 📚 Magic School Exams - What helps students get better grades?")
 print("3. 🌟 Creature Sightings - Where and when are magical creatures spotted?")
 
+########################################################
+
 # 🎯 STEP 1: Choose Your Dataset (uncomment ONE)
 print("\n🎯 STEP 1: Choose your dataset!")
 print("Uncomment (remove #) from ONE of these lines:")
@@ -65,6 +67,8 @@ my_data <- pet_adoption
 print("📊 Preview of chosen dataset:")
 print(head(my_data))
 
+########################################################
+
 # 🎯 STEP 2: Explore Your Data
 print("\n🎯 STEP 2: Explore your data!")
 
@@ -76,6 +80,8 @@ print(names(my_data))
 
 print("Data summary:")
 print(summary(my_data))
+
+########################################################
 
 # 🎯 STEP 3: Ask Research Questions
 print("\n🎯 STEP 3: Brainstorm research questions with your partner!")
@@ -89,6 +95,8 @@ print("- Is there a relationship between friendliness and adoption?")
 # Write your research question here:
 research_question <- "Which pet types are adopted most quickly?"
 print(paste("🔍 Our research question:", research_question))
+
+########################################################
 
 # 🎯 STEP 4: Data Wrangling
 print("\n🎯 STEP 4: Clean and prepare your data!")
@@ -119,6 +127,8 @@ print(adoption_summary)
 #     ... = ...
 #   )
 
+########################################################
+
 # 🎯 STEP 5: Create Visualizations
 print("\n🎯 STEP 5: Create compelling visualizations!")
 
@@ -148,6 +158,8 @@ print(viz2)
 #   labs(title = "...", x = "...", y = "...") +
 #   theme_minimal()
 
+########################################################
+
 # 🎯 STEP 6: Tell Your Story
 print("\n🎯 STEP 6: Prepare your presentation!")
 print("With your partner, prepare to share:")
@@ -163,6 +175,8 @@ print("Research Question: Which pet types are adopted most quickly?")
 print("Key Discovery: [Fill in what you found]")
 print("Surprising Finding: [Something unexpected]")
 print("Recommendation: [What should the adoption center do?]")
+
+########################################################
 
 # 🎯 STEP 7: Bonus Challenges
 print("\n✨ Bonus Challenges (if time allows):")
@@ -180,6 +194,8 @@ if("corrplot" %in% rownames(installed.packages())) {
   print("🔢 Correlation Matrix:")
   print(round(cor_matrix, 2))
 }
+
+########################################################
 
 # 🎯 Presentation Template
 print("\n🎤 Presentation Template:")

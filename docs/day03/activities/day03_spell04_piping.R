@@ -43,6 +43,8 @@ friendly_powerful <- creatures %>%
 print("Same result, but cleaner code:")
 print(friendly_powerful)
 
+########################################################
+
 # 🎯 Challenge 1: Basic pipe practice
 print("\n1️⃣ Basic pipe practice:")
 
@@ -61,6 +63,8 @@ forest_creatures <- creatures %>%
 
 print("Forest creatures:")
 print(forest_creatures)
+
+########################################################
 
 # 🎯 Challenge 2: Adding calculations with pipes
 print("\n2️⃣ Adding calculations with pipes:")
@@ -86,6 +90,8 @@ young_powerful <- creatures %>%
 
 print("Young but powerful creatures:")
 print(young_powerful)
+
+########################################################
 
 # 🎯 Challenge 3: Grouping with pipes
 print("\n3️⃣ Grouping with pipes:")
@@ -116,6 +122,8 @@ type_summary <- creatures %>%
 print("Summary by creature type:")
 print(type_summary)
 
+########################################################
+
 # ✨ Advanced Challenge: Complex pipe chain
 print("\n✨ Advanced Challenge - Complex pipe chain:")
 
@@ -129,6 +137,8 @@ top_friendly_per_realm <- creatures %>%
 
 print("Most powerful friendly creature in each realm:")
 print(top_friendly_per_realm)
+
+########################################################
 
 # 🎯 Your Creative Challenge: Design your own pipe chain!
 # Create a pipe that does something interesting with the data

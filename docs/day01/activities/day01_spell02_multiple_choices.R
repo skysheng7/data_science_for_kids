@@ -13,16 +13,19 @@ if (favorite_color == "red") {
   print("✨ You have a unique and magical taste!")
 }
 
+########################################################
 # 🎈 Activity: Customize Your Color Magic!
 # 1. Change `favorite_color` to your actual favorite color
 # 2. If your color isn't there, what message do you get?
 # 3. **Extension:** Add your favorite color with a special message!
 
+########################################################
 # ✨ Try these colors:
 # favorite_color <- "red"     # Bold adventures
 # favorite_color <- "purple"  # What happens?
 # favorite_color <- "yellow"  # What about this?
 
+########################################################
 # 🎨 **Challenge:** Add a new color condition like the examplebelow:
 # else if (favorite_color == "purple") {
 #   print("💜 You love magic and mystery!")

@@ -20,6 +20,8 @@ magic_school <- data.frame(
 print("🏫 Magic School Dataset:")
 print(magic_school)
 
+########################################################
+
 # 🎯 Challenge 1: SELECT - Pick specific columns
 print("\n1️⃣ SELECT: Pick specific columns")
 print("Just names and houses:")
@@ -34,6 +36,8 @@ print(scores_only)
 pet_info <- select(magic_school, ..., ...)
 print("Student pet information:")
 print(pet_info)
+
+########################################################
 
 # 🎯 Challenge 2: FILTER - Find specific rows
 print("\n2️⃣ FILTER: Find specific rows")
@@ -53,6 +57,8 @@ print(pet_owners)
 older_students <- filter(magic_school, grade >= ...)
 print("Older students (grade 4+):")
 print(older_students)
+
+########################################################
 
 # 🎯 Challenge 3: MUTATE - Create new columns
 print("\n3️⃣ MUTATE: Create new columns")
@@ -76,6 +82,8 @@ print(select(with_performance, student_name, magic_score, performance))
 with_total <- mutate(magic_school, total_score = ... + ... + ...)
 print("Dataset with total scores:")
 print(select(with_total, student_name, total_score))
+
+########################################################
 
 # 🎯 Challenge 4: GROUP_BY and SUMMARIZE - Group and calculate
 print("\n4️⃣ GROUP_BY & SUMMARIZE: Group similar data and calculate summaries")
@@ -114,6 +122,8 @@ pet_summary <- magic_school %>%
   )
 print("Summary by pet ownership:")
 print(pet_summary)
+
+########################################################
 
 # ✨ Advanced Challenge: Complex filtering and grouping
 print("\n✨ Advanced Challenge:")

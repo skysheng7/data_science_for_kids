@@ -10,12 +10,14 @@ if (temperature > 20 & weather == "sunny") {
   print("🏠 Maybe it's a good day to stay inside and code!")
 }
 
+########################################################
 # 🎈 Activity: Weather Wizard!
 # 1. Try these combinations and see what Oda does:
 #    - temperature <- 15 and weather <- "sunny"
 #    - temperature <- 25 and weather <- "rainy"  
 #    - temperature <- 30 and weather <- "sunny"
 
+########################################################
 # ✨ Test different weather combinations:
 # temperature <- 15
 # weather <- "sunny"    # Warm enough? Sunny enough?
@@ -26,10 +28,12 @@ if (temperature > 20 & weather == "sunny") {
 # temperature <- 30
 # weather <- "sunny"    # Perfect day?
 
+########################################################
 # 🤔 Challenge Questions:
 # - What happens when ONLY temperature is good but weather is bad?
 # - What happens when ONLY weather is good but temperature is bad?
 # - Why do we need BOTH to be true for a perfect day?
 
+########################################################
 # 🎯 Experiment: Try creating your own perfect day conditions!
 # Maybe add wind speed or humidity?

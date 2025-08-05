@@ -22,12 +22,14 @@ if (creature_size <= 20) {
   print("👹 You found a friendly giant!")
 }
 
+########################################################
 # 🎈 Activity: Create your own creature:
 # 1. Try different combinations of `creature_size` (15, 50, 150) and `creature_color`
 # 2. Add a new size range (maybe 101-300 for "large" creatures) with your own magical creature
 # 3. Add a new color option with your own special message
 # 4. **Challenge:** What happens if you use negative numbers or zero for size?
 
+########################################################
 # ✨ Test different combinations:
 # creature_size <- 15
 # creature_color <- "purple"  # Tiny fairy?
@@ -38,20 +40,24 @@ if (creature_size <= 20) {
 # creature_size <- 150
 # creature_color <- "blue"    # Friendly giant?
 
+########################################################
 # 🎯 Creative Challenges:
 # 1. Add a new size category between 101-200 for "large" creatures
 # 2. Add more colors like "silver", "rainbow", "invisible"
 # 3. Add creature abilities based on color (flying, swimming, magic powers)
 
+########################################################
 # 🔧 Extension Ideas (uncomment to try):
 # Add a third variable for creature abilities:
 # creature_ability <- "flying"  # Try: "flying", "swimming", "invisible"
 
+########################################################
 # 🤔 Think about it:
 # - How do nested if statements work?
 # - Why do we check size first, then color?
 # - What happens when we have multiple conditions to check?
 # - How would you add a third characteristic like "flying ability"?
 
+########################################################
 # 🎈 Activity: Have your friends try to find creatures in your code!
 # Give them different size and color combinations and see what they discover!

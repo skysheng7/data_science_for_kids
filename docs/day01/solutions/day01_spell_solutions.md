@@ -1,4 +1,4 @@
-# 🔮 Day 1 Spell Solutions 
+# 🔮 Day 1 - Spell Solutions 
 *Oda the Data Otter's Magic Answer Key! 🦦✨*
 
 ---

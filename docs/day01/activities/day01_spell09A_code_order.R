@@ -18,5 +18,6 @@ if (position == 1) {
 
 print("")  # Empty line for spacing
 
+########################################################
 # 🎈 Activity: Code Detective!
 # 1. Try with position = 1, 2, and 3

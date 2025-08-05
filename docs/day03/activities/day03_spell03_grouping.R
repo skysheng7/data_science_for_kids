@@ -25,6 +25,8 @@ creature_summary <- creature_data %>%
 
 print(creature_summary)
 
+########################################################
+
 # 🎯 Challenge 2: Group by location
 print("\n🌍 Grouping creatures by location:")
 
@@ -37,6 +39,8 @@ location_summary <- creature_data %>%
   )
 
 print(location_summary)
+
+########################################################
 
 # 🎯 Challenge 3: Multiple grouping variables
 print("\n🔍 Grouping by both creature type AND location:")
@@ -60,6 +64,8 @@ print("- mean(): Calculates the average")
 print("- n(): Counts how many rows in each group")
 print("- n_distinct(): Counts unique values")
 print("- max(): Finds the highest number")
+
+########################################################
 
 # ✨ Challenge: Create your own grouping summary!
 print("\n📝 Your turn to group and summarize!")

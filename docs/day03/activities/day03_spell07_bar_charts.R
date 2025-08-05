@@ -31,6 +31,7 @@ student_achievements <- data.frame(
 print("🎓 Student Achievement Data:")
 print(student_achievements)
 
+########################################################
 # 🎯 Challenge 1: Basic bar chart
 print("\n1️⃣ Basic Bar Chart:")
 
@@ -51,6 +52,8 @@ points_chart <- ggplot(house_data, aes(x = house, y = ...)) +
   theme_minimal()
 
 print(points_chart)
+
+########################################################
 
 # 🎯 Challenge 2: Colorful bar charts
 print("\n2️⃣ Colorful Bar Charts:")
@@ -79,6 +82,8 @@ quidditch_chart <- ggplot(house_data, aes(x = house, y = quidditch_wins, fill = 
 
 print(quidditch_chart)
 
+########################################################
+
 # 🎯 Challenge 3: Grouped bar charts
 print("\n3️⃣ Grouped Bar Charts:")
 
@@ -101,6 +106,8 @@ grouped_bars <- ggplot(house_long, aes(x = house, y = wins, fill = competition_t
   theme_minimal()
 
 print(grouped_bars)
+
+########################################################
 
 # 🎯 Challenge 4: Student-level bar charts
 print("\n4️⃣ Student-Level Bar Charts:")
@@ -131,6 +138,8 @@ subject_chart <- ggplot(subject_summary, aes(x = favorite_subject, y = student_c
 
 print(subject_chart)
 
+########################################################
+
 # 🎯 Challenge 5: Horizontal bar charts
 print("\n5️⃣ Horizontal Bar Charts:")
 
@@ -153,6 +162,8 @@ horizontal_spells <- ggplot(house_data, aes(x = reorder(house, ...), y = ...)) +
   theme_minimal()
 
 print(horizontal_spells)
+
+########################################################
 
 # ✨ Advanced Challenge: Stacked bar charts
 print("\n✨ Advanced Challenge - Stacked Bar Charts:")

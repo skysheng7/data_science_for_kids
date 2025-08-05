@@ -46,6 +46,8 @@ print("🔍 Shape Detective Analysis:")
 print("Magic theory scores look like a bell curve (normal distribution)")
 print("Most students scored around 75, with fewer getting very high or very low scores")
 
+########################################################
+
 # 🎯 Challenge 2: Compare different subjects
 print("\n2️⃣ Compare Different Subjects:")
 
@@ -66,6 +68,8 @@ spell_hist <- ggplot(magic_test_scores, aes(x = ...)) +
   theme_minimal()
 
 print(spell_hist)
+
+########################################################
 
 # 🎯 Challenge 3: Histogram with different bin sizes
 print("\n3️⃣ Experimenting with Bin Sizes:")
@@ -94,6 +98,8 @@ dragon_hist <- ggplot(magic_test_scores, aes(x = dragon_care)) +
 
 print(dragon_hist)
 
+########################################################
+
 # 🎯 Challenge 4: Side-by-side comparison
 print("\n4️⃣ Side-by-Side Comparison:")
 
@@ -115,6 +121,8 @@ faceted_hist <- ggplot(scores_long, aes(x = score)) +
 
 print(faceted_hist)
 
+########################################################
+
 # ✨ Advanced Challenge: Overlapping histograms
 print("\n✨ Advanced Challenge - Overlapping Histograms:")
 
@@ -133,6 +141,8 @@ overlay_hist <- ggplot(comparison_data, aes(x = score, fill = subject)) +
   theme_minimal()
 
 print(overlay_hist)
+
+########################################################
 
 # 🎯 Your Data Detective Mission:
 print("\n🕵️ Your Data Detective Mission:")
