@@ -1,4 +1,4 @@
-# 🔮 Day 2 - Spell 3: Story Scrambler Challenge
+# 🔮 Day 2 - Spell 4: Story Scrambler Challenge
 
 # 🎈 Activity: Secret Message Encoder & Decoder
 # 🕵️ Turn yourself into a data spy! Create secret codes and decode messages!

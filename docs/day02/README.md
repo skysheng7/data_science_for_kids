@@ -300,7 +300,7 @@ library(ggplot2)
 - `install.packages()` downloads them once (like downloading an app)
 - `library()` opens them each time you want to use them (like opening the app)
 
-<img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3Nzh4MjgxeHMxYWJobzE4NWRtNnQyYWx5MDVxejRjb216OGpyaHByZCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/tK9wGsGc72LcznCSeU/giphy.gif" alt="dance" style="width: 50%; height: auto;">
+<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMWpsYTV5ZmFvb2ZnbWJ5Njhsb3JwajZxeXJ2ZnpxOXFzNW5lODhmbSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/1ym5LJ17vp77BL8X5O/giphy.gif" alt="woo" style="width: 100%; height: auto;">
 
 ### 3.4 Spell 7: Your First Plot (No Data Yet!)
 *Duration: 10 minutes*
@@ -313,13 +313,15 @@ library(ggplot2)
 
 ```R
 # Simple lists (these are called vectors)
-animals <- c("cat", "dog", "rabbit", "hamster", "fish")
+animals <- c("pikachu", "dog", "rabbit", "hamster", "fish")
 counts <- c(3, 5, 2, 1, 4)
 
 # Your first ggplot2 magic spell!
 ggplot() + 
   geom_col(aes(x = animals, y = counts))
 ```
+
+<img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3Nzh4MjgxeHMxYWJobzE4NWRtNnQyYWx5MDVxejRjb216OGpyaHByZCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/tK9wGsGc72LcznCSeU/giphy.gif" alt="dance" style="width: 50%; height: auto;">
 
 🔮 **What does this code do?**
 - `c()` creates a simple list

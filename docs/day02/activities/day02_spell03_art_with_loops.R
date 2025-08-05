@@ -1,7 +1,8 @@
-# 🔮 Day 2 - Spell 4: Art with Loops
+# 🔮 Day 2 - Spell 3: Art with Loops
 
 # 🎈 Activity: Creating Patterns and Art with Programming
 
+########################################################
 # 🎨 Art Challenge 1: Simple patterns with basic symbols
 # Let's create patterns using loops and basic keyboard symbols
 
@@ -14,6 +15,7 @@ for (row in 1:5) {
   print(pattern)
 }
 
+########################################################
 # 🐟 Fish Pattern: Create a fish shape using # symbols
 print("\n--- Fish Pattern ---")
 fish_pattern <- c(
@@ -34,6 +36,7 @@ for (line in fish_pattern) {
   print(line)
 }
 
+########################################################
 # 🎨 Art Challenge 2: Emoji patterns
 # Let's create patterns using loops and emoji symbols
 
@@ -46,6 +49,7 @@ for (row in 1:5) {
   print(stars)
 }
 
+########################################################
 # 🎨 Art Challenge 3: Colorful symbol patterns
 # Create a pattern using different symbols
 print("\n--- Rainbow Pattern ---")
@@ -60,6 +64,7 @@ for (row in 1:6) {
   print(line)
 }
 
+########################################################
 # 🎨 Art Challenge 4: Grid patterns
 # Create a rectangular grid with alternating symbols
 print("\n--- Grid Art ---")
@@ -74,6 +79,7 @@ for (row in 1:4) {
   print(line)
 }
 
+########################################################
 # ✨ Your Turn: Create your own pattern!
 # Fill in the blanks to make a Christmas tree pattern
 print("\n--- Christmas Tree Pattern ---")
@@ -97,6 +103,7 @@ for (row in 1:5) {
 # Add the tree trunk
 print("    🪵")
 
+########################################################
 # 🎨 Advanced Challenge: Number patterns
 print("\n--- Number Triangle ---")
 for (row in 1:5) {
@@ -107,6 +114,7 @@ for (row in 1:5) {
   print(line)
 }
 
+########################################################
 # ✨ Bonus Challenge: Create your own artistic pattern
 # Use any symbols you like and create something unique!
 print("\n--- Your Creative Pattern ---")

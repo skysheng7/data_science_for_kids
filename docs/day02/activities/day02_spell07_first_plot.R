@@ -3,6 +3,7 @@
 # Load our magical plotting package
 library(ggplot2)
 
+########################################################
 # 🎯 Challenge 1: Simple bar chart with lists
 # 📝 Instructions:
 # Try changing the data to your own favorite animals and counts!
@@ -21,6 +22,7 @@ plot1 <- ggplot() +
 
 print(plot1)
 
+########################################################
 # 🎯 Challenge 2: Try your own food ratings data
 print("\n🍕 Creating a plot with your own food ratings data!")
 
@@ -35,6 +37,7 @@ plot2 <- ggplot() +
 print(plot2)
 
 
+########################################################
 # ✨ Challenge: Create your own plot!
 # Fill in your own data and create a plot:
 

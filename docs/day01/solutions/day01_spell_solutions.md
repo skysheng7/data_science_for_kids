@@ -517,32 +517,4 @@ print(paste("📏 Your creature is", creature_size, "cm tall,", creature_color, 
 
 ---
 
-## 🎯 Common Patterns & Key Lessons
-
-### 1. **Condition Order Matters!**
-- Always check SPECIFIC conditions before GENERAL ones
-- R stops at the first TRUE condition
-- Example: Check `x == 5` before `x >= 1`
-
-### 2. **AND vs OR Logic**
-- **AND (&)**: ALL conditions must be true
-- **OR (|)**: Only ONE condition needs to be true
-
-### 3. **Edge Cases to Test**
-- Boundary values (exactly 0, exactly 5, etc.)
-- Negative numbers
-- Empty or unusual inputs
-- Case sensitivity for text
-
-### 4. **When to Use Else vs No Else**
-- Use `else` when you want exactly ONE outcome
-- Skip `else` when you might want multiple outcomes (like achievements)
-
-### 5. **Nested Conditions**
-- Use when you need to check multiple characteristics
-- Outer condition narrows down the group
-- Inner conditions make specific decisions within that group
-
----
-
 *🎉 Congratulations! You've mastered all 12 magical spells! You're now ready to cast decision-making magic in any R adventure! 🦦✨*

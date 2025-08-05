@@ -1,5 +1,6 @@
 # 🔮 Day 2 - Spell 6: Your First Package - ggplot2
 
+########################################################
 # 🎯 Challenge 1: Install and load ggplot2
 
 # Step 1: Install the package (like downloading an app)
@@ -10,12 +11,14 @@ install.packages("ggplot2")
 # Note: You need to do this every time you start R!
 library(ggplot2)
 
+########################################################
 # 🎯 Challenge 2: Check if it worked
 # Test if ggplot2 is loaded by running a simple command
 ggplot()
 
 # Expected: You should see an empty gray plot window - this means ggplot2 is working!
 
+########################################################
 # ✨ Challenge: Can you find out what ggplot2 does?
 # Hint: Try using the help system you learned in Spell 5!
 ?ggplot2

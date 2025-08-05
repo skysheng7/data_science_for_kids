@@ -17,6 +17,7 @@ for (i in 1:5) {
   print("Hello, magical world!")
 }
 
+########################################################
 # 🎯 Challenge 1: Print your name 3 times using a for loop
 # Fill in the blanks, replace the ... with the correct number or string:
 for (i in 1:...) {
@@ -28,6 +29,7 @@ for (i in 1:5) {
   print(paste("This is loop number", i))
 }
 
+########################################################
 # 🎯 Challenge 2: Create a countdown from 10 to 1
 # Hint: Use 10:1 instead of 1:10
 # Note: paste() is a function that glues strings together
@@ -36,6 +38,7 @@ for (countdown in ...:...) {
 }
 print("🚀 Blast off!")
 
+########################################################
 # ✨ Advanced Challenge: Print different animals on each loop
 # Note: c() is a function that creates a collection of items!
 animals <- c("🐶 dog", "🐱 cat", "🐰 rabbit", "🐸 frog", "🦆 duck")

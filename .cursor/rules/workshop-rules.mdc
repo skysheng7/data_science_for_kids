@@ -100,6 +100,7 @@ In README files, always instruct users:
 - Include solutions to all spells and their questions
 - When students need to write new code, print out the **entire code chunk** in solution
 - **Always include expected output:** Write exactly what the output would be
+- You DO NOT need summarize the key concepts at the end of the solution file
 
 ### 3.2 Expected Output Format
 

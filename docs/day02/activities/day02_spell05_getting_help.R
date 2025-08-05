@@ -1,5 +1,6 @@
 # 🔮 Day 2 - Spell 5: Getting Help with the Magic `?` and `??`
 
+########################################################
 # 🎯 Challenge 1: Explore the print function with ?
 ?print
 
@@ -8,11 +9,13 @@
 # - Usage: How to use it  
 # - Examples: Code you can try!
 
+########################################################
 # 🎯 Challenge 2: Get help with paste
 ?paste
 
 # Expected: Help documentation explaining how paste() combines strings
 
+########################################################
 # 🎯 Challenge 3: Try the super search with ??
 # What if you don't know the exact function name? Use ?? to search!
 
@@ -25,6 +28,7 @@
 
 # Expected: A list of functions related to statistics
 
+########################################################
 # 🎯 Challenge 4: Compare ? vs ??
 # Try both and see the difference!
 
@@ -35,6 +39,7 @@
 # - `?` = Get help for ONE specific function (like asking about a specific spell)
 # - `??` = Search for ALL functions related to a topic (like asking "show me all fire spells")
 
+########################################################
 # ✨ Challenge: Pick 3 functions you've learned and explore their help pages
 # Write down one new thing you learned about each function:
 
