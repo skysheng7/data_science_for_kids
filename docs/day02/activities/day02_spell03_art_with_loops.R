@@ -2,10 +2,42 @@
 
 # 🎈 Activity: Creating Patterns and Art with Programming
 
-# 🎨 Art Challenge 1: Simple patterns
-# Let's create patterns using loops and symbols
+# 🎨 Art Challenge 1: Simple patterns with basic symbols
+# Let's create patterns using loops and basic keyboard symbols
 
-print("--- Simple Star Pattern ---")
+print("--- Simple Hash Pattern ---")
+for (row in 1:5) {
+  pattern <- ""
+  for (col in 1:row) {
+    pattern <- paste(pattern, "#", sep="")
+  }
+  print(pattern)
+}
+
+# 🐟 Fish Pattern: Create a fish shape using # symbols
+print("\n--- Fish Pattern ---")
+fish_pattern <- c(
+  "    ##",
+  "   ##@#",
+  "  ######",
+  " #------#",
+  "##########",
+  " ########",
+  "  ######",
+  "   ####",
+  "    ##",
+  "   ####",
+  "  ######",
+)
+
+for (line in fish_pattern) {
+  print(line)
+}
+
+# 🎨 Art Challenge 2: Emoji patterns
+# Let's create patterns using loops and emoji symbols
+
+print("\n--- Simple Star Pattern ---")
 for (row in 1:5) {
   stars <- ""
   for (col in 1:row) {
@@ -14,7 +46,7 @@ for (row in 1:5) {
   print(stars)
 }
 
-# 🎨 Art Challenge 2: Colorful symbol patterns
+# 🎨 Art Challenge 3: Colorful symbol patterns
 # Create a pattern using different symbols
 print("\n--- Rainbow Pattern ---")
 symbols <- c("🔴", "🟠", "🟡", "🟢", "🔵", "🟣")
@@ -28,7 +60,7 @@ for (row in 1:6) {
   print(line)
 }
 
-# 🎨 Art Challenge 3: Grid patterns
+# 🎨 Art Challenge 4: Grid patterns
 # Create a rectangular grid with alternating symbols
 print("\n--- Grid Art ---")
 symbols <- c("⭐", "🌙", "☀️", "💫")

@@ -122,6 +122,9 @@ Let's learn how to make R repeat actions automatically! We'll start by printing 
 
 🎭 **Now that you understand loops, let's BE the loops!** Time to get creative and invent your own human loop performance!
 
+<img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3aW1xaHl5aDFkb2hmd3pqNnQxYTFic2lub3pvMWpsdGl4ZXZ6cGdzbyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/l0MYK98ppyEHuvl0A/giphy.gif" alt="sing" style="width: 100%; height: auto;">
+
+
 #### 🎈 Activity: Design Your Own Loop Performance
 
 **🌟 Your Mission:** Work in groups of 5-6 to create and perform an original human for loop! You can use the examples below for inspiration, but we want to see YOUR creative ideas!
@@ -169,6 +172,7 @@ Let's learn how to make R repeat actions automatically! We'll start by printing 
 - End with: "Loop complete!" or something creative
 
 <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExc2d4eXNtc2kxYjIweTM4NDJwODJ5aHM4OWpsOXYyMmUxcGkwb3BwYiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/l3fQueO8cHyZl2Pvi/giphy.gif" alt="performance" style="width: 100%; height: auto;">
+
 
 ### 2.3 Spell 2: Loop Detective Challenge
 *Duration: 15 minutes*
