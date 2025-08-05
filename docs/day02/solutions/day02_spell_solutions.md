@@ -290,6 +290,23 @@ Expected Output:
 - `?` = Get help for ONE specific function (like asking about a specific spell)
 - `??` = Search for ALL functions related to a topic (like asking "show me all fire spells")
 
+### Challenge: Pick 3 functions exploration
+```R
+# Example answers (students can pick any functions they've learned)
+
+# Function 1: print
+?print
+# New thing learned: print() can take additional arguments like 'quote = FALSE' to remove quotes
+
+# Function 2: paste  
+?paste
+# New thing learned: paste() has a 'sep' argument to control what goes between words, and 'collapse' to join vectors
+
+# Function 3: length
+?length
+# New thing learned: length() works on many different types of data, not just vectors
+```
+
 ## Spell 6: Your First Package - ggplot2
 
 ### Understanding the Big Picture (No code needed - just discussion!)
@@ -372,6 +389,20 @@ ggplot() +
 ```
 
 Expected Output: A bar chart showing color popularity.
+
+### Challenge from Activity File: Create your own plot
+```R
+# Fill in your own data and create a plot
+my_categories <- c("homework", "games", "sleep")  # Fill in 3 things you want to compare
+my_values <- c(2, 8, 10)  # Fill in numbers for each thing
+
+# Fill in the code below and run it
+my_plot <- ggplot() + 
+   geom_col(aes(x = my_categories, y = my_values))
+print(my_plot)
+```
+
+Expected Output: A bar chart showing your custom categories and values.
 
 **Key Learning:**
 - `c()` creates simple lists (called vectors)
