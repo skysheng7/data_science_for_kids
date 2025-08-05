@@ -3,7 +3,7 @@ layout: default
 title: Posit Cloud Setup
 ---
 
-# 🔮 Posit Cloud Setup Guide
+# ☁️ Posit Cloud Setup Guide
 
 Posit Cloud is our magical online coding environment where you'll write R code in your web browser - no installation needed! It's free, professional, easy to share with others, and has everything pre-installed for our data science adventures.
 
