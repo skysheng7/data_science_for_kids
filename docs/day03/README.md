@@ -134,12 +134,6 @@ pet_summary <- pets_data %>%
   summarize(count = n())
 ```
 
-**🎮 Candy Sorting Activity:**
-- Give each team different colored candies
-- Practice GROUP BY: sort by color
-- Practice SUMMARIZE: count each color group
-
-
 ### 3.3 Spell 4: Pipeline Magic
 *Duration: 25 minutes*
 
@@ -151,13 +145,14 @@ pet_summary <- pets_data %>%
 The pipe (%>%) is like a magical slide that passes your data from one function to the next! It's like saying "first do this, THEN do that, THEN do this other thing!"
 
 
-<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZzNoN3NobHE1MzRoN2l5OHRtNHYwbTZrYjBvYzU0a2R5NDhncnowaCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/JunL6dl3Xw3ok/giphy.gif" alt="sequence" style="width: 100%; height: auto;">
+Think of it like cooking a meal:
+1. Take vegetables %>%
+2. Add water %>%
+3. Add spices %>%
+4. Cook and serve
 
-Think of it like making a sandwich:
-1. Take bread %>%
-2. Add peanut butter %>%
-3. Add jelly %>%
-4. Add top slice
+<img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3eXh4enB4emcwMzZtY2xxMWhtNzUxOW14bGlvMTAyNTF0OTJqeXlpciZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Jg8G4ve9HRSpO/giphy.gif" alt="cook" style="width: 100%; height: auto;">
+
 
 ```R
 # Instead of many steps:
@@ -200,11 +195,6 @@ ggplot(pets_data, aes(x = age_years)) +
        x = "Age in Years",
        y = "Number of Pets")
 ```
-
-**🎮 Physical Histogram:**
-- Use building blocks to create histograms of student heights, favorite colors, etc.
-- Stack blocks to show counts in each category
-
 
 ### 4.2 Spell 6: Scatter Plot Adventures
 *Duration: 20 minutes*
