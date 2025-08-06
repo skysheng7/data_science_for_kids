@@ -20,15 +20,14 @@ By the end of today, you'll be magical data wizards who can:
 - 📊 Create three types of data stories: histograms, scatter plots, and bar charts
 - 👥 Work as a team to solve real data mysteries
 
-<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExY2dlMzQ4bGxwdG0wN3p4YXUzZ3V6cGN3MjQ2OWg4OXM1MzVwcjFjbiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/brsEO1JayBVja/giphy.gif" alt="hello_bird" style="width: 60%; height: auto;">
-
-
 ## 1. Ice Breaker: Mixed Treasure Bag Sorting Game
 *Duration: 10 minutes*
 
 🎈 **Activity: The Great Treasure Sort Competition**
 
 Let's start with a treasure sort! Your team will get a bag of mixed treasures and a mission.
+
+<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNTB6ZTVqbXdsMW81aG03M2pueTg5Y3EyY3ppdTQ4Z2lzNWJxbjZqOSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/w7GmOB1krzjbl8icfF/giphy.gif" alt="colorful" style="width: 60%; height: auto;">
 
 **What you'll need:** A bag or box of mixed items for each team (e.g., colorful tokens, different types of pens, beads, LEGO bricks).
 
@@ -53,7 +52,6 @@ Guess what? The steps you took are the *exact* steps data wizards use to wrangle
 You just acted out a real data analysis workflow! Today, we'll teach you the spells to do this in R.
 
 
-
 ## 2. Data Loading Magic
 *Duration: 25 minutes*
 
@@ -67,7 +65,7 @@ You just acted out a real data analysis workflow! Today, we'll teach you the spe
 **💡 What is a CSV file?**
 Think of CSV files like digital treasure chests that hold data! Just like you can open a toy box to see all your toys, we can open CSV files to see all the data inside.
 
-CSV stands for "Comma Separated Values" - it's like writing a list where commas separate each piece of information.
+CSV stands for "Comma Separated Values" - it's like writing a shopping list where commas separate each toy you wish to buy.
 
 **🔍 Let's explore our magical datasets:**
 
@@ -83,11 +81,6 @@ nrow(pets_data)  # How many pets?
 ncol(pets_data)  # How many details about each pet?
 ```
 
-**🎮 Physical Activity:** Before we code, let's practice with real objects!
-- Pass around a clipboard with a "data table" drawn on paper
-- Each row represents one stuffed animal, each column represents a property (name, type, color)
-
-<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMWpsYTV5ZmFvb2ZnbWJ5Njhsb3JwajZxeXJ2ZnpxOXFzNW5lODhmbSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/QxZ0nbcVgMlPlnfZos/giphy.gif" alt="challenge" style="width: 60%; height: auto;">
 
 ## 3. Data Wrangling Adventures
 *Duration: 75 minutes*
@@ -115,14 +108,6 @@ selected_data <- select(pets_data, pet_name, pet_type)
 # FILTER: Keep only certain rows (like finding only dragons)
 dragons_only <- filter(pets_data, pet_type == "Dragon")
 ```
-
-**🎮 Physical Game: Human Filter and Select**
-- Give each child a card with pet information
-- Call out "SELECT only pet names!" - kids hold up cards showing only names
-- Call out "FILTER for only cats!" - only kids with cat cards stand up
-
-
-<img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3N2Y0MzJia281OWU4ZmFlbHJpdTJzeGJ2cXMyczQ1NW45eGVoaWczeSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/3oz8xElsKyL1Pdostq/giphy.gif" alt="Kids sorting colorful candy by groups" style="width: 100%; height: auto;">
 
 
 ### 3.2 Spell 3: Mutate and Group Magic
