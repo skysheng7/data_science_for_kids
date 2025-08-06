@@ -82,6 +82,10 @@ Claude only allows user to register for an account if they are > 18 years old. Y
 
 1. **🎯 Be specific**: Instead of "my code is broken," explain what you were trying to do, communicate to AI in a clear, specific way like talking to another human
 2. **💙 Be polite and say "Thank you"**: Research shows that when you talk to AI in a polite, encouraging way, like saying "thank you", "please", "good job!", the performance of AI increases
+
+<img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3Z3diMjJnZjFvMHhhZmNjNmh0ODJlbjZ2cm9hMGEwYXhranphN2VqdSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/jLKvwWHIXUS4/giphy.gif" alt=“please” style="width: 60%; height: auto;">
+
+
 3. **➕ New conversation**: Create a new conversation window everytime you have a new question or a new task. AI can get confused when your conversation with it gets too long
 4. **📋 Share your code**: Copy and paste your R code so Claude can see the exact problem. It's even better if you can wrap your code inside of the 3 tick marks like this:
 ````

@@ -19,10 +19,14 @@ title: Day 2 - Loops and Magic Libraries
 - 🎨 Create your first simple visualizations with ggplot2
 - 🗂️ Understand what dataframes are with simple examples
 
+
+<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbDlkdXZvdmRsZTVpY2RqNnJwcTRsNnd3eWszbmxrcGlhZzJ2c2I1biZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Cmr1OMJ2FN0B2/giphy.gif" alt="hello_penguine" style="width: 60%; height: auto;">
+
 ## 1. Ice Breaker: Human Decision Tree Builder
 *Duration: 15 minutes*
 
 🎈 **Activity:** Work in groups of 3-4 to interview each other, draw a decision tree, and write if-else code that sorts each group member into a unique category! This refreshes Day 1's if-else magic while preparing us for data exploration.
+
 
 **How to Play:**
 1. Discovery Questions *(4 min)*: Share with your group:

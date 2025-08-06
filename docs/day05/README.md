@@ -23,6 +23,8 @@ By the end of today, you will:
 - 🔮 Use generative AI tools like Claude to help with coding
 - 📊 Conduct your own AI model comparison experiment
 
+<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDJnNmZmNDMzaXZqZTk1NmQxejB6ZnNlcWhrMjN2ZmtpbXhkemI0ZyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/OOmn3L2GZB1w38CFW3/giphy.gif" alt="hello_robot" style="width: 60%; height: auto;">
+
 ## 1. Ice Breaker: Human KNN Game (*Duration: 10 minutes*)
 
 *Just like Oda the Data Otter, we'll start by understanding how neighbors help us make decisions!*

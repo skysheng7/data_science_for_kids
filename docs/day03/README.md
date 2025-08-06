@@ -20,25 +20,39 @@ By the end of today, you'll be magical data wizards who can:
 - 📊 Create three types of data stories: histograms, scatter plots, and bar charts
 - 👥 Work as a team to solve real data mysteries
 
-## 1. Ice Breaker: Stuffed Animal Data Sorting Game
+<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExY2dlMzQ4bGxwdG0wN3p4YXUzZ3V6cGN3MjQ2OWg4OXM1MzVwcjFjbiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/brsEO1JayBVja/giphy.gif" alt="hello_bird" style="width: 60%; height: auto;">
+
+
+## 1. Ice Breaker: Mixed Treasure Bag Sorting Game
 *Duration: 10 minutes*
 
-🎈 **Activity: The Great Animal Sort**
+🎈 **Activity: The Great Treasure Sort Competition**
 
-Let's start with a physical data game! We have a collection of stuffed animals that need organizing.
+Let's start with a treasure sort! Your team will get a bag of mixed treasures and a mission.
 
-**What you'll need:** Various stuffed animals (different types, colors, sizes)
+**What you'll need:** A bag or box of mixed items for each team (e.g., colorful tokens, different types of pens, beads, LEGO bricks).
 
-**How to play:**
-1. Spread all stuffed animals on tables
-2. **SELECT operation:** Pick only the bears from all animals
-3. **FILTER operation:** Keep only the red bears
-4. **GROUP BY operation:** Sort all animals by type (cats together, dogs together, etc.)
-5. **SUMMARIZE operation:** Count how many of each type we have
+**Your Mission:**
+1. Form teams of 3-4 people. Each team gets one bag.
+2. Empty your bag of treasures onto the table.
+3. **Your challenge:** Work together to count how many items you have for each category. For example, your result might be "5 red tokens, 3 blue tokens, and 2 green LEGOs."
+4. 🏆 The first team to get their counts **wins**!
 
-**🎯 Learning connection:** These are the exact same operations we'll do with data in R!
+#### 🤔 Team Reflection
+*Once you have your counts, think about this:*
+- What steps did your team take to complete the mission?
+- Did you sort the items first? Why?
 
-<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMWpsYTV5ZmFvb2ZnbWJ5Njhsb3JwajZxeXJ2ZnpxOXFzNW5lODhmbSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/VgSjnwSoqiPjRRIJ1F/giphy.gif" alt="Kids sorting stuffed animals by categories" style="width: 60%; height: auto;">
+#### 💡 Connecting to Code
+Guess what? The steps you took are the *exact* steps data wizards use to wrangle data with code!
+
+- When you sorted items into piles (like all the red things together), you were performing a **`group_by()`** operation.
+- When you counted the items in each pile, you were doing a **`summarize()`**.
+- If we asked you to find *only the pens*, you would be using **`select()`**.
+
+You just acted out a real data analysis workflow! Today, we'll teach you the spells to do this in R.
+
+
 
 ## 2. Data Loading Magic
 *Duration: 25 minutes*

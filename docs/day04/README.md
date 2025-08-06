@@ -16,6 +16,8 @@ title: Day 4 - Statistics Ocean
 
 Today we'll explore the fascinating world of statistics using hands-on activities with toy cows, colorful candies, and magical data tokens. You'll learn how to measure central tendencies, understand sampling, and discover the magic of confidence intervals through fun physical experiments!
 
+<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExc2d5YThoNXRucHU2eDJmYWYxbzJsaTBlc2VhczBnYTkyM3pwcGNuNiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/l46CdoZqbJxQMOvjW/giphy.gif" alt="hello_robot" style="width: 60%; height: auto;">
+
 ### 🎯 Learning Objectives
 - 📏 Understand mean, median, and mode through measuring toy cows
 - 🍬 Learn about sampling by counting candy flavors
