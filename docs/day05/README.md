@@ -3,7 +3,7 @@ layout: default
 title: Day 5 - Machine Learning & AI
 ---
 
-# 🧙‍♀️ Day 5: Machine Learning & AI Ethics
+# 🧙‍♀️ Day 5: Machine Learning & AI
 
 *Welcome to the AI Academy where Oda the Data Otter discovers machine learning magic and explores the ethical future of artificial intelligence!*
 

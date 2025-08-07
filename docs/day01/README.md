@@ -292,7 +292,7 @@ Setup:
 
 🐛 **Don't worry - Everyone makes mistakes when coding!**
 
-![error](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExb24wdXFlNG9rZ3U3Z3FxOHo2a2o5dXpnMnM0ZzZzMmpmNXBmeW1vbSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/YAlhwn67KT76E/giphy.gif)
+<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExb24wdXFlNG9rZ3U3Z3FxOHo2a2o5dXpnMnM0ZzZzMmpmNXBmeW1vbSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/YAlhwn67KT76E/giphy.gif" alt="error" style="width: 40%; height: auto;">
 
 R is like learning a new language! Just like human languages, R has rules. But R is different from human languages in two important ways:
 
