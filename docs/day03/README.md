@@ -399,7 +399,7 @@ ggplot(creature_counts, aes(x = creature_type, y = total)) +
 
 Take a look at this real bar plot that was shared when GPT-5 was announced last week by OpenAI:
 
-![GPT-5 performance comparison chart](../../images/gpt5.jpg)
+![GPT-5 performance comparison chart](../../images/gpt5.png)
 
 ##### **🤔 What's wrong with this bar plot?**
 
