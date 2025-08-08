@@ -12,7 +12,6 @@ title: Day 4 - Statistics Ocean
 :width: 50%
 ```
 
-<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExc2d5YThoNXRucHU2eDJmYWYxbzJsaTBlc2VhczBnYTkyM3pwcGNuNiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/l46CdoZqbJxQMOvjW/giphy.gif" alt="hello_robot" style="width: 60%; height: auto;">
 
 ### 🎯 Learning Objectives
 - 📏 Understand mean, median, and mode
@@ -20,6 +19,8 @@ title: Day 4 - Statistics Ocean
 - 🔄 Explore bootstrapping with hands-on candy experiments  
 - 📊 Calculate confidence intervals using R magic
 - 🎲 Discover sampling variability through physical activities
+
+<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExc2d5YThoNXRucHU2eDJmYWYxbzJsaTBlc2VhczBnYTkyM3pwcGNuNiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/l46CdoZqbJxQMOvjW/giphy.gif" alt="hello_robot" style="width: 60%; height: auto;">
 
 ## 🎈 Ice Breaker Activity: Rainbow Token Count
 *Duration: 10 minutes*

@@ -45,16 +45,7 @@ treat_magic_bar <- ggplot(treat_magic, aes(x = favorite_treat, y = average_magic
 print(treat_magic_bar)
 
 ########################################################
-# ✨ Challenge (from scratch)
+# ✨ Challenge (code from scratch)
 # Create a plot that shows age distribution (histogram) for the most popular treat.
 # Hint: filter() to keep only the most popular treat, then use ggplot() + geom_histogram().
-
-########################################################
-# 🧩 Template (fill in the ...)
-
-# most_popular <- treat_counts %>% slice(1) %>% pull(favorite_treat)
-# pets_top_treat <- pets_data %>% filter(favorite_treat == most_popular)
-# ggplot(pets_top_treat, aes(x = ...)) +
-#   geom_histogram(bins = ..., fill = "...", color = "...") +
-#   labs(title = "...", x = "...", y = "...")
 
