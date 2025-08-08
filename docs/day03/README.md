@@ -395,6 +395,14 @@ ggplot(creature_counts, aes(x = creature_type, y = total)) +
 - **Histograms** are for numbers that are continuous (like height, score)
 - **Bar Charts** are for comparing separate groups or categories (like creature types: "dragon", "Fairy", "Phoenix").
 
+#### 🤡 Visualization Crime Alert: Can You Spot What's Wrong?
+
+Take a look at this real bar plot that was shared when GPT-5 was announced last week by OpenAI:
+
+![GPT-5 performance comparison chart](../../images/gpt5.jpg)
+
+##### **🤔 What's wrong with this bar plot?**
+
 
 ## 6. Team Data Detective Project
 *Duration: 35 minutes*
