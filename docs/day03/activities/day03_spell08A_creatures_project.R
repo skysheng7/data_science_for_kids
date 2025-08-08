@@ -56,6 +56,15 @@ age_magic_plot <- ggplot(creature_data, aes(x = creature_age, y = ..., color = c
 print(age_magic_plot)
 
 ########################################################
+# 4) Bonus: What does the distribution of magic power look like?
+# TODO: Make a histogram to see the shape of magic power values
+magic_hist <- ggplot(creature_data, aes(x = ...)) +
+  geom_histogram(bins = 8, fill = "...", color = "black") +
+  labs(title = "Magic Power Distribution",
+       x = "Magic Power", y = "Number of Creatures")
+print(magic_hist)
+
+########################################################
 # ✨ Challenge (writing code from scratch)
 # Challenge question 1:
 # - Which element has the highest average magic power?

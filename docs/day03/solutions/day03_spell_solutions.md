@@ -55,131 +55,72 @@ names(creature_data)
 
 ### Challenge Solutions:
 
-**Challenge 1: Select only creature name and type**
+**Challenge 1: Select only creature_name and creature_age**
 ```R
 # creature_data <- read.csv("datasets/creature_of_sky.csv")  # Practice data
 creature_data <- read.csv("datasets/creatures.csv")  # Your real creature data
 
-creature_basics <- select(creature_data, creature_name, creature_type)
+creature_basics <- select(creature_data, creature_name, creature_age)
 print(creature_basics)
 ```
 
-**Challenge 2: Filter for creatures with high magic power (8+)**
+**Challenge 2: Filter for creatures older than 100 years**
 ```R
-powerful_creatures <- filter(creature_data, magic_power >= 8)
-print(powerful_creatures)
+older_creatures <- filter(creature_data, creature_age > 100)
+print(older_creatures)
 ```
 
 **Challenge 3: Find dragons and show only their names**
 ```R
 dragon_names <- creature_data %>%
-  filter(creature_type == "Dragon") %>%
+  filter(creature_type == "dragon") %>%
   select(creature_name)
 print(dragon_names)
 ```
 
 ---
 
-## Spell 3: Slice and Arrange Magic
+## Spell 3: Grouping and Counting Magic
 
 ### Challenge Solutions:
 
-**Challenge 1: Get the first 3 creatures**
+**Challenge 1: Create age_group column**
 ```R
-first_three <- slice(creature_data, 1:3)
-print(first_three)
+creatures_with_age_group <- mutate(creature_data, 
+                                   age_group = ifelse(creature_age > 100, "Old", "Young"))
+print(creatures_with_age_group)
 ```
 
-**Challenge 2: Sort creatures by age (youngest first)**
+**Challenge 2: Group by age_group and count**
 ```R
-creatures_by_age <- arrange(creature_data, creature_age)
-print(creatures_by_age)
-```
-
-**Challenge 3: Find the top 5 most powerful creatures**
-```R
-top_powerful <- creature_data %>%
-  arrange(desc(magic_power)) %>%
-  slice(1:5)
-print(top_powerful)
-```
-
-**Challenge 4: Sort by creature type, then by magic power (highest first)**
-```R
-creatures_organized <- arrange(creature_data, creature_type, desc(magic_power))
-print(creatures_organized)
+age_counts <- creatures_with_age_group %>%
+  group_by(age_group) %>%
+  summarize(count = n())
+print(age_counts)
 ```
 
 ---
 
-## Spell 4: Mutate and Group Magic
+## Spell 4: Pipeline Magic
 
 ### Challenge Solutions:
 
-**Challenge 1: Create power_category column**
+**Challenge: Use a pipeline to filter, select, and arrange**
 ```R
-creatures_enhanced <- mutate(creature_data, 
-                           power_category = ifelse(magic_power >= 8, "Super Strong", 
-                                                 ifelse(magic_power >= 5, "Medium", "Growing")))
-print(creatures_enhanced)
-```
-
-**Challenge 2: Group by creature_type and count**
-```R
-creature_summary <- creature_data %>%
-  group_by(creature_type) %>%
-  summarize(count = n(),
-           avg_power = mean(magic_power))
-print(creature_summary)
-```
-
-**Challenge 3: Create human_years column (creature age * 0.8)**
-```R
-creatures_with_human_age <- mutate(creature_data, 
-                                  human_years = creature_age * 0.8)
-print(creatures_with_human_age)
+challenge_result <- creature_data %>%
+  filter(magic_power > 8) %>%
+  select(creature_name, creature_type) %>%
+  arrange(creature_name)
+print(challenge_result)
 ```
 
 ---
 
-## Spell 5: Pipeline Magic
-
-### Challenge Solutions:
-
-**Challenge 1: Find winged creatures with high power**
-```R
-powerful_winged <- creature_data %>%
-  filter(has_wings == "Yes") %>%
-  filter(magic_power >= 7) %>%
-  select(creature_name, creature_type, magic_power) %>%
-  arrange(desc(magic_power))
-print(powerful_winged)
-```
-
-**Challenge 2: Top 3 oldest creatures of each type**
-```R
-oldest_by_type <- creature_data %>%
-  group_by(creature_type) %>%
-  arrange(desc(creature_age)) %>%
-  slice(1:3) %>%
-  select(creature_name, creature_type, creature_age)
-print(oldest_by_type)
-```
-
-**Challenge 3: Complex pipeline - fire element creatures analysis**
-```R
-fire_analysis <- creature_data %>%
-  filter(magical_element == "fire") %>%
-  mutate(power_level = ifelse(magic_power >= 8, "High", "Medium")) %>%
-  group_by(power_level) %>%
-  summarize(count = n()) %>%
-  arrange(desc(count))
-print(fire_analysis)
-```
+<!-- Removed previous mismatched section -->
 
 ---
 
-## Spell 6: Histogram Magic
+## Spell 5: Histogram Magic
 
 ### Challenge Solutions:
 
@@ -218,7 +159,7 @@ print(wings_histogram)
 
 ---
 
-## Spell 7: Scatter Plot Magic
+## Spell 6: Scatter Plot Magic
 
 ### Challenge Solutions:
 
@@ -258,57 +199,27 @@ print(advanced_scatter)
 
 ---
 
-## Spell 8: Bar Chart Magic
+## Spell 7: Bar Chart Magic
 
 ### Challenge Solutions:
 
-**Challenge 1: Count creatures by type**
+**Challenge: Create a bar chart showing average age for each creature type**
 ```R
-creature_counts <- creature_data %>%
+age_totals <- creature_data %>%
   group_by(creature_type) %>%
-  summarize(total = n())
+  summarize(average_age = mean(creature_age))
 
-type_bar_chart <- ggplot(creature_counts, aes(x = creature_type, y = total)) +
+age_bar_chart <- ggplot(age_totals, aes(x = creature_type, y = average_age)) +
   geom_col(fill = "orange", color = "black") +
-  labs(title = "Which Creature Type is Most Popular?",
+  labs(title = "Average Age by Creature Type",
        x = "Creature Type",
-       y = "Number of Creatures")
-print(type_bar_chart)
-```
-
-**Challenge 2: Average magic power by magical element**
-```R
-element_power <- creature_data %>%
-  group_by(magical_element) %>%
-  summarize(avg_power = mean(magic_power))
-
-element_bar_chart <- ggplot(element_power, aes(x = magical_element, y = avg_power, fill = magical_element)) +
-  geom_col(color = "black") +
-  labs(title = "Average Magic Power by Element",
-       x = "Magical Element",
-       y = "Average Magic Power") +
-  theme(legend.position = "none")
-print(element_bar_chart)
-```
-
-**Challenge 3: Total age by creature type (only winged creatures)**
-```R
-winged_age_totals <- creature_data %>%
-  filter(has_wings == "Yes") %>%
-  group_by(creature_type) %>%
-  summarize(total_age = sum(creature_age))
-
-winged_bar_chart <- ggplot(winged_age_totals, aes(x = creature_type, y = total_age)) +
-  geom_col(fill = "skyblue", color = "navy") +
-  labs(title = "Total Age of Winged Creatures by Type",
-       x = "Creature Type",
-       y = "Total Age (Years)")
-print(winged_bar_chart)
+       y = "Average Age (Years)")
+print(age_bar_chart)
 ```
 
 ---
 
-## Spell 9: Team Project Example Solutions
+## Spell 8: Team Project Example Solutions
 
 ### Creature Power Mystery Solutions:
 
@@ -351,12 +262,22 @@ correlation <- cor(creature_data$creature_age, creature_data$magic_power)
 print(paste("Correlation between age and magic power:", correlation))
 ```
 
+**What does the distribution of magic power look like?**
+```R
+magic_hist <- ggplot(creature_data, aes(x = magic_power)) +
+  geom_histogram(bins = 8, fill = "gold", color = "black") +
+  labs(title = "Magic Power Distribution",
+       x = "Magic Power",
+       y = "Number of Creatures")
+print(magic_hist)
+```
+
 ### Elemental Balance Mystery Solutions:
 
-**Which magical element is most common?**
+**Which element is most common?**
 ```R
 creature_data %>%
-  group_by(magical_element) %>%
+  group_by(element) %>%
   summarize(count = n()) %>%
   arrange(desc(count))
 ```
@@ -364,55 +285,128 @@ creature_data %>%
 **Do certain creature types prefer certain elements?**
 ```R
 element_type_analysis <- creature_data %>%
-  group_by(creature_type, magical_element) %>%
+  group_by(creature_type, element) %>%
   summarize(count = n()) %>%
   arrange(creature_type, desc(count))
 
 # Visualization
-ggplot(creature_data, aes(x = creature_type, fill = magical_element)) +
+ggplot(creature_data, aes(x = creature_type, fill = element)) +
   geom_bar(position = "fill") +
   labs(title = "Element Distribution by Creature Type",
        x = "Creature Type",
        y = "Proportion",
-       fill = "Magical Element") +
+       fill = "Element") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 ```
 
 ### Additional Dataset Solutions:
 
+**Magical Pets Analysis:**
+```R
+pets_data <- read.csv("datasets/magical_pets.csv")
+
+# 1) Which favorite treat is most popular among pets?
+pets_data %>%
+  group_by(favorite_treat) %>%
+  summarize(count = n()) %>%
+  arrange(desc(count))
+
+# 2) Do pets who like that treat also tend to have higher magic levels?
+pets_data %>%
+  group_by(favorite_treat) %>%
+  summarize(average_magic = mean(magic_level)) %>%
+  arrange(desc(average_magic))
+
+# 3) Which pet type has the highest average magic level?
+pets_data %>%
+  group_by(pet_type) %>%
+  summarize(average_magic = mean(magic_level), count = n()) %>%
+  arrange(desc(average_magic))
+
+# Scatter: Are older pets more magical?
+ggplot(pets_data, aes(x = age_years, y = magic_level, color = pet_type)) +
+  geom_point(size = 4) +
+  labs(title = "Are Older Pets More Magical?",
+       x = "Age (years)", y = "Magic Level", color = "Pet Type")
+
+# Histogram: Magic level distribution
+ggplot(pets_data, aes(x = magic_level)) +
+  geom_histogram(bins = 8, fill = "steelblue", color = "black") +
+  labs(title = "Distribution of Pet Magic Levels",
+       x = "Magic Level", y = "Number of Pets")
+```
+
 **Creature Sightings Analysis:**
 ```R
 creatures_sightings <- read.csv("datasets/creature_sightings.csv")
 
-# Location with most sightings
+# 1) Which location has the most creature sightings?
 creatures_sightings %>%
   group_by(location) %>%
-  summarize(total_sightings = sum(count)) %>%
+  summarize(total_sightings = n()) %>%
   arrange(desc(total_sightings))
 
-# Rarest creature
+# 2) What's the rarest creature type (lowest average rarity_score)?
 creatures_sightings %>%
   group_by(creature_type) %>%
-  summarize(total_seen = sum(count)) %>%
-  arrange(total_seen) %>%
+  summarize(average_rarity = mean(rarity_score), count = n()) %>%
+  arrange(average_rarity) %>%
   head(1)
+
+# 3) Which creature type appears most often overall?
+creatures_sightings %>%
+  group_by(creature_type) %>%
+  summarize(count = n()) %>%
+  arrange(desc(count))
+
+# Scatter: Are rarer creatures seen more by expert photographers?
+ggplot(creatures_sightings, aes(x = photographer_level, y = rarity_score, color = creature_type)) +
+  geom_point(size = 4) +
+  labs(title = "Rarity vs Photographer Skill",
+       x = "Photographer Level", y = "Rarity Score", color = "Creature Type")
+
+# Histogram: Rarity score distribution
+ggplot(creatures_sightings, aes(x = rarity_score)) +
+  geom_histogram(bins = 8, fill = "plum", color = "black") +
+  labs(title = "Distribution of Rarity Scores",
+       x = "Rarity Score", y = "Number of Sightings")
 ```
 
 **Magic School Analysis:**
 ```R
 school_data <- read.csv("datasets/magic_school_grades.csv")
 
-# Subject students struggle with most
-school_data %>%
-  group_by(subject) %>%
-  summarize(avg_grade = mean(grade)) %>%
-  arrange(avg_grade) %>%
-  head(1)
+# 1) Which subject do students struggle with most? (lowest average)
+avg_by_subject <- school_data %>%
+  summarize(
+    avg_magic = mean(magic_score),
+    avg_potion = mean(potion_score),
+    avg_flying = mean(flying_score)
+  )
+avg_by_subject
 
-# Top students
-school_data %>%
-  group_by(student_name) %>%
-  summarize(avg_grade = mean(grade)) %>%
-  arrange(desc(avg_grade)) %>%
-  head(3)
+# 2) Who are the top students by overall score?
+ranked <- school_data %>%
+  mutate(overall = (magic_score + potion_score + flying_score) / 3) %>%
+  arrange(desc(overall))
+head(ranked, 5)
+
+# 3) What's the average overall score in each house?
+house_avg <- ranked %>%
+  group_by(house) %>%
+  summarize(average_overall = mean(overall)) %>%
+  arrange(desc(average_overall))
+house_avg
+
+# Scatter: Is potion score related to flying score?
+ggplot(school_data, aes(x = potion_score, y = flying_score, color = house)) +
+  geom_point(size = 4) +
+  labs(title = "Potion vs Flying Scores",
+       x = "Potion Score", y = "Flying Score", color = "House")
+
+# Histogram: Magic score distribution
+ggplot(school_data, aes(x = magic_score)) +
+  geom_histogram(bins = 8, fill = "steelblue", color = "black") +
+  labs(title = "Distribution of Magic Scores",
+       x = "Magic Score", y = "Number of Students")
 ```

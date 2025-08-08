@@ -17,20 +17,21 @@ head(school_data)
 # 3) What's the average score in each house?
 
 ########################################################
-# 🧭 Starter templates (fill in the ...)
+# TODO: Fill in the ... below to solve the mysteries!
 
 # 1) Average by subject
 avg_by_subject <- school_data %>%
   summarize(
-    avg_magic = mean(magic_score),
-    avg_potion = mean(potion_score),
-    avg_flying = mean(flying_score)
+    avg_magic = mean(...),
+    avg_potion = mean(...),
+    avg_flying = mean(...)
   )
 print(avg_by_subject)
 
+########################################################
 # 2) Overall score and top students
 ranked <- school_data %>%
-  mutate(overall = (magic_score + potion_score + flying_score) / 3) %>%
+  mutate(overall = (... + ... + ...) / 3) %>%
   arrange(desc(overall))
 print(head(ranked, 5))
 
@@ -40,10 +41,11 @@ top_plot <- ggplot(ranked, aes(x = reorder(student_name, overall), y = overall, 
   labs(title = "Top Students by Overall Score", x = "Student", y = "Overall Score")
 print(top_plot)
 
+########################################################
 # 3) Average overall by house
 house_avg <- ranked %>%
   group_by(house) %>%
-  summarize(average_overall = mean(overall)) %>%
+  summarize(average_overall = mean(...)) %>%
   arrange(desc(average_overall))
 print(house_avg)
 
@@ -52,3 +54,20 @@ print(house_avg)
 # Create a histogram showing distribution of overall scores.
 # Hint: use ggplot(ranked, aes(x = overall)) + geom_histogram().
 
+
+########################################################
+# Bonus: Explore with scatter and histogram
+
+# 4) Scatter plot: Is potion score related to flying score?
+pf_scatter <- ggplot(school_data, aes(x = ..., y = ..., color = house)) +
+  geom_point(size = 4) +
+  labs(title = "Potion vs Flying Scores",
+       x = "Potion Score", y = "Flying Score", color = "House")
+print(pf_scatter)
+
+# 5) Histogram: How are magic scores distributed?
+magic_hist <- ggplot(school_data, aes(x = ...)) +
+  geom_histogram(bins = 8, fill = "...", color = "black") +
+  labs(title = "Distribution of Magic Scores",
+       x = "Magic Score", y = "Number of Students")
+print(magic_hist)

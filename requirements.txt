@@ -1,2 +1,6 @@
 jupyter-book
+jupyter
+nbformat
+nbclient
+jupytext
 

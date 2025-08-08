@@ -397,12 +397,45 @@ ggplot(creature_counts, aes(x = creature_type, y = total)) +
 
 #### 🤡 Visualization Crime Alert: Can You Spot What's Wrong?
 
+##### Visualization crime 1
 Take a look at this real bar plot that was shared when GPT-5 was announced last week by OpenAI:
 
 ![GPT-5 performance comparison chart](../../images/gpt5.png)
 
-##### **🤔 What's wrong with this bar plot?**
+**🤔 What's wrong with this bar plot?**
 
+##### Visualization crime 2
+
+Here is a plot to show where do participants come from attending an AI conference
+
+![acm facct 2025 bar plot 1](../../images/acm_facct2025_1.png)
+
+**🤔 Where do you think most participants come from from this plot?**
+
+Here is another plot to show where do participants come from attending the **SAME** AI conference (using the same data set)
+
+![acm facct 2025 bar plot 2](../../images/acm_facct2025_2.png)
+
+##### Visualization crime 3
+
+Here is a plot showing the global temperature changes from 1880 - 2015. 
+
+![global_warming](../../images/global_warming1.png)
+
+**🤔 Looks pretty flat to me! So global warming is not real??**
+
+
+Here is another visualization that is zoomed in, using the same data: 
+
+![global_warming](../../images/global_warming2.png)
+
+**🤯 Global warming is real!!**
+
+##### Visualization crime 4
+
+![global_warming](../../images/mmr1.png)
+
+![global_warming](../../images/mmr2.png)
 
 ## 6. Team Data Detective Project
 *Duration: 35 minutes*
