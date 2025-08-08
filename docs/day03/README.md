@@ -433,9 +433,19 @@ Here is another visualization that is zoomed in, using the same data:
 
 ##### Visualization crime 4
 
-![global_warming](../../images/mmr1.png)
+Here is a plot from a scientific paper, showing there is a relationship between the prevalence of autisim and the population covergae of measles, mumps, and rubella vaccine. 
 
-![global_warming](../../images/mmr2.png)
+![MMR1](../../images/mmr1.png)
+
+**🤔 So does vaccine causes autisim??**
+
+Hint: Look at where does both y axis starts? Are they on the same scale?
+
+![MMR2](../../images/mmr2.png)
+
+Here is another visualization that is more properly plotted, there is barely any relationship between the 2 lines.
+
+**🤯 Vaccine does not cause autisim!! Correlation is also not causation!**
 
 ## 6. Team Data Detective Project
 *Duration: 35 minutes*
