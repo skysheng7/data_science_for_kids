@@ -8,9 +8,9 @@
 
 library(dplyr)  # Our data wrangling toolbox
 
-# Load our magical pets data
-pets_data <- read.csv("datasets/magical_pets.csv")
-print("🎉 Data loaded! Ready to wrangle!")
+# Load the cleaned creatures data (created from the form by our cleaning spell)
+creature_data <- read.csv("datasets/creatures.csv")
+print("🎉 Creatures data loaded! Ready to wrangle!")
 
 ########################################################
 # Step 2: SELECT Magic - Choose specific columns
@@ -19,8 +19,8 @@ print("🎉 Data loaded! Ready to wrangle!")
 # It's like choosing which toys you want to play with
 # You don't need ALL the toys, just the ones for today's game!
 
-# Select only pet names and types
-selected_data <- select(pets_data, pet_name, pet_type)
+# Select only creature names and types
+selected_data <- select(creature_data, creature_name, creature_type)
 print("🎯 Selected only names and types:")
 print(selected_data)
 
@@ -32,42 +32,42 @@ print(selected_data)
 # You keep only the ones that match what you're looking for!
 
 # Keep only dragons
-dragons_only <- filter(pets_data, pet_type == "Dragon")
+dragons_only <- filter(creature_data, creature_type == "dragon")
 print("🐉 Only dragons:")
 print(dragons_only)
 
-# Keep only young pets (age less than 10)
-young_pets <- filter(pets_data, age_years < 10)
-print("👶 Only young pets:")
-print(young_pets)
+# Keep only young creatures (age less than 50)
+young_creatures <- filter(creature_data, creature_age < 50)
+print("👶 Only young creatures:")
+print(young_creatures)
 
 ########################################################
 # Step 4: Combine SELECT and FILTER
 
-# Get only names of magical pets with high magic levels
-powerful_pet_names <- pets_data %>%
-  filter(magic_level > 50) %>%
-  select(pet_name, magic_level)
+# Get only names of creatures with high magic levels
+powerful_creatures <- creature_data %>%
+  filter(magic_power > 8) %>%
+  select(creature_name, magic_power)
 
-print("⚡ Powerful pets and their magic levels:")
-print(powerful_pet_names)
+print("⚡ Powerful creatures and their magic levels:")
+print(powerful_creatures)
 
 ########################################################
 # 🎈 Your turn to practice!
 
-# Challenge 1: Select only pet_name and age_years
+# Challenge 1: Select only creature_name and creature_age
 # YOUR CODE HERE:
-# challenge1 <- select(pets_data, ...)
+challenge1 <- select(creature_data, ...)
 
-# Challenge 2: Filter for pets older than 50 years
+# Challenge 2: Filter for creatures older than 100 years
 # YOUR CODE HERE:
-# challenge2 <- filter(pets_data, ...)
+challenge2 <- filter(creature_data, ...)
 
-# Challenge 3: Find cats and show only their names
+# Challenge 3: Find dragons and show only their names
 # YOUR CODE HERE:
-# challenge3 <- pets_data %>%
-#   filter(...) %>%
-#   select(...)
+challenge3 <- creature_data %>%
+  filter(...) %>%
+  select(...)
 
 ########################################################
 # 💡 Memory Tip:

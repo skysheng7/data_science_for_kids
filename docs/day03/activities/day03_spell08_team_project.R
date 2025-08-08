@@ -1,4 +1,4 @@
-# 🔮 Day 3 - Spell 8: Team Data Detective Project
+# 🔮 Day 3 - Spell 8: Team Data Detective Project (Overview)
 
 # Work with a partner to solve a data mystery!
 # Use all your new data magic skills together
@@ -6,10 +6,12 @@
 ########################################################
 # 🕵️‍♀️ Mission: Choose Your Mystery!
 
-# Pick ONE mystery to solve with your partner:
-# 1. Magical Pets Mystery
-# 2. Creature Sightings Mystery  
-# 3. Magic School Mystery
+# Pick ONE mystery or multiple mysteries to solve with your partner by opening the scripts below.
+# Each script uses ONE dataset so you can focus clearly:
+# - day03_spell08A_creatures_project.R (uses creatures.csv)
+# - day03_spell08B_magical_pets_project.R (uses magical_pets.csv)
+# - day03_spell08C_creature_sightings_project.R (uses creature_sightings.csv)
+# - day03_spell08D_magic_school_project.R (uses magic_school_grades.csv)
 
 ########################################################
 # Step 1: Load your detective toolkit
@@ -21,61 +23,12 @@ print("🔍 Detective toolkit loaded!")
 print("👫 Ready to solve mysteries with your partner!")
 
 ########################################################
-# Mystery Option 1: Magical Pets Investigation
-
-print("🐾 MYSTERY 1: The Case of the Magical Pets")
-print("Questions to solve:")
-print("- Which pet has the highest magic level?")
-print("- Are older pets more magical?")
-print("- What's the most common pet type?")
-
-# Load the data
-pets_data <- read.csv("datasets/magical_pets.csv")
-
-# Start your investigation here!
-print("🔍 First, let's peek at our evidence:")
-head(pets_data)
-
-# YOUR DETECTIVE WORK HERE:
-# Use filter(), select(), group_by(), summarize()
-# Create at least one visualization
-
-########################################################
-# Mystery Option 2: Creature Sightings Investigation
-
-print("👾 MYSTERY 2: The Case of the Mysterious Creatures")
-print("Questions to solve:")
-print("- Which location has the most creature sightings?")
-print("- What's the rarest creature?")
-print("- Which creature type appears most often?")
-
-# Uncomment these lines if you choose this mystery:
-# creatures_data <- read.csv("datasets/creature_sightings.csv")
-# print("🔍 Evidence from creature sightings:")
-# head(creatures_data)
-
-# YOUR DETECTIVE WORK HERE:
-
-########################################################
-# Mystery Option 3: Magic School Investigation
-
-print("🏫 MYSTERY 3: The Case of the Magic School Grades")
-print("Questions to solve:")
-print("- Which subject do students struggle with most?")
-print("- Who are the top students?")
-print("- What's the average grade in each subject?")
-
-# Uncomment these lines if you choose this mystery:
-# school_data <- read.csv("datasets/magic_school_grades.csv")
-# print("🔍 Evidence from magic school:")
-# head(school_data)
-
-# YOUR DETECTIVE WORK HERE:
+# Open ONE of the dataset-specific project files listed above to begin.
 
 ########################################################
 # Step 2: Investigation Template
 
-# Use this template for ANY mystery you choose:
+# Use this template in your chosen project script:
 
 # 1. EXPLORE: Look at your data
 # head(your_data)
@@ -117,4 +70,3 @@ print("👥 Share your findings with the class!")
 # - Ask lots of questions about your data
 # - Try different visualizations to see patterns
 # - Don't be afraid to experiment
-# - The best discoveries often come from unexpected questions!

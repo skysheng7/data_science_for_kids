@@ -40,6 +40,7 @@ Use hierarchical numbering throughout:
 - Use placeholder format: `<img src="PLACEHOLDER_GIF_URL" alt="description" style="width: 100%; height: auto;">`
 - Ask user to replace with actual GIF HTML later
 - Place GIFs strategically to enhance learning and engagement
+- Always retain GIFs when reorganizing or editing content.
 
 ## 2. Spell Activities Format
 
@@ -53,6 +54,7 @@ Use hierarchical numbering throughout:
 - Add activity instructions with 🎈
 - Include challenges with ✨
 - End with memory tip 💡
+- If the concept involves demonstration with code, you should present small code snippets for demonstration first, followed by simple explanations for each new concept/function before asking them to go to Posit Cloud and play with the code themselves
 
 ### 2.2 Posit Cloud File References
 In README files, always instruct users:

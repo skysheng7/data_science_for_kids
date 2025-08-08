@@ -7,7 +7,6 @@
 # Step 1: Load our magical toolbox
 # These are like apps that give R new powers!
 
-library(readr)  # Helps us read CSV files
 library(dplyr)  # Helps us explore data
 
 print("✨ Toolbox loaded! Ready for data magic!")
@@ -19,41 +18,45 @@ print("✨ Toolbox loaded! Ready for data magic!")
 # Loading data from a CSV file (comma-separated values)
 # It's like opening a digital treasure chest full of information!
 
-pets_data <- read.csv("datasets/magical_pets.csv")
-print("🎉 Data treasure chest opened!")
+# For our class demo, we'll first load the raw creatures data collected from SKY!
+creatures_raw <- read.csv("datasets/creature_of_sky.csv")
+print("🎉 Raw creatures data from Sky loaded!")
+
+# 🎈Try loading the cleaned dataset once we've run the cleaning script:
+# creatures_raw <- read.csv("datasets/creatures.csv")
+# uncomment the line above and explore!
 
 ########################################################
 # Step 3: Let's peek inside our treasure chest
 
 # Look at the first few rows (like peeking into the box)
-print("👀 First peek at our magical pets:")
-head(pets_data)
+print("👀 First peek at our raw creature data:")
+head(creatures_raw)
+
+########################################################
+# Step 4: Let's peek inside our treasure chest
+
+# Look at the last few rows (like peeking into the box)
+print("👀 Last peek at our raw creature data:")
+tail(creatures_raw)
 
 ########################################################
 # Step 4: Count our treasures
 
-# How many pets do we have? (count the rows)
-num_pets <- nrow(pets_data)
-print(paste("🐾 Total magical pets:", num_pets))
+# How many responses do we have? (count the rows)
+num_rows <- nrow(creatures_raw)
+print(paste("🧙 Total number of creatures:", num_rows))
 
-# How many details about each pet? (count the columns)
-num_details <- ncol(pets_data)
-print(paste("📋 Details per pet:", num_details))
+# How many details about each creature? (count the columns)
+num_details <- ncol(creatures_raw)
+print(paste("📋 Number of details per creature:", num_details))
 
 ########################################################
 # Step 5: What kind of details do we have?
 
-# Show the column names (what information we have about each pet)
-print("📝 Information we have about each pet:")
-names(pets_data)
-
-########################################################
-# 🎈 Your turn to explore!
-
-# Try loading another dataset:
-# creatures_data <- read.csv("datasets/creature_sightings.csv")
-
-# YOUR CODE HERE - uncomment the line above and explore!
+# Show the column names (what information we have about each response)
+print("📝 Columns in our raw creatures data:")
+names(creatures_raw)
 
 
 ########################################################

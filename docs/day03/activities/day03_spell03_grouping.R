@@ -7,8 +7,8 @@
 # Step 1: Load data and tools
 
 library(dplyr)
-pets_data <- read.csv("datasets/magical_pets.csv")
-print("🎉 Ready to group and count!")
+creature_data <- read.csv("datasets/creatures.csv")
+print("🎉 Ready to group and count creatures!")
 
 ########################################################
 # Step 2: GROUP BY Magic - Sort into piles
@@ -16,13 +16,13 @@ print("🎉 Ready to group and count!")
 # 💡 What is GROUP BY?
 # It's like sorting your candy by color - all reds together, all blues together!
 
-# Group pets by their type and count how many of each
-pet_counts <- pets_data %>%
-  group_by(pet_type) %>%
+# Group creatures by their type and count how many of each
+creature_counts <- creature_data %>%
+  group_by(creature_type) %>%
   summarize(count = n())
 
-print("📊 How many of each pet type:")
-print(pet_counts)
+print("📊 How many of each creature type:")
+print(creature_counts)
 
 ########################################################
 # Step 3: MUTATE Magic - Create new information
@@ -31,38 +31,38 @@ print(pet_counts)
 # It's like adding a new sticker to each trading card
 # You create something new based on what's already there!
 
-# Add a column for age in human years (divide by 10)
-pets_with_human_age <- mutate(pets_data, 
-                             human_age = age_years / 10)
+# Add a column for power category
+creatures_with_category <- mutate(creature_data,
+                                 power_category = ifelse(magic_power >= 8, "high", "low"))
 
-print("👶 Pets with human age:")
-print(pets_with_human_age)
+print("⚡ Creatures with power category:")
+print(creatures_with_category)
 
 ########################################################
 # Step 4: More grouping examples
 
-# Find the average magic level for each pet type
-magic_by_type <- pets_data %>%
-  group_by(pet_type) %>%
-  summarize(average_magic = mean(magic_level))
+# Find the average magic level for each creature type
+magic_by_type <- creature_data %>%
+  group_by(creature_type) %>%
+  summarize(average_magic = mean(magic_power))
 
-print("⚡ Average magic by pet type:")
+print("⚡ Average magic by creature type:")
 print(magic_by_type)
 
 ########################################################
 # 🎈 Your turn to practice!
 
-# Challenge 1: Create a new column called "magic_category"
-# If magic_level > 50, it should say "High", otherwise "Low"
+# Challenge 1: Create a new column called "age_group"
+# If creature_age > 100, it should say "Old", otherwise "Young"
 # YOUR CODE HERE:
-# pets_with_category <- mutate(pets_data, 
-#                             magic_category = ...)
+creatures_with_age_group <- mutate(creature_data, 
+                                   age_group = ...)
 
-# Challenge 2: Group by magic_category and count
+# Challenge 2: Group by age_group and count how many creatures are in each group
 # YOUR CODE HERE:
-# magic_counts <- pets_with_category %>%
-#   group_by(...) %>%
-#   summarize(...)
+age_counts <- creatures_with_age_group %>%
+   group_by(...) %>%
+   summarize(...)
 
 ########################################################
 # 💡 Memory Tip:
