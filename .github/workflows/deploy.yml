@@ -39,7 +39,7 @@ jobs:
     - name: Install R packages and kernel
       run: |
         # Install required R packages
-        Rscript -e "install.packages(c('IRkernel', 'dplyr', 'ggplot2', 'readr'), repos='https://cran.rstudio.com/')"
+        Rscript -e "install.packages(c('IRkernel', 'dplyr', 'ggplot2', 'readr', 'gridExtra'), repos='https://cran.rstudio.com/')"
         # Register R kernel with Jupyter
         Rscript -e "IRkernel::installspec()"
 
