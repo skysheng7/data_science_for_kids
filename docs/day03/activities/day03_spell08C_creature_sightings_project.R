@@ -14,12 +14,14 @@ head(creatures_data)
 # 🎯 Your missions (pick one or more)
 # 1) Which location has the most creature sightings?
 # 2) What's the rarest creature type (lowest average rarity_score)?
-# 3) Which creature type appears most often overall?
+# 3) What time of the day would you most likely to encounter a creature?
+# 4) Is there a relationship between rarity score and photographer level? (scatter plot)
 
 ########################################################
+# 1) Which location has the most creature sightings?
 # TODO: Fill in the ... below to solve the mysteries!
 
-# 1) Count by location
+# Count by location
 by_location <- creatures_data %>%
   group_by(location) %>%
   summarize(count = ...) %>%
@@ -32,8 +34,11 @@ location_plot <- ggplot(by_location, aes(x = location, y = ...)) +
 print(location_plot)
 
 ########################################################
-# 2) Rarest creature by average rarity score 
+# 2) What's the rarest creature type (lowest average rarity_score)
+
 # TODO: Fill in the ... below to solve the mysteries!
+
+# Rarest creature by average rarity score 
 rare_by_type <- creatures_data %>%
   group_by(creature_type) %>%
   summarize(average_rarity = mean(...), count = n()) %>%
@@ -46,39 +51,34 @@ rare_plot <- ggplot(rare_by_type, aes(x = creature_type, y = average_rarity)) +
 print(rare_plot)
 
 ########################################################
-# 3) Most frequent creature type
+# 3) What time of the day would you most likely to encounter a creature?
+
 # TODO: Fill in the ... below to solve the mysteries!
-freq_type <- creatures_data %>%
-  group_by(creature_type) %>%
+
+# Count by time of day
+by_time <- creatures_data %>%
+  group_by(...) %>%
   summarize(count = n()) %>%
   arrange(desc(count))
-print(freq_type)
+print(by_time)
 
-freq_plot <- ggplot(freq_type, aes(x = ..., y = count)) +
-  geom_col(fill = "gold", color = "black") +
-  labs(title = "Most Frequently Sighted Creatures", x = "Creature Type", y = "Sightings")
-print(freq_plot)
-
-
-########################################################
-# ✨ Challenge (code from scratch)
-# Create a plot comparing average rarity by time_of_day.
-# Hint: group_by(time_of_day) then summarize(mean(rarity_score)).
-
+time_plot <- ggplot(by_time, aes(x = time_of_day, y = ...)) +
+  geom_col(fill = "orange", color = "black") +
+  labs(title = "Creature Sightings by Time of Day", x = "Time of Day", y = "Number of Sightings")
+print(time_plot)
 
 ########################################################
-# Bonus: Explore with a scatter plot and histogram
+# 4) Is there a relationship between rarity score and photographer level? (scatter plot)
 
-# 4) Scatter plot: Are rarer creatures seen more by expert photographers?
-rarity_vs_skill <- ggplot(creatures_data, aes(x = photographer_level, y = ..., color = creature_type)) +
-  geom_point(size = 4) +
-  labs(title = "Rarity vs Photographer Skill",
-       x = "Photographer Level", y = "Rarity Score", color = "Creature Type")
-print(rarity_vs_skill)
+# TODO: Fill in the ... below to solve the mysteries!
 
-# 5) Histogram: What times of day have higher rarity scores?
-rarity_hist <- ggplot(creatures_data, aes(x = ...)) +
-  geom_histogram(bins = 8, fill = "...", color = "black") +
-  labs(title = "Distribution of Rarity Scores",
-       x = "Rarity Score", y = "Number of Sightings")
-print(rarity_hist)
+# Create scatter plot
+scatter_plot <- ggplot(creatures_data, aes(x = ..., y = ...)) +
+  geom_point(size = 3, color = "darkgreen", alpha = 0.7) +
+  labs(title = "Rarity Score vs Photographer Level", 
+       x = "Photographer Level", 
+       y = "Rarity Score") +
+  theme_minimal()
+print(scatter_plot)
+
+

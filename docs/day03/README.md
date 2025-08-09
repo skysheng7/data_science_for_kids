@@ -343,7 +343,7 @@ ggplot(creature_data, aes(x = creature_age)) +
 ```
 
 ### 5.2 Spell 6: Scatter Plot Adventures
-*Duration: 15 minutes*
+*Duration: 10 minutes*
 
 #### 🎈 Activity: Relationship Detective
 
@@ -363,7 +363,7 @@ ggplot(creature_data, aes(x = creature_age, y = magic_power)) +
 
 
 ### 5.3 Spell 7: Bar Chart Champions
-*Duration: 15 minutes*
+*Duration: 10 minutes*
 
 #### 🎈 Physical Activity: Human Bar Chart:**
 - Teams line up behind their category signs
@@ -396,48 +396,49 @@ ggplot(creature_counts, aes(x = creature_type, y = total)) +
 - **Bar Charts** are for comparing separate groups or categories (like creature types: "dragon", "Fairy", "Phoenix").
 
 #### 🤡 Visualization Crime Alert: Can You Spot What's Wrong?
+*Duration: 10 minutes*
 
-##### Visualization crime 1
+##### 🚔 **Visualization crime 1**
 Take a look at this real bar plot that was shared when GPT-5 was announced last week by OpenAI:
 
 ![GPT-5 performance comparison chart](../../images/gpt5.png)
 
-**🤔 What's wrong with this bar plot?**
+ > 🤔 What's wrong with this bar plot?
 
-##### Visualization crime 2
+##### 🚔 **Visualization crime 2**
 
 Here is a plot to show where do participants come from attending an AI conference
 
 ![acm facct 2025 bar plot 1](../../images/acm_facct2025_1.png)
 
-**🤔 Where do you think most participants come from from this plot?**
+> 🤔 Where do you think most participants come from from this plot?
 
 Here is another plot to show where do participants come from attending the **SAME** AI conference (using the same data set)
 
 ![acm facct 2025 bar plot 2](../../images/acm_facct2025_2.png)
 
-##### Visualization crime 3
+##### 🚔 **Visualization crime 3**
 
 Here is a plot showing the global temperature changes from 1880 - 2015. 
 
 ![global_warming](../../images/global_warming1.png)
 
-**🤔 Looks pretty flat to me! So global warming is not real??**
+> 🤔 Looks pretty flat to me! So global warming is not real??
 
 
 Here is another visualization that is zoomed in, using the same data: 
 
 ![global_warming](../../images/global_warming2.png)
 
-**🤯 Global warming is real!!**
+> 🤯 Global warming is real!!
 
-##### Visualization crime 4
+##### 🚔 **Visualization crime 4**
 
 Here is a plot from a scientific paper, showing there is a relationship between the prevalence of autisim and the population covergae of measles, mumps, and rubella vaccine. 
 
 ![MMR1](../../images/mmr1.png)
 
-**🤔 So does vaccine causes autisim??**
+> 🤔 So does vaccine causes autisim??
 
 Hint: Look at where does both y axis starts? Are they on the same scale?
 
@@ -445,7 +446,7 @@ Hint: Look at where does both y axis starts? Are they on the same scale?
 
 Here is another visualization that is more properly plotted, there is barely any relationship between the 2 lines.
 
-**🤯 Vaccine does not cause autisim!! Correlation is also not causation!**
+> 🤯 Vaccine does not cause autisim!! Correlation is also not causation!
 
 ## 6. Team Data Detective Project
 *Duration: 35 minutes*

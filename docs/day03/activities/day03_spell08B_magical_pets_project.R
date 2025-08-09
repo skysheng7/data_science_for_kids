@@ -15,17 +15,21 @@ head(pets_data)
 # 1) Which favorite treat is most popular among pets?
 # 2) Do pets who like that treat also tend to have higher magic levels?
 # 3) Which pet type has the highest average magic level?
+# 4) Are older pets more magical?
+# 5) What does the distribution of magic levels look like?
 
 ########################################################
+# 1) Which favorite treat is most popular among pets?
 # TODO: Fill in the ... below to solve the mysteries!
 
-# 1) Count by favorite treat
+# count by favorite treat
 treat_counts <- pets_data %>%
   group_by(favorite_treat) %>%
   summarize(count = ...) %>%
   arrange(desc(count))
 print(treat_counts)
 
+# bar plot to show how many pets like each treat
 treat_bar <- ggplot(treat_counts, aes(x = ..., y = ...)) +
   geom_col(fill = "orange", color = "black") +
   labs(title = "Most Popular Favorite Treats",
@@ -33,7 +37,9 @@ treat_bar <- ggplot(treat_counts, aes(x = ..., y = ...)) +
 print(treat_bar)
 
 ########################################################
-# 2) Average magic by favorite treat 
+# 2) Do pets who like that treat also tend to have higher magic levels?
+
+# Average magic by favorite treat 
 # TODO: Fill in the ... below to solve the mysteries!
 treat_magic <- pets_data %>%
   group_by(favorite_treat) %>%
@@ -48,7 +54,9 @@ treat_magic_bar <- ggplot(treat_magic, aes(x = favorite_treat, y = ...)) +
 print(treat_magic_bar)
 
 ########################################################
-# 3) Average magic by pet type 
+# 3) Which pet type has the highest average magic level?
+
+# Average magic by pet type 
 # TODO: Fill in the ... below to solve the mysteries!
 type_magic <- pets_data %>%
   group_by(...) %>%
@@ -63,21 +71,19 @@ type_magic_bar <- ggplot(type_magic, aes(x = pet_type, y = average_magic)) +
 print(type_magic_bar)
 
 ########################################################
-# ✨ Challenge (code from scratch)
-# Are older pets more magical?
-# Hint: scatter plot might help you solve the mystery!
+# 4) Are older pets more magical?
 
-########################################################
-# Bonus: Visualize with a scatter plot and a histogram
-
-# 4) Scatter plot: Are older pets more magical?
+# TODO: Fill in the ... below to solve the mysteries!
 pets_scatter <- ggplot(pets_data, aes(x = ..., y = ..., color = pet_type)) +
   geom_point(size = 4) +
   labs(title = "Are Older Pets More Magical?",
        x = "Age (years)", y = "Magic Level", color = "Pet Type")
 print(pets_scatter)
 
-# 5) Histogram: What does the distribution of magic levels look like?
+########################################################
+# 5) What does the distribution of magic levels look like?
+
+# TODO: Fill in the ... below to solve the mysteries!
 pets_magic_hist <- ggplot(pets_data, aes(x = ...)) +
   geom_histogram(bins = 8, fill = "...", color = "black") +
   labs(title = "Distribution of Pet Magic Levels",

@@ -53,12 +53,9 @@ Copy and paste this code into the Console:
 ```r
 # Install packages for our camp
 install.packages(c(
-  "tidyverse",    # Data manipulation and visualization
   "ggplot2",      # Beautiful graphs
   "dplyr",        # Data wrangling
-  "readr",        # Reading data files
-  "plotly",       # Interactive plots
-  "DT",           # Interactive tables
+  "gridExtra"     # Visualization grid
   "knitr",        # Document creation
   "rmarkdown"     # Reports and presentations
 ))

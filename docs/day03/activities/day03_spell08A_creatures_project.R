@@ -17,9 +17,10 @@ head(creature_data)
 # 3) Are older creatures more magical?
 
 ########################################################
+# 1) Which creature type has the highest average magic power?
 # TODO: Fill in the ... below to solve the mysteries!
 
-# 1) Average magic by creature type
+# Average magic by creature type
 avg_magic_by_type <- creature_data %>%
   group_by(creature_type) %>%
   summarize(average_magic = mean(...)) %>%
@@ -33,7 +34,9 @@ avg_magic_plot <- ggplot(avg_magic_by_type, aes(x = ..., y = ...)) +
 print(avg_magic_plot)
 
 ########################################################
-# 2) Compare winged vs non-winged
+# 2) Do winged creatures tend to be more powerful?
+
+# Compare winged vs non-winged
 # TODO: Fill in the ... below to solve the mysteries!
 winged_compare <- creature_data %>%
   group_by(has_wings) %>%
@@ -47,7 +50,9 @@ winged_plot <- ggplot(winged_compare, aes(x = has_wings, y = average_magic, fill
 print(winged_plot)
 
 ########################################################
-# 3) Relationship between age and magic
+# 3) Are older creatures more magical?
+
+# Relationship between age and magic
 # TODO: Fill in the ... below to solve the mysteries!
 age_magic_plot <- ggplot(creature_data, aes(x = creature_age, y = ..., color = creature_type)) +
   geom_point(size = 4) +
