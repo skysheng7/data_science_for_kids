@@ -30,7 +30,7 @@ Today we'll join Oda on our first adventure into the magical world of R programm
 
 <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3MngzNnRhN3lzNmhrd3Mxb2hhM200bThiaGN0YXh2bXVlNWdtZm0xYiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/26FPwppc3RioM4z6w/giphy.gif" alt="Hello GIF" style="width: 100%; height: auto;">
 
-#### 🎨 Two Truths and a Creative Lie
+### 🎨 Two Truths and a Creative Lie
 *Duration: 10 minutes*
 
 How to Play:

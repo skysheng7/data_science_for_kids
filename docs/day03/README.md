@@ -37,12 +37,12 @@ Let's start with a treasure sort! Your team will get a bag of mixed treasures an
 3. **Your challenge:** Work together to count how many items you have for each category. For example, your result might be "5 red tokens, 3 blue tokens, and 2 green LEGOs."
 4. 🏆 The first team to get their counts **wins**!
 
-#### 🤔 Team Reflection
+### 🤔 Team Reflection
 *Once you have your counts, think about this:*
 - What steps did your team take to complete the mission?
 - Did you sort the items first? Why?
 
-#### 💡 Connecting to Code
+### 💡 Connecting to Code
 Guess what? The steps you took are the *exact* steps data wizards use to wrangle data with code!
 
 - When you sorted items into piles (like all the red things together), you were performing a **`group_by()`** operation.

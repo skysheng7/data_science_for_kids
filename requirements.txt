@@ -3,4 +3,7 @@ jupyter
 nbformat
 nbclient
 jupytext
+myst-nb
+jupyter-client
+ipykernel
 
