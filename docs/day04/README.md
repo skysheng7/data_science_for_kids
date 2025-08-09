@@ -5,7 +5,7 @@ title: Day 4 - Statistics Ocean
 
 # 🌊 Day 4: Statistics Ocean
 
-*Join Oda the Data Otter as she dives deep into the magical Statistics Ocean, where colorful data reveals the secrets of mean, median, and sampling!*
+*Join Oda the Data Otter as she dives deep into the magical Statistics Ocean, where colorful data reveals the secrets of mean, median, and sampling through epic games and challenges!*
 
 ```{image} ../../images/stat.png
 :alt: stat
@@ -14,226 +14,348 @@ title: Day 4 - Statistics Ocean
 
 
 ### 🎯 Learning Objectives
-- 📏 Understand mean, median, and mode
-- 🍬 Learn about sampling by counting candy flavors
-- 🔄 Explore bootstrapping with hands-on candy experiments  
-- 📊 Calculate confidence intervals using R magic
-- 🎲 Discover sampling variability through physical activities
+- 🎯 Become human data points in the ultimate "Human Histogram" game
+- 🕵️ Master detective skills finding mean, median, and mode with candy mysteries
+- 🎲 Discover sampling secrets through friendly competitions
+- 🔄 Unlock bootstrap magic with team relay races
+- 📊 Use R wizardry to create confidence interval casinos
+- 🏆 Experience how different sampling methods create chaos and discoveries
 
 <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExc2d5YThoNXRucHU2eDJmYWYxbzJsaTBlc2VhczBnYTkyM3pwcGNuNiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/l46CdoZqbJxQMOvjW/giphy.gif" alt="hello_robot" style="width: 60%; height: auto;">
 
-## 🎈 Ice Breaker Activity: Rainbow Token Count
-*Duration: 10 minutes*
+## 🎈 Ice Breaker Activity: Human Histogram Championship
+*Duration: 15 minutes*
 
-Welcome, data explorers! Let's start our statistics adventure with a fun token counting game!
+🎉 Today, YOU become the data points!
 
-**What we'll do:**
-- Each team gets a bag of colorful tokens (red, blue, green, yellow)
-- Count how many tokens of each color you have
-- Write your results on the whiteboard
-- Compare with other teams - are the results the same?
+### Round 1: Height Detective Challenge
+1. **📏 Measurement Station:** Use the ruler to measure your height in centimeters
+2. **📝 Data Collection:** Enter your wizard name and height into our magical data form: 
 
-**The Magic Question:** Why do different teams get different numbers? This is our first taste of **variability**!
+https://forms.gle/TG2dgNwknN6KGTcE6
 
-<img src="PLACEHOLDER_GIF_URL" alt="Kids counting colorful tokens" style="width: 100%; height: auto;">
+3. **🧙‍♀️ Human Lineup:** Line up by height from shortest to tallest
+4. **🔍 In-Person Investigation:** 
+   - Find the shortest wizard (minimum)
+   - Find the tallest wizard (maximum) 
+   - Find the middle wizard (median) - count from both ends!
+5. **💻 R Magic Verification:** Watch as we put your data into R and compare our human results with computer calculations!
 
-## 1. Central Tendency: Meet the Statistical Triplets
+### Round 2: Birthday Block Building
+1. **🧱 Block Distribution:** Each wizard gets one block
+2. **📅 Month Stations:** Set up 12 month stations at the front of the classroom
+3. **🏗️ Building Together:** Place your block on your birth month pile
+4. **📊 Visual Discovery:** Watch our classroom histogram grow in real-time!
+5. **🤔 Pattern Spotting:** Which months are popular? Any empty months?
+
+
+<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMWpsYTV5ZmFvb2ZnbWJ5Njhsb3JwajZxeXJ2ZnpxOXFzNW5lODhmbSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/VgSjnwSoqiPjRRIJ1F/giphy.gif" alt="do_it" style="width: 100%; height: auto;">
+
+## 1. Game 1: Candy Shop Detective Championship 🕵️
+*Duration: 40 minutes*
+
+### 1.1 The Great Candy Mystery Setup
+*Duration: 5 minutes*
+
+💡 **The Mission:** Each team becomes elite candy shop detectives investigating mysterious bags of evidence (colorful candies)! Your job is to solve THREE statistical mysteries using detective tools called mean, median, and mode.
+
+**🎯 Team Names:** Choose your detective squad name:
+- The Mean Machines
+- Sample Squad  
+- Mode Masters
+- Statistical Sleuths
+
+### Spell 1: Candy Shop Detective Investigation
+*Duration: 35 minutes*
+
+#### 🎈 Activity: The Triple Mystery Challenge
+
+**🍬 Physical Detective Work:**
+1. Each team gets a mixed bag of colorful candies (Skittles work great!)
+2. Sort your evidence by color - make neat piles
+3. Count each color carefully (no eating the evidence yet!)
+4. Record your findings on the detective report sheet
+
+**🔍 Mystery #1: Mean Mission**
+- Count total candies and divide by number of different colors
+- "What's the average number of candies per color?"
+
+**🔍 Mystery #2: Median Mystery** 
+- Line up your color counts from smallest to largest
+- "What's the middle value when you arrange the counts?"
+
+**🔍 Mystery #3: Mode Madness**
+- "Which color appears most often in your evidence bag?"
+
+📁 **Find this spell in Posit Cloud:** Look for the file `day04_spell01_candy_detective.Rmd` in your project files!
+
+**🏆 Championship Scoring:**
+- First team to solve all three mysteries: 10 points
+- Correct answers: 5 points each
+- **Bonus:** After solving mysteries, teams can eat their evidence!
+
+💡 **Detective Tips:** 
+- **Mean** = Add all color counts and divide by number of colors (like sharing candy equally)
+- **Median** = Middle detective in a lineup of counts
+- **Mode** = Most popular color in your evidence
+
+<img src="PLACEHOLDER_GIF_URL" alt="Kids sorting candies like detectives" style="width: 100%; height: auto;">
+
+## 2. Game 2: Random Grab Championship 🎲
 *Duration: 45 minutes*
 
-### 1.1 What is Central Tendency?
-*Duration: 10 minutes*
-
-💡 **What is Central Tendency?**
-Think of central tendency like finding the "middle" or "typical" value in your data - just like finding the middle kid when your class lines up by height!
-
-There are three magical ways to find the center:
-- **Mean** - The average (add everything up and divide)
-- **Median** - The middle value when you line things up
-- **Mode** - The value that appears most often
-
-### Spell 1: Measuring Magic Cows
-*Duration: 25 minutes*
-
-#### 🎈 Activity: Cow Height Investigation
-
-**Physical Activity:**
-1. Each team gets 10 toy cows of different sizes
-2. Use rulers to measure each cow's height in centimeters
-3. Record measurements in your data collection sheet
-4. Enter your data into R using the code below!
-
-📁 **Find this spell in Posit Cloud:** Look for the file `day04_spell01_measuring_cows.R` in your project files!
-
-#### ✨ Challenge: Calculate the Three Centers!
-
-💡 **Memory Tip:** 
-- **Mean** = Add all and divide (like sharing pizza equally)
-- **Median** = Middle kid in a line
-- **Mode** = Most popular choice
-
-<img src="PLACEHOLDER_GIF_URL" alt="Kids measuring toy cows with rulers" style="width: 100%; height: auto;">
-
-### 1.2 Understanding Spread: How Spread Out is Our Data?
-*Duration: 10 minutes*
-
-### Spell 2: Cow Height Spread
-#### 🎈 Activity: How Different Are Our Cows?
-
-📁 **Find this spell in Posit Cloud:** Look for the file `day04_spell02_cow_spread.R` in your project files!
-
-💡 **What does Standard Deviation mean?**
-Think of it like this: If standard deviation is small, your cows are similar heights (like siblings). If it's big, you have both tiny and giant cows (like a mix of babies and adults)!
-
-## 2. Sampling Adventure: The Great Candy Investigation
-*Duration: 50 minutes*
-
-### 2.1 What is Sampling?
+### 2.1 The Great Ocean Sampling Challenge Setup
 *Duration: 10 minutes*
 
 💡 **What is Sampling?**
 Imagine you want to know how many fish are in the entire ocean, but you can't count them all! So you take a net, catch some fish, count those, and use that to guess about the whole ocean. That's sampling!
 
-**Population** = All the fish in the ocean (everything we want to know about)
-**Sample** = The fish we caught in our net (the small group we actually study)
+**🌊 Population** = All the fish in the ocean (everything we want to know about)
+**🎣 Sample** = The fish we caught in our net (the small group we actually study)
 
-### Spell 3: Candy Bag Sampling
+**Today's Challenge:** The teacher has a GIANT bowl of mixed candies (the ocean population). Your mission: grab samples and see what happens!
+
+### Spell 2: Random Grab Championship
 *Duration: 25 minutes*
 
-#### 🎈 Activity: The Great Strawberry Candy Count
+#### 🎈 Activity: The Blind Grab Competition
 
-**Physical Activity:**
-1. Each team chooses one mystery candy bag
-2. Open your bag and count ALL the candies
-3. Sort them by flavor and count how many are strawberry
-4. Don't eat them yet - we need them for science! 🔬
+**🍬 Physical Championship Rules:**
+1. **The Population Bowl:** One giant bowl with mixed candies (red, blue, green, yellow, orange)
+2. **Blind Grab Challenge:** Each kid does a "blind grab" of exactly 10 candies (their sample)
+3. **No Peeking:** Eyes closed or blindfolded for fair sampling!
+4. **Record Results:** Count each color and write on the big classroom chart
+5. **Team Competition:** Which team can grab the most representative samples?
 
-📁 **Find this spell in Posit Cloud:** Look for the file `day04_spell03_candy_sampling.R` in your project files!
+**🏆 Championship Rounds:**
+- **Round 1:** Individual blind grabs
+- **Round 2:** Speed sampling (30 seconds per team)
+- **Round 3:** Compare results - why are they all different?
 
-💡 **What did you notice?** The samples give us different results each time! This is called **sampling variability**.
+📁 **Find this spell in Posit Cloud:** Look for the file `day04_spell02_random_grab.Rmd` in your project files!
 
-<img src="PLACEHOLDER_GIF_URL" alt="Kids sorting colorful candies by flavor" style="width: 100%; height: auto;">
+💡 **The Magic Discovery:** Different samples give different results! This is called **sampling variability** - and it's totally normal!
 
-### 2.2 Sampling Distribution Magic
-*Duration: 15 minutes*
+<img src="PLACEHOLDER_GIF_URL" alt="Kids doing blind grab sampling from candy bowl" style="width: 100%; height: auto;">
 
-### Spell 4: Many Samples Adventure
-#### 🎈 Activity: What if we took 100 samples?
+### 2.2 Digital Data Collection Magic
+*Duration: 10 minutes*
 
-📁 **Find this spell in Posit Cloud:** Look for the file `day04_spell04_sampling_distribution.R` in your project files!
+### Spell 3: Google Form Data Blast
+#### 🎈 Activity: Real-Time Results Explosion
 
-💡 **The Magic Discovery:** Even though individual samples vary, the average of many samples gets close to the true population value!
+**📱 Digital Extension:**
+- Enter your grab results into the Google Form
+- Watch the real-time classroom results appear on the big screen
+- See how ALL our samples create a pattern together!
 
-## 3. Bootstrapping: The Time Travel Sampling Trick
-*Duration: 40 minutes*
+**🤯 Mind-Blowing Moment:** Even though everyone got different results, together we can see the true pattern of the population!
 
-### 3.1 What is Bootstrapping?
+## 3. Game 3: Bootstrap Bootcamp Relay Race 🔄
+*Duration: 45 minutes*
+
+### 3.1 The Time Machine Challenge Setup
 *Duration: 10 minutes*
 
 💡 **What is Bootstrapping?**
 Imagine you have only one bag of candies, but you want to know what would happen if you had many bags like it. Bootstrapping is like a time machine - you sample from your one bag WITH replacement (putting candies back) to simulate having many similar bags!
 
-### Spell 5: Candy Bootstrap Adventure
-*Duration: 30 minutes*
+**🕐 The Magic:** We can travel through time by sampling WITH replacement!
 
-#### 🎈 Activity: The Magical Candy Replacement Trick
+### Spell 4: Bootstrap Bootcamp Relay
+*Duration: 35 minutes*
 
-**Physical Activity:**
-1. Take one candy from your bag
-2. Look at its flavor and write it down
-3. **Put it back in the bag!** (This is the magic part)
-4. Shake the bag and repeat 10 times
-5. Count how many strawberry candies you drew
+#### 🎈 Activity: The Ultimate Replacement Relay Challenge
 
-📁 **Find this spell in Posit Cloud:** Look for the file `day04_spell05_bootstrapping.R` in your project files!
+**🏃‍♀️ Physical Relay Race Setup:**
+- **Station 1:** Sample Grabber (grab 1 candy)
+- **Station 2:** Color Recorder (write down the color)  
+- **Station 3:** Replacer (put candy back and shake bag)
+- **Station 4:** Counter (tally the results)
+
+**🏆 Relay Race Rules:**
+1. Teams line up at Station 1
+2. Each team member does one complete rotation through all stations
+3. **Key Rule:** Always put the candy back! (This is bootstrap magic)
+4. Race to complete 20 bootstrap samples first
+5. Calculate your team's bootstrap mean
+
+**🎯 The Ultimate Challenge:** Which team can bootstrap fastest while getting results closest to the true population?
+
+📁 **Find this spell in Posit Cloud:** Look for the file `day04_spell04_bootstrap_bootcamp.Rmd` in your project files!
 
 💡 **The Big Discovery:** Bootstrapping from one sample gives us similar information to taking many samples from the population!
 
-<img src="PLACEHOLDER_GIF_URL" alt="Kids putting candies back in bag for bootstrap sampling" style="width: 100%; height: auto;">
+<img src="PLACEHOLDER_GIF_URL" alt="Kids in relay race putting candies back in bags" style="width: 100%; height: auto;">
 
-## 4. Confidence Intervals: How Sure Are We?
-*Duration: 30 minutes*
+## 4. Game 4: R Magic + Confidence Interval Casino 🎰
+*Duration: 40 minutes*
 
-### 4.1 What is a Confidence Interval?
+### 4.1 Welcome to the Statistical Casino
 *Duration: 10 minutes*
 
 💡 **What is a Confidence Interval?**
 Think of it like this: If someone asks "How tall are the students in your school?" you might say "Most are between 140cm and 160cm tall." That's a confidence interval - a range where we think the true answer lies!
 
-### Spell 6: Building Confidence Intervals
-*Duration: 20 minutes*
+**🎰 Casino Challenge:** Use your bootstrap data to "bet" on where the true population mean lies!
 
-#### 🎈 Activity: How Confident Are We About Our Candy Proportion?
+### Spell 5: Confidence Interval Casino Challenge
+*Duration: 30 minutes*
 
-📁 **Find this spell in Posit Cloud:** Look for the file `day04_spell06_confidence_intervals.R` in your project files!
+#### 🎈 Activity: The Greatest Statistical Bet Ever
 
-💡 **Memory Tip:** Being more confident (99% vs 90%) means we need a wider net to catch the true answer!
+**🎮 Casino Game Setup:**
+1. **Input Your Data:** Enter your bootstrap results into the pre-loaded R script
+2. **R Magic Happens:** Watch R generate cool confidence interval visualizations
+3. **Place Your Bet:** Predict whether the true population mean falls in your interval
+4. **The Big Reveal:** Teacher counts the actual population bowl
+5. **Winners Circle:** Teams with correct intervals get extra candy!
 
-## 5. 📋 Pro Tips Cheatsheet
+📁 **Find this spell in Posit Cloud:** Look for the file `day04_spell05_confidence_casino.Rmd` in your project files!
 
-### Central Tendency
-- **Mean**: Add all values and divide by count `mean(data)`
-- **Median**: Middle value when sorted `median(data)`  
-- **Mode**: Most frequent value `table(data)` then find max
-- **Standard Deviation**: How spread out data is `sd(data)`
+**🏆 Casino Scoring:**
+- Correct 90% confidence interval bet: 5 points
+- Correct 95% confidence interval bet: 10 points  
+- Correct 99% confidence interval bet: 15 points
+- **Jackpot:** If your interval captures the true mean: 20 bonus points!
 
-### Sampling Concepts
-- **Population**: Everything we want to study
-- **Sample**: Small part we actually measure
-- **Sampling Variability**: Samples give different results
-- **Sample Size Effect**: Bigger samples = less variability
+💡 **Casino Wisdom:** Being more confident (99% vs 90%) means you need a wider net to catch the true answer - but you're more likely to win!
 
-### Bootstrap Magic
-- **Bootstrap Sample**: Sample WITH replacement from original data
-- **Bootstrap Distribution**: Pattern from many bootstrap samples
-- **Key Insight**: Bootstrap approximates what we'd get with many samples
+<img src="PLACEHOLDER_GIF_URL" alt="Kids cheering at computer screens showing confidence intervals" style="width: 100%; height: auto;">
 
-### Confidence Intervals
-- **95% CI**: We're 95% confident true value is in this range
-- **Calculation**: Use middle 95% of bootstrap distribution
-- **Interpretation**: "We're X% confident the true value is between A and B"
+## 5. Game 5: Sampling Chaos Challenge 🌪️
+*Duration: 25 minutes*
 
-### R Functions You Learned
+### Spell 6: The Ultimate Sampling Method Showdown
+#### 🎈 Activity: Chaos Stations Discovery
+
+**🚨 The Setup:** Five stations around the room with different sampling methods - discover how method affects results!
+
+**🎯 Station Challenges:**
+- **Station 1: "Careful Counter"** - Systematic sampling (every 3rd candy)
+- **Station 2: "Speed Sampler"** - Rushed random (grab fast!)
+- **Station 3: "Color Picker"** - Biased sampling (only grab your favorite colors)
+- **Station 4: "Blindfold Challenge"** - True random sampling (eyes closed)
+- **Station 5: "Tiny Sample Snatcher"** - Small samples (only 3 candies)
+
+**🔄 Rotation Rules:**
+- 4 minutes per station
+- Record results at each station
+- Compare final results across all methods
+
+📁 **Find this spell in Posit Cloud:** Look for the file `day04_spell06_sampling_chaos.Rmd` in your project files!
+
+**🤯 The Epic Discovery:** Different sampling methods give WILDLY different results! Good sampling is CRUCIAL for good science!
+
+<img src="PLACEHOLDER_GIF_URL" alt="Kids rotating between sampling stations" style="width: 100%; height: auto;">
+
+## 6. Victory Celebration & Reflection Circle 🎉
+*Duration: 10 minutes*
+
+### 🎈 Activity: What Did We Discover?
+
+**🏆 Champions Recognition:**
+- Announce team winners from each game
+- Award "Statistician Badges" for different achievements:
+  - 🕵️ Master Detective Badge
+  - 🎲 Sampling Champion Badge  
+  - 🔄 Bootstrap Wizard Badge
+  - 🎰 Casino Winner Badge
+  - 🌪️ Chaos Survivor Badge
+
+**🤔 Reflection Questions:**
+- What was the most surprising thing you learned today?
+- Which game taught you the most about statistics?
+- How could you use these detective skills in real life?
+
+**📸 Memory Moment:** Take team photos with your badges and candy evidence!
+
+## 7. 📋 Pro Tips Cheatsheet
+
+### Detective Skills (Central Tendency)
+- **Mean**: Add all candy counts and divide by number of colors
+- **Median**: Line up counts from smallest to largest, find middle
+- **Mode**: Which color appears most often in your evidence bag
+- **Detective Memory**: Mean = sharing equally, Median = middle kid, Mode = most popular
+
+### Sampling Wisdom  
+- **Population**: The giant candy bowl (everything we want to know)
+- **Sample**: Your blind grab (small part we study)
+- **Sampling Variability**: Everyone gets different results - that's normal!
+- **Good Sampling**: Random, unbiased, representative of population
+
+### Bootstrap Magic Tricks
+- **Bootstrap Sample**: Sample WITH replacement (put candies back!)
+- **Bootstrap Power**: One sample can simulate many samples
+- **Key Discovery**: Bootstrap results tell us about population patterns
+- **Physical Rule**: Always shake the bag after replacing!
+
+### Confidence Interval Casino
+- **90% Confidence**: "We're 90% sure the true answer is in this range"
+- **95% Confidence**: More sure, but need wider range
+- **99% Confidence**: Very sure, but need very wide range
+- **Casino Rule**: Higher confidence = wider net = better chance of winning
+
+### Game Strategy Tips
+- **Detective Work**: Sort candies carefully before counting
+- **Random Sampling**: Keep eyes closed, no peeking!
+- **Bootstrap Racing**: Speed + accuracy = winning combination
+- **Casino Betting**: Pick confidence level based on how sure you want to be
+
+### R Magic Commands
 ```r
-mean(data)                    # Calculate average
-median(data)                  # Find middle value
-sd(data)                      # Standard deviation
-sample(data, size, replace)   # Take samples
-quantile(data, probability)   # Find percentiles
-table(data)                   # Count frequencies
+# Basic stats detective tools
+mean(candy_counts)           # Calculate average
+median(candy_counts)         # Find middle value
+table(candy_colors)          # Count each color
+
+# Sampling and bootstrap
+sample(colors, 10, replace = TRUE)    # Bootstrap sample
+quantile(bootstrap_means, c(0.05, 0.95))  # 90% confidence interval
 ```
 
-## 6. 🆘 Troubleshooting Cheatsheet
+## 8. 🆘 Troubleshooting Cheatsheet
 
-### Common Mistakes and Fixes
+### Game Day Troubleshooting
 
-**🐛 Error: "object not found"**
+**🐛 "My team's candy counts don't match others!"**
+- **What it means:** Different samples give different results
+- **Why it happens:** This is sampling variability - totally normal!
+- **The Fix:** No fix needed - this is the magic of statistics!
+
+**🐛 "I forgot to put the candy back during bootstrap!"**
+- **What it means:** You broke the bootstrap rule
+- **Why it happens:** Excitement and rushing
+- **The Fix:** Start that round over, always replace the candy!
+
+**🐛 "Our confidence interval missed the true answer!"**
+- **What it means:** Sometimes intervals don't capture the truth
+- **Why it happens:** That's why it's called 95% confidence, not 100%!
+- **The Fix:** This is normal! 5% of the time you'll miss.
+
+**🐛 Error: "object not found" in R**
 - **What it means:** You forgot to create a variable
-- **Why it happens:** Trying to use something before defining it
-- **The Fix:** Make sure you run the lines that create your variables first
+- **Why it happens:** Skipped a step in the activity
+- **The Fix:** Go back and run all the code chunks in order
 
-**🐛 My mean/median don't make sense**
-- **What it means:** Your data might have errors
-- **Why it happens:** Wrong measurements or typing mistakes
-- **The Fix:** Check your cow_heights vector - are all numbers reasonable?
+**🐛 "My sampling station results are crazy different!"**
+- **What it means:** Different sampling methods give different results
+- **Why it happens:** Bias affects sampling!
+- **The Fix:** Perfect! This shows why good sampling matters.
 
-**🐛 Error: "replacement has different length"**
-- **What it means:** Your vector has wrong number of items
-- **Why it happens:** Missing comma or extra/missing numbers
-- **The Fix:** Count your cow measurements - should be 10 numbers
+**🐛 "The Google Form won't take my data!"**
+- **What it means:** Data format might be wrong
+- **Why it happens:** Numbers entered as text or missing values
+- **The Fix:** Check that you're entering numbers only, no letters
 
-**🐛 Bootstrap results look weird**
-- **What it means:** Something wrong with your original sample
-- **Why it happens:** Original data had errors
-- **The Fix:** Go back and check your candy counting
+**🐛 "My team is behind in the championship!"**
+- **What it means:** Some teams finish activities faster
+- **Why it happens:** Different working speeds
+- **The Fix:** Focus on learning, not just winning!
 
-**🐛 Confidence interval too wide/narrow**
-- **What it means:** This is normal! Different confidence levels give different widths
-- **Why it happens:** 99% intervals are wider than 90% intervals
-- **The Fix:** No fix needed - this is how statistics works!
+**🐛 R code runs but graph looks weird**
+- **What it means:** Your data might have unusual values
+- **Why it happens:** Candy counting errors or typos
+- **The Fix:** Double-check your candy counts before entering data
 
-**🐛 Histogram looks empty or weird**
-- **What it means:** Not enough data points or wrong bins
-- **Why it happens:** Too few samples or wrong bin size
-- **The Fix:** Try `bins = 5` or `bins = 15` in your ggplot
-
-**💡 Remember:** In statistics, different results each time is NORMAL - that's the whole point of studying variability!
+**💡 Game Day Wisdom:** Different results each round is PERFECT - that's exactly what we want to discover about statistics!

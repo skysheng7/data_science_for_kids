@@ -1,542 +1,486 @@
-# Day 4 - Statistics Ocean: Solutions
+# 🔮 Day 4 Solutions: Statistics Ocean Game Day
 
-This file contains complete solutions for all Day 4 spells about central tendency, sampling, and bootstrapping.
+*Complete solutions for all the epic statistics games and challenges*
 
-## Spell 1: Measuring Magic Cows - Solutions
+## 🎯 Overview of Day 4 Games
 
-### Example Data Entry
-```r
-# Example cow heights (in centimeters)
-cow_heights <- c(12.5, 15.2, 13.8, 14.1, 16.0, 12.9, 15.5, 13.2, 14.7, 15.8)
-
-print("Our cow heights:")
-print(cow_heights)
-```
-
-**Expected Output:**
-```r
-[1] "Our cow heights:"
-[1] 12.5 15.2 13.8 14.1 16.0 12.9 15.5 13.2 14.7 15.8
-```
-
-### Calculate Mean (Average)
-```r
-mean_height <- mean(cow_heights)
-print(paste("Mean height:", round(mean_height, 2), "cm"))
-```
-
-**Expected Output:**
-```r
-[1] "Mean height: 14.37 cm"
-```
-
-### Calculate Median (Middle Value)
-```r
-median_height <- median(cow_heights)
-print(paste("Median height:", median_height, "cm"))
-```
-
-**Expected Output:**
-```r
-[1] "Median height: 14.4 cm"
-```
-
-### Find Mode (Most Common Height)
-```r
-get_mode <- function(data) {
-  freq_table <- table(data)
-  mode_value <- names(freq_table)[which.max(freq_table)]
-  return(as.numeric(mode_value))
-}
-
-mode_height <- get_mode(cow_heights)
-print(paste("Mode height:", mode_height, "cm"))
-```
-
-**Expected Output:**
-```r
-[1] "Mode height: 12.5 cm"
-```
-*Note: If all values are unique, R will return the first value. This is normal!*
-
-### Compare All Three Centers
-```r
-print("=== SUMMARY OF COW HEIGHTS ===")
-print(paste("Mean (average):", round(mean_height, 2), "cm"))
-print(paste("Median (middle):", median_height, "cm"))
-print(paste("Mode (most common):", mode_height, "cm"))
-```
-
-**Expected Output:**
-```r
-[1] "=== SUMMARY OF COW HEIGHTS ==="
-[1] "Mean (average): 14.37 cm"
-[1] "Median (middle): 14.4 cm"
-[1] "Mode (most common): 12.5 cm"
-```
-
-### Challenge: Which Cow is Closest to Each Center?
-```r
-closest_to_mean <- which.min(abs(cow_heights - mean_height))
-print(paste("Cow #", closest_to_mean, "is closest to the mean"))
-
-closest_to_median <- which.min(abs(cow_heights - median_height))
-print(paste("Cow #", closest_to_median, "is closest to the median"))
-```
-
-**Expected Output:**
-```r
-[1] "Cow #4 is closest to the mean"
-[1] "Cow #9 is closest to the median"
-```
+1. **Candy Shop Detective Investigation** - Mean, Median, Mode
+2. **Random Grab Championship** - Sampling and Variability  
+3. **Bootstrap Bootcamp Relay Race** - Bootstrap Sampling
+4. **Confidence Interval Casino** - Confidence Intervals
+5. **Sampling Chaos Challenge** - Sampling Method Comparison
 
 ---
 
-## Spell 2: Cow Height Spread - Solutions
+## 🕵️ Spell 1 Solutions: Candy Shop Detective Investigation
 
-### Calculate Standard Deviation
+### Example Team Data
+
 ```r
-cow_heights <- c(12.5, 15.2, 13.8, 14.1, 16.0, 12.9, 15.5, 13.2, 14.7, 15.8)
+# 🍬 Example Detective Evidence Data
+# (Students will have different numbers based on their actual candy bags)
 
-std_dev <- sd(cow_heights)
-print(paste("Standard deviation:", round(std_dev, 2), "cm"))
+red_count <- 8
+blue_count <- 6  
+green_count <- 4
+yellow_count <- 7
+orange_count <- 5
 
-if (std_dev < 2) {
-  print("Your cows are quite similar in height! 👫")
-} else if (std_dev < 5) {
-  print("Your cows have medium variation in height! 📏")
-} else {
-  print("Your cows are very different heights! 🐄👶🦣")
+# Create evidence vector
+candy_counts <- c(red_count, blue_count, green_count, yellow_count, orange_count)
+color_names <- c("Red", "Blue", "Green", "Yellow", "Orange")
+
+# Display evidence
+print("🍬 Evidence Report:")
+for(i in 1:length(candy_counts)) {
+  cat(color_names[i], "candies:", candy_counts[i], "\n")
 }
 ```
 
 **Expected Output:**
-```r
-[1] "Standard deviation: 1.36 cm"
-[1] "Your cows are quite similar in height! 👫"
+```
+🍬 Evidence Report:
+Red candies: 8 
+Blue candies: 6 
+Green candies: 4 
+Yellow candies: 7 
+Orange candies: 5
 ```
 
-### Calculate Range
+### 🔍 Mystery #1: Mean Mission
+
 ```r
-range_value <- max(cow_heights) - min(cow_heights)
-print(paste("Range:", range_value, "cm"))
-print(paste("Tallest cow:", max(cow_heights), "cm"))
-print(paste("Shortest cow:", min(cow_heights), "cm"))
-```
+# Calculate the mean (average)
+mean_candies <- mean(candy_counts)
 
-**Expected Output:**
-```r
-[1] "Range: 3.5 cm"
-[1] "Tallest cow: 16 cm"
-[1] "Shortest cow: 12.5 cm"
-```
-
-### Histogram Creation
-```r
-library(ggplot2)
-
-cow_data <- data.frame(heights = cow_heights)
-
-ggplot(cow_data, aes(x = heights)) +
-  geom_histogram(bins = 5, fill = "skyblue", color = "black") +
-  labs(title = "Heights of Our Magic Cows", 
-       x = "Height (cm)", 
-       y = "Number of Cows") +
-  theme_minimal() +
-  theme(text = element_text(size = 14))
-```
-
-This creates a histogram showing the distribution of cow heights.
-
-### Quartiles Calculation
-```r
-quartiles <- quantile(cow_heights)
-print("Quartiles (4 equal parts):")
-print(quartiles)
-
-q1 <- quartiles[2]  # 25th percentile
-q3 <- quartiles[4]  # 75th percentile
-iqr <- q3 - q1      # Interquartile Range
-
-print(paste("Middle 50% of cows are between", q1, "and", q3, "cm"))
-print(paste("Interquartile Range (IQR):", iqr, "cm"))
+print(paste("🔍 Mystery #1 SOLVED!"))
+print(paste("Average candies per color:", round(mean_candies, 2)))
 ```
 
 **Expected Output:**
-```r
-[1] "Quartiles (4 equal parts):"
-    0%    25%    50%    75%   100% 
-12.500 13.375 14.400 15.375 16.000 
-[1] "Middle 50% of cows are between 13.375 and 15.375 cm"
-[1] "Interquartile Range (IQR): 2 cm"
 ```
+[1] "🔍 Mystery #1 SOLVED!"
+[1] "Average candies per color: 6"
+```
+
+### 🔍 Mystery #2: Median Mystery
+
+```r
+# Sort the counts and find the median
+sorted_counts <- sort(candy_counts)
+median_candies <- median(candy_counts)
+
+print("🔍 Mystery #2 SOLVED!")
+print(paste("Sorted counts:", paste(sorted_counts, collapse = ", ")))
+print(paste("Median (middle value):", median_candies))
+```
+
+**Expected Output:**
+```
+[1] "🔍 Mystery #2 SOLVED!"
+[1] "Sorted counts: 4, 5, 6, 7, 8"
+[1] "Median (middle value): 6"
+```
+
+### 🔍 Mystery #3: Mode Madness
+
+```r
+# Find the mode (most frequent count)
+count_table <- table(candy_counts)
+mode_count <- as.numeric(names(count_table)[which.max(count_table)])
+mode_colors <- color_names[candy_counts == mode_count]
+
+print("🔍 Mystery #3 SOLVED!")
+print(paste("Most common count:", mode_count))
+print(paste("Color(s) with this count:", paste(mode_colors, collapse = ", ")))
+```
+
+**Expected Output:**
+```
+[1] "🔍 Mystery #3 SOLVED!"
+[1] "Most common count: 4"
+[1] "Color(s) with this count: Green"
+```
+
+*Note: In this example, all counts are different, so it shows the first value. In real scenarios where counts repeat, this would find the most frequent count.*
 
 ---
 
-## Spell 3: Candy Bag Sampling - Solutions
+## 🎲 Spell 2 Solutions: Random Grab Championship
 
-### Example Data Entry
+### Individual Sample Analysis
+
 ```r
-total_candies <- 48
-strawberry_candies <- 12
+# 🎣 Example individual sample data
+my_red <- 3
+my_blue <- 2
+my_green <- 1
+my_yellow <- 2
+my_orange <- 2
 
-print(paste("Total candies in our bag:", total_candies))
-print(paste("Strawberry candies:", strawberry_candies))
-```
+my_sample <- c(my_red, my_blue, my_green, my_yellow, my_orange)
+color_names <- c("Red", "Blue", "Green", "Yellow", "Orange")
 
-**Expected Output:**
-```r
-[1] "Total candies in our bag: 48"
-[1] "Strawberry candies: 12"
-```
-
-### Calculate Proportion
-```r
-strawberry_proportion <- strawberry_candies / total_candies
-print(paste("Proportion of strawberry candies:", round(strawberry_proportion, 3)))
-
-strawberry_percentage <- strawberry_proportion * 100
-print(paste("That's", round(strawberry_percentage, 1), "% strawberry candies!"))
-```
-
-**Expected Output:**
-```r
-[1] "Proportion of strawberry candies: 0.25"
-[1] "That's 25.0 % strawberry candies!"
-```
-
-### Create Population and Take Samples
-```r
-set.seed(123)
-population <- rep(c("strawberry", "other"), 
-                 times = c(strawberry_candies, total_candies - strawberry_candies))
-
-sample_size <- 10
-sample1 <- sample(population, sample_size, replace = FALSE)
-
-sample1_strawberry <- sum(sample1 == "strawberry")
-sample1_proportion <- sample1_strawberry / sample_size
-
-print("=== SAMPLE 1 RESULTS ===")
-print(paste("Strawberry candies in sample:", sample1_strawberry))
-print(paste("Sample proportion:", round(sample1_proportion, 3)))
-print(paste("True population proportion:", round(strawberry_proportion, 3)))
-```
-
-**Expected Output:**
-```r
-[1] "=== SAMPLE 1 RESULTS ==="
-[1] "Strawberry candies in sample: 3"
-[1] "Sample proportion: 0.3"
-[1] "True population proportion: 0.25"
-```
-
-### Multiple Samples Challenge
-```r
-print("\n=== TAKING 5 SAMPLES ===")
-sample_results <- c()
-
-for(i in 1:5) {
-  sample_i <- sample(population, sample_size, replace = FALSE)
-  strawberry_count <- sum(sample_i == "strawberry")
-  proportion <- strawberry_count / sample_size
-  sample_results[i] <- proportion
-  print(paste("Sample", i, "- Strawberry candies:", strawberry_count, 
-              "- Proportion:", round(proportion, 3)))
+print("🎣 Your Sample Results:")
+for(i in 1:length(my_sample)) {
+  if(my_sample[i] > 0) {
+    cat(color_names[i], ":", my_sample[i], "candies\n")
+  }
 }
 
-print("\nAll sample proportions:")
-print(round(sample_results, 3))
+print(paste("Total candies in sample:", sum(my_sample)))
+print(paste("Most common color in your sample:", 
+            color_names[which.max(my_sample)]))
 ```
 
-**Expected Output (will vary due to randomness):**
+**Expected Output:**
+```
+🎣 Your Sample Results:
+Red : 3 candies
+Blue : 2 candies
+Green : 1 candies
+Yellow : 2 candies
+Orange : 2 candies
+[1] "Total candies in sample: 10"
+[1] "Most common color in your sample: Red"
+```
+
+### Classroom Data Collection
+
 ```r
-[1] "=== TAKING 5 SAMPLES ==="
-[1] "Sample 1 - Strawberry candies: 3 - Proportion: 0.3"
-[1] "Sample 2 - Strawberry candies: 2 - Proportion: 0.2"
-[1] "Sample 3 - Strawberry candies: 4 - Proportion: 0.4"
-[1] "Sample 4 - Strawberry candies: 1 - Proportion: 0.1"
-[1] "Sample 5 - Strawberry candies: 3 - Proportion: 0.3"
-[1] "All sample proportions:"
-[1] 0.3 0.2 0.4 0.1 0.3
+# 📊 Example Classroom Data Collection
+# Simulating data from 20 students
+classroom_red <- c(3, 4, 2, 3, 1, 2, 4, 3, 2, 3, 4, 2, 3, 2, 4, 3, 2, 3, 4, 2)
+classroom_blue <- c(2, 1, 3, 2, 3, 2, 1, 2, 3, 2, 1, 3, 2, 3, 1, 2, 3, 2, 1, 3)
+classroom_green <- c(1, 2, 1, 1, 2, 2, 1, 1, 2, 1, 2, 1, 1, 2, 1, 1, 2, 1, 2, 1)
+classroom_yellow <- c(2, 2, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2)
+classroom_orange <- c(2, 1, 1, 2, 2, 2, 2, 2, 1, 2, 1, 2, 2, 1, 2, 2, 1, 2, 1, 2)
+
+# Calculate class totals
+total_red <- sum(classroom_red)
+total_blue <- sum(classroom_blue)
+total_green <- sum(classroom_green)
+total_yellow <- sum(classroom_yellow)
+total_orange <- sum(classroom_orange)
+
+print("🏆 Championship Results - Entire Class Combined:")
+print(paste("Red candies:", total_red))
+print(paste("Blue candies:", total_blue))
+print(paste("Green candies:", total_green))
+print(paste("Yellow candies:", total_yellow))
+print(paste("Orange candies:", total_orange))
+```
+
+**Expected Output:**
+```
+[1] "🏆 Championship Results - Entire Class Combined:"
+[1] "Red candies: 56"
+[1] "Blue candies: 42"
+[1] "Green candies: 30"
+[1] "Yellow candies: 40"
+[1] "Orange candies: 32"
 ```
 
 ---
 
-## Spell 4: Many Samples Adventure - Solutions
+## 🔄 Spell 4 Solutions: Bootstrap Bootcamp Relay Race
 
-### Taking 100 Samples
+### Bootstrap Analysis
+
 ```r
-set.seed(456)
-num_samples <- 100
-sample_size <- 10
-sample_proportions <- c()
+# 🔄 Example bootstrap relay results
+# Original sample (from Random Grab)
+original_red <- 3
+original_blue <- 2
+original_green <- 1
+original_yellow <- 2
+original_orange <- 2
 
-for(i in 1:num_samples) {
-  sample_i <- sample(population, sample_size, replace = FALSE)
-  strawberry_count <- sum(sample_i == "strawberry")
-  proportion <- strawberry_count / sample_size
-  sample_proportions[i] <- proportion
+original_sample <- c(original_red, original_blue, original_green, 
+                    original_yellow, original_orange)
+
+# Bootstrap totals from 20 relay samples
+bootstrap_red <- 7      # Red drawn 7 times out of 20
+bootstrap_blue <- 4     # Blue drawn 4 times out of 20
+bootstrap_green <- 2    # Green drawn 2 times out of 20
+bootstrap_yellow <- 4   # Yellow drawn 4 times out of 20
+bootstrap_orange <- 3   # Orange drawn 3 times out of 20
+
+bootstrap_totals <- c(bootstrap_red, bootstrap_blue, bootstrap_green,
+                     bootstrap_yellow, bootstrap_orange)
+
+color_names <- c("Red", "Blue", "Green", "Yellow", "Orange")
+
+print("🔄 Bootstrap Relay Results:")
+print("Original Sample vs Bootstrap Totals:")
+for(i in 1:length(color_names)) {
+  cat(color_names[i], "- Original:", original_sample[i], 
+      ", Bootstrap:", bootstrap_totals[i], "\n")
+}
+```
+
+**Expected Output:**
+```
+🔄 Bootstrap Relay Results:
+Original Sample vs Bootstrap Totals:
+Red - Original: 3 , Bootstrap: 7 
+Blue - Original: 2 , Bootstrap: 4 
+Green - Original: 1 , Bootstrap: 2 
+Yellow - Original: 2 , Bootstrap: 4 
+Orange - Original: 2 , Bootstrap: 3
+```
+
+### 🔮 R Magic: 1000 Bootstrap Samples
+
+```r
+# Create a vector representing the original sample
+original_colors <- c(rep("Red", original_red),
+                    rep("Blue", original_blue),
+                    rep("Green", original_green),
+                    rep("Yellow", original_yellow),
+                    rep("Orange", original_orange))
+
+# Function to do one bootstrap sample
+bootstrap_sample <- function() {
+  sample(original_colors, 10, replace = TRUE)
 }
 
-print(paste("Finished taking", num_samples, "samples!"))
-```
-
-### Analyze Results
-```r
-average_proportion <- mean(sample_proportions)
-print(paste("Average of all samples:", round(average_proportion, 3)))
-print(paste("True population value:", round(strawberry_proportion, 3)))
-
-sample_sd <- sd(sample_proportions)
-print(paste("Standard deviation of samples:", round(sample_sd, 3)))
-
-sample_min <- min(sample_proportions)
-sample_max <- max(sample_proportions)
-print(paste("Lowest sample proportion:", round(sample_min, 3)))
-print(paste("Highest sample proportion:", round(sample_max, 3)))
-```
-
-**Expected Output:**
-```r
-[1] "Average of all samples: 0.248"
-[1] "True population value: 0.25"
-[1] "Standard deviation of samples: 0.137"
-[1] "Lowest sample proportion: 0"
-[1] "Highest sample proportion: 0.6"
-```
-
-### Create Sampling Distribution Histogram
-```r
-library(ggplot2)
-
-sample_data <- data.frame(proportions = sample_proportions)
-
-ggplot(sample_data, aes(x = proportions)) +
-  geom_histogram(bins = 10, fill = "pink", color = "darkred", alpha = 0.7) +
-  geom_vline(xintercept = strawberry_proportion, 
-             color = "blue", size = 2, linetype = "dashed") +
-  geom_vline(xintercept = average_proportion, 
-             color = "green", size = 2, linetype = "dashed") +
-  labs(title = "Sampling Distribution of Strawberry Proportions",
-       subtitle = paste("Based on", num_samples, "samples of size", sample_size),
-       x = "Proportion of Strawberry Candies",
-       y = "Number of Samples") +
-  theme_minimal() +
-  theme(text = element_text(size = 14))
-```
-
-This creates a histogram showing the distribution of sample proportions with blue line (true value) and green line (sample average).
-
----
-
-## Spell 5: Candy Bootstrap Adventure - Solutions
-
-### Create Sample and Bootstrap
-```r
-set.seed(789)
-my_sample_size <- min(20, total_candies)
-my_sample <- sample(population, my_sample_size, replace = FALSE)
-
-my_sample_strawberry <- sum(my_sample == "strawberry")
-my_sample_proportion <- my_sample_strawberry / my_sample_size
-
-print("=== YOUR ACTUAL SAMPLE ===")
-print(paste("Sample size:", my_sample_size))
-print(paste("Strawberry candies in sample:", my_sample_strawberry))
-print(paste("Sample proportion:", round(my_sample_proportion, 3)))
-```
-
-**Expected Output:**
-```r
-[1] "=== YOUR ACTUAL SAMPLE ==="
-[1] "Sample size: 20"
-[1] "Strawberry candies in sample: 6"
-[1] "Sample proportion: 0.3"
-```
-
-### Bootstrap Sampling
-```r
-num_bootstraps <- 100
-bootstrap_proportions <- c()
-bootstrap_size <- my_sample_size
+# Do 1000 bootstrap samples
+set.seed(123)  # For reproducible results
+num_bootstraps <- 1000
+bootstrap_means <- numeric(num_bootstraps)
 
 for(i in 1:num_bootstraps) {
-  bootstrap_sample <- sample(my_sample, bootstrap_size, replace = TRUE)
-  strawberry_count <- sum(bootstrap_sample == "strawberry")
-  proportion <- strawberry_count / bootstrap_size
-  bootstrap_proportions[i] <- proportion
+  boot_sample <- bootstrap_sample()
+  # Calculate proportion of red candies in this bootstrap
+  bootstrap_means[i] <- sum(boot_sample == "Red") / 10
 }
 
-print("Bootstrap sampling complete! ✨")
-```
+# Show the distribution
+hist(bootstrap_means, 
+     breaks = 20,
+     main = "🔮 1000 Bootstrap Samples - Red Proportion",
+     xlab = "Proportion of Red Candies",
+     col = "lightcoral")
 
-### Analyze Bootstrap Results
-```r
-bootstrap_average <- mean(bootstrap_proportions)
-print(paste("Average bootstrap proportion:", round(bootstrap_average, 3)))
-print(paste("Your original sample proportion:", round(my_sample_proportion, 3)))
-
-bootstrap_sd <- sd(bootstrap_proportions)
-print(paste("Bootstrap standard deviation:", round(bootstrap_sd, 3)))
-
-bootstrap_min <- min(bootstrap_proportions)
-bootstrap_max <- max(bootstrap_proportions)
-print(paste("Lowest bootstrap proportion:", round(bootstrap_min, 3)))
-print(paste("Highest bootstrap proportion:", round(bootstrap_max, 3)))
+print(paste("🔮 Bootstrap mean of red proportion:", round(mean(bootstrap_means), 3)))
+print(paste("🎯 Original red proportion:", round(original_red/10, 3)))
 ```
 
 **Expected Output:**
-```r
-[1] "Average bootstrap proportion: 0.299"
-[1] "Your original sample proportion: 0.3"
-[1] "Bootstrap standard deviation: 0.102"
-[1] "Lowest bootstrap proportion: 0.05"
-[1] "Highest bootstrap proportion: 0.55"
 ```
-
-### Bootstrap Confidence Interval
-```r
-ci_lower <- quantile(bootstrap_proportions, 0.025)
-ci_upper <- quantile(bootstrap_proportions, 0.975)
-
-print("\n=== BOOTSTRAP CONFIDENCE INTERVAL ===")
-print(paste("95% Confidence Interval: [", round(ci_lower, 3), ",", round(ci_upper, 3), "]"))
-
-true_in_ci <- (strawberry_proportion >= ci_lower) & (strawberry_proportion <= ci_upper)
-print(paste("Does our CI contain the true proportion?", true_in_ci))
-```
-
-**Expected Output:**
-```r
-[1] "95% Confidence Interval: [ 0.1 , 0.5 ]"
-[1] "Does our CI contain the true proportion? TRUE"
+[1] "🔮 Bootstrap mean of red proportion: 0.3"
+[1] "🎯 Original red proportion: 0.3"
 ```
 
 ---
 
-## Spell 6: Building Confidence Intervals - Solutions
+## 🎰 Spell 5 Solutions: Confidence Interval Casino Challenge
 
-### 95% Confidence Interval
+### Creating Confidence Intervals
+
 ```r
-ci_95_lower <- quantile(bootstrap_proportions, 0.025)
-ci_95_upper <- quantile(bootstrap_proportions, 0.975)
+# 🎰 Calculate different confidence intervals using bootstrap distribution
 
-print("=== 95% CONFIDENCE INTERVAL ===")
-print(paste("Lower bound:", round(ci_95_lower, 3)))
-print(paste("Upper bound:", round(ci_95_upper, 3)))
-print(paste("We are 95% confident the true proportion is between", 
-           round(ci_95_lower, 3), "and", round(ci_95_upper, 3)))
+# 90% Confidence Interval
+ci_90 <- quantile(bootstrap_means, c(0.05, 0.95))
+print("🎰 90% Confidence Interval:")
+print(paste("Lower bound:", round(ci_90[1], 3)))
+print(paste("Upper bound:", round(ci_90[2], 3)))
+print(paste("Width:", round(ci_90[2] - ci_90[1], 3)))
 
-ci_width <- ci_95_upper - ci_95_lower
-print(paste("Interval width:", round(ci_width, 3)))
+# 95% Confidence Interval  
+ci_95 <- quantile(bootstrap_means, c(0.025, 0.975))
+print("🎰 95% Confidence Interval:")
+print(paste("Lower bound:", round(ci_95[1], 3)))
+print(paste("Upper bound:", round(ci_95[2], 3)))
+print(paste("Width:", round(ci_95[2] - ci_95[1], 3)))
+
+# 99% Confidence Interval
+ci_99 <- quantile(bootstrap_means, c(0.005, 0.995))
+print("🎰 99% Confidence Interval:")
+print(paste("Lower bound:", round(ci_99[1], 3)))
+print(paste("Upper bound:", round(ci_99[2], 3)))
+print(paste("Width:", round(ci_99[2] - ci_99[1], 3)))
 ```
 
 **Expected Output:**
-```r
-[1] "=== 95% CONFIDENCE INTERVAL ==="
+```
+[1] "🎰 90% Confidence Interval:"
 [1] "Lower bound: 0.1"
 [1] "Upper bound: 0.5"
-[1] "We are 95% confident the true proportion is between 0.1 and 0.5"
-[1] "Interval width: 0.4"
+[1] "Width: 0.4"
+[1] "🎰 95% Confidence Interval:"
+[1] "Lower bound: 0.1"
+[1] "Upper bound: 0.6"
+[1] "Width: 0.5"
+[1] "🎰 99% Confidence Interval:"
+[1] "Lower bound: 0"
+[1] "Upper bound: 0.7"
+[1] "Width: 0.7"
 ```
 
-### Different Confidence Levels
+### 🎲 The Big Reveal
+
 ```r
-ci_90_lower <- quantile(bootstrap_proportions, 0.05)
-ci_90_upper <- quantile(bootstrap_proportions, 0.95)
+# Example: Student chooses 95% confidence interval
+chosen_ci <- ci_95
+chosen_level <- 95
+true_red_proportion <- 0.28  # Teacher reveals this
 
-ci_99_lower <- quantile(bootstrap_proportions, 0.005)
-ci_99_upper <- quantile(bootstrap_proportions, 0.995)
+print("🎲 THE BIG REVEAL!")
+print(paste("🌟 TRUE RED PROPORTION:", true_red_proportion))
+print(paste("🎯 Your interval: [", round(chosen_ci[1], 3), ", ", 
+            round(chosen_ci[2], 3), "]"))
 
-print("Confidence Intervals Comparison:")
-print(paste("90% CI: [", round(ci_90_lower, 3), ",", round(ci_90_upper, 3), "]"))
-print(paste("95% CI: [", round(ci_95_lower, 3), ",", round(ci_95_upper, 3), "]"))
-print(paste("99% CI: [", round(ci_99_lower, 3), ",", round(ci_99_upper, 3), "]"))
+# Check if student won!
+won_bet <- (true_red_proportion >= chosen_ci[1]) & (true_red_proportion <= chosen_ci[2])
 
-width_90 <- ci_90_upper - ci_90_lower
-width_95 <- ci_95_upper - ci_95_lower
-width_99 <- ci_99_upper - ci_99_lower
-
-print("\nInterval Widths:")
-print(paste("90% CI width:", round(width_90, 3)))
-print(paste("95% CI width:", round(width_95, 3)))
-print(paste("99% CI width:", round(width_99, 3)))
+if(won_bet) {
+  print("🎉 JACKPOT! YOU WON THE BET!")
+  print("🍬 Congratulations! You earn extra candy!")
+} else {
+  print("😅 Oh no! The true value fell outside your interval!")
+  print("🎲 This happens sometimes - that's why it's not 100% confidence!")
+}
 ```
 
 **Expected Output:**
-```r
-[1] "Confidence Intervals Comparison:"
-[1] "90% CI: [ 0.15 , 0.45 ]"
-[1] "95% CI: [ 0.1 , 0.5 ]"
-[1] "99% CI: [ 0.05 , 0.55 ]"
-[1] "Interval Widths:"
-[1] "90% CI width: 0.3"
-[1] "95% CI width: 0.4"
-[1] "99% CI width: 0.5"
+```
+[1] "🎲 THE BIG REVEAL!"
+[1] "🌟 TRUE RED PROPORTION: 0.28"
+[1] "🎯 Your interval: [ 0.1 ,  0.6 ]"
+[1] "🎉 JACKPOT! YOU WON THE BET!"
+[1] "🍬 Congratulations! You earn extra candy!"
 ```
 
-### Margin of Error
+---
+
+## 🌪️ Spell 6 Solutions: Sampling Chaos Challenge
+
+### Example Results from All 5 Stations
+
 ```r
-margin_of_error <- (ci_95_upper - ci_95_lower) / 2
-print(paste("95% CI Margin of Error:", round(margin_of_error, 3)))
+# 🌪️ Example results from all sampling stations
 
-margin_percentage <- margin_of_error * 100
-print(paste("That's about ±", round(margin_percentage, 1), "percentage points"))
+# Station 1: Systematic Sampling (every 3rd candy)
+station1_props <- c(0.2, 0.3, 0.2, 0.2, 0.1)  # Red, Blue, Green, Yellow, Orange
 
-print(paste("We can say: proportion =", round(my_sample_proportion, 3), 
-           "±", round(margin_of_error, 3)))
+# Station 2: Speed Sampling (rushed)
+station2_props <- c(0.4, 0.1, 0.1, 0.2, 0.2)
+
+# Station 3: Biased Sampling (favorite colors)
+station3_props <- c(0.6, 0.3, 0.0, 0.1, 0.0)
+
+# Station 4: True Random (blindfolded)
+station4_props <- c(0.3, 0.2, 0.1, 0.2, 0.2)
+
+# Station 5: Tiny Sample (only 3 candies)
+station5_props <- c(0.667, 0.0, 0.0, 0.333, 0.0)
+
+methods <- c("Systematic", "Speed", "Biased", "Random", "Tiny")
+colors <- c("Red", "Blue", "Green", "Yellow", "Orange")
+
+all_props <- rbind(station1_props, station2_props, station3_props, 
+                  station4_props, station5_props)
+rownames(all_props) <- methods
+colnames(all_props) <- colors
+
+print("🌪️ CHAOS COMPARISON - All Sampling Methods:")
+print(round(all_props, 3))
 ```
 
 **Expected Output:**
-```r
-[1] "95% CI Margin of Error: 0.2"
-[1] "That's about ± 20.0 percentage points"
-[1] "We can say: proportion = 0.3 ± 0.2"
+```
+🌪️ CHAOS COMPARISON - All Sampling Methods:
+             Red  Blue Green Yellow Orange
+Systematic  0.2  0.3   0.2    0.2   0.1
+Speed       0.4  0.1   0.1    0.2   0.2
+Biased      0.6  0.3   0.0    0.1   0.0
+Random      0.3  0.2   0.1    0.2   0.2
+Tiny        0.667 0.0  0.0   0.333  0.0
 ```
 
-### Final Results Summary
+### 🕵️ Bias Detection Analysis
+
 ```r
-print("\n=== YOUR FINAL RESULTS SUMMARY ===")
-print(paste("Original sample proportion:", round(my_sample_proportion, 3)))
-print(paste("95% Confidence Interval: [", round(ci_95_lower, 3), ",", round(ci_95_upper, 3), "]"))
-print(paste("Margin of Error: ±", round(margin_of_error, 3)))
-print("Interpretation: We are 95% confident the true strawberry proportion")
-print(paste("is between", round(ci_95_lower, 3), "and", round(ci_95_upper, 3)))
+# Compare each method to the random method (Station 4)
+random_baseline <- station4_props
+
+print("🕵️ BIAS DETECTION ANALYSIS:")
+print("Comparing all methods to True Random baseline:")
+
+for(i in 1:nrow(all_props)) {
+  differences <- abs(all_props[i,] - random_baseline)
+  avg_difference <- mean(differences)
+  
+  cat(methods[i], "- Average difference from random:", 
+      round(avg_difference, 3))
+  
+  if(avg_difference < 0.1) {
+    cat(" ✅ Unbiased\n")
+  } else if(avg_difference < 0.2) {
+    cat(" ⚠️ Slightly biased\n")
+  } else {
+    cat(" 🚨 Highly biased\n")
+  }
+}
 ```
 
 **Expected Output:**
-```r
-[1] "=== YOUR FINAL RESULTS SUMMARY ==="
-[1] "Original sample proportion: 0.3"
-[1] "95% Confidence Interval: [ 0.1 , 0.5 ]"
-[1] "Margin of Error: ± 0.2"
-[1] "Interpretation: We are 95% confident the true strawberry proportion"
-[1] "is between 0.1 and 0.5"
+```
+🕵️ BIAS DETECTION ANALYSIS:
+Comparing all methods to True Random baseline:
+Systematic - Average difference from random: 0.08 ✅ Unbiased
+Speed - Average difference from random: 0.12 ⚠️ Slightly biased
+Biased - Average difference from random: 0.24 🚨 Highly biased
+Random - Average difference from random: 0 ✅ Unbiased
+Tiny - Average difference from random: 0.267 🚨 Highly biased
 ```
 
-## Key Learning Points
+---
 
-### Central Tendency
-- **Mean**: Average value (sum ÷ count)
-- **Median**: Middle value when data is sorted
-- **Mode**: Most frequently occurring value
-- **Standard Deviation**: Measure of spread/variability
+## 🎓 Key Learning Summary
 
-### Sampling Concepts
-- **Population**: All items we want to study
-- **Sample**: Subset we actually measure
-- **Sampling Variability**: Samples give different results
-- **Sampling Distribution**: Pattern from many samples
+### 🕵️ Detective Skills (Central Tendency)
+- **Mean:** Average value (add all and divide)
+- **Median:** Middle value when sorted  
+- **Mode:** Most frequently occurring value
+- **Key Insight:** These measure the "center" of data in different ways
 
-### Bootstrap Magic
-- **Bootstrap Sample**: Sample WITH replacement from original data
-- **Bootstrap Distribution**: Approximates sampling distribution
-- **Key Insight**: One sample can tell us about uncertainty
+### 🎲 Sampling Wisdom
+- **Sampling Variability:** Different samples naturally give different results
+- **Sample Size Effect:** Larger samples are generally more reliable
+- **Random Sampling:** Gold standard for unbiased results
+- **Key Insight:** Variability is expected and normal!
 
-### Confidence Intervals
-- **95% CI**: We're 95% confident true value is in this range
-- **Interpretation**: Our method captures truth 95% of the time
-- **Trade-off**: Higher confidence = wider intervals
+### 🔄 Bootstrap Magic
+- **Bootstrap Principle:** Sample WITH replacement from original data
+- **Bootstrap Power:** Simulates having many samples from just one
+- **Bootstrap Distribution:** Shows pattern of sample statistics
+- **Key Insight:** Bootstrap approximates true sampling distribution
 
-Remember: In statistics, variability is normal and expected! The goal is to understand and quantify that variability.
+### 🎰 Confidence Interval Casino
+- **Confidence Level:** How sure we are (90%, 95%, 99%)
+- **Width Trade-off:** Higher confidence = wider intervals
+- **Interpretation:** Range where true value likely lies
+- **Key Insight:** Even good intervals sometimes miss!
+
+### 🌪️ Sampling Method Impact
+- **Method Matters:** Different approaches give different results
+- **Bias Detection:** Systematic differences from random sampling
+- **Sample Size:** Smaller samples show more variability
+- **Key Insight:** Good methodology is crucial for good science!
+
+---
+
+## 🎉 Congratulations!
+
+You've completed an epic journey through the Statistics Ocean! You now have the skills to:
+- Investigate data like a detective 🕵️
+- Understand sampling variability 🎲
+- Use bootstrap magic for uncertainty 🔄
+- Make statistical bets with confidence intervals 🎰
+- Detect bias in sampling methods 🌪️
+
+These are the same tools real scientists use to understand our world! 🌟

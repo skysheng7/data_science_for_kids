@@ -14,8 +14,8 @@ This workshop runs for 5-day, 3-hour per day. The coding language is based on R.
 ### 1.1 Folder Organization
 Each day folder must contain:
 - `README.md` - Main lesson content with activities
-- `activities/` - Individual spell files (`dayXX_spellYY_name.R`)
-- `solutions/` - Single solutions file including solutions to all spells in different R scripts in activities (`dayXX_spell_solutions.md`)
+- `activities/` - Individual spell files (`dayXX_spellYY_name.R` or `dayXX_spellYY_name.rmd`) 
+- `solutions/` - Single solutions file including solutions to all spells in different R scripts in activities (`dayXX_spell_solutions.md` or `dayXX_spell_solutions.ipynb`)
 - `datasets/` - Data files (Days 3-5 only)
 
 ### 1.2 README.md Structure & Numbering
