@@ -39,7 +39,7 @@ title: Day 4 - Statistics Ocean
 3. **📝 Data Collection:** Enter your wizard name and height into our magical data form: 
 https://forms.gle/TG2dgNwknN6KGTcE6
 4. **📏 What if I don't know my height?:** 
-    - Try to give a guess about your height using reference objects around you. 
+    - Try to give a guess about your height using reference objects or people around you. 
         - For example, a regular paper is 21 cm in width and 30 cm in height. 
         - Your instructor Sky is 175 cm tall.
 5. **🧮 Calculate Our Class Mean Height:** We'll add up everyone's heights and divide by the number of wizards in our class
