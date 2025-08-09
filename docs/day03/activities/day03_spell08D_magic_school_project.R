@@ -6,7 +6,7 @@
 library(dplyr)
 library(ggplot2)
 library(gridExtra)
-school_data <- read.csv("datasets/magic_school_grades.csv")
+school_data <- read.csv("../datasets/magic_school_grades.csv")
 
 print("🔍 Evidence loaded from magic_school_grades.csv")
 head(school_data)

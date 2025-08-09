@@ -5,7 +5,7 @@
 
 library(dplyr)
 library(ggplot2)
-pets_data <- read.csv("datasets/magical_pets.csv")
+pets_data <- read.csv("../datasets/magical_pets.csv")
 
 print("🔍 Evidence loaded from magical_pets.csv")
 head(pets_data)

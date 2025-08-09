@@ -1,7 +1,7 @@
 # 🔮 Day 3 - Spell 1B: Clean Our Real-World Creatures Data (Optional)
 
-# This spell cleans the raw form responses in datasets/creature_of_sky.csv
-# and saves a clean file datasets/creatures.csv for the rest of today's activities.
+# This spell cleans the raw form responses in ../datasets/creature_of_sky.csv
+# and saves a clean file ../datasets/creatures.csv for the rest of today's activities.
 
 ########################################################
 # 🎒 Load toolbox
@@ -11,7 +11,7 @@ library(dplyr)
 ########################################################
 # 📥 Load raw data (from Google Form export)
 
-raw <- read.csv("datasets/creature_of_sky.csv", stringsAsFactors = FALSE)
+raw <- read.csv("../datasets/creature_of_sky.csv", stringsAsFactors = FALSE)
 
 ########################################################
 # 🧼 Rename columns to simple, consistent names
@@ -83,8 +83,8 @@ print(paste("✅ Kept", after_n, "clean rows; removed", removed_n, "rows with ba
 ########################################################
 # 💾 Save the clean dataset for use in all other spells
 
-write.csv(cleaned, "datasets/creatures.csv", row.names = FALSE)
-print("💾 Saved clean data to datasets/creatures.csv")
+write.csv(cleaned, "../datasets/creatures.csv", row.names = FALSE)
+print("💾 Saved clean data to ../datasets/creatures.csv")
 print(head(cleaned, 3))
 
 ########################################################

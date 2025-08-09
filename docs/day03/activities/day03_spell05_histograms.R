@@ -8,7 +8,7 @@
 
 library(ggplot2)  # Our plotting magic toolbox
 library(dplyr)
-creature_data <- read.csv("datasets/creatures.csv")
+creature_data <- read.csv("../datasets/creatures.csv")
 
 print("🎨 Ready to paint with creature data!")
 

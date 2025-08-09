@@ -9,7 +9,7 @@
 library(dplyr)  # Our data wrangling toolbox
 
 # Load the cleaned creatures data (created from the form by our cleaning spell)
-creature_data <- read.csv("datasets/creatures.csv")
+creature_data <- read.csv("../datasets/creatures.csv")
 print("🎉 Creatures data loaded! Ready to wrangle!")
 
 ########################################################

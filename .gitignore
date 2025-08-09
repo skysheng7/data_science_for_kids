@@ -7,6 +7,9 @@ day3.md
 # macOS
 .DS_Store
 
+# all zip files
+*.zip
+
 # Jupyter Book build files
 docs/_build/
 docs/.jupyter_cache/

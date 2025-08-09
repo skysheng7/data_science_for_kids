@@ -7,7 +7,7 @@
 # Step 1: Load our data
 
 library(dplyr)
-creature_data <- read.csv("datasets/creatures.csv")
+creature_data <- read.csv("../datasets/creatures.csv")
 print("🎉 Ready to learn pipeline magic with creatures!")
 
 ########################################################

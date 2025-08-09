@@ -7,7 +7,7 @@
 # Step 1: Load data and tools
 
 library(dplyr)
-creature_data <- read.csv("datasets/creatures.csv")
+creature_data <- read.csv("../datasetss/creatures.csv")
 print("🎉 Ready to group and count creatures!")
 
 ########################################################

@@ -16,12 +16,12 @@ title: Day 4 - Statistics Ocean
 ### 🎯 Learning Objectives
 - 🎯 Become human data points in the ultimate "Human Histogram" game
 - 🕵️ Master detective skills finding mean, median, and mode through data distribution patterns
-- 🎲 Discover sampling secrets through magical creature population studies
+- 🎲 Discover the power of taking samples from the population and sampling distribution magic
 - 🔄 Understand how sample size affects the reliability of our conclusions
 - 📈 Explore different distribution shapes and what they tell us about data
-- 🏆 Experience the power of statistical inference through hands-on experiments
+- 🏆 Experience the power of statistical inference through games
 
-<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExc2d5YThoNXRucHU2eDJmYWYxbzJsaTBlc2VhczBnYTkyM3pwcGNuNiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/l46CdoZqbJxQMOvjW/giphy.gif" alt="hello_robot" style="width: 60%; height: auto;">
+<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExc2d5YThoNXRucHU2eDJmYWYxbzJsaTBlc2VhczBnYTkyM3pwcGNuNiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/l46CdoZqbJxQMOvjW/giphy.gif" alt="hello_fish" style="width: 60%; height: auto;">
 
 ## 🎈 Ice Breaker Activity: Human Histogram & Statistics Discovery
 *Duration: 30 minutes*
@@ -31,17 +31,26 @@ title: Day 4 - Statistics Ocean
 ### Round 1: Height Histogram & Mean Discovery
 *Duration: 15 minutes*
 
-1. **📏 Measurement Station:** Use the ruler to measure your height in centimeters
-2. **📝 Data Collection:** Enter your wizard name and height into our magical data form: 
-
-https://forms.gle/TG2dgNwknN6KGTcE6
-
-3. **🧙‍♀️ Human Lineup:** Line up by height from shortest to tallest
-4. **🔍 In-Person Investigation:** 
+1. **🧙‍♀️ Human Lineup:** Line up by height from shortest to tallest
+2. **🔍 In-Person Investigation:** 
    - Find the shortest wizard (minimum)
    - Find the tallest wizard (maximum) 
    - Find the middle wizard (median) - count from both ends!
-5. **💻 R Magic Verification:** Watch as we put your data into R and compare our human results with computer calculations!
+3. **📝 Data Collection:** Enter your wizard name and height into our magical data form: 
+https://forms.gle/TG2dgNwknN6KGTcE6
+4. **📏 What if I don't know my height?:** 
+    - Try to give a guess about your height using reference objects around you. 
+        - For example, a regular paper is 21 cm in width and 30 cm in height. 
+        - Your instructor Sky is 175 cm tall.
+5. **🧮 Calculate Our Class Mean Height:** We'll add up everyone's heights and divide by the number of wizards in our class
+6. **💻 R Magic Verification:** Watch as we put your data into R and compare our human results with computer calculations!
+
+**🤔 Why Do We Care About Mean Height?**
+The mean tells us what a "typical" wizard in our class looks like! It helps us:
+- **📊 Know what's normal:** Is 160cm tall or short for our class?
+- **🔍 Make comparisons:** Are wizards in our class taller than students in other classes?
+- **🎯 Make decisions:** Should we adjust the height of our classroom desks?
+- **📈 Spot patterns:** The mean is like finding the "balance point" of all our heights - where our class would balance on a giant seesaw!
 
 ### Round 2: Birthday Block Building & Mode/Median Discovery
 *Duration: 15 minutes*

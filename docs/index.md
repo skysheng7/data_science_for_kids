@@ -13,7 +13,7 @@ Welcome, young data detectives! Meet the Otter Oda, a friendly hacker who can lo
 
 | Day | Theme | Key Concepts |
 |-----|-------|--------------|
-| **[1](day01/README.md)** | 🏰 Basic Programming Magic | Variables, data types, if-else conditions |
+| **1** | 🏰 Basic Programming Magic | Variables, data types, if-else conditions |
 | **2** | 🪄 Loops and Magic Libraries | For loops, packages, ggplot2, dataframes |
 | **3** | 🎨 Data Storytelling | Data wrangling, advanced visualization |
 | **4** | 🌊 Statistics Ocean | Mean, sampling, confidence intervals |

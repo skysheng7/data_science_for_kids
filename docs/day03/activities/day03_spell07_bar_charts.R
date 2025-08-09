@@ -8,7 +8,7 @@
 
 library(ggplot2)
 library(dplyr)
-creature_data <- read.csv("datasets/creatures.csv")
+creature_data <- read.csv("../datasets/creatures.csv")
 
 print("🏆 Ready for the creature competition!")
 

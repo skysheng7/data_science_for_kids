@@ -19,11 +19,11 @@ print("✨ Toolbox loaded! Ready for data magic!")
 # It's like opening a digital treasure chest full of information!
 
 # For our class demo, we'll first load the raw creatures data collected from SKY!
-creatures_raw <- read.csv("datasets/creature_of_sky.csv")
+creatures_raw <- read.csv("../datasets/creature_of_sky.csv")
 print("🎉 Raw creatures data from Sky loaded!")
 
 # 🎈Try loading the cleaned dataset once we've run the cleaning script:
-# creatures_raw <- read.csv("datasets/creatures.csv")
+# creatures_raw <- read.csv("../datasets/creatures.csv")
 # uncomment the line above and explore!
 
 ########################################################
