@@ -29,10 +29,15 @@ print(creature_data$creature_age)
 
 # Show the distribution of creature ages
 age_histogram <- ggplot(creature_data, aes(x = creature_age)) +
-  geom_histogram(bins = 5, fill = "purple", color = "black") +
+  geom_histogram(fill = "purple", color = "black") +
   labs(title = "How Old Are Our Magical creatures?",
        x = "Age in Years",
-       y = "Number of Creatures")
+       y = "Number of Creatures")+
+  theme_minimal() +
+  theme(text = element_text(size = 16),
+        plot.title = element_text(size = 20),
+        axis.title = element_text(size = 18),
+        axis.text = element_text(size = 19))
 
 print(age_histogram)
 
@@ -41,10 +46,15 @@ print(age_histogram)
 
 # Look at magic levels
 magic_histogram <- ggplot(creature_data, aes(x = magic_power)) +
-  geom_histogram(bins = 4, fill = "gold", color = "black") +
+  geom_histogram(fill = "gold", color = "black") +
   labs(title = "Magic Level Distribution",
        x = "Magic Level",
-       y = "Number of Creatures")
+       y = "Number of Creatures")+
+  theme_minimal() +
+  theme(text = element_text(size = 16),
+        plot.title = element_text(size = 20),
+        axis.title = element_text(size = 18),
+        axis.text = element_text(size = 19))
 
 print(magic_histogram)
 
@@ -53,11 +63,16 @@ print(magic_histogram)
 
 # Different colors for different creature types
 colorful_histogram <- ggplot(creature_data, aes(x = magic_power, fill = creature_type)) +
-  geom_histogram(bins = 4, color = "black") +
+  geom_histogram(color = "black") +
   labs(title = "Magic Levels by creature Type",
        x = "Magic Level",
        y = "Number of Creatures",
-       fill = "Creature Type")
+       fill = "Creature Type")+
+  theme_minimal() +
+  theme(text = element_text(size = 16),
+        plot.title = element_text(size = 20),
+        axis.title = element_text(size = 18),
+        axis.text = element_text(size = 19))
 
 print(colorful_histogram)
 
@@ -67,10 +82,15 @@ print(colorful_histogram)
 # Challenge 1: Create a histogram of ages with different colors for different creature types
 # YOUR CODE HERE:
 my_histogram <- ggplot(creature_data, aes(x = ...)) +
-  geom_histogram(bins = 3, fill = "...", color = "...") +
+  geom_histogram(fill = "...", color = "...") +
   labs(title = "...",
        x = "...",
-       y = "...")
+       y = "...")+
+  theme_minimal() +
+  theme(text = element_text(size = 16),
+        plot.title = element_text(size = 20),
+        axis.title = element_text(size = 18),
+        axis.text = element_text(size = 19))
 
 ########################################################
 # 💡 Memory Tip:

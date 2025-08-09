@@ -39,7 +39,12 @@ creature_bar_chart <- ggplot(creature_counts, aes(x = creature_type, y = total))
   geom_col(fill = "orange", color = "black") +
   labs(title = "How Many of Each Creature Type?",
        x = "Creature Type",
-       y = "Number of Creatures")
+       y = "Number of Creatures")+
+  theme_minimal() +
+  theme(text = element_text(size = 16),
+        plot.title = element_text(size = 20),
+        axis.title = element_text(size = 18),
+        axis.text = element_text(size = 19))
 
 print(creature_bar_chart)
 
@@ -58,7 +63,12 @@ magic_bar_chart <- ggplot(magic_by_type, aes(x = creature_type, y = average_magi
   geom_col(fill = "purple", color = "black") +
   labs(title = "Which Creature Type is Most Magical?",
        x = "Creature Type",
-       y = "Average Magic Level")
+       y = "Average Magic Level")+
+  theme_minimal() +
+  theme(text = element_text(size = 16),
+        plot.title = element_text(size = 20),
+        axis.title = element_text(size = 18),
+        axis.text = element_text(size = 19))
 
 print(magic_bar_chart)
 
@@ -77,7 +87,12 @@ age_bar_chart <- ggplot(age_totals, aes(x = creature_type, y = average_age)) +
   geom_col(fill = "...", color = "...") +
   labs(title = "...",
        x = "...",
-       y = "...")
+       y = "...")+
+  theme_minimal() +
+  theme(text = element_text(size = 16),
+        plot.title = element_text(size = 20),
+        axis.title = element_text(size = 18),
+        axis.text = element_text(size = 19))
 
 ########################################################
 # 💡 Memory Tip:

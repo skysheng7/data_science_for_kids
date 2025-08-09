@@ -336,7 +336,7 @@ library(ggplot2)
 
 # Create a histogram to see the shape of creature ages
 ggplot(creature_data, aes(x = creature_age)) +
-  geom_histogram(bins = 5, fill = "purple", color = "black") +
+  geom_histogram(fill = "purple", color = "black") +
   labs(title = "How Old Are Our Magical Creatures?",
        x = "Age in Years",
        y = "Number of Creatures")

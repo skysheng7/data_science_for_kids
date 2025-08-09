@@ -30,7 +30,13 @@ print(by_location)
 
 location_plot <- ggplot(by_location, aes(x = location, y = ...)) +
   geom_col(fill = "steelblue", color = "black") +
-  labs(title = "Sightings by Location", x = "Location", y = "Sightings")
+  labs(title = "Sightings by Location", x = "Location", y = "Sightings")+
+  theme_minimal() +
+  theme(text = element_text(size = 16),
+        plot.title = element_text(size = 20),
+        axis.title = element_text(size = 18),
+        axis.text = element_text(size = 19),
+        axis.text.x = element_text(angle = 60, hjust = 1))
 print(location_plot)
 
 ########################################################
@@ -47,7 +53,13 @@ print(rare_by_type)
 
 rare_plot <- ggplot(rare_by_type, aes(x = creature_type, y = average_rarity)) +
   geom_col(fill = "plum", color = "black") +
-  labs(title = "Average Rarity by Creature Type", x = "Creature Type", y = "Average Rarity")
+  labs(title = "Average Rarity by Creature Type", x = "Creature Type", y = "Average Rarity")+
+  theme_minimal() +
+  theme(text = element_text(size = 16),
+        plot.title = element_text(size = 20),
+        axis.title = element_text(size = 18),
+        axis.text = element_text(size = 19),
+        axis.text.x = element_text(angle = 60, hjust = 1))
 print(rare_plot)
 
 ########################################################
@@ -64,7 +76,13 @@ print(by_time)
 
 time_plot <- ggplot(by_time, aes(x = time_of_day, y = ...)) +
   geom_col(fill = "orange", color = "black") +
-  labs(title = "Creature Sightings by Time of Day", x = "Time of Day", y = "Number of Sightings")
+  labs(title = "Creature Sightings by Time of Day", x = "Time of Day", y = "Number of Sightings")+
+  theme_minimal() +
+  theme(text = element_text(size = 16),
+        plot.title = element_text(size = 20),
+        axis.title = element_text(size = 18),
+        axis.text = element_text(size = 19),
+        axis.text.x = element_text(angle = 60, hjust = 1))
 print(time_plot)
 
 ########################################################
@@ -78,7 +96,11 @@ scatter_plot <- ggplot(creatures_data, aes(x = ..., y = ...)) +
   labs(title = "Rarity Score vs Photographer Level", 
        x = "Photographer Level", 
        y = "Rarity Score") +
-  theme_minimal()
+  theme_minimal() +
+  theme(text = element_text(size = 16),
+        plot.title = element_text(size = 20),
+        axis.title = element_text(size = 18),
+        axis.text = element_text(size = 19))
 print(scatter_plot)
 
 

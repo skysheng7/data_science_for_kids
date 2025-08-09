@@ -51,7 +51,12 @@ print("👫 Ready to solve mysteries with your partner!")
 #   geom_point() +  # or geom_col() or geom_histogram()
 #   labs(title = "Your Discovery Title",
 #        x = "X-axis label",
-#        y = "Y-axis label")
+#        y = "Y-axis label")+
+#   theme_minimal() +
+#   theme(text = element_text(size = 16),
+#         plot.title = element_text(size = 20),
+#         axis.title = element_text(size = 18),
+#         axis.text = element_text(size = 19))
 
 ########################################################
 # Step 3: Present Your Findings!

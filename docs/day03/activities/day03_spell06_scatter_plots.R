@@ -30,22 +30,15 @@ age_vs_magic <- ggplot(creature_data, aes(x = creature_age, y = magic_power)) +
   geom_point(size = 4, color = "orange") +
   labs(title = "Do Older Creatures Have More Magic?",
        x = "Age in Years",
-       y = "Magic Level")
+       y = "Magic Level")+
+  theme_minimal() +
+  theme(text = element_text(size = 16),
+        plot.title = element_text(size = 20),
+        axis.title = element_text(size = 18),
+        axis.text = element_text(size = 19))
 
 print(age_vs_magic)
 
-########################################################
-# Step 4: Add colors for different groups
-
-# Same plot but with different colors for each creature type
-colorful_scatter <- ggplot(creature_data, aes(x = creature_age, y = magic_power, color = creature_type)) +
-  geom_point(size = 5) +
-  labs(title = "Age vs Magic by Creature Type",
-       x = "Age in Years",
-       y = "Magic Level",
-       color = "Creature Type")
-
-print(colorful_scatter)
 
 ########################################################
 # 🎈 Your turn to explore!
@@ -58,7 +51,12 @@ colorful_scatter <- ggplot(creature_data, aes(x = ..., y = ..., color = ...)) +
   labs(title = "Age vs Magic by Creature Type",
        x = "Age in Years",
        y = "Magic Level",
-       color = "Creature Type")
+       color = "Creature Type")+
+  theme_minimal() +
+  theme(text = element_text(size = 16),
+        plot.title = element_text(size = 20),
+        axis.title = element_text(size = 18),
+        axis.text = element_text(size = 19))
 
 print(colorful_scatter)
 

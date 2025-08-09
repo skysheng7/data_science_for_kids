@@ -33,7 +33,13 @@ print(treat_counts)
 treat_bar <- ggplot(treat_counts, aes(x = ..., y = ...)) +
   geom_col(fill = "orange", color = "black") +
   labs(title = "Most Popular Favorite Treats",
-       x = "Favorite Treat", y = "Number of Pets")
+       x = "Favorite Treat", y = "Number of Pets")+
+  theme_minimal() +
+  theme(text = element_text(size = 16),
+        plot.title = element_text(size = 20),
+        axis.title = element_text(size = 18),
+        axis.text = element_text(size = 19),
+        axis.text.x = element_text(angle = 60, hjust = 1))
 print(treat_bar)
 
 ########################################################
@@ -50,7 +56,13 @@ print(treat_magic)
 treat_magic_bar <- ggplot(treat_magic, aes(x = favorite_treat, y = ...)) +
   geom_col(fill = "purple", color = "black") +
   labs(title = "Average Magic by Favorite Treat",
-       x = "Favorite Treat", y = "Average Magic Level")
+       x = "Favorite Treat", y = "Average Magic Level")+
+  theme_minimal() +
+  theme(text = element_text(size = 16),
+        plot.title = element_text(size = 20),
+        axis.title = element_text(size = 18),
+        axis.text = element_text(size = 19),
+        axis.text.x = element_text(angle = 60, hjust = 1))
 print(treat_magic_bar)
 
 ########################################################
@@ -67,7 +79,13 @@ print(type_magic)
 type_magic_bar <- ggplot(type_magic, aes(x = pet_type, y = average_magic)) +
   geom_col(fill = "skyblue", color = "black") +
   labs(title = "Which Pet Type is the Most Magical?",
-       x = "Pet Type", y = "Average Magic Level")
+       x = "Pet Type", y = "Average Magic Level")+
+  theme_minimal() +
+  theme(text = element_text(size = 16),
+        plot.title = element_text(size = 20),
+        axis.title = element_text(size = 18),
+        axis.text = element_text(size = 19),
+        axis.text.x = element_text(angle = 60, hjust = 1))
 print(type_magic_bar)
 
 ########################################################
@@ -77,7 +95,12 @@ print(type_magic_bar)
 pets_scatter <- ggplot(pets_data, aes(x = ..., y = ..., color = pet_type)) +
   geom_point(size = 4) +
   labs(title = "Are Older Pets More Magical?",
-       x = "Age (years)", y = "Magic Level", color = "Pet Type")
+       x = "Age (years)", y = "Magic Level", color = "Pet Type")+
+  theme_minimal() +
+  theme(text = element_text(size = 16),
+        plot.title = element_text(size = 20),
+        axis.title = element_text(size = 18),
+        axis.text = element_text(size = 19))
 print(pets_scatter)
 
 ########################################################
@@ -85,7 +108,12 @@ print(pets_scatter)
 
 # TODO: Fill in the ... below to solve the mysteries!
 pets_magic_hist <- ggplot(pets_data, aes(x = ...)) +
-  geom_histogram(bins = 8, fill = "...", color = "black") +
+  geom_histogram(fill = "...", color = "black") +
   labs(title = "Distribution of Pet Magic Levels",
-       x = "Magic Level", y = "Number of Pets")
+       x = "Magic Level", y = "Number of Pets")+
+  theme_minimal() +
+  theme(text = element_text(size = 16),
+        plot.title = element_text(size = 20),
+        axis.title = element_text(size = 18),
+        axis.text = element_text(size = 19))
 print(pets_magic_hist)

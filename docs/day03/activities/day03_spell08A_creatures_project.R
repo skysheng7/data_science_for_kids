@@ -30,7 +30,12 @@ print(avg_magic_by_type)
 avg_magic_plot <- ggplot(avg_magic_by_type, aes(x = ..., y = ...)) +
   geom_col(fill = "purple", color = "black") +
   labs(title = "Average Magic by Creature Type",
-       x = "Creature Type", y = "Average Magic Power")
+       x = "Creature Type", y = "Average Magic Power")+
+  theme_minimal() +
+  theme(text = element_text(size = 16),
+        plot.title = element_text(size = 20),
+        axis.title = element_text(size = 18),
+        axis.text = element_text(size = 19))
 print(avg_magic_plot)
 
 ########################################################
@@ -46,7 +51,12 @@ print(winged_compare)
 winged_plot <- ggplot(winged_compare, aes(x = has_wings, y = average_magic, fill = has_wings)) +
   geom_col(color = "black") +
   labs(title = "Do Winged Creatures Have More Magic?",
-       x = "Has Wings?", y = "...", fill = "Has Wings")
+       x = "Has Wings?", y = "...", fill = "Has Wings")+
+  theme_minimal() +
+  theme(text = element_text(size = 16),
+        plot.title = element_text(size = 20),
+        axis.title = element_text(size = 18),
+        axis.text = element_text(size = 19))
 print(winged_plot)
 
 ########################################################
@@ -57,16 +67,26 @@ print(winged_plot)
 age_magic_plot <- ggplot(creature_data, aes(x = creature_age, y = ..., color = creature_type)) +
   geom_point(size = 4) +
   labs(title = "Are Older Creatures More Magical?",
-       x = "...", y = "Magic Power", color = "Creature Type")
+       x = "...", y = "Magic Power", color = "Creature Type")+
+  theme_minimal() +
+  theme(text = element_text(size = 16),
+        plot.title = element_text(size = 20),
+        axis.title = element_text(size = 18),
+        axis.text = element_text(size = 19))
 print(age_magic_plot)
 
 ########################################################
 # 4) Bonus: What does the distribution of magic power look like?
 # TODO: Make a histogram to see the shape of magic power values
 magic_hist <- ggplot(creature_data, aes(x = ...)) +
-  geom_histogram(bins = 8, fill = "...", color = "black") +
+  geom_histogram(fill = "...", color = "black") +
   labs(title = "Magic Power Distribution",
-       x = "Magic Power", y = "Number of Creatures")
+       x = "Magic Power", y = "Number of Creatures")+
+  theme_minimal() +
+  theme(text = element_text(size = 16),
+        plot.title = element_text(size = 20),
+        axis.title = element_text(size = 18),
+        axis.text = element_text(size = 19))
 print(magic_hist)
 
 ########################################################

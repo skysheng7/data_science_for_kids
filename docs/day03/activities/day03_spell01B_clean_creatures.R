@@ -21,7 +21,7 @@ clean_names <- raw %>%
     wizard_name = What.is.your.wizard.name.,
     creature_name = What.is.your.magical.creature.s.name.,
     creature_type = What.type.of.creature.is.it.,
-    creature_age_raw = How.old.is.your.creature..please.enter.number.only...,
+    creature_age_raw = How.old.is.your.creature..please.enter.number.only..,
     magic_power_raw = On.a.scale.of.1.10..how.powerful.is.its.magic.,
     has_wings_raw = Does.your.creature.have.wings.,
     element = What.is.its.primary.magical.element.,
