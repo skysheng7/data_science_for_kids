@@ -1,0 +1,201 @@
+---
+title: "🔮 Day 4 - Spell 1: Distribution Detective Mission"
+output: html_document
+---
+
+## 🎯 Mission Briefing
+Discover the magical secrets of mean, median, and mode through different creature power distributions!
+
+### 💡 What are Distributions?
+Think of distributions like different ways data can be shaped - some are balanced (symmetrical), some lean to one side (skewed), and some have unusual outliers!
+
+```{r setup, message=FALSE, warning=FALSE}
+# Load our magical libraries
+library(ggplot2)
+library(dplyr)
+library(gridExtra)
+
+# Load our magical creature dataset
+#creatures <- read.csv("../datasets/magical_creatures_stats.csv")
+creatures <- read.csv("docs/day04/datasets/magical_creatures_stats.csv")
+
+# Let's peek at our data first
+head(creatures)
+
+# Separate each creature type for easier analysis
+dragons <- creatures[creatures$creature_type == "dragon", ]
+unicorns <- creatures[creatures$creature_type == "unicorn", ]
+phoenixes <- creatures[creatures$creature_type == "phoenix", ]
+
+cat("We have", nrow(dragons), "dragons,", nrow(unicorns), "unicorns, and", nrow(phoenixes), "phoenixes!")
+```
+
+---
+
+## 🐉 Investigation 1: Dragon Power (Normal Distribution)
+
+Dragons have very balanced power - most dragons are medium strength, with fewer very weak or very strong dragons.
+
+```{r dragon-analysis}
+# Create a histogram of dragon power
+ggplot(dragons, aes(x = power_level)) +
+  geom_histogram(fill = "pink", color = "white", alpha = 0.7) +
+  labs(title = "🐉 Dragon Power Distribution (Normal/Symmetrical)", 
+       x = "Dragon Power Level", 
+       y = "Number of Dragons") +
+  theme_minimal()
+
+# Calculate statistics for dragon power
+dragon_stats <- dragons %>%
+  summarise(
+    mean_power = mean(power_level),
+    median_power = median(power_level),
+    min_power = min(power_level),
+    max_power = max(power_level)
+  )
+
+print("🐉 Dragon Power Statistics:")
+print(dragon_stats)
+```
+
+### 💡 Key Learning
+In symmetrical distributions, mean and median are very close!
+
+---
+
+## 🦄 Investigation 2: Unicorn Power (Left-Skewed Distribution)
+
+Most unicorns have high power, but a few have very low power - this creates a "tail" on the left.
+
+```{r unicorn-analysis}
+# Create histogram of unicorn magic
+ggplot(unicorns, aes(x = power_level)) +
+  geom_histogram(fill = "lightblue", color = "white", alpha = 0.7) +
+  labs(title = "🦄 Unicorn Power Distribution (Left-Skewed)", 
+       x = "Unicorn Power Level", 
+       y = "Number of Unicorns") +
+  theme_minimal()
+
+# Calculate statistics for unicorn power
+unicorn_stats <- unicorns %>%
+  summarise(
+    mean_power = mean(power_level),
+    median_power = median(power_level),
+    min_power = min(power_level),
+    max_power = max(power_level)
+  )
+
+print("🦄 Unicorn Power Statistics:")
+print(unicorn_stats)
+```
+
+### 💡 Key Learning
+In left-skewed distributions, the mean is PULLED DOWN by the low values!
+
+---
+
+## 🔥 Investigation 3: Phoenix Power (Right-Skewed Distribution)
+
+Most phoenixes have low power, but a few have extremely high power - this creates a "tail" on the right.
+
+```{r phoenix-analysis}
+# Create histogram of phoenix energy
+ggplot(phoenixes, aes(x = power_level)) +
+  geom_histogram(fill = "orange", color = "white", alpha = 0.7) +
+  labs(title = "🔥 Phoenix Power Distribution (Right-Skewed)", 
+       x = "Phoenix Power Level", 
+       y = "Number of Phoenixes") +
+  theme_minimal()
+
+# Calculate statistics for phoenix power
+phoenix_stats <- phoenixes %>%
+  summarise(
+    mean_power = mean(power_level),
+    median_power = median(power_level),
+    min_power = min(power_level),
+    max_power = max(power_level)
+  )
+
+print("🔥 Phoenix Power Statistics:")
+print(phoenix_stats)
+```
+
+### 💡 Key Learning
+In right-skewed distributions, the mean is PULLED UP by the high values!
+
+---
+
+## 🎨 Stacked Distribution Gallery
+
+Let's see all three distributions stacked vertically in one beautiful view!
+
+```{r stacked-distributions}
+# Create individual plots
+p1 <- ggplot(dragons, aes(x = power_level)) +
+  geom_histogram(fill = "#48c33f", color = "black", alpha = 0.7, bins = 25) +
+  labs(title = "🐉 Dragon Power (Normal Distribution)", 
+       x = "Power Level", 
+       y = "Count") +
+  theme_minimal() +
+  theme(plot.title = element_text(size = 12, hjust = 0.5))
+
+p2 <- ggplot(unicorns, aes(x = power_level)) +
+  geom_histogram(fill = "purple", color = "black", alpha = 0.7, bins = 25) +
+  labs(title = "🦄 Unicorn Power (Left-Skewed Distribution)", 
+       x = "Power Level", 
+       y = "Count") +
+  theme_minimal() +
+  theme(plot.title = element_text(size = 12, hjust = 0.5))
+
+p3 <- ggplot(phoenixes, aes(x = power_level)) +
+  geom_histogram(fill = "orange", color = "black", alpha = 0.7, bins = 25) +
+  labs(title = "🔥 Phoenix Power (Right-Skewed Distribution)", 
+       x = "Power Level", 
+       y = "Count") +
+  theme_minimal() +
+  theme(plot.title = element_text(size = 12, hjust = 0.5))
+
+# Stack them in a 3x1 grid (3 rows, 1 column)
+grid.arrange(p1, p2, p3, nrow = 3, ncol = 1)
+```
+
+### 💡 What Do You Notice?
+Look at how different each shape is! Can you see the "tails" and where most of the data clusters?
+
+---
+
+## 🔍 The Great Comparison Challenge
+
+Let's compare all three distributions with numbers!
+
+```{r comparison}
+# Combine all the statistics
+all_stats <- data.frame(
+  Creature = c("Dragon (Normal)", "Unicorn (Left-Skewed)", "Phoenix (Right-Skewed)"),
+  Mean = c(dragon_stats$mean_power, unicorn_stats$mean_power, phoenix_stats$mean_power),
+  Median = c(dragon_stats$median_power, unicorn_stats$median_power, phoenix_stats$median_power),
+  Difference = c(
+    abs(dragon_stats$mean_power - dragon_stats$median_power),
+    abs(unicorn_stats$mean_power - unicorn_stats$median_power),
+    abs(phoenix_stats$mean_power - phoenix_stats$median_power)
+  )
+)
+
+print("📊 The Great Statistics Comparison:")
+print(all_stats)
+```
+
+### 💡 Mystery Question
+Which creature type has the biggest difference between mean and median? Why?
+
+---
+
+## 💡 Take-Home Messages
+
+1. **Symmetrical distributions:** Mean ≈ Median (they're close friends!)
+2. **Left-skewed distributions:** Mean < Median (mean gets pulled down)
+3. **Right-skewed distributions:** Mean > Median (mean gets pulled up)
+4. **When data is skewed,** median is often a better measure of "typical" value
+
+### 🎈 Your Turn!
+Try running each code chunk and observe how the different distribution shapes affect the relationship between mean, median, and mode. Can you explain why the mean "moves" toward the tail in skewed distributions?
