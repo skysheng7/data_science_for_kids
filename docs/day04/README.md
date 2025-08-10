@@ -343,7 +343,6 @@ You can only see 20 sheep through the smoke, but you want to know what the whole
 - **Magic Hat Rule**: Always PUT THE SHEEP BACK! (sample WITH replacement)
 - **Bootstrap Power**: Your 20 sheep can create hundreds of "pretend samples"
 - **Key Discovery**: Bootstrap shows how much your estimate might vary
-- **Confidence Prophecy**: Use bootstrap results to create ranges for farmers
 
 ### Confidence Prophecy Magic
 - **90% Confidence**: "I'm 90% confident the true percentage is in this range"
@@ -363,8 +362,6 @@ rep_sample_n(magical_sheep, size = 20)  # Take one sample
 rep_sample_n(sheep_sample, size = 20, replace = TRUE, reps = 1000)  # Bootstrap magic
 quantile(bootstrap_results$black_proportion, c(0.05, 0.95))  # 90% confidence prophecy
 
-# Create magical visualizations
-ggplot(data, aes(x = variable)) + geom_histogram()  # Distribution shapes
 ```
 
 ## 6. 🆘 Troubleshooting Cheatsheet
@@ -381,34 +378,22 @@ ggplot(data, aes(x = variable)) + geom_histogram()  # Distribution shapes
 - **Why it happens:** Excitement and rushing during the sheep rescue
 - **The Fix:** Start that bootstrap round over, always PUT THE SHEEP BACK!
 
-**🐛 "Our confidence interval missed the true answer!"**
-- **What it means:** Sometimes intervals don't capture the truth
-- **Why it happens:** That's why it's called 95% confidence, not 100%!
-- **The Fix:** This is normal! 5% of the time you'll miss.
-
-**🐛 Error: "object not found" in R**
-- **What it means:** You forgot to create a variable
-- **Why it happens:** Skipped a step in the activity
-- **The Fix:** Go back and run all the code chunks in order
-
-**🐛 "My sampling station results are crazy different!"**
-- **What it means:** Different sampling methods give different results
-- **Why it happens:** Bias affects sampling!
-- **The Fix:** Perfect! This shows why good sampling matters.
+**🐛 "Our confidence prophecy missed the true sheep percentage!"**
+- **What it means:** Sometimes prophecies don't capture the truth
+- **Why it happens:** That's why it's called 90% confidence, not 100%!
+- **The Fix:** This is normal! 10% of the time shepherds' prophecies will miss.
 
 **🐛 "The Google Form won't take my data!"**
 - **What it means:** Data format might be wrong
 - **Why it happens:** Numbers entered as text or missing values
 - **The Fix:** Check that you're entering numbers only, no letters
 
-**🐛 "My team is behind in the championship!"**
-- **What it means:** Some teams finish activities faster
-- **Why it happens:** Different working speeds
-- **The Fix:** Focus on learning, not just winning!
+**🐛 Error: "could not find function rep_sample_n"**
+- **What it means:** You forgot to load the infer package
+- **Why it happens:** Skipped the library(infer) command
+- **The Fix:** Run `library(infer)` before using rep_sample_n
 
-**🐛 R code runs but graph looks weird**
-- **What it means:** Your data might have unusual values
-- **Why it happens:** Candy counting errors or typos
-- **The Fix:** Double-check your candy counts before entering data
-
-**💡 Game Day Wisdom:** Different results each round is PERFECT - that's exactly what we want to discover about statistics!
+**🐛 "My bootstrap results are all the same!"**
+- **What it means:** You might be sampling without replacement
+- **Why it happens:** Forgot `replace = TRUE` in rep_sample_n
+- **The Fix:** Make sure to use `replace = TRUE` for bootstrap magic
