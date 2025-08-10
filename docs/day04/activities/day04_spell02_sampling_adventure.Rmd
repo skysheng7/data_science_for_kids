@@ -11,7 +11,7 @@ Imagine you want to know how many dragons live in the entire Enchanted Forest, b
 **📊 Statistic** = Something we calculate using our sample (like "30% of creatures in our sample are dragons")  
 **🎯 Inference** = Using our sample to make a conclusion about the whole population
 
-```{r setup, include=FALSE}
+```{r}
 knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 library(ggplot2)
 library(dplyr)
@@ -216,6 +216,3 @@ print(round(summary_table, 3))
 **🍕 Restaurant Reviews:** A restaurant with 500 reviews gives you a better idea of quality than one with 5 reviews!
 
 **⚕️ Medical Research:** Doctors test medicines on large groups to be confident about the results.
-
-## 🎈 Your Turn: Real Candy Sampling!
-Now let's connect this to our classroom candy bowl experiment! When you grab 10 green candies from the bowl, you're doing exactly what we just simulated - taking a sample to learn about the population!

@@ -241,7 +241,7 @@ If the true percentage of dragons in the forest is 30%, and you take 100 differe
 
 
 #### 3.2.4 🎈 Activity: The Magical Creature Population Study
-*Duration: 15 minutes*
+*Duration: 20 minutes*
 
 **🐉 The Setup:** In the Enchanted Forest, we have a population of 1000 magical creatures where exactly 30% are dragons. Let's see what happens when we take different sized samples!
 
