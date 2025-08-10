@@ -141,13 +141,17 @@ Just like how people can be tall, short, or in-between, data comes in different 
 💡 **The Big Picture:**
 Imagine you want to know what percentage of creatures in the entire Enchanted Forest are dragons, but you can't count all million creatures! So you explore small areas and use those to make educated guesses.
 
-<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExd3c2ajdtcjhxY2lqZ3Ribm02eTh1cGxlaDl3b21jcmFpODZrZGIybiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/vBo48HVy3uVGM/giphy.gif" alt="dragon" style="width: 100%; height: auto;">
+<img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3djkxamhiZ3FmZDMzOWszY3dmdTJlbTM4eHM1MjAxa2ltdHZzZWI3biZlcD12MV9naWZzX3JlbGF0ZWQmY3Q9Zw/143ujxyRoVMJVK/giphy.gif" alt="dragon" style="width: 60%; height: auto;">
 
-**🌲 Population** = All creatures in the entire Enchanted Forest (everything we want to know about)
-**🔍 Sample** = The creatures we find in one small area (the small group we actually study)
-**🎯 Parameter** = The true characteristic of the entire population (like "exactly 30% of all forest creatures are dragons")
-**📊 Statistic** = Something we calculate from our sample (like "25% of creatures in our sample are dragons")
-**🎯 Inference** = Using our sample to make conclusions about the whole population, knowing how uncertain we are
+- **🌲 Population** = All creatures in the entire Enchanted Forest (everything we want to know about)
+
+- **🔍 Sample** = The creatures we find in one small area (the small group we actually study)
+
+- **🎯 Parameter** = The true characteristic of the entire population (like "exactly 30% of all forest creatures are dragons")
+
+- **📊 Statistic** = Something we calculate from our sample (like "25% of creatures in our sample are dragons")
+
+- **🎯 Inference** = Using our sample to make conclusions about the whole population, knowing how uncertain we are
 
 ### 3.2 Game 1: The Enchanted Halloween Neighborhood Mystery 🎃
 *Duration: 20 minutes*
