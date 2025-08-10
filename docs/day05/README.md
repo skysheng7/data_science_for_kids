@@ -34,8 +34,9 @@ By the end of today, you will:
 - Spread out randomly across the classroom
 - Instructor walks to a random spot and predicts their "color" based on the K=3 closest students
 - Try different K values (1, 5, 7) and see how predictions change!
+- Let's start **Moving**!
 
-<img src="PLACEHOLDER_GIF_URL" alt="Students spreading out for KNN game" style="width: 100%; height: auto;">
+<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbTlrM2U4NmJvODRqZDJ6ZWF4ZWk3Y2J3eHFkajZzMW5wYnUwdGMxMCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/X7jjWeC03QDT2/giphy.gif" alt="snail walking" style="width: 100%; height: auto;">
 
 **💡 Key Discovery:** *The number of neighbors (K) affects our predictions!*
 
@@ -87,7 +88,7 @@ Just like studying for a test, computers need practice data (training) and then 
 - Testing data = The actual exam (new problems)
 - Why would it be cheating to study using the exact exam questions?
 
-<img src="PLACEHOLDER_GIF_URL" alt="Student studying with practice problems vs taking real exam" style="width: 100%; height: auto;">
+<img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3M213ZTZraWtndTdoOXhjMmd0Mnhwczg3ZnRrY3I1eWJkdWp4ZTVqZCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/GtmmEUMZbo1hhRAi96/giphy.gif" alt="robot_running" style="width: 100%; height: auto;">
 
 ### Spell 1: KNN Classification with Magical Creatures
 
@@ -112,7 +113,7 @@ Build your own KNN model and test its accuracy!
 
 **✨ Challenge:** Can you get over 80% accuracy?
 
-<img src="PLACEHOLDER_GIF_URL" alt="Students choosing their adventure" style="width: 100%; height: auto;">
+<img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3d3JoczFnc2wzbzMwN3JqeXNhM2Nxd3AwdGN4NTU1bHBtdHUza3p3bCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/aDKMe14FKM1TEyjm1l/giphy.gif" alt="robot_learning" style="width: 100%; height: auto;">
 
 ## 4. AI Exploration & Ethics (*Duration: 75 minutes*)
 
@@ -128,7 +129,7 @@ Build your own KNN model and test its accuracy!
 - GPS navigation vs self-driving car
 - Thermostat vs smart home assistant
 
-<img src="PLACEHOLDER_GIF_URL" alt="Students debating AI definitions" style="width: 100%; height: auto;">
+<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDJnNmZmNDMzaXZqZTk1NmQxejB6ZnNlcWhrMjN2ZmtpbXhkemI0ZyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/An4vQcXaC6xjiA6ZX3/giphy.gif" alt="otters" style="width: 100%; height: auto;">
 
 ### 4.2 Programming with AI: Claude Magic (*Duration: 25 minutes*)
 
@@ -164,7 +165,7 @@ Compare responses from different AI models and record results!
 
 **✨ Challenge:** Analyze the class results - which AI model won overall?
 
-<img src="PLACEHOLDER_GIF_URL" alt="Students conducting AI model comparison" style="width: 100%; height: auto;">
+<img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3cnVnOGQ4bXFwcjdmMGhjeGIzcjI3ZGwyano2bTN6NzZnYW4zdGV0ciZlcD12MV9naWZzX3NlYXJjaCZjdD1n/GiNyo8KD5j9mM/giphy.gif" alt="minion_yeah" style="width: 100%; height: auto;">
 
 ### 4.4 AI Ethics Deep Dive (*Duration: 10 minutes*)
 
@@ -181,7 +182,6 @@ Compare responses from different AI models and record results!
 - AI hiring tools showing gender bias
 - Language models reflecting cultural biases
 
-<img src="PLACEHOLDER_GIF_URL" alt="Students in thoughtful discussion circle" style="width: 100%; height: auto;">
 
 ## 5. Optional: Cursor IDE Demo (*Duration: 10 minutes - if time allows*)
 
@@ -207,7 +207,7 @@ An advanced code editor where AI helps you write code in real-time!
 ### 6.2 Survey & Feedback
 Complete the camp evaluation survey to help us make future camps even more magical!
 
-<img src="PLACEHOLDER_GIF_URL" alt="Students celebrating with graduation ceremony" style="width: 100%; height: auto;">
+<img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3cGlubDAwZnl1ZmFtZTYyNm9wc3VrNnQzYW1zOGRsbW9iYnRpY2VwYiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/FyH83LEK2hytq/giphy.gif" alt="friday" style="width: 60%; height: auto;">
 
 ## 7. 📋 Pro Tips Cheatsheet
 
