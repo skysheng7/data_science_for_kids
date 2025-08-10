@@ -31,7 +31,7 @@ Welcome to an enchanting adventure where mathematics meets magic, and data tells
 | **1** | 🏰 Basic Programming Magic | Variables, data types, if-else conditions |
 | **2** | 🪄 Loops and Magic Libraries | For loops, packages, ggplot2, dataframes |
 | **3** | 🎨 Data Storytelling | Data wrangling, advanced visualization |
-| **4** | 🌊 Statistics Ocean | Mean, sampling, confidence intervals |
+| **4** | 🌲 Statistics Enchanted Forest | Mean, sampling, confidence intervals |
 | **5** | 🧙‍♀️ Machine Learning & AI | KNN, AI, ethics and future |
 
 ## 🚀 Quick Start Guide
