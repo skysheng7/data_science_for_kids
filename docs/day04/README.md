@@ -45,12 +45,13 @@ https://forms.gle/TG2dgNwknN6KGTcE6
 5. **🧮 Calculate Our Class Mean Height:** We'll add up everyone's heights and divide by the number of wizards in our class
 6. **💻 R Magic Verification:** Watch as we put your data into R and compare our human results with computer calculations!
 
-**🤔 Why Do We Care About Mean Height?**
-The mean tells us what a "typical" wizard in our class looks like! It helps us:
-- **📊 Know what's normal:** Is 160cm tall or short for our class?
-- **🔍 Make comparisons:** Are wizards in our class taller than students in other classes?
-- **🎯 Make decisions:** Should we adjust the height of our classroom desks?
-- **📈 Spot patterns:** The mean is like finding the "balance point" of all our heights - where our class would balance on a giant seesaw!
+**🤔 Why Do We Care About Mean?**
+- The mean tells us what a "typical" wizard in our class looks like!
+- Other examples of using **Mean**:
+    - 🌡️ **Weather Wizard:** Weather apps use mean temperature to tell you if it's a hot or cold month
+    - 🏀 **Sports Star:** Basketball players track their mean points per game to see how good they are
+    - 🍕 **Pizza Party Planning:** If you know the mean number of pizza slices each friend eats, you can order the right amount!
+
 
 ### Round 2: Birthday Block Building & Mode/Median Discovery
 *Duration: 15 minutes*
@@ -70,7 +71,19 @@ The mean tells us what a "typical" wizard in our class looks like! It helps us:
 - **Median** = Middle detective in a lineup of counts
 - **Mode** = Most popular birthday month in the room
 
-<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMWpsYTV5ZmFvb2ZnbWJ5Njhsb3JwajZxeXJ2ZnpxOXFzNW5lODhmbSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/VgSjnwSoqiPjRRIJ1F/giphy.gif" alt="do_it" style="width: 100%; height: auto;">
+**🤔 Why Do We Care About Median?**
+- The median shows us the "middle" value that splits our data in half!
+- Other examples of using **Median**:
+    - 🏠 **House Prices:** When some houses cost millions and others cost thousands, median gives a better "typical" price than mean
+    - 🍎 **Test Scores:** Median helps teachers see how the "middle" student performed, not affected by super high or low scores. This helps teachers to see how well the class in general understands a new concept.
+
+**🤔 Why Do We Care About Mode?**
+- The mode tells us what happens most often - the most popular choice!
+- Other examples of using **Mode**:
+    - 👕 **T-Shirt Sizes:** Stores need to know which size sells most (mode) to stock the right amounts
+    - 🍦 **Ice Cream Flavors:** Ice cream shops track which flavor is ordered most often to plan their inventory
+
+<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMWpsYTV5ZmFvb2ZnbWJ5Njhsb3JwajZxeXJ2ZnpxOXFzNW5lODhmbSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/VgSjnwSoqiPjRRIJ1F/giphy.gif" alt="do_it" style="width: 60%; height: auto;">
 
 ## 1. Distribution Detective Mission 🔍
 *Duration: 35 minutes*
