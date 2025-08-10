@@ -21,74 +21,71 @@ library(ggplot2)  # For beautiful visualizations
 library(dplyr)    # For data cleaning and manipulation
 ```
 
-## 🧹 Step 2: Load and Clean the Data
+## 🧹 Step 2: Set Parameters and Load Round 1 Data
 
-```{r load-data}
-# 💡 Load the candy count data from both rounds
-# Make sure these CSV files are in your datasets folder!
+```{r set-parameters}
+# 🎯 Set the maximum number of candies possible in each bag
+MAX_CANDIES_PER_BAG <- 10  # Change this if needed!
+
+# 🏰 Set the safety threshold (80% or more means SAFE)
+SAFETY_THRESHOLD <- 80
+
+cat("🎃 Maximum candies per bag:", MAX_CANDIES_PER_BAG, "\n")
+cat("🛡️ Safety threshold:", SAFETY_THRESHOLD, "% (>= this percentage means SAFE)\n")
+```
+
+```{r load-round1}
+# 💡 Load Round 1 candy count data
+# Make sure this CSV file is in your datasets folder!
 
 # Round 1 data (replace with your actual file name)
 #round1_data <- read.csv("../datasets/candy_round1.csv")
 round1_data <- read.csv("docs/day04/datasets/candy_round1.csv")
 
-# Round 2 data (replace with your actual file name)  
-#round2_data <- read.csv("../datasets/candy_round2.csv")
-round2_data <- read.csv("docs/day04/datasets/candy_round2.csv")
-
 # Let's peek at our data structure
 cat("🔍 Round 1 Data Structure:\n")
 head(round1_data)
-
-cat("\n🔍 Round 2 Data Structure:\n")
-head(round2_data)
 ```
 
-```{r clean-data}
-# 🧹 Clean the data - remove any test entries and fix data types
+```{r clean-round1}
+# 🧹 Clean Round 1 data - use only columns 2, 3, 4 and clean data types
 
 # Function to clean candy data
 clean_candy_data <- function(data, round_name) {
+  # Select only columns 2, 3, 4 and rename them
   cleaned <- data %>%
-    # Remove test entries (like "test" in candy count)
-    filter(!grepl("test|Test|TEST", .data[[colnames(data)[3]]])) %>%
-    # Convert candy count to numeric
+    select(
+      wizard_name = 2,      # Column 2: wizard name
+      candy_count_raw = 3,  # Column 3: candy count
+      decision = 4          # Column 4: decision
+    ) %>%
+    # Convert candy count to numeric and clean invalid entries
     mutate(
-      candy_count = as.numeric(.data[[colnames(data)[3]]]),
-      wizard_name = .data[[colnames(data)[2]]],
-      decision = .data[[colnames(data)[4]]],
-      # Calculate candy percentage (assuming 10 items per bag)
-      candy_percentage = .data[["candy_count"]] / 10 * 100,
+      candy_count = as.numeric(candy_count_raw),
       round = round_name
     ) %>%
-    # Remove rows with invalid candy counts
-    filter(!is.na(.data[["candy_count"]]), .data[["candy_count"]] >= 0, .data[["candy_count"]] <= 10) %>%
+    # Remove rows with invalid candy counts (NA, negative, or above maximum)
+    filter(
+      !is.na(candy_count), 
+      candy_count >= 0, 
+      candy_count <= MAX_CANDIES_PER_BAG
+    ) %>%
+    # Calculate candy percentage
+    mutate(
+      candy_percentage = candy_count / MAX_CANDIES_PER_BAG * 100
+    ) %>%
     # Keep only the columns we need
-    select(.data[["wizard_name"]], .data[["candy_count"]], .data[["candy_percentage"]], .data[["decision"]], .data[["round"]])
+    select(wizard_name, candy_count, candy_percentage, decision, round)
   
   return(cleaned)
 }
 
-# Clean both datasets
+# Clean Round 1 dataset
 round1_clean <- clean_candy_data(round1_data, "Round 1")
-round2_clean <- clean_candy_data(round2_data, "Round 2")
 
-cat("✨ Cleaned Data Summary:\n")
-cat("Round 1 wizards:", nrow(round1_clean), "\n")
-cat("Round 2 wizards:", nrow(round2_clean), "\n")
-```
-
-## 🏆 Step 3: Set the True Population Parameter
-
-```{r set-parameters}
-# 🎯 Set the TRUE candy percentage for the Enchanted Forest Neighborhood
-# You can change this value based on what the instructor set!
-TRUE_CANDY_PERCENTAGE <- 70  # Change this if needed!
-
-# 🏰 Determine the correct answer based on the 80% safety threshold
-CORRECT_ANSWER <- ifelse(TRUE_CANDY_PERCENTAGE >= 80, "SAFE", "CURSED")
-
-cat("🔮 TRUE candy percentage in the neighborhood:", TRUE_CANDY_PERCENTAGE, "%\n")
-cat("🏆 CORRECT answer should be:", CORRECT_ANSWER, "\n")
+cat("✨ Round 1 Cleaned Data Summary:\n")
+cat("Total wizards:", nrow(round1_clean), "\n")
+cat("Valid candy counts range:", min(round1_clean$candy_count), "to", max(round1_clean$candy_count), "\n")
 ```
 
 ## 📈 Step 4: Round 1 Analysis

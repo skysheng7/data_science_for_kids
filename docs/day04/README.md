@@ -220,7 +220,7 @@ If the true percentage of dragons in the forest is 30%, and you take 100 differe
 
 > 🎉 Good News! The magical council has prepared more "Time Crystal Bag" for us!
 
-![candy](../../images/candy.png)
+![candy2](../../images/candy2.png)
 
 **🪄 You will get:**
 
