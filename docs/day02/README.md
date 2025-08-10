@@ -121,6 +121,8 @@ for (number in 1:10){
 - **Day 1:** We used `.R` files - just plain code
 - **Day 2+:** We use `.Rmd` files - code + beautiful formatting + notes all in one!
 
+![rmd file](../../images/markdown.png)
+
 ##### 🎯 Key Parts of .Rmd Files:
 
 **1. Text/Paragraphs** 📝
