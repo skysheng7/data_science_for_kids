@@ -133,56 +133,95 @@ Just like how people can be tall, short, or in-between, data comes in different 
 ![skewness file](../../images/distribution.png)
 
 ## 3. The Great Sampling Adventure 🎲
-*Duration: 70 minutes*
+*Duration: 65 minutes*
 
 ### 3.1 Understanding Populations vs Samples
-*Duration: 10 minutes*
+*Duration: 5 minutes*
 
 💡 **The Big Picture:**
 Imagine you want to know what percentage of creatures in the entire Enchanted Forest are dragons, but you can't count all million creatures! So you explore small areas and use those to make educated guesses.
 
+<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExd3c2ajdtcjhxY2lqZ3Ribm02eTh1cGxlaDl3b21jcmFpODZrZGIybiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/vBo48HVy3uVGM/giphy.gif" alt="dragon" style="width: 100%; height: auto;">
+
 **🌲 Population** = All creatures in the entire Enchanted Forest (everything we want to know about)
-**🔍 Sample** = The creatures we find in one small area (the small group we actually study)  
-**📊 Statistic** = Something we calculate from our sample (like "30% of creatures in our sample are dragons")
+**🔍 Sample** = The creatures we find in one small area (the small group we actually study)
+**🎯 Parameter** = The true characteristic of the entire population (like "exactly 30% of all forest creatures are dragons")
+**📊 Statistic** = Something we calculate from our sample (like "25% of creatures in our sample are dragons")
 **🎯 Inference** = Using our sample to make conclusions about the whole population, knowing how uncertain we are
 
 ### 3.2 Game 1: The Enchanted Halloween Neighborhood Mystery 🎃
-*Duration: 25 minutes*
+*Duration: 20 minutes*
 
-#### 🎈 Activity: Statistical Wizards Save Halloween
+#### 3.2.1 🎈 Activity: Statistical Wizards Save Halloween
 *Teaching Concept: Sampling Distribution*
 
 **📖 The Story**
-The Mystical Council of Halloween has received reports that the Shadow Sorcerer has been cursing neighborhoods, turning precious candies into worthless shadow stones! As young Statistical Wizards, your mission is to determine if the **Whispering Willows Neighborhood** is safe for trick-or-treating.
+The Mgaic Council of Halloween has received reports that the Shadow Monster has been cursing neighborhoods, turning precious candies into worthless shadow stones! As young Statistical Wizards, your mission is to determine if the **Enchanted Forest Neighborhood** is safe for trick-or-treating.
 
-**⚡ The Challenge:** The neighborhood has a magical protection spell - if it contains 80% or more real candies (not shadow stones), it's safe to visit. But beware! You only have **5 minutes of magical sight** to examine your sample before the spell fades.
+**⚡ The Challenge:** The neighborhood has a magical protection spell - if it contains 80% or more real candies (not shadow stones), it's safe to visit. But beware! You only have **3 minutes of magical sight** to examine your sample before the spell fades.
 
-**🧙‍♀️ Materials Needed:**
-- Paper bags (opaque) containing 10 items each
-- Mix of wrapped candies and small rocks/stones
-- Timer set to 5 minutes
-- Google Form for data collection
-- "Statistical Wizard" badges/hats (optional but fun!)
+**🧙‍♀️ The Mgaic Council Has Prepared:**
+- "Time Crystal Bag" containing 10 items each (Mix of wrapped candies and shadow stones)
+- Timer will be set to 3 minutes for **magical sighting**
+- Magical google Form for data collection
+    - URL: [https://forms.gle/pVVK2zBVovA1637Z9](https://forms.gle/pVVK2zBVovA1637Z9)
+    - Enter "how many candies are in your bag" after you finish counting
 
-**🎮 Game Setup:**
-- Each child gets one "Time Crystal Bag" containing 10 items
-- The true population parameter: exactly 70% candies (so some will think it's safe, others won't!)
-- Round 1: Single sample (n=10)
-- Round 2: Triple sample (n=30) - each child gets 2 additional bags
+**🪄 You will get:**
+- Everyone gets one "Time Crystal Bag" containing 10 items
 
 **⚡ The Magic Rules:**
 1. **Incantation Phase:** Kids chant "Statistical powers, reveal the truth!" before opening their bags
 2. **Counting Phase:** 5 minutes to count candies vs. shadow stones
 3. **Decision Phase:** Each wizard declares if they think the neighborhood is "SAFE" or "CURSED"
-4. **Data Crystal Phase:** Enter candy count into the magical Google Form
-5. **Revelation Phase:** Show the sampling distribution plot - watch their amazement as the magic of statistics unfolds!
-
-**🏆 Rewards & Competition:**
-- **Prediction Points:** Kids who correctly predict "CURSED" (since 70% < 80%) earn **EXTRA CANDY!**
-- **Accuracy Awards:** Those with estimates closest to the true 70% get **BONUS TREATS!**
-- **Team Spirit:** Celebrate how their combined wisdom reveals the truth - everyone gets a small candy for participating!
+4. **Data Crystal Phase:** Enter candy count, and your decision into the magical Google Form: [https://forms.gle/pVVK2zBVovA1637Z9](https://forms.gle/pVVK2zBVovA1637Z9)
 
 💡 **The Magic Discovery:** Different samples give different results! This is called **sampling variability** - and it's totally normal!
+
+<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnV0YzFleHFjNjMyemxzc2M5emkwZTl6cmMyeTl5NW1sYWFsZnZzMSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/50WoQ8JdjyqzhxpBjP/giphy.gif" alt="surprise" style="width: 100%; height: auto;">
+
+
+#### 3.2.2 💡 Pro Tips: Understanding Sampling Magic
+*Duration: 5 minutes*
+
+**🎯 What is a Sampling Distribution?**
+Remember our candy bag game? Imagine if 100 different kids each got their own "Time Crystal Bag" with 10 items from the same magical neighborhood. Each kid counts their candies and gets a different result - maybe 6 candies, 8 candies, 7 candies, etc. If we collected ALL 100 results and made a graph showing how many kids got 6 candies, how many got 7, etc., that graph is called a **sampling distribution**! It shows us the pattern of what happens when **lots of samples** are taken from the same **population**.
+
+**📊 What is Spread (Variability)?**
+Spread tells us how "spread out" or scattered our data points are:
+- **Small spread**: All your data points are close together (like 28%, 30%, 32% candies)
+- **Large spread**: Your data points are far apart (like 15%, 30%, 45% candies)
+- **Magic Rule**: Larger samples = smaller spread = more reliable results!
+
+**🧮 What Does the Mean of the Sampling Distribution Tell Us?**
+Here's the coolest part about our candy bag game! Let's say the magical neighborhood REALLY has 80% candies (that's the truth). If 100 kids each count their bags, some might get 6 candies, some 8, some 7, etc. But here's the magic: if you add up ALL their candy counts and find the average, you'll get very close to 8 candies (which equals 80%)! Even though each kid got different results, when we combine everyone's results, we get closer to the truth about the neighborhood!
+
+**🔍 Real-Life Example:**
+If the true percentage of dragons in the forest is 30%, and you take 100 different samples:
+- Some samples might give you 25% dragons
+- Some might give you 35% dragons  
+- But the AVERAGE of all 100 sample percentages will be very close to 30%!
+
+<img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3NW9pN2MxdGF6Y25jcXRtdml6Y3RpMmlsYmpxaTJ6YmFiam1ueXUwNyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/V6fMm9TDwdb5K7yjt8/giphy.gif" alt="" style="width: 100%; height: auto;">
+
+#### 3.2.3 🎈 Activity: Statistical Wizards Save Halloween - Round 2!!
+*Duration: 20 minutes*
+
+> 🎉 Good News! The magical council has prepared more "Time Crystal Bag" for us!
+
+**🪄 You will get:**
+- Everyone gets 2 more "Time Crystal Bag"
+
+**⚡ The Magic Rules:**
+1. **Incantation Phase:** Kids chant "Statistical powers, reveal the truth!" before opening their bags
+2. **Counting Phase:** 5 minutes to count candies vs. shadow stones
+3. **Decision Phase:** Each wizard declares if they think the neighborhood is "SAFE" or "CURSED"
+4. **Data Crystal Phase:** Enter candy count, and your decision into the magical Google Form: [https://forms.gle/dwMLreYBN4CHmWwh8](https://forms.gle/dwMLreYBN4CHmWwh8)
+
+**🏆 Rewards & Competition:**
+- **Prediction Points:** Kids who make the right prediction earn **EXTRA CANDY!**
+
+<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWxsZXN1NTJyaXYwejNsbDEwNHlocjA3cWdqemRibnVuZ3B0YTBzMCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/3oz8xLZ1qiYR43jYE8/giphy.gif" alt="rabbit_dance" style="width: 60%; height: auto;">
 
 ### Spell 2: Digital Sampling Magic
 *Duration: 15 minutes*
