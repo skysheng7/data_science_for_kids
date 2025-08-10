@@ -23,7 +23,7 @@ head(creatures)
 
 # Create a histogram of dragon power
 ggplot(creatures, aes(x = dragon_power_normal)) +
-  geom_histogram(bins = 15, fill = "red", color = "black", alpha = 0.7) +
+  geom_histogram(bins = 15, fill = "#48c33f", color = "black", alpha = 0.7) +
   labs(title = "🐉 Dragon Power Distribution (Symmetrical)", 
        x = "Dragon Power Level", 
        y = "Number of Dragons") +

@@ -123,12 +123,13 @@ Just like how people can be tall, short, or in-between, data comes in different 
 2. Which creature type shows the biggest difference between mean and median?
 3. When data is skewed, which is better to use: mean or median?
 
+<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbzNmeGFuMjFheDE1aHl2cWUwcGFzamllY255bjM2YXFvMzIwajVmZiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/QontxdcIsa2iI/giphy.gif" alt="dragon" style="width: 60%; height: auto;">
+
 💡 **Detective Rules:**
 - **Symmetrical data:** Mean ≈ Median (use either one!)
 - **Skewed data:** Median is often more "typical" than mean
 - **Outliers:** Can pull the mean away from where most data sits
 
-<img src="PLACEHOLDER_GIF_URL" alt="Kids analyzing different distribution shapes" style="width: 100%; height: auto;">
 
 ## 2. The Great Sampling Adventure 🎲
 *Duration: 40 minutes*

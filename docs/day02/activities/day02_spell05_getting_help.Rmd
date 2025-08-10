@@ -1,0 +1,73 @@
+---
+title: "🔮 Day 2 - Spell 5: Getting Help with the Magic `?` and `??`"
+output: html_document
+---
+
+---
+
+## 🎯 Challenge 1: Explore the print function with ?
+
+```{r eval=FALSE}
+?print
+```
+
+Expected: A help page will show up with:
+- Description: What print() does
+- Usage: How to use it  
+- Examples: Code you can try!
+
+---
+
+## 🎯 Challenge 2: Get help with paste
+
+```{r eval=FALSE}
+?paste
+```
+
+Expected: Help documentation explaining how paste() combines strings
+
+---
+
+## 🎯 Challenge 3: Try the super search with ??
+What if you don't know the exact function name? Use ?? to search!
+
+```{r eval=FALSE}
+??plotting
+```
+
+Expected: A list of ALL functions related to plotting!
+This is like asking "Show me everything about plotting"
+
+```{r eval=FALSE}
+??statistics
+```
+
+Expected: A list of functions related to statistics
+
+---
+
+## 🎯 Challenge 4: Compare ? vs ??
+Try both and see the difference!
+
+```{r eval=FALSE}
+?plot         # Specific help for plot function
+??plot        # All functions related to "plot"
+```
+
+💡 Pro Tip: 
+- `?` = Get help for ONE specific function (like asking about a specific spell)
+- `??` = Search for ALL functions related to a topic (like asking "show me all fire spells")
+
+---
+
+## ✨ Challenge: Pick 3 functions you've learned and explore their help pages
+Write down one new thing you learned about each function:
+
+**Function 1:** _______________  
+**New thing I learned:** _______________
+
+**Function 2:** _______________  
+**New thing I learned:** _______________
+
+**Function 3:** _______________  
+**New thing I learned:** _______________

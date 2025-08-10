@@ -1,24 +1,34 @@
-# 🔮 Day 3 - Spell 8C: Team Project - Creature Sightings Mystery (uses creature_sightings.csv)
+---
+title: "🔮 Day 3 - Spell 8C: Team Project - Creature Sightings Mystery (uses creature_sightings.csv)"
+output: html_document
+---
 
-########################################################
-# 🧰 Load tools and data
+---
 
+## 🧰 Load tools and data
+
+```{r}
 library(dplyr)
 library(ggplot2)
 creatures_data <- read.csv("../datasets/creature_sightings.csv")
 
 print("🔍 Evidence loaded from creature_sightings.csv")
 head(creatures_data)
+```
 
-########################################################
-# 🎯 Your missions (pick one or more)
-# 1) Which location has the most creature sightings?
-# 2) What's the rarest creature type (lowest average rarity_score)?
-# 3) What time of the day would you most likely to encounter a creature?
-# 4) Is there a relationship between rarity score and photographer level? (scatter plot)
+---
 
-########################################################
-# 1) Which location has the most creature sightings?
+## 🎯 Your missions (pick one or more)
+1) Which location has the most creature sightings?
+2) What's the rarest creature type (lowest average rarity_score)?
+3) What time of the day would you most likely to encounter a creature?
+4) Is there a relationship between rarity score and photographer level? (scatter plot)
+
+---
+
+## 1) Which location has the most creature sightings?
+
+```{r eval=FALSE}
 # TODO: Fill in the ... below to solve the mysteries!
 
 # Count by location
@@ -38,10 +48,13 @@ location_plot <- ggplot(by_location, aes(x = location, y = ...)) +
         axis.text = element_text(size = 19),
         axis.text.x = element_text(angle = 60, hjust = 1))
 print(location_plot)
+```
 
-########################################################
-# 2) What's the rarest creature type (lowest average rarity_score)
+---
 
+## 2) What's the rarest creature type (lowest average rarity_score)
+
+```{r eval=FALSE}
 # TODO: Fill in the ... below to solve the mysteries!
 
 # Rarest creature by average rarity score 
@@ -61,10 +74,13 @@ rare_plot <- ggplot(rare_by_type, aes(x = creature_type, y = average_rarity)) +
         axis.text = element_text(size = 19),
         axis.text.x = element_text(angle = 60, hjust = 1))
 print(rare_plot)
+```
 
-########################################################
-# 3) What time of the day would you most likely to encounter a creature?
+---
 
+## 3) What time of the day would you most likely to encounter a creature?
+
+```{r eval=FALSE}
 # TODO: Fill in the ... below to solve the mysteries!
 
 # Count by time of day
@@ -84,10 +100,13 @@ time_plot <- ggplot(by_time, aes(x = time_of_day, y = ...)) +
         axis.text = element_text(size = 19),
         axis.text.x = element_text(angle = 60, hjust = 1))
 print(time_plot)
+```
 
-########################################################
-# 4) Is there a relationship between rarity score and photographer level? (scatter plot)
+---
 
+## 4) Is there a relationship between rarity score and photographer level? (scatter plot)
+
+```{r eval=FALSE}
 # TODO: Fill in the ... below to solve the mysteries!
 
 # Create scatter plot
@@ -102,5 +121,4 @@ scatter_plot <- ggplot(creatures_data, aes(x = ..., y = ...)) +
         axis.title = element_text(size = 18),
         axis.text = element_text(size = 19))
 print(scatter_plot)
-
-
+```

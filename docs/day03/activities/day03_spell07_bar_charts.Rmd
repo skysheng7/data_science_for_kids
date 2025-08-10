@@ -1,32 +1,44 @@
-# 🔮 Day 3 - Spell 7: Bar Chart Magic
+---
+title: "🔮 Day 3 - Spell 7: Bar Chart Magic"
+output: html_document
+---
 
-# Compare different groups and see who wins!
-# Bar charts are perfect for competitions and comparisons
+Compare different groups and see who wins!
+Bar charts are perfect for competitions and comparisons
 
-########################################################
-# Step 1: Load tools and data
+---
 
+## Step 1: Load tools and data
+
+```{r}
 library(ggplot2)
 library(dplyr)
 creature_data <- read.csv("../datasets/creatures.csv")
 
 print("🏆 Ready for the creature competition!")
+```
 
-########################################################
-# Step 2: Understanding Bar Charts
+---
 
-# 💡 What is a Bar Chart?
-# It's like having a competition where each bar shows how many creatures each team has
-# Longer bars win! Perfect for comparing different groups
-# Like comparing how many red creatures vs blue creatures vs green creatures you have
+## Step 2: Understanding Bar Charts
 
+💡 **What is a Bar Chart?**
+It's like having a competition where each bar shows how many creatures each team has
+Longer bars win! Perfect for comparing different groups
+Like comparing how many red creatures vs blue creatures vs green creatures you have
+
+```{r}
 print("🎯 Let's count our creature types:")
 print(table(creature_data$creature_type))
+```
 
-########################################################
-# Step 3: Create your first bar chart
+---
 
-# Count how many of each creature type we have
+## Step 3: Create your first bar chart
+
+Count how many of each creature type we have
+
+```{r}
 creature_counts <- creature_data %>%
   group_by(creature_type) %>%
   summarize(total = n())
@@ -47,11 +59,15 @@ creature_bar_chart <- ggplot(creature_counts, aes(x = creature_type, y = total))
         axis.text = element_text(size = 19))
 
 print(creature_bar_chart)
+```
 
-########################################################
-# Step 4: Compare average magic levels
+---
 
-# Which creature type has the highest average magic?
+## Step 4: Compare average magic levels
+
+Which creature type has the highest average magic?
+
+```{r}
 magic_by_type <- creature_data %>%
   group_by(creature_type) %>%
   summarize(average_magic = mean(magic_power))
@@ -71,13 +87,15 @@ magic_bar_chart <- ggplot(magic_by_type, aes(x = creature_type, y = average_magi
         axis.text = element_text(size = 19))
 
 print(magic_bar_chart)
+```
 
+---
 
-########################################################
-# 🎈 Your turn to compete!
+## 🎈 Your turn to compete!
 
-# Challenge 1: Create a bar chart showing the average age
-# for each creature type 
+### Challenge 1: Create a bar chart showing the average age for each creature type 
+
+```{r eval=FALSE}
 # YOUR CODE HERE:
 age_totals <- creature_data %>%
   group_by(creature_type) %>%
@@ -93,11 +111,11 @@ age_bar_chart <- ggplot(age_totals, aes(x = creature_type, y = average_age)) +
         plot.title = element_text(size = 20),
         axis.title = element_text(size = 18),
         axis.text = element_text(size = 19))
+```
 
-########################################################
-# 💡 Memory Tip:
-# geom_col() creates bars for comparisons
-# group_by() + summarize() prepares data for bar charts
-# fill = color inside bars
-# Bars show amounts - longer bars = more of something
-# Great for answering "which group has the most?"
+## 💡 Memory Tip:
+- geom_col() creates bars for comparisons
+- group_by() + summarize() prepares data for bar charts
+- fill = color inside bars
+- Bars show amounts - longer bars = more of something
+- Great for answering "which group has the most?"

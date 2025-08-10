@@ -160,7 +160,7 @@ If you're currently in the `giants` folder and want to access the  `unicorn_data
 
 #### 3.1.4 **Our own magical creature data:**
 
-📁 **Find this spell in Posit Cloud:** Look for the file `day03_spell01_loading_data.R` in your project files!
+📁 **Find this spell in Posit Cloud:** Look for the file `day03_spell01_loading_data.Rmd` in your project files!
 
 ```R
 # Step 1: Load the treasure chest (read the data)
@@ -211,7 +211,7 @@ dim(creatures_raw)   # how many rows and how many columns?
 
 <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExeDZ2ZmlkM3E1ZW82NmVsMWl3dnlyNTQ5ZzRxdWZsOWdldTQ5NmI1NSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/a1QLZUUtCcgyA/giphy.gif" alt="stitch_hi" style="width: 70%; height: auto;">
 
-📁 **Find this spell in Posit Cloud:** Look for the file `day03_spell02_data_wrangling.R` in your project files!
+📁 **Find this spell in Posit Cloud:** Look for the file `day03_spell02_data_wrangling.Rmd` in your project files!
 
 ```R
 # Load our data toolbox
@@ -267,7 +267,7 @@ The `slice()` spell picks rows by their position in the table. It’s like choos
 
 🎈 **Activity: Sorting Creatures into Teams**
 
-📁 **Find this spell in Posit Cloud:** Look for the file `day03_spell03_grouping.R` in your project files!
+📁 **Find this spell in Posit Cloud:** Look for the file `day03_spell03_grouping.Rmd` in your project files!
 
 
 ```R
@@ -316,7 +316,7 @@ creatures_enhanced <- mutate(creature_data,
 🎈 **Activity: Chaining Commands Like Magic**
 
 
-📁 **Find this spell in Posit Cloud:** Look for the file `day03_spell04_piping.R` in your project files!
+📁 **Find this spell in Posit Cloud:** Look for the file `day03_spell04_piping.Rmd` in your project files!
 
 ```R
 # Without a pipe, you need lots of steps:
@@ -365,7 +365,7 @@ Think of it like cooking a meal:
 #### 5.1.1 **💡 What is a Histogram?**
 A histogram is a picture that shows how your numbers are spread out. Imagine sorting creature ages into boxes (called bins): 0–10, 10–20, 20–30, and so on. Each bar tells you how many creatures are in each box. The bars touch because ages go in order with no gaps. This helps you see the overall shape — are most creatures young, old, or in-between?
 
-📁 **Find this spell in Posit Cloud:** Look for the file `day03_spell05_histograms.R` in your project files!
+📁 **Find this spell in Posit Cloud:** Look for the file `day03_spell05_histograms.Rmd` in your project files!
 
 ```R
 library(ggplot2)
@@ -386,7 +386,7 @@ ggplot(creature_data, aes(x = creature_age)) +
 #### 5.2.1 **💡 What is a Scatter Plot?**
 A scatter plot is the perfect tool for a relationship detective! It helps you see if two things are connected. For example, does a creature who is older have more magic power? Each dot on the plot represents one creature, showing both their age and their magic level. If the dots form a pattern (like going up and to the right), it suggests a relationship!
 
-📁 **Find this spell in Posit Cloud:** Look for the file `day03_spell06_scatter_plots.R` in your project files!
+📁 **Find this spell in Posit Cloud:** Look for the file `day03_spell06_scatter_plots.Rmd` in your project files!
 
 ```R
 # Look for a relationship between age and magic power
@@ -411,7 +411,7 @@ ggplot(creature_data, aes(x = creature_age, y = magic_power)) +
 A bar chart is perfect for comparing different groups (categorical data). Each bar represents a group, and its height shows the count or value. It makes it super easy to see which group is the biggest! Which type of magical creature is most popular? A bar chart will tell you. 
 
 
-📁 **Find this spell in Posit Cloud:** Look for the file `day03_spell07_bar_charts.R` in your project files!
+📁 **Find this spell in Posit Cloud:** Look for the file `day03_spell07_bar_charts.Rmd` in your project files!
 
 ```R
 # Count each type of creature first
@@ -490,11 +490,11 @@ Here is another visualization that is more properly plotted, there is barely any
 ### 6.1 Spell 8: Data Mystery Solving
 *Duration: 35 minutes*
 
-📁 **Find this spell in Posit Cloud:** Start with `day03_spell08_team_project.R` (overview), then open ONE of:
-- `day03_spell08A_creatures_project.R` (uses `creatures.csv`)
-- `day03_spell08B_magical_pets_project.R` (uses `magical_pets.csv`)
-- `day03_spell08C_creature_sightings_project.R` (uses `creature_sightings.csv`)
-- `day03_spell08D_magic_school_project.R` (uses `magic_school_grades.csv`)
+📁 **Find this spell in Posit Cloud:** Start with `day03_spell08_team_project.Rmd` (overview), then open ONE of:
+- `day03_spell08A_creatures_project.Rmd` (uses `creatures.csv`)
+- `day03_spell08B_magical_pets_project.Rmd` (uses `magical_pets.csv`)
+- `day03_spell08C_creature_sightings_project.Rmd` (uses `creature_sightings.csv`)
+- `day03_spell08D_magic_school_project.Rmd` (uses `magic_school_grades.csv`)
 
 #### 6.1.1 Activity: Partner Data Investigation
 
@@ -538,7 +538,8 @@ Work with a partner to become data detectives! Choose one or many mysteries to s
 - `ncol(data)` counts how many columns (how many characteristics per creature)
 - `dim(data)` counts both how many rows (first number), and how many columns (second number)
 - Always check your data after loading it!
-- Use relative paths like `"datasets/creatures.csv"` so your code works on any computer.
+- Use relative paths like `"datasets/creatures.csv"` so your code works on any computer
+- `..` means "go up one level" to the parent folder from where you are currently located
 
 ### 7.2 Data Wrangling with dplyr
 - `library(dplyr)` loads an open-source R package with code written by someone else (don't forget this!).

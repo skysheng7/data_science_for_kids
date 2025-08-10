@@ -106,12 +106,51 @@ for (number in 1:10){
 
 <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3djRrMWlzbnBzZGkzY3d2N3Rld2RpeTF6aGdkdWp0Z29pbGhueDV2eiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/VbIAPdxKhv9jG/giphy.gif" alt="ginger" style="width: 100%; height: auto;">
 
+
 ### 2.1 Spell 1: Basic Loop Magic
 *Duration: 15 minutes*
 
-📁 **Find this spell in Posit Cloud:** Look for the file `day02_spell01_basic_loops.R` in your project files!
+📁 **Find this spell in Posit Cloud:** Look for the file `day02_spell01_basic_loops.Rmd` in your project files!
 
-Let's learn how to make R repeat actions automatically! We'll start by printing messages and watching our counter change.
+#### 2.1.1 🔮 R Markdown Files (.Rmd)
+
+🎉 **Big upgrade!** Yesterday we used `.R` files, but today we're using `.Rmd` files - they're like super-powered R files!
+
+##### 💡 What is an R Markdown (.Rmd) file?
+- **Think of it like a magic notebook** where you can mix your hand-written notes with code!
+- **Day 1:** We used `.R` files - just plain code
+- **Day 2+:** We use `.Rmd` files - code + beautiful formatting + notes all in one!
+
+##### 🎯 Key Parts of .Rmd Files:
+
+**1. Text/Paragraphs** 📝
+- Just type normally like this sentence
+- Use `#` for big titles, `##` for smaller titles
+- Use `**bold**` or `*italic*` for emphasis
+
+**2. Code Chunks** 💻
+- Code lives inside special "fences" that look like this:
+```
+```{r}
+print("This is R code!")
+```
+- Click the ▶️ green arrow to run just that chunk
+- You can run one piece at a time instead of the whole file!
+
+**3. Two Ways to View Your File:**
+- **📝 `Source` Mode:** See the raw code and text (like peeking behind the magic curtain)
+- **👁️ `Visual` Mode:** See it formatted nicely (like the final magic show)
+- Click the buttons at the top left to switch between them!
+
+**4. The `Knit` Button** 🧶
+- Turns your .Rmd file into a beautiful HTML webpage or PDF file
+- Like magic - combines all your code, results, and explanation notes into one pretty document
+- Try it later to see your work as a professional report!
+
+Let's use `.Rmd` files to learn how to make R repeat actions automatically! We'll start by printing messages and watching our counter change.
+
+<img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3bHRmM2IzM2FqcWo5OWVnd3A3NnIyOGhkY2U4c2s2YnhmN2hpamJ4byZlcD12MV9naWZzX3NlYXJjaCZjdD1n/MlNCRVUrm5dwTflpTo/giphy.gif" alt="repeat" style="width: 100%; height: auto;">
+
 
 #### 🎈 Activity: Printing Practice
 
@@ -175,7 +214,7 @@ Let's learn how to make R repeat actions automatically! We'll start by printing 
 ### 2.3 Spell 2: Loop Detective Challenge
 *Duration: 15 minutes*
 
-📁 **Find this spell in Posit Cloud:** Look for the file `day02_spell02_loop_debugging.R` in your project files!
+📁 **Find this spell in Posit Cloud:** Look for the file `day02_spell02_loop_debugging.Rmd` in your project files!
 
 #### 🎈 Activity: Fix the Broken Code
 
@@ -184,7 +223,7 @@ Let's learn how to make R repeat actions automatically! We'll start by printing 
 ### 2.4 Spell 3: Art with Loops
 *Duration: 20 minutes*
 
-📁 **Find this spell in Posit Cloud:** Look for the file `day02_spell03_art_with_loops.R` in your project files!
+📁 **Find this spell in Posit Cloud:** Look for the file `day02_spell03_art_with_loops.Rmd` in your project files!
 
 #### 🎈 Activity: Creative Programming Patterns
 
@@ -193,7 +232,7 @@ Let's learn how to make R repeat actions automatically! We'll start by printing 
 ### 2.5 🤯 Challenging Magic -- Spell 4: Story Scrambler Challenge (Optional)
 *Duration: 20 minutes (excluded from time in chapter 2)*
 
-📁 **Find this spell in Posit Cloud:** Look for the file `day02_spell04_story_scrambler.R` in your project files!
+📁 **Find this spell in Posit Cloud:** Look for the file `day02_spell04_story_scrambler.Rmd` in your project files!
 
 📚 **The Magic Story:** *"In the Magic Forest, a smart rabbit and a tiny dragon became friends, built a flying boat out of leaves, and sailed through the sky to save a sleepy bear cub who was stuck on a candy cloud."*
 
@@ -243,7 +282,7 @@ In R, when you don't know how something works, just type `?` or `??` for help!
 <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGtmcWw5dWZvN2VwNHhhaW80eG1wM2hld3RyOWZyYjE5empuY2RtayZlcD12MV9naWZzX3NlYXJjaCZjdD1n/NS7gPxeumewkWDOIxi/giphy.gif" alt="help" style="width: 100%; height: auto;">
 
 
-📁 **Find this spell in Posit Cloud:** Look for the file `day02_spell05_getting_help.R` in your project files!
+📁 **Find this spell in Posit Cloud:** Look for the file `day02_spell05_getting_help.Rmd` in your project files!
 
 #### 🎈 Activity: The Help Symbol
 
@@ -274,7 +313,7 @@ In R, when you don't know how something works, just type `?` or `??` for help!
 ### 3.3 Spell 6: Your First Package - ggplot2
 *Duration: 10 minutes*
 
-📁 **Find this spell in Posit Cloud:** Look for the file `day02_spell06_first_package.R` in your project files!
+📁 **Find this spell in Posit Cloud:** Look for the file `day02_spell06_first_package.Rmd` in your project files!
 
 #### 🎈 Activity: Installing Your First Magic Tool
 
@@ -309,7 +348,7 @@ library(ggplot2)
 ### 3.4 Spell 7: Your First Plot (No Data Yet!)
 *Duration: 10 minutes*
 
-📁 **Find this spell in Posit Cloud:** Look for the file `day02_spell07_first_plot.R` in your project files!
+📁 **Find this spell in Posit Cloud:** Look for the file `day02_spell07_first_plot.Rmd` in your project files!
 
 #### 🎈 Activity: Drawing Without Data
 
@@ -343,7 +382,7 @@ ggplot() +
 
 🗂️ **What is a Dataframe?** Think of it like a super simple spreadsheet - it has rows and columns, just like a table you might make for organizing your Pokemon cards or book collection!
 
-📁 **Find this spell in Posit Cloud:** Look for the file `day02_spell08_dataframes.R` in your project files!
+📁 **Find this spell in Posit Cloud:** Look for the file `day02_spell08_dataframes.Rmd` in your project files!
 
 #### 🎈 Activity: Building Your First Data Table
 
@@ -379,7 +418,7 @@ print(pets)
 ### 4.2 Spell 9: Visualizing Your Data Magic
 *Duration: 20 minutes*
 
-📁 **Find this spell in Posit Cloud:** Look for the file `day02_spell09_visualizing_dataframes.R` in your project files!
+📁 **Find this spell in Posit Cloud:** Look for the file `day02_spell09_visualizing_dataframes.Rmd` in your project files!
 
 🎨 **Now that you've created your own dataframe in Spell 8, let's turn it into beautiful pictures!** Just like how artists use different brushes and colors, we can use ggplot2 to make our data look amazing in many different ways!
 
@@ -402,6 +441,14 @@ print(pets)
 <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3MnhxYmI1cm95aGNnZ3QxdWFkejN1a2xuazB5eHV1ZXByemljNzJ5OCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/oDDs67mo76beM/giphy.gif" alt="visualization" style="width: 100%; height: auto;">
 
 ## 5. 📋 Pro Tips Cheatsheet
+
+### R Markdown Files (.Rmd)
+- `.Rmd` is like a magic notebook: where you mix hand-written notes with code
+- Code chunks: Put R code inside special fences: ````{r}` and ````
+- Text/paragraphs: Just type normally, use `#` for titles, `**bold**` for emphasis
+- Two viewing modes: `Source` (raw code/text) vs `Visual` (formatted nicely)
+- `Knit` button: Turns your .Rmd into beautiful HTML webpage or PDF
+- Run chunks individually: Click ▶️ green arrow to run one piece at a time
 
 ### For Loops
 - Use `for (i in 1:10)` to repeat actions 10 times

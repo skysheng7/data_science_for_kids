@@ -5,13 +5,14 @@ title: Home
 
 # 🌟 Data Science for Kids Summer Camp at VISST
 
-- Location: **[Vancouver Institute for the Scholarship of Sustainability and Technology (VISST)](https://www.visst.ca/)**
-
-- Date and Time: **📅 August 11-15, 2025 (Monday-Friday) | ⏰ 1:00-4:00 PM**
-
 > *A magical 5-day journey into the world of data science for young explorers aged 10-14*
 
 Welcome to an enchanting adventure where mathematics meets magic, and data tells stories! This summer camp introduces fundamental data science concepts through hands-on activities, storytelling, and creative projects using R programming.
+
+- Location: Vancouver Institute for the Scholarship of Sustainability and Technology **[(VISST)](https://www.visst.ca/)**
+- Date and Time: 
+    - 📅 August 11-15, 2025 (Monday-Friday) 
+    - ⏰ 1:00-4:00 PM
 
 ## 👋 Meet Your Instructor
 
@@ -47,10 +48,6 @@ Welcome to an enchanting adventure where mathematics meets magic, and data tells
 - **Curiosity and creativity** (most important!)
 - **Cloud computing account**: Posit Cloud account (free)
 - **Optional**: Claude account (free)
-
-## 👩‍🏫 Meet Your Instructor
-
-[**Sky (Kehan) Sheng**](http://www.skysheng.io/) is a PhD candidate at UBC doing research in data science, AI fairness and animal welfare science. Sky is passionate about making data science and AI accessible and fun for young learners.
 
 ## 🙏 Acknowledgments
 

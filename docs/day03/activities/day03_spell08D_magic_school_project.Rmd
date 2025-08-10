@@ -1,8 +1,13 @@
-# 🔮 Day 3 - Spell 8D: Team Project - Magic School Mystery (uses magic_school_grades.csv)
+---
+title: "🔮 Day 3 - Spell 8D: Team Project - Magic School Mystery (uses magic_school_grades.csv)"
+output: html_document
+---
 
-########################################################
-# 🧰 Load tools and data
+---
 
+## 🧰 Load tools and data
+
+```{r}
 library(dplyr)
 library(ggplot2)
 library(gridExtra)
@@ -10,16 +15,20 @@ school_data <- read.csv("../datasets/magic_school_grades.csv")
 
 print("🔍 Evidence loaded from magic_school_grades.csv")
 head(school_data)
+```
 
-########################################################
-# 🎯 Your missions (pick one or more)
-# 1) What's the distribution of scores for each subject? (3 histograms)
-# 2) Do people who have a pet have better magic scores?
-# 3) Is there a relationship between potion score and flying score? (scatter plot)
+---
 
-########################################################
-# 1) What's the distribution of scores for each subject? (3 histograms)
+## 🎯 Your missions (pick one or more)
+1) What's the distribution of scores for each subject? (3 histograms)
+2) Do people who have a pet have better magic scores?
+3) Is there a relationship between potion score and flying score? (scatter plot)
 
+---
+
+## 1) What's the distribution of scores for each subject? (3 histograms)
+
+```{r}
 # TODO: Fill in the ... below to solve the mysteries!
 
 # Create 3 histograms stacked on top of each other
@@ -34,7 +43,9 @@ magic_hist <- ggplot(school_data, aes(x = magic_score)) +
         plot.title = element_text(size = 18),
         axis.title = element_text(size = 16),
         axis.text = element_text(size = 17))
+```
 
+```{r eval=FALSE}
 # Potion score
 potion_hist <- ggplot(school_data, aes(x = ...)) +
   geom_histogram(fill = "#87d31d", color = "black", alpha = 0.7) +
@@ -62,10 +73,13 @@ flying_hist <- ggplot(school_data, aes(x = ...)) +
 # Arrange the three histograms in a 3x1 grid (3 rows, 1 column)
 grid_plot <- grid.arrange(magic_hist, potion_hist, flying_hist, nrow = 3, ncol = 1)
 print(grid_plot)
+```
 
-########################################################
-# 2) Do people who have a pet have better magic scores?
+---
 
+## 2) Do people who have a pet have better magic scores?
+
+```{r}
 # TODO: Fill in the ... below to solve the mysteries!
 
 # Compare magic scores between pet owners and non-pet owners
@@ -90,7 +104,9 @@ pet_hist <- ggplot(pet_owners, aes(x = magic_score)) +
         plot.title = element_text(size = 18),
         axis.title = element_text(size = 16),
         axis.text = element_text(size = 17))
+```
 
+```{r eval=FALSE}
 # Histogram for non-pet owners
 no_pet_hist <- ggplot(non_pet_owners, aes(x = ...)) +
   geom_histogram(fill = "#ffb6c1", color = "black", alpha = 0.7) +
@@ -106,9 +122,9 @@ no_pet_hist <- ggplot(non_pet_owners, aes(x = ...)) +
 # Arrange histograms in 2x1 grid
 hist_grid <- grid.arrange(pet_hist, no_pet_hist, nrow = 2, ncol = 1)
 print(hist_grid)
+```
 
-
-
+```{r}
 # Method 2: Bar plot showing average magic scores
 avg_plot <- ggplot(pet_comparison, aes(x = has_pet, y = avg_magic, fill = has_pet)) +
   geom_col(color = "black", alpha = 0.8) +
@@ -120,10 +136,13 @@ avg_plot <- ggplot(pet_comparison, aes(x = has_pet, y = avg_magic, fill = has_pe
         axis.title = element_text(size = 16),
         axis.text = element_text(size = 17))
 print(avg_plot)
+```
 
-########################################################
-# 3) Is there a relationship between potion score and flying score? (scatter plot)
+---
 
+## 3) Is there a relationship between potion score and flying score? (scatter plot)
+
+```{r eval=FALSE}
 # TODO: Fill in the ... below to solve the mysteries!
 
 # Create scatter plot to see relationship
@@ -139,10 +158,16 @@ pf_scatter <- ggplot(school_data, aes(x = ..., y = ..., color = house)) +
         axis.title = element_text(size = 18),
         axis.text = element_text(size = 19))
 print(pf_scatter)
+```
 
-########################################################
-# ✨ Challenge (from scratch)
-# Students from which house has the best score on average?
-# Hint: Calculate overall average score for each house and compare them!
-# You'll need to use group_by(), summarize(), and maybe mutate() to create an overall score first.
+---
 
+## ✨ Challenge (from scratch)
+Students from which house has the best score on average?
+Hint: Calculate overall average score for each house and compare them!
+You'll need to use group_by(), summarize(), and maybe mutate() to create an overall score first.
+
+```{r eval=FALSE}
+# Write your code here:
+
+```

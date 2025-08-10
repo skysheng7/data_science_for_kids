@@ -1,9 +1,14 @@
-# 🔮 Day 2 - Spell 4: Story Scrambler Challenge
+---
+title: "🔮 Day 2 - Spell 4: Story Scrambler Challenge"
+output: html_document
+---
 
 # 🎈 Activity: Secret Message Encoder & Decoder
-# 🕵️ Turn yourself into a data spy! Create secret codes and decode messages!
+🕵️ Turn yourself into a data spy! Create secret codes and decode messages!
 
-# 📚 The Magic Story to scramble:
+## 📚 The Magic Story to scramble:
+
+```{r}
 original_story <- "In the Magic Forest, a smart rabbit and a tiny dragon became friends, built a flying boat out of leaves, and sailed through the sky to save a sleepy bear cub who was stuck on a candy cloud."
 
 # First, let's split the story into individual words
@@ -12,11 +17,14 @@ story_words <- unlist(strsplit(original_story, " "))
 print("🔤 Original story words:")
 print(story_words)
 print(paste("📊 Total words:", length(story_words)))
+```
 
-########################################################
-# 🎯 Challenge 1: Reverse Word Order Spy Code
-# 🔄 Like reading a sentence backwards to confuse enemies!
+---
 
+## 🎯 Challenge 1: Reverse Word Order Spy Code
+🔄 Like reading a sentence backwards to confuse enemies!
+
+```{r}
 print("\n🚀 === CHALLENGE 1: REVERSE SPY CODE ===")
 
 # Step 1: Create reversed word list
@@ -38,11 +46,14 @@ for (i in length(reversed_words):1) {
 print("\n🔓 DECODED (Original Order):")
 original_restored <- paste(original_words, collapse = " ")
 print(...)  # TODO Fill in: what should we print?
+```
 
-########################################################
-# 🎯 Challenge 2: Every-Other-Word Spy Code
-# 🔀 Mix up words by putting odd positions first, then even positions!
+---
 
+## 🎯 Challenge 2: Every-Other-Word Spy Code
+🔀 Mix up words by putting odd positions first, then even positions!
+
+```{r}
 print("\n🚀 === CHALLENGE 2: EVERY-OTHER-WORD SPY CODE ===")
 
 # Step 1: Create empty lists for odd and even positioned words
@@ -79,11 +90,14 @@ for (i in 1:max(length(odd_words), length(even_words))) {
 print("🔓 DECODED (Original Order):")
 decoded_story <- paste(decoded_words, collapse = " ")
 print(...)  # Fill in: what should we print?
+```
 
-########################################################
-# 🎮 Bonus: Try Your Own Secret Messages!
-# 🤐 Create secret codes to share with friends!
+---
 
+## 🎮 Bonus: Try Your Own Secret Messages!
+🤐 Create secret codes to share with friends!
+
+```{r}
 print("\n🎮 === BONUS: YOUR SECRET MESSAGES ===")
 
 # Try these mini stories or create your own!
@@ -100,10 +114,11 @@ my_words <- unlist(strsplit(my_secret, " "))
 # Encode using Method 1 (Reverse) or Method 2 (Every-other-word)
 # Write your encoding code here:
 
+```
 
-# 💡 Memory Tips: 
-# - length() tells you how many items are in a list
-# - %% finds remainders (i %% 2 == 1 means odd numbers)
-# - paste(words, collapse = " ") joins words back into a sentence, seperating by " "
-# - Use i:1 for backwards loops, 1:i for forward loops
-# - c() creates or adds to lists: new_list <- c(old_list, new_item)
+## 💡 Memory Tips: 
+- length() tells you how many items are in a list
+- %% finds remainders (i %% 2 == 1 means odd numbers)
+- paste(words, collapse = " ") joins words back into a sentence, seperating by " "
+- Use i:1 for backwards loops, 1:i for forward loops
+- c() creates or adds to lists: new_list <- c(old_list, new_item)

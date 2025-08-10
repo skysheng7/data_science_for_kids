@@ -1,32 +1,43 @@
-# 🔮 Day 3 - Spell 5: Histogram Magic
+---
+title: "🔮 Day 3 - Spell 5: Histogram Magic"
+output: html_document
+---
 
-# Learn to see the shape of your data!
-# Histograms show us patterns like mountains and valleys in our data
+Learn to see the shape of your data!
+Histograms show us patterns like mountains and valleys in our data
 
-########################################################
-# Step 1: Load tools and data
+---
 
+## Step 1: Load tools and data
+
+```{r}
 library(ggplot2)  # Our plotting magic toolbox
 library(dplyr)
 creature_data <- read.csv("../datasets/creatures.csv")
 
 print("🎨 Ready to paint with creature data!")
+```
 
-########################################################
-# Step 2: Understanding Histograms
+---
 
-# 💡 What is a Histogram?
-# Histogram is a bar chart that shows the distribution of a variable
-# It shows how many creatures are in each age range
-# It shows the shape of the data
+## Step 2: Understanding Histograms
 
+💡 **What is a Histogram?**
+Histogram is a bar chart that shows the distribution of a variable
+It shows how many creatures are in each age range
+It shows the shape of the data
+
+```{r}
 # Let's look at the ages of our creatures
 print("🔍 Let's explore creature ages:")
 print(creature_data$creature_age)
+```
 
-########################################################
-# Step 3: Create your first histogram
+---
 
+## Step 3: Create your first histogram
+
+```{r}
 # Show the distribution of creature ages
 age_histogram <- ggplot(creature_data, aes(x = creature_age)) +
   geom_histogram(fill = "purple", color = "black") +
@@ -40,10 +51,13 @@ age_histogram <- ggplot(creature_data, aes(x = creature_age)) +
         axis.text = element_text(size = 19))
 
 print(age_histogram)
+```
 
-########################################################
-# Step 4: Try different data
+---
 
+## Step 4: Try different data
+
+```{r}
 # Look at magic levels
 magic_histogram <- ggplot(creature_data, aes(x = magic_power)) +
   geom_histogram(fill = "gold", color = "black") +
@@ -57,10 +71,13 @@ magic_histogram <- ggplot(creature_data, aes(x = magic_power)) +
         axis.text = element_text(size = 19))
 
 print(magic_histogram)
+```
 
-########################################################
-# Step 5: Make it colorful by groups
+---
 
+## Step 5: Make it colorful by groups
+
+```{r}
 # Different colors for different creature types
 colorful_histogram <- ggplot(creature_data, aes(x = magic_power, fill = creature_type)) +
   geom_histogram(color = "black") +
@@ -75,11 +92,15 @@ colorful_histogram <- ggplot(creature_data, aes(x = magic_power, fill = creature
         axis.text = element_text(size = 19))
 
 print(colorful_histogram)
+```
 
-########################################################
-# 🎈 Your turn to create!
+---
 
-# Challenge 1: Create a histogram of ages with different colors for different creature types
+## 🎈 Your turn to create!
+
+### Challenge 1: Create a histogram of ages with different colors for different creature types
+
+```{r eval=FALSE}
 # YOUR CODE HERE:
 my_histogram <- ggplot(creature_data, aes(x = ...)) +
   geom_histogram(fill = "...", color = "...") +
@@ -91,12 +112,12 @@ my_histogram <- ggplot(creature_data, aes(x = ...)) +
         plot.title = element_text(size = 20),
         axis.title = element_text(size = 18),
         axis.text = element_text(size = 19))
+```
 
-########################################################
-# 💡 Memory Tip:
-# ggplot() starts the plot
-# aes(x = column) tells what data to use
-# geom_histogram() creates the bars
-# bins = number of bars to create
-# fill = color inside bars, color = outline color
-# labs() adds titles and labels
+## 💡 Memory Tip:
+- ggplot() starts the plot
+- aes(x = column) tells what data to use
+- geom_histogram() creates the bars
+- bins = number of bars to create
+- fill = color inside bars, color = outline color
+- labs() adds titles and labels

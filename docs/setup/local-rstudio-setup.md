@@ -56,6 +56,7 @@ install.packages(c(
   "ggplot2",      # Beautiful graphs
   "dplyr",        # Data wrangling
   "gridExtra"     # Visualization grid
+  "tidymodels"    # Machine learning models
   "knitr",        # Document creation
   "rmarkdown"     # Reports and presentations
 ))

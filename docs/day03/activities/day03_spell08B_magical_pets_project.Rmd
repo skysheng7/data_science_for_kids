@@ -1,25 +1,35 @@
-# 🔮 Day 3 - Spell 8B: Team Project - Magical Pets Mystery (uses magical_pets.csv)
+---
+title: "🔮 Day 3 - Spell 8B: Team Project - Magical Pets Mystery (uses magical_pets.csv)"
+output: html_document
+---
 
-########################################################
-# 🧰 Load tools and data
+---
 
+## 🧰 Load tools and data
+
+```{r}
 library(dplyr)
 library(ggplot2)
 pets_data <- read.csv("../datasets/magical_pets.csv")
 
 print("🔍 Evidence loaded from magical_pets.csv")
 head(pets_data)
+```
 
-########################################################
-# 🎯 Your missions (pick one or more)
-# 1) Which favorite treat is most popular among pets?
-# 2) Do pets who like that treat also tend to have higher magic levels?
-# 3) Which pet type has the highest average magic level?
-# 4) Are older pets more magical?
-# 5) What does the distribution of magic levels look like?
+---
 
-########################################################
-# 1) Which favorite treat is most popular among pets?
+## 🎯 Your missions (pick one or more)
+1) Which favorite treat is most popular among pets?
+2) Do pets who like that treat also tend to have higher magic levels?
+3) Which pet type has the highest average magic level?
+4) Are older pets more magical?
+5) What does the distribution of magic levels look like?
+
+---
+
+## 1) Which favorite treat is most popular among pets?
+
+```{r eval=FALSE}
 # TODO: Fill in the ... below to solve the mysteries!
 
 # count by favorite treat
@@ -41,10 +51,13 @@ treat_bar <- ggplot(treat_counts, aes(x = ..., y = ...)) +
         axis.text = element_text(size = 19),
         axis.text.x = element_text(angle = 60, hjust = 1))
 print(treat_bar)
+```
 
-########################################################
-# 2) Do pets who like that treat also tend to have higher magic levels?
+---
 
+## 2) Do pets who like that treat also tend to have higher magic levels?
+
+```{r eval=FALSE}
 # Average magic by favorite treat 
 # TODO: Fill in the ... below to solve the mysteries!
 treat_magic <- pets_data %>%
@@ -64,10 +77,13 @@ treat_magic_bar <- ggplot(treat_magic, aes(x = favorite_treat, y = ...)) +
         axis.text = element_text(size = 19),
         axis.text.x = element_text(angle = 60, hjust = 1))
 print(treat_magic_bar)
+```
 
-########################################################
-# 3) Which pet type has the highest average magic level?
+---
 
+## 3) Which pet type has the highest average magic level?
+
+```{r eval=FALSE}
 # Average magic by pet type 
 # TODO: Fill in the ... below to solve the mysteries!
 type_magic <- pets_data %>%
@@ -87,10 +103,13 @@ type_magic_bar <- ggplot(type_magic, aes(x = pet_type, y = average_magic)) +
         axis.text = element_text(size = 19),
         axis.text.x = element_text(angle = 60, hjust = 1))
 print(type_magic_bar)
+```
 
-########################################################
-# 4) Are older pets more magical?
+---
 
+## 4) Are older pets more magical?
+
+```{r eval=FALSE}
 # TODO: Fill in the ... below to solve the mysteries!
 pets_scatter <- ggplot(pets_data, aes(x = ..., y = ..., color = pet_type)) +
   geom_point(size = 4) +
@@ -102,10 +121,13 @@ pets_scatter <- ggplot(pets_data, aes(x = ..., y = ..., color = pet_type)) +
         axis.title = element_text(size = 18),
         axis.text = element_text(size = 19))
 print(pets_scatter)
+```
 
-########################################################
-# 5) What does the distribution of magic levels look like?
+---
 
+## 5) What does the distribution of magic levels look like?
+
+```{r eval=FALSE}
 # TODO: Fill in the ... below to solve the mysteries!
 pets_magic_hist <- ggplot(pets_data, aes(x = ...)) +
   geom_histogram(fill = "...", color = "black") +
@@ -117,3 +139,4 @@ pets_magic_hist <- ggplot(pets_data, aes(x = ...)) +
         axis.title = element_text(size = 18),
         axis.text = element_text(size = 19))
 print(pets_magic_hist)
+```
