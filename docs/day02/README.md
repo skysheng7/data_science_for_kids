@@ -134,10 +134,11 @@ for (number in 1:10){
 **2. Code Chunks** 💻
 - Click `insert` --> `Executable Cell` --> `R` to add a new paragraph block
 - Code lives inside special "fences" that look like this:
-```
+````
 ```{r}
 print("This is R code!")
 ```
+````
 - Click the ▶️ green arrow to run just that chunk
 - You can run one piece at a time instead of the whole file!
 
