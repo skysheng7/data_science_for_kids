@@ -121,7 +121,7 @@ Just like how people can be tall, short, or in-between, data comes in different 
 2. Which creature type shows the biggest difference between mean and median?
 3. When data is skewed, which is better to use: mean or median?
 
-<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbzNmeGFuMjFheDE1aHl2cWUwcGFzamllY255bjM2YXFvMzIwajVmZiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/QontxdcIsa2iI/giphy.gif" alt="dragon" style="width: 60%; height: auto;">
+<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbzNmeGFuMjFheDE1aHl2cWUwcGFzamllY255bjM2YXFvMzIwajVmZiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/QontxdcIsa2iI/giphy.gif" alt="dragon" style="width: 50%; height: auto;">
 
 💡 **Detective Rules:**
 - **Symmetrical data:** Mean ≈ Median (use either one!)
@@ -157,14 +157,17 @@ Imagine you want to know what percentage of creatures in the entire Enchanted Fo
 *Duration: 20 minutes*
 
 #### 3.2.1 🎈 Activity: Statistical Wizards Save Halloween
-*Teaching Concept: Sampling Distribution*
 
-**📖 The Story**
+**📖 The Story:**
+
 The Mgaic Council of Halloween has received reports that the Shadow Monster has been cursing neighborhoods, turning precious candies into worthless shadow stones! As young Statistical Wizards, your mission is to determine if the **Enchanted Forest Neighborhood** is safe for trick-or-treating.
 
-**⚡ The Challenge:** The neighborhood has a magical protection spell - if it contains 80% or more real candies (not shadow stones), it's safe to visit. But beware! You only have **3 minutes of magical sight** to examine your sample before the spell fades.
+**⚡ The Challenge:** 
+
+The neighborhood has a magical protection spell - if it contains 80% or more real candies (not shadow stones), it's safe to visit. But beware! You only have **3 minutes of magical sight** to examine your sample before the spell fades.
 
 **🧙‍♀️ The Mgaic Council Has Prepared:**
+
 - "Time Crystal Bag" containing 10 items each (Mix of wrapped candies and shadow stones)
 - Timer will be set to 3 minutes for **magical sighting**
 - Magical google Form for data collection
@@ -172,9 +175,11 @@ The Mgaic Council of Halloween has received reports that the Shadow Monster has 
     - Enter "how many candies are in your bag" after you finish counting
 
 **🪄 You will get:**
+
 - Everyone gets one "Time Crystal Bag" containing 10 items
 
 **⚡ The Magic Rules:**
+
 1. **Incantation Phase:** Kids chant "Statistical powers, reveal the truth!" before opening their bags
 2. **Counting Phase:** 5 minutes to count candies vs. shadow stones
 3. **Decision Phase:** Each wizard declares if they think the neighborhood is "SAFE" or "CURSED"
@@ -182,7 +187,7 @@ The Mgaic Council of Halloween has received reports that the Shadow Monster has 
 
 💡 **The Magic Discovery:** Different samples give different results! This is called **sampling variability** - and it's totally normal!
 
-<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnV0YzFleHFjNjMyemxzc2M5emkwZTl6cmMyeTl5NW1sYWFsZnZzMSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/50WoQ8JdjyqzhxpBjP/giphy.gif" alt="surprise" style="width: 100%; height: auto;">
+<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnV0YzFleHFjNjMyemxzc2M5emkwZTl6cmMyeTl5NW1sYWFsZnZzMSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/50WoQ8JdjyqzhxpBjP/giphy.gif" alt="surprise" style="width: 60%; height: auto;">
 
 
 #### 3.2.2 💡 Pro Tips: Understanding Sampling Magic
@@ -206,7 +211,7 @@ If the true percentage of dragons in the forest is 30%, and you take 100 differe
 - Some might give you 35% dragons  
 - But the AVERAGE of all 100 sample percentages will be very close to 30%!
 
-<img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3NW9pN2MxdGF6Y25jcXRtdml6Y3RpMmlsYmpxaTJ6YmFiam1ueXUwNyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/V6fMm9TDwdb5K7yjt8/giphy.gif" alt="" style="width: 100%; height: auto;">
+<img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3NW9pN2MxdGF6Y25jcXRtdml6Y3RpMmlsYmpxaTJ6YmFiam1ueXUwNyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/V6fMm9TDwdb5K7yjt8/giphy.gif" alt="" style="width: 70%; height: auto;">
 
 #### 3.2.3 🎈 Activity: Statistical Wizards Save Halloween - Round 2!!
 *Duration: 20 minutes*
@@ -214,15 +219,18 @@ If the true percentage of dragons in the forest is 30%, and you take 100 differe
 > 🎉 Good News! The magical council has prepared more "Time Crystal Bag" for us!
 
 **🪄 You will get:**
+
 - Everyone gets 2 more "Time Crystal Bag"
 
 **⚡ The Magic Rules:**
+
 1. **Incantation Phase:** Kids chant "Statistical powers, reveal the truth!" before opening their bags
 2. **Counting Phase:** 5 minutes to count candies vs. shadow stones
 3. **Decision Phase:** Each wizard declares if they think the neighborhood is "SAFE" or "CURSED"
 4. **Data Crystal Phase:** Enter candy count, and your decision into the magical Google Form: [https://forms.gle/dwMLreYBN4CHmWwh8](https://forms.gle/dwMLreYBN4CHmWwh8)
 
 **🏆 Rewards & Competition:**
+
 - **Prediction Points:** Kids who make the right prediction earn **EXTRA CANDY!**
 
 <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWxsZXN1NTJyaXYwejNsbDEwNHlocjA3cWdqemRibnVuZ3B0YTBzMCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/3oz8xLZ1qiYR43jYE8/giphy.gif" alt="rabbit_dance" style="width: 60%; height: auto;">
