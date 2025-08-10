@@ -8,7 +8,7 @@ import re
 import os
 from pathlib import Path
 
-def parse_markdown_to_notebook(md_file_path, output_file_path):
+def parse_markdown_to_notebook(md_file_path, output_file_path, remove_expected_output=False):
     """
     Convert markdown file with R code blocks to Jupyter notebook
     """
@@ -16,6 +16,17 @@ def parse_markdown_to_notebook(md_file_path, output_file_path):
     # Read the markdown file
     with open(md_file_path, 'r', encoding='utf-8') as f:
         content = f.read()
+    
+    # Remove "Expected Output:" sections if requested
+    if remove_expected_output:
+        import re
+        # Pattern to match "Expected Output:" sections
+        pattern = r'\*\*Expected Output.*?\*\*\s*\n```[rR]?\n.*?\n```'
+        content = re.sub(pattern, '', content, flags=re.DOTALL)
+        
+        # Also remove standalone Expected Output sections
+        pattern2 = r'Expected Output:\s*\n```[rR]?\n.*?\n```'
+        content = re.sub(pattern2, '', content, flags=re.DOTALL)
     
     # Initialize notebook structure
     notebook = {
@@ -107,22 +118,33 @@ def parse_markdown_to_notebook(md_file_path, output_file_path):
     print(f"📊 Created {len(notebook['cells'])} cells")
 
 def main():
-    """Main function to convert the Day 3 solutions"""
+    """Main function to convert spell solutions"""
+    import sys
     
-    # Define paths
-    md_file = "/Users/skysheng/Library/CloudStorage/OneDrive-UBC/UBC/Conferences & presentation/2025_data_science_for_kids/data_science_for_kids/docs/day03/solutions/day03_spell_solutions.md"
-    output_file = "/Users/skysheng/Library/CloudStorage/OneDrive-UBC/UBC/Conferences & presentation/2025_data_science_for_kids/data_science_for_kids/docs/day03/solutions/day03_spell_solutions.ipynb"
+    # Check command line arguments for day selection
+    if len(sys.argv) > 1:
+        day = sys.argv[1]
+    else:
+        day = "01"  # Default to day 1
+    
+    # Define paths based on day
+    base_path = "/Users/skysheng/Library/CloudStorage/OneDrive-UBC/UBC/Conferences & presentation/2025_data_science_for_kids/data_science_for_kids"
+    md_file = f"{base_path}/docs/day{day}/solutions/day{day}_spell_solutions.md"
+    output_file = f"{base_path}/docs/day{day}/solutions/day{day}_spell_solutions.ipynb"
     
     # Check if input file exists
     if not os.path.exists(md_file):
         print(f"❌ Error: Input file {md_file} not found!")
         return
     
-    # Convert the file
+    # Convert the file (remove expected output for Day 1)
+    remove_output = day == "01"
     try:
-        parse_markdown_to_notebook(md_file, output_file)
+        parse_markdown_to_notebook(md_file, output_file, remove_expected_output=remove_output)
         print(f"🎉 Successfully created notebook: {output_file}")
         print(f"📁 You can now open this file in Jupyter with R kernel!")
+        if remove_output:
+            print(f"✨ Expected Output sections have been removed as requested!")
         
     except Exception as e:
         print(f"❌ Error during conversion: {e}")
