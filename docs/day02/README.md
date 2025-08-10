@@ -126,11 +126,13 @@ for (number in 1:10){
 ##### 🎯 Key Parts of .Rmd Files:
 
 **1. Text/Paragraphs** 📝
+- Click `insert` --> `paragraph` to add a new paragraph block
 - Just type normally like this sentence
 - Use `#` for big titles, `##` for smaller titles
 - Use `**bold**` or `*italic*` for emphasis
 
 **2. Code Chunks** 💻
+- Click `insert` --> `Executable Cell` --> `R` to add a new paragraph block
 - Code lives inside special "fences" that look like this:
 ```
 ```{r}
