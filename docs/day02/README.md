@@ -20,7 +20,7 @@ title: Day 2 - Loops and Magic Libraries
 - 🗂️ Understand what dataframes are with simple examples
 
 
-<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbDlkdXZvdmRsZTVpY2RqNnJwcTRsNnd3eWszbmxrcGlhZzJ2c2I1biZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Cmr1OMJ2FN0B2/giphy.gif" alt="hello_penguine" style="width: 60%; height: auto;">
+<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbDlkdXZvdmRsZTVpY2RqNnJwcTRsNnd3eWszbmxrcGlhZzJ2c2I1biZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Cmr1OMJ2FN0B2/giphy.gif" alt="hello_penguine" style="width: 50%; height: auto;">
 
 ## 1. Ice Breaker: Human Decision Tree Builder
 *Duration: 15 minutes*
