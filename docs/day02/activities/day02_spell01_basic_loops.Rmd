@@ -62,6 +62,7 @@ print("🚀 Blast off!")
 
 ## ✨ Advanced Challenge: Print different animals on each loop
 Note: c() is a function that creates a collection of items!
+TODO: Add a new animal to the list!
 
 ```{r}
 animals <- c("🐶 dog", "🐱 cat", "🐰 rabbit", "🐸 frog", "🦆 duck")

@@ -34,11 +34,15 @@ Let's make it more colorful and beautiful
 
 ```{r}
 ggplot(my_data, aes(x = name, y = rating)) +
-  geom_col(fill = "blue")    # Try different colors: "red", "green", "purple", "orange"
+  geom_col(fill = "orange")    # Try different colors: "red", "green", "purple", "orange"
 
 # Try this too - different color for each bar!
 ggplot(my_data, aes(x = name, y = rating, fill = name)) +
-  geom_col()
+  geom_col()  +
+  theme(text = element_text(size = 16),  # Set text size for all elements
+        plot.title = element_text(size = 20), # Set title size
+        axis.title = element_text(size = 18), # Set axis title size
+        axis.text = element_text(size = 19)) # Set axis text size
 ```
 
 ---
@@ -47,8 +51,12 @@ ggplot(my_data, aes(x = name, y = rating, fill = name)) +
 
 ```{r}
 ggplot(my_data, aes(x = name, y = rating)) +
-  geom_col(fill = "darkblue") +
-  theme_minimal()    # Makes it look clean and modern!
+  geom_col(fill = "pink") +
+  theme_minimal() +    # Makes it look clean and modern!
+  theme(text = element_text(size = 16),  # Set text size for all elements
+        plot.title = element_text(size = 20), # Set title size
+        axis.title = element_text(size = 18), # Set axis title size
+        axis.text = element_text(size = 19)) # Set axis text size
 
 # Try other themes: theme_classic(), theme_dark(), theme_void()
 ```
@@ -65,7 +73,11 @@ ggplot(my_data, aes(x = name, y = rating)) +
     title = "My Favorite Foods Rating",     # Main title
     x = "Food Items",                       # X-axis label  
     y = "How Much I Like It (1-10)"        # Y-axis label
-  )
+  ) +
+  theme(text = element_text(size = 16),  # Set text size for all elements
+        plot.title = element_text(size = 20), # Set title size
+        axis.title = element_text(size = 18), # Set axis title size
+        axis.text = element_text(size = 19)) # Set axis text size
 ```
 
 ---
@@ -76,7 +88,11 @@ ggplot(my_data, aes(x = name, y = rating)) +
 ggplot(my_data, aes(x = name, y = rating, fill = category)) +
   geom_col() +
   theme_minimal() +
-  labs(title = "My Food Ratings by Category")
+  labs(title = "My Food Ratings by Category") +
+  theme(text = element_text(size = 16),  # Set text size for all elements
+        plot.title = element_text(size = 20), # Set title size
+        axis.title = element_text(size = 18), # Set axis title size
+        axis.text = element_text(size = 19)) # Set axis text size
 ```
 
 ---

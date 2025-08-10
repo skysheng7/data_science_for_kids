@@ -20,13 +20,20 @@ def parse_markdown_to_notebook(md_file_path, output_file_path, remove_expected_o
     # Remove "Expected Output:" sections if requested
     if remove_expected_output:
         import re
-        # Pattern to match "Expected Output:" sections
-        pattern = r'\*\*Expected Output.*?\*\*\s*\n```[rR]?\n.*?\n```'
-        content = re.sub(pattern, '', content, flags=re.DOTALL)
+        # Pattern to match "**Expected Output**" sections with code blocks
+        pattern1 = r'\*\*Expected Output.*?\*\*\s*\n```[rR]?\n.*?\n```'
+        content = re.sub(pattern1, '', content, flags=re.DOTALL)
         
-        # Also remove standalone Expected Output sections
+        # Pattern to match "Expected Output:" with code blocks  
         pattern2 = r'Expected Output:\s*\n```[rR]?\n.*?\n```'
         content = re.sub(pattern2, '', content, flags=re.DOTALL)
+        
+        # Pattern to match "Expected Output:" followed by text (no code block)
+        pattern3 = r'Expected Output:.*?(?=\n\n|\n###|\n##|\nExpected Output|\n```|\Z)'
+        content = re.sub(pattern3, '', content, flags=re.DOTALL)
+        
+        # Clean up any leftover "Expected Output:" lines
+        content = re.sub(r'^Expected Output:.*$', '', content, flags=re.MULTILINE)
     
     # Initialize notebook structure
     notebook = {
@@ -137,8 +144,8 @@ def main():
         print(f"❌ Error: Input file {md_file} not found!")
         return
     
-    # Convert the file (remove expected output for Day 1)
-    remove_output = day == "01"
+    # Convert the file (remove expected output for Day 1 and Day 2)
+    remove_output = day in ["01", "02"]
     try:
         parse_markdown_to_notebook(md_file, output_file, remove_expected_output=remove_output)
         print(f"🎉 Successfully created notebook: {output_file}")

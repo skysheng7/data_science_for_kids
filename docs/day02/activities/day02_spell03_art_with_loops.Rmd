@@ -7,7 +7,7 @@ output: html_document
 
 ---
 
-## 🎨 Art Challenge 1: Simple patterns with basic symbols
+## 🎨 Art Example 1: Simple patterns with basic symbols
 Let's create patterns using loops and basic keyboard symbols
 
 ```{r}
@@ -23,7 +23,7 @@ for (row in 1:5) {
 
 ---
 
-## 🐟 Fish Pattern: Create a fish shape using # symbols
+## 🐟 Fish Pattern Example: Create a fish shape using # symbols
 
 ```{r}
 print("\n--- Fish Pattern ---")
@@ -48,7 +48,7 @@ for (line in fish_pattern) {
 
 ---
 
-## 🎨 Art Challenge 2: Emoji patterns
+## 🎨 Art Example 2: Emoji patterns
 Let's create patterns using loops and emoji symbols
 
 ```{r}
@@ -64,7 +64,7 @@ for (row in 1:5) {
 
 ---
 
-## 🎨 Art Challenge 3: Colorful symbol patterns
+## 🎨 Art Example 3: Colorful symbol patterns
 Create a pattern using different symbols
 
 ```{r}
@@ -83,7 +83,7 @@ for (row in 1:6) {
 
 ---
 
-## 🎨 Art Challenge 4: Grid patterns
+## 🎨 Art Example 4: Grid patterns
 Create a rectangular grid with alternating symbols
 
 ```{r}
@@ -102,8 +102,7 @@ for (row in 1:4) {
 
 ---
 
-## ✨ Your Turn: Create your own pattern!
-Fill in the blanks to make a Christmas tree pattern
+## 🎨 Art Example 5: Christmas tree pattern
 
 ```{r}
 print("\n--- Christmas Tree Pattern ---")
@@ -130,14 +129,18 @@ print("    🪵")
 
 ---
 
-## 🎨 Advanced Challenge: Number patterns
+## 🎨 Art Example 6: Number triangle
 
 ```{r}
 print("\n--- Number Triangle ---")
 for (row in 1:5) {
   line <- ""
   for (col in 1:row) {
-    line <- paste(line, col, sep=" ")
+    if (col == 1) {
+      line <- paste(line, col, sep="")
+    } else {
+      line <- paste(line, col, sep=" ")
+    }
   }
   print(line)
 }
@@ -145,7 +148,8 @@ for (row in 1:5) {
 
 ---
 
-## ✨ Bonus Challenge: Create your own artistic pattern
+## ✨ YOUR TURN:
+### Your Challenge: Create your own artistic pattern
 Use any symbols you like and create something unique!
 
 ```{r eval=FALSE}
