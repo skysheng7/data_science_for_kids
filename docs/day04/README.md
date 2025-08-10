@@ -21,7 +21,7 @@ title: Day 4 - Statistics Ocean
 - 🐑 Learn bootstrapping magic by rescuing sheep from dragon fire
 - 🎯 Build confidence intervals to make educated guesses about unknown populations
 
-<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExc2d5YThoNXRucHU2eDJmYWYxbzJsaTBlc2VhczBnYTkyM3pwcGNuNiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/l46CdoZqbJxQMOvjW/giphy.gif" alt="hello_fish" style="width: 60%; height: auto;">
+<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMWt1ZzN0dnkyYWRkZW9xbmxic2Z5dDVxYW5mMG1xOWQ0N3B6Y2Q2aSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Qw4X3FyDEfQrNgjl6M0/giphy.gif" alt="dance_2" style="width: 100%; height: auto;">
 
 ## 1. 🎈 Ice Breaker Activity: Human Histogram & Statistics Discovery
 *Duration: 30 minutes*
@@ -320,7 +320,7 @@ As Junior Statistical Shepherds, you must use the ancient art of **Bootstrap Mag
 
 💡 **The Rescue Discovery:** Your confidence prophecy shows how uncertain your estimate is - this is statistical honesty!
 
-<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMWt1ZzN0dnkyYWRkZW9xbmxic2Z5dDVxYW5mMG1xOWQ0N3B6Y2Q2aSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Qw4X3FyDEfQrNgjl6M0/giphy.gif" alt="dance_2" style="width: 100%; height: auto;">
+<img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3ankza3F2ZmRqdWUybzd4MTE2aXNwOG45cTlqb2V4cmh3OHFnNGM2dCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/V5zZwAejmS58I/giphy.gif" alt="dance_2" style="width: 60%; height: auto;">
 
 #### 4.2.2 💡 Pro Tips: Understanding Bootstrap Magic
 *Duration: 5 minutes*

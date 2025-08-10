@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>day01_spell_solutions_nb</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+</head>
+<body>
+<section id="crystal_ball-day-1---spell-solutions"
+class="cell markdown">
+<h1>🔮 Day 1 - Spell Solutions</h1>
+<p><em>Oda the Data Otter's Magic Answer Key! 🦦✨</em></p>
+<hr />
+<h2 id="sparkles-spell-1-simple-if-else-magic---solutions">✨ Spell 1:
+Simple If-Else Magic - Solutions</h2>
+<h3 id="activity-questions--answers">Activity Questions &amp;
+Answers:</h3>
+<p><strong>1. Change <code>my_favorite_number</code> to different values
+(try 3, 10, 1)</strong></p>
+<ul>
+<li><code>my_favorite_number &lt;- 3</code>: Output → "💭 That's a nice
+small number!" (because 3 is not &gt; 5)</li>
+<li><code>my_favorite_number &lt;- 10</code>: Output → "🎉 Wow! That's a
+big number!" (because 10 &gt; 5)<br />
+</li>
+<li><code>my_favorite_number &lt;- 1</code>: Output → "💭 That's a nice
+small number!" (because 1 is not &gt; 5)</li>
+</ul>
+<p><strong>2. Can you predict the message before running
+it?</strong></p>
+<ul>
+<li>If the number is greater than 5 → "big number" message</li>
+<li>If the number is 5 or less → "small number" message</li>
+</ul>
+<hr />
+<h2 id="sparkles-spell-2-multiple-choices---solutions">✨ Spell 2:
+Multiple Choices - Solutions</h2>
+<h3 id="activity-questions--answers-1">Activity Questions &amp;
+Answers:</h3>
+<p><strong>1. Change <code>favorite_color</code> to your actual favorite
+color</strong></p>
+<ul>
+<li>If your color is "red", "blue", or "green" → specific mood
+message</li>
+<li>Any other color → "✨ You have a unique and magical taste!"</li>
+</ul>
+<p><strong>2. If your color isn't there, what message do you
+get?</strong></p>
+<ul>
+<li>You get the default message: "✨ You have a unique and magical
+taste!"</li>
+</ul>
+<p><strong>3. Extension: Add your favorite color with a special
+message</strong></p>
+</section>
+<div class="cell code" data-execution_count="1"
+data-vscode="{&quot;languageId&quot;:&quot;r&quot;}">
+<div class="sourceCode" id="cb1"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 🌈 Oda&#39;s color mood detector with added purple option</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>favorite_color <span class="ot">&lt;-</span> <span class="st">&quot;purple&quot;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (favorite_color <span class="sc">==</span> <span class="st">&quot;red&quot;</span>) {</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;🔥 You like bold and exciting adventures!&quot;</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> <span class="cf">if</span> (favorite_color <span class="sc">==</span> <span class="st">&quot;blue&quot;</span>) {</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;🌊 You love calm and peaceful vibes!&quot;</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> <span class="cf">if</span> (favorite_color <span class="sc">==</span> <span class="st">&quot;green&quot;</span>) {</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;🌱 You enjoy nature and growing things!&quot;</span>)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> <span class="cf">if</span> (favorite_color <span class="sc">==</span> <span class="st">&quot;purple&quot;</span>) { <span class="co"># NEW line added to include a new color purple</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;💜 You love magic and mystery!&quot;</span>) <span class="co"># NEW line added</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;✨ You have a unique and magical taste!&quot;</span>)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>[1] &quot;&lt;U+0001F49C&gt; You love magic and mystery!&quot;
+</code></pre>
+</div>
+</div>
+<div class="cell markdown">
+<hr />
+<h2 id="sparkles-spell-3-number-range-detective---solutions">✨ Spell 3:
+Number Range Detective - Solutions</h2>
+<h3 id="activity-questions--answers">Activity Questions &amp;
+Answers:</h3>
+<p><strong>1. Predict which otter for each number:</strong></p>
+<ul>
+<li><code>mystery_number &lt;- 5</code>: "🐣 Tiny number - like a baby
+otter!" (5 &lt; 10)</li>
+<li><code>mystery_number &lt;- 25</code>: "🦦 Medium number - like a
+young otter!" (25 &lt; 50)</li>
+<li><code>mystery_number &lt;- 75</code>: "🏔️ Big number - like a
+mountain otter!" (75 &lt; 100)</li>
+<li><code>mystery_number &lt;- 150</code>: "🚀 Huge number - like a
+space otter!" (150 &gt;= 100)</li>
+</ul>
+<p><strong>2. What happens with 0 or negative numbers?</strong></p>
+<ul>
+<li><code>mystery_number &lt;- 0</code>: "🐣 Tiny number - like a baby
+otter!" (0 &lt; 10)</li>
+<li><code>mystery_number &lt;- -5</code>: "🐣 Tiny number - like a baby
+otter!" (-5 &lt; 10)</li>
+</ul>
+<p><strong>3. Why check smaller numbers first?</strong></p>
+<ul>
+<li>R checks conditions from top to bottom and stops at the first TRUE
+condition</li>
+<li>If we checked larger ranges first, smaller numbers might never reach
+their specific conditions</li>
+</ul>
+<hr />
+<h2 id="sparkles-spell-4-and-condition-magic---solutions">✨ Spell 4:
+AND Condition Magic - Solutions</h2>
+<h3 id="activity-questions--answers-1">Activity Questions &amp;
+Answers:</h3>
+<p><strong>1. Test weather combinations:</strong></p>
+<ul>
+<li><code>temperature &lt;- 15, weather &lt;- "sunny"</code>: "🏠 Maybe
+it's a good day to stay inside..." (15 is not &gt; 20)</li>
+<li><code>temperature &lt;- 25, weather &lt;- "rainy"</code>: "🏠 Maybe
+it's a good day to stay inside..." (weather is not "sunny")<br />
+</li>
+<li><code>temperature &lt;- 30, weather &lt;- "sunny"</code>: "🏖️
+Perfect day for swimming and playing!" (both conditions true)</li>
+</ul>
+<p><strong>2. Challenge Questions:</strong></p>
+<ul>
+<li><strong>Only temperature good but weather bad</strong>: No perfect
+day (need BOTH conditions)</li>
+<li><strong>Only weather good but temperature bad</strong>: No perfect
+day (need BOTH conditions)</li>
+<li><strong>Why need BOTH true</strong>: AND (&amp;) requires ALL
+conditions to be true</li>
+</ul>
+<p><strong>3. 🎯 Experiment: Try creating your own perfect day
+conditions:</strong> Example output:</p>
+</div>
+<div class="cell code" data-execution_count="2"
+data-vscode="{&quot;languageId&quot;:&quot;r&quot;}">
+<div class="sourceCode" id="cb3"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>temperature <span class="ot">&lt;-</span> <span class="dv">25</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>weather <span class="ot">&lt;-</span> <span class="st">&quot;sunny&quot;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>wind_speed <span class="ot">&lt;-</span> <span class="dv">60</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> ((temperature <span class="sc">&gt;</span> <span class="dv">20</span>) <span class="sc">&amp;</span> (weather <span class="sc">==</span> <span class="st">&quot;sunny&quot;</span>) <span class="sc">&amp;</span> (wind_speed <span class="sc">&lt;</span> <span class="dv">10</span>)) {</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;🏖️ Perfect day for swimming and playing!&quot;</span>)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;🦦 Oda is super happy!&quot;</span>)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> <span class="cf">if</span> (wind_speed <span class="sc">&gt;</span> <span class="dv">50</span>){</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;💨 Wow I&#39;m being blown away, hide in the bunk!&quot;</span>)</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>}<span class="cf">else</span> {</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;🏠 Maybe it&#39;s a good day to stay inside and code!&quot;</span>)</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>[1] &quot;&lt;U+0001F4A8&gt; Wow I&#39;m being blown away, hide in the bunk!&quot;
+</code></pre>
+</div>
+</div>
+<div class="cell markdown">
+<ul>
+<li><h2
+id="because-wind_speed--60-which-is--50-so-the-first-condition-fails-and-the-second-condition-is-true">(Because
+wind_speed = 60, which is &gt; 50, so the first condition fails and the
+second condition is true)</h2></li>
+</ul>
+<h2 id="sparkles-spell-5-or-condition-magic---solutions">✨ Spell 5: OR
+Condition Magic - Solutions</h2>
+<h3 id="activity-questions--answers">Activity Questions &amp;
+Answers:</h3>
+<p><strong>1. Test different snacks:</strong></p>
+<ul>
+<li><code>snack &lt;- "apple"</code>: "🥰 Yummy! Oda loves healthy
+snacks!" (apple is in healthy list)</li>
+<li><code>snack &lt;- "banana"</code>: "🥰 Yummy! Oda loves healthy
+snacks!" (banana is in healthy list)</li>
+<li><code>snack &lt;- "cookie"</code>: "🍪 Sweet treat! But just a
+little bit!" (cookie is in sweet list)</li>
+<li><code>snack &lt;- "pizza"</code>: "🤔 Hmm, Oda isn't sure about this
+snack..." (not in any list)</li>
+</ul>
+<p><strong>2. What happens with "Apple" vs "apple"?</strong></p>
+<ul>
+<li><code>snack &lt;- "Apple"</code>: "🤔 Hmm, Oda isn't sure..." (R is
+case-sensitive - "Apple" ≠ "apple")</li>
+</ul>
+<p><strong>3. Extension: Add more snacks</strong></p>
+</div>
+<div class="cell code" data-execution_count="3"
+data-vscode="{&quot;languageId&quot;:&quot;r&quot;}">
+<div class="sourceCode" id="cb5"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 🍎 Oda&#39;s snack time detector with added protein category</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>snack <span class="ot">&lt;-</span> <span class="st">&quot;cheese&quot;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (snack <span class="sc">==</span> <span class="st">&quot;apple&quot;</span> <span class="sc">|</span> snack <span class="sc">==</span> <span class="st">&quot;banana&quot;</span> <span class="sc">|</span> snack <span class="sc">==</span> <span class="st">&quot;carrot&quot;</span>) {</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;🥰 Yummy! Oda loves healthy snacks!&quot;</span>)</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;💪 This will give me energy for coding!&quot;</span>)</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> <span class="cf">if</span> (snack <span class="sc">==</span> <span class="st">&quot;cookie&quot;</span> <span class="sc">|</span> snack <span class="sc">==</span> <span class="st">&quot;candy&quot;</span>) {</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;🍪 Sweet treat! But just a little bit!&quot;</span>)</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> <span class="cf">if</span> (snack <span class="sc">==</span> <span class="st">&quot;cheese&quot;</span> <span class="sc">|</span> snack <span class="sc">==</span> <span class="st">&quot;nuts&quot;</span>) {</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;🧀 Protein power! Great for brain fuel!&quot;</span>)</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;🤔 Hmm, Oda isn&#39;t sure about this snack...&quot;</span>)</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>[1] &quot;&lt;U+0001F9C0&gt; Protein power! Great for brain fuel!&quot;
+</code></pre>
+</div>
+</div>
+<div class="cell markdown">
+<hr />
+<h2 id="sparkles-spell-6-age-group-sorter---solutions">✨ Spell 6: Age
+Group Sorter - Solutions</h2>
+<h3 id="activity-questions--answers">Activity Questions &amp;
+Answers:</h3>
+<p><strong>1. Test different ages:</strong></p>
+<ul>
+<li><code>age &lt;- 5</code>: "🐣 Little explorer - just starting the
+adventure!" (5 &lt; 6)</li>
+<li><code>age &lt;- 8</code>: "🧸 Young adventurer - ready for fun!" (6
+≤ 8 ≤ 9)</li>
+<li><code>age &lt;- 12</code>: "🧙‍♀️ Data wizard in training - that's
+you!" (10 ≤ 12 ≤ 14)</li>
+<li><code>age &lt;- 16</code>: "🚀 Teen tech master - almost ready to
+rule the world!" (15 ≤ 16 ≤ 18)</li>
+<li><code>age &lt;- 25</code>: "🎓 Wise adult - teaching the next
+generation!" (25 &gt; 18)</li>
+</ul>
+<p><strong>2. Edge cases:</strong></p>
+<ul>
+<li><code>age &lt;- 6</code>: "🧸 Young adventurer" (6 ≥ 6 is true)</li>
+<li><code>age &lt;- 14</code>: "🧙‍♀️ Data wizard in training" (14 ≤ 14 is
+true)</li>
+</ul>
+<p><strong>3. Why use &gt;= and &lt;=?</strong></p>
+<ul>
+<li>To include the boundary ages (like exactly 6 or exactly 14)</li>
+<li>Makes sure no ages "fall through the cracks"</li>
+</ul>
+<p><strong>4. 🎯 Challenge Solution: Age-Based Activity
+Sorter</strong></p>
+</div>
+<div class="cell code" data-execution_count="4"
+data-vscode="{&quot;languageId&quot;:&quot;r&quot;}">
+<div class="sourceCode" id="cb7"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 🎯 Oda&#39;s Age-Based Activity Sorter - Perfect activities for each age group!</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>age <span class="ot">&lt;-</span> <span class="dv">12</span>  <span class="co"># Try different ages: 4, 7, 13, 16, 25</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (age <span class="sc">&lt;</span> <span class="dv">6</span>) {</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;🐣 Little Explorer Activities:&quot;</span>)</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;🧸 Play with building blocks and stuffed animals&quot;</span>)</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;📚 Listen to picture book stories&quot;</span>) </span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;🎨 Finger painting and simple crafts&quot;</span>)</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;🎵 Sing-along songs and nursery rhymes&quot;</span>)</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> <span class="cf">if</span> (age <span class="sc">&gt;=</span> <span class="dv">6</span> <span class="sc">&amp;</span> age <span class="sc">&lt;=</span> <span class="dv">9</span>) {</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;🧸 Young Adventurer Activities:&quot;</span>)</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;🎮 Simple board games and puzzles&quot;</span>)</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;⚽ Team sports like soccer or basketball&quot;</span>)</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;🔬 Basic science experiments&quot;</span>)</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;🎭 Drama and pretend play&quot;</span>)</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> <span class="cf">if</span> (age <span class="sc">&gt;=</span> <span class="dv">10</span> <span class="sc">&amp;</span> age <span class="sc">&lt;=</span> <span class="dv">14</span>) {</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;🧙‍♀️ Data Wizard Activities:&quot;</span>)</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;💻 Learn coding and computer programming!&quot;</span>)</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;🎸 Learn musical instruments&quot;</span>)</span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;📱 Create digital art and videos&quot;</span>)</span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;🧩 Complex strategy games and escape rooms&quot;</span>)</span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> <span class="cf">if</span> (age <span class="sc">&gt;=</span> <span class="dv">15</span> <span class="sc">&amp;</span> age <span class="sc">&lt;=</span> <span class="dv">18</span>) {</span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;🚀 Teen Tech Master Activities:&quot;</span>)</span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;🚗 Learn to drive and gain independence&quot;</span>)</span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;💼 Part-time jobs and internships&quot;</span>)</span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;🎓 Prepare for college and career planning&quot;</span>)</span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;🌍 Volunteer work and community service&quot;</span>)</span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;🎓 Wise Adult Activities:&quot;</span>)</span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;👨‍🏫 Teach and mentor the next generation&quot;</span>)</span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;💰 Career advancement and financial planning&quot;</span>)</span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;🌿 Hobbies like gardening, cooking, or travel&quot;</span>)</span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">&quot;🎂 Perfect activities for someone who is&quot;</span>, age, <span class="st">&quot;years old!&quot;</span>))</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>[1] &quot;&lt;U+0001F9D9&gt;&lt;U+200D&gt;&lt;U+2640&gt;&lt;U+FE0F&gt; Data Wizard Activities:&quot;
+[1] &quot;&lt;U+0001F4BB&gt; Learn coding and computer programming!&quot;
+[1] &quot;&lt;U+0001F3B8&gt; Learn musical instruments&quot;
+[1] &quot;&lt;U+0001F4F1&gt; Create digital art and videos&quot;
+[1] &quot;&lt;U+0001F9E9&gt; Complex strategy games and escape rooms&quot;
+[1] &quot;&lt;U+0001F382&gt; Perfect activities for someone who is 12 years old!&quot;
+</code></pre>
+</div>
+</div>
+<div class="cell markdown">
+<hr />
+<h2 id="sparkles-spell-7-multiple-actions-spell---solutions">✨ Spell 7:
+Multiple Actions Spell - Solutions</h2>
+<h3 id="activity-questions--answers">Activity Questions &amp;
+Answers:</h3>
+<p><strong>1. Test magic words:</strong></p>
+<ul>
+<li><code>magic_word &lt;- "abracadabra"</code>: Full classic magic show
+(4 actions)</li>
+<li><code>magic_word &lt;- "alakazam"</code>: Fireworks show (3
+actions)</li>
+<li><code>magic_word &lt;- "hocus pocus"</code>: Unknown magic word
+message (2 actions)</li>
+</ul>
+<p><strong>2. Why multiple print() statements?</strong></p>
+<ul>
+<li>Each print() creates a separate line of output</li>
+<li>Creates a sequence of actions that tell a story</li>
+<li>Makes the magic show feel more dramatic and realistic</li>
+</ul>
+<p><strong>3. Creative Challenge: Add third magic word</strong></p>
+</div>
+<div class="cell code" data-execution_count="5"
+data-vscode="{&quot;languageId&quot;:&quot;r&quot;}">
+<div class="sourceCode" id="cb9"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 🎪 Oda&#39;s magic show with multiple tricks including new &quot;presto&quot; magic</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>magic_word <span class="ot">&lt;-</span> <span class="st">&quot;presto&quot;</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (magic_word <span class="sc">==</span> <span class="st">&quot;abracadabra&quot;</span>) {</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;✨ *Sparkles appear in the air*&quot;</span>)</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;🎩 *A rabbit pops out of the hat*&quot;</span>)</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;🌟 *The crowd cheers loudly*&quot;</span>)</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;🦦 Oda takes a bow!&quot;</span>)</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> <span class="cf">if</span> (magic_word <span class="sc">==</span> <span class="st">&quot;alakazam&quot;</span>) {</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;💥 *Thunder sound effect*&quot;</span>)</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;🎆 *Colorful fireworks explode*&quot;</span>)</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;🦦 Oda does a backflip!&quot;</span>)</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> <span class="cf">if</span> (magic_word <span class="sc">==</span> <span class="st">&quot;presto&quot;</span>) {</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;🐰 *Magic rabbits hop everywhere*&quot;</span>)</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;🌈 *Rainbow appears in the sky*&quot;</span>)</span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;🦦 Oda waves her magic wand!&quot;</span>)</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;😅 Oops! That&#39;s not a magic word Oda knows...&quot;</span>)</span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;💡 Try &#39;abracadabra&#39;, &#39;alakazam&#39;, or &#39;presto&#39;!&quot;</span>)</span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>[1] &quot;&lt;U+0001F430&gt; *Magic rabbits hop everywhere*&quot;
+[1] &quot;&lt;U+0001F308&gt; *Rainbow appears in the sky*&quot;
+[1] &quot;&lt;U+0001F9A6&gt; Oda waves her magic wand!&quot;
+</code></pre>
+</div>
+</div>
+<div class="cell markdown">
+<hr />
+<h2 id="sparkles-spell-8-no-else-challenge---solutions">✨ Spell 8: No
+Else Challenge - Solutions</h2>
+<h3 id="activity-questions--answers">Activity Questions &amp;
+Answers:</h3>
+<p><strong>1. Test point values:</strong></p>
+<ul>
+<li><code>points &lt;- 30</code>: Only "🎯 You have 30 points total!"
+(no achievements met)</li>
+<li><code>points &lt;- 60</code>: "👍 GOOD JOB! Keep practicing!" +
+total points (≥50 condition met)</li>
+<li><code>points &lt;- 80</code>: "⭐ AWESOME! You're doing great!" +
+"👍 GOOD JOB! Keep practicing!" + total points (≥75 and ≥50 met)</li>
+<li><code>points &lt;- 120</code>: All three achievements + total points
+(≥100, ≥75, ≥50 all met)</li>
+</ul>
+<p><strong>2. Why multiple achievement messages?</strong></p>
+<ul>
+<li>Each <code>if</code> statement runs independently (no
+<code>else</code> to stop them)</li>
+<li>High scores qualify for multiple achievement levels
+simultaneously</li>
+<li>Like earning multiple badges in a game</li>
+</ul>
+<p><strong>3. Minimum points for all achievements?</strong></p>
+<ul>
+<li>Need at least 100 points to trigger all three achievement
+conditions</li>
+</ul>
+<hr />
+<h2 id="sparkles-spell-9-code-order-magic---solutions">✨ Spell 9: Code
+Order Magic - Solutions</h2>
+<h3 id="activity-questions--answers-1">Activity Questions &amp;
+Answers:</h3>
+<p><strong>1. Compare both versions:</strong></p>
+<p><strong>Version 9A (Correct):</strong></p>
+<ul>
+<li><code>position &lt;- 1</code>: "🥇 GOLD MEDAL!"</li>
+<li><code>position &lt;- 2</code>: "🥈 SILVER MEDAL!"<br />
+</li>
+<li><code>position &lt;- 3</code>: "🥉 BRONZE MEDAL!"</li>
+</ul>
+<p><strong>Version 9B (Wrong):</strong></p>
+<ul>
+<li><code>position &lt;- 1</code>: "👏 Good race! Keep practicing!"
+(WRONG!)</li>
+<li><code>position &lt;- 2</code>: "👏 Good race! Keep practicing!"
+(WRONG!)</li>
+<li><code>position &lt;- 3</code>: "👏 Good race! Keep practicing!"
+(WRONG!)</li>
+</ul>
+<p><strong>2. Why Version 9B always says "Good race!"</strong></p>
+<ul>
+<li>First condition <code>position &gt;= 1</code> is TRUE for positions
+1, 2, and 3</li>
+<li>R stops at the first TRUE condition and never checks the others</li>
+</ul>
+<p><strong>3. Which conditions never run in Version 2?</strong></p>
+<ul>
+<li>The <code>position == 1</code> and <code>position == 2</code>
+conditions never run</li>
+<li>Because <code>position &gt;= 1</code> catches everything first</li>
+</ul>
+<p><strong>Key Lesson:</strong> Always check SPECIFIC conditions before
+GENERAL ones!</p>
+<hr />
+<h2 id="sparkles-spell-10-string-detective---solutions">✨ Spell 10:
+String Detective - Solutions</h2>
+<h3 id="activity-questions--answers-2">Activity Questions &amp;
+Answers:</h3>
+<p><strong>1. Test different names:</strong></p>
+<ul>
+<li><code>name &lt;- "Jo"</code>: "📝 You have a nice short name!" (2
+letters ≤ 4)</li>
+<li><code>name &lt;- "Elizabeth"</code>: "📚 Wow! You have a beautifully
+long name!" (9 letters ≥ 8)</li>
+<li><code>name &lt;- "Sam"</code>: "📝 You have a nice short name!" (3
+letters ≤ 4)</li>
+<li><code>name &lt;- "Christopher"</code>: "📚 Wow! You have a
+beautifully long name!" (11 letters ≥ 8)</li>
+</ul>
+<p><strong>2. What does nchar() do?</strong></p>
+<ul>
+<li><code>nchar()</code> counts the number of characters (letters) in a
+text string</li>
+<li><code>nchar("hello")</code> returns 5</li>
+<li><code>nchar("R")</code> returns 1</li>
+</ul>
+<p><strong>3. Why can't Oda find Mike? THE BIG PROBLEM!</strong></p>
+<ul>
+<li>When <code>name &lt;- "Mike"</code>:
+<ol>
+<li>First condition: <code>nchar("Mike") &lt;= 4</code> →
+<code>4 &lt;= 4</code> → TRUE!</li>
+<li>R prints "📝 You have a nice short name!" and stops</li>
+<li>The Mike-finding condition never gets checked!</li>
+</ol></li>
+</ul>
+<p><strong>4. How to fix it:</strong></p>
+</div>
+<div class="cell code" data-execution_count="6"
+data-vscode="{&quot;languageId&quot;:&quot;r&quot;}">
+<div class="sourceCode" id="cb11"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 🔍 FIXED version - Oda can now find Mike! Check for Mike FIRST:</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>name <span class="ot">&lt;-</span> <span class="st">&quot;Mike&quot;</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (name <span class="sc">==</span> <span class="st">&quot;mike&quot;</span> <span class="sc">|</span> name <span class="sc">==</span> <span class="st">&quot;Mike&quot;</span> <span class="sc">|</span> name <span class="sc">==</span> <span class="st">&quot;Michael&quot;</span> <span class="sc">|</span> name <span class="sc">==</span> <span class="st">&quot;michael&quot;</span>){</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;👥 Hi Mike, long time no see! I&#39;ve caught some clams today! 🌊 🐚 🦪&quot;</span>)</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> <span class="cf">if</span> (<span class="fu">nchar</span>(name) <span class="sc">&lt;=</span> <span class="dv">4</span>){</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;📝 You have a nice short name!&quot;</span>)</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> <span class="cf">if</span> (<span class="fu">nchar</span>(name) <span class="sc">&gt;=</span> <span class="dv">8</span>) {</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;📚 Wow! You have a beautifully long name!&quot;</span>)</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;✨ You have a perfectly medium-sized name!&quot;</span>)</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Bonus: Count the letters in your name!</span></span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">&quot;🔢 Your name has&quot;</span>, <span class="fu">nchar</span>(name), <span class="st">&quot;letters!&quot;</span>))</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>[1] &quot;&lt;U+0001F465&gt; Hi Mike, long time no see! I&#39;ve caught some clams today! &lt;U+0001F30A&gt; &lt;U+0001F41A&gt; &lt;U+0001F9AA&gt;&quot;
+[1] &quot;&lt;U+0001F522&gt; Your name has 4 letters!&quot;
+</code></pre>
+</div>
+</div>
+<div class="cell markdown">
+<p><em>(Now Oda can find Mike because we check for his name BEFORE
+checking the length!)</em></p>
+<hr />
+<h2 id="sparkles-spell-11-temperature-zone-detective---solutions">✨
+Spell 11: Temperature Zone Detective - Solutions</h2>
+<h3 id="activity-questions--answers">Activity Questions &amp;
+Answers:</h3>
+<p><strong>1. Test temperatures:</strong></p>
+<ul>
+<li><code>temperature &lt;- -5</code>: "🧊 FREEZING!" + winter coat
+message (-5 ≤ 0)</li>
+<li><code>temperature &lt;- 5</code>: "🥶 COLD! Perfect sweater
+weather!" (1 ≤ 5 ≤ 10)</li>
+<li><code>temperature &lt;- 15</code>: "😊 COOL! Great for a light
+jacket!" (11 ≤ 15 ≤ 20)</li>
+<li><code>temperature &lt;- 25</code>: "☀️ WARM! Perfect for playing
+outside!" (21 ≤ 25 ≤ 30)</li>
+<li><code>temperature &lt;- 35</code>: "🔥 HOT!" + swimming message (35
+≥ 31)</li>
+</ul>
+<p><strong>2. Why use &gt;= and &lt;= instead of &gt; and
+&lt;?</strong></p>
+<ul>
+<li>To include exact boundary temperatures (like exactly 0°, 21°,
+etc.)</li>
+<li>Prevents temperatures from "falling between" categories</li>
+<li><code>temperature &lt;- 20</code> with <code>&lt; 20</code> would
+not be caught by the "cool" category</li>
+</ul>
+<p><strong>3. Edge cases:</strong></p>
+<ul>
+<li><code>temperature &lt;- 0</code>: "🧊 FREEZING!" (0 ≤ 0 is
+true)</li>
+<li><code>temperature &lt;- 21</code>: "☀️ WARM!" (21 ≥ 21 is true)</li>
+<li><code>temperature &lt;- 20.5</code>: "🤔 Something seems fishy with
+this temperature..."</li>
+</ul>
+<hr />
+<h2 id="sparkles-spell-12-magical-creatures---solutions">✨ Spell 12:
+Magical Creatures - Solutions</h2>
+<h3 id="activity-questions--answers-1">Activity Questions &amp;
+Answers:</h3>
+<p><strong>1. Test different combinations:</strong></p>
+<ul>
+<li><code>creature_size &lt;- 15, creature_color &lt;- "purple"</code>:
+"🧚‍♀️ You found a tiny fairy!"</li>
+<li><code>creature_size &lt;- 50, creature_color &lt;- "gold"</code>:
+"🐉 You found a baby dragon!"</li>
+<li><code>creature_size &lt;- 50, creature_color &lt;- "blue"</code>:
+"🦦 You found Oda the Otter!"</li>
+<li><code>creature_size &lt;- 150, creature_color &lt;- "any"</code>:
+"👹 You found a friendly giant!"</li>
+</ul>
+<p><strong>2. What happens with negative/zero size?</strong></p>
+<ul>
+<li><code>creature_size &lt;- 0</code>: "🐛 You found a magical bug!" (0
+≤ 20, not purple)</li>
+<li><code>creature_size &lt;- -5</code>: "🐛 You found a magical bug!"
+(-5 ≤ 20, not purple)</li>
+</ul>
+<p><strong>3. How nested conditions work:</strong></p>
+<ul>
+<li>Outer condition checks size range first</li>
+<li>Inner conditions check color within that size range</li>
+<li>Like a decision tree: size → then color → then result</li>
+</ul>
+<p><strong>4. Extension ideas:</strong></p>
+</div>
+<div class="cell code" data-execution_count="7"
+data-vscode="{&quot;languageId&quot;:&quot;r&quot;}">
+<div class="sourceCode" id="cb13"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 🦄 EXTENDED Magical Creature Classifier with more sizes and colors</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>creature_size <span class="ot">&lt;-</span> <span class="dv">150</span>   <span class="co"># Size in cm</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>creature_color <span class="ot">&lt;-</span> <span class="st">&quot;silver&quot;</span> <span class="co"># Try different colors</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (creature_size <span class="sc">&lt;=</span> <span class="dv">20</span>) {</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (creature_color <span class="sc">==</span> <span class="st">&quot;purple&quot;</span>) {</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="st">&quot;🧚‍♀️ You found a tiny fairy!&quot;</span>)</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> <span class="cf">if</span> (creature_color <span class="sc">==</span> <span class="st">&quot;invisible&quot;</span>) {</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="st">&quot;👻 You found an invisible sprite!&quot;</span>)</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="st">&quot;🐛 You found a magical bug!&quot;</span>)</span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> <span class="cf">if</span> (creature_size <span class="sc">&gt;=</span> <span class="dv">21</span> <span class="sc">&amp;</span> creature_size <span class="sc">&lt;=</span> <span class="dv">100</span>) {</span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (creature_color <span class="sc">==</span> <span class="st">&quot;purple&quot;</span>) {</span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="st">&quot;🦄 You found a unicorn!&quot;</span>)</span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> <span class="cf">if</span> (creature_color <span class="sc">==</span> <span class="st">&quot;gold&quot;</span>) {</span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="st">&quot;🐉 You found a baby dragon!&quot;</span>)</span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> <span class="cf">if</span> (creature_color <span class="sc">==</span> <span class="st">&quot;rainbow&quot;</span>) {</span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="st">&quot;🦄 You found a rainbow unicorn!&quot;</span>)</span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="st">&quot;🦦 You found Oda the Otter!&quot;</span>)</span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> <span class="cf">if</span> (creature_size <span class="sc">&gt;=</span> <span class="dv">101</span> <span class="sc">&amp;</span> creature_size <span class="sc">&lt;=</span> <span class="dv">200</span>) {</span>
+<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (creature_color <span class="sc">==</span> <span class="st">&quot;silver&quot;</span>) {</span>
+<span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="st">&quot;🐺 You found a silver wolf!&quot;</span>)</span>
+<span id="cb13-26"><a href="#cb13-26" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> <span class="cf">if</span> (creature_color <span class="sc">==</span> <span class="st">&quot;gold&quot;</span>) {</span>
+<span id="cb13-27"><a href="#cb13-27" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="st">&quot;🐉 You found a teenage dragon!&quot;</span>)</span>
+<span id="cb13-28"><a href="#cb13-28" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb13-29"><a href="#cb13-29" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="st">&quot;🐻 You found a friendly bear!&quot;</span>)</span>
+<span id="cb13-30"><a href="#cb13-30" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb13-31"><a href="#cb13-31" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> <span class="cf">if</span> (creature_size <span class="sc">&gt;=</span> <span class="dv">201</span>) {</span>
+<span id="cb13-32"><a href="#cb13-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;👹 You found a friendly giant!&quot;</span>)</span>
+<span id="cb13-33"><a href="#cb13-33" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb13-34"><a href="#cb13-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-35"><a href="#cb13-35" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">&quot;📏 Your creature is&quot;</span>, creature_size, <span class="st">&quot;cm tall and&quot;</span>, creature_color, <span class="st">&quot;colored!&quot;</span>))</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>[1] &quot;&lt;U+0001F43A&gt; You found a silver wolf!&quot;
+[1] &quot;&lt;U+0001F4CF&gt; Your creature is 150 cm tall and silver colored!&quot;
+</code></pre>
+</div>
+</div>
+<div class="cell markdown">
+<p><em>(Because creature_size = 150 falls in the 101-200 range, and
+creature_color = "silver" matches the wolf condition)</em></p>
+<p><strong>5. SUPER CHALLENGE: Flying Ability Extension</strong></p>
+</div>
+<div class="cell code" data-execution_count="8"
+data-vscode="{&quot;languageId&quot;:&quot;r&quot;}">
+<div class="sourceCode" id="cb15"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 🚀 ULTIMATE Magical Creature Classifier with Flying Abilities!</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>creature_size <span class="ot">&lt;-</span> <span class="dv">50</span>      <span class="co"># Size in cm</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>creature_color <span class="ot">&lt;-</span> <span class="st">&quot;gold&quot;</span> <span class="co"># Try different colors  </span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>creature_ability <span class="ot">&lt;-</span> <span class="st">&quot;flying&quot;</span>  <span class="co"># Try: &quot;flying&quot;, &quot;swimming&quot;, &quot;invisible&quot;</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (creature_size <span class="sc">&lt;=</span> <span class="dv">20</span>) {</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (creature_color <span class="sc">==</span> <span class="st">&quot;purple&quot;</span>) {</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (creature_ability <span class="sc">==</span> <span class="st">&quot;flying&quot;</span>) {</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>      <span class="fu">print</span>(<span class="st">&quot;🧚‍♀️✈️ You found a flying tiny fairy!&quot;</span>)</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>      <span class="fu">print</span>(<span class="st">&quot;💫 She can sprinkle magic dust from the sky!&quot;</span>)</span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> <span class="cf">if</span> (creature_ability <span class="sc">==</span> <span class="st">&quot;invisible&quot;</span>) {</span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>      <span class="fu">print</span>(<span class="st">&quot;🧚‍♀️👻 You found an invisible tiny fairy!&quot;</span>)</span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>      <span class="fu">print</span>(<span class="st">&quot;🔍 You can only see sparkles where she flies!&quot;</span>)</span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> {</span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>      <span class="fu">print</span>(<span class="st">&quot;🧚‍♀️ You found a tiny fairy!&quot;</span>)</span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="st">&quot;🐛 You found a magical bug!&quot;</span>)</span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> <span class="cf">if</span> (creature_size <span class="sc">&gt;=</span> <span class="dv">21</span> <span class="sc">&amp;</span> creature_size <span class="sc">&lt;=</span> <span class="dv">100</span>) {</span>
+<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (creature_color <span class="sc">==</span> <span class="st">&quot;gold&quot;</span>) {</span>
+<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (creature_ability <span class="sc">==</span> <span class="st">&quot;flying&quot;</span>) {</span>
+<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a>      <span class="fu">print</span>(<span class="st">&quot;🐉✈️ You found a flying baby dragon!&quot;</span>)</span>
+<span id="cb15-24"><a href="#cb15-24" aria-hidden="true" tabindex="-1"></a>      <span class="fu">print</span>(<span class="st">&quot;🔥 It breathes fire while soaring through the clouds!&quot;</span>)</span>
+<span id="cb15-25"><a href="#cb15-25" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> <span class="cf">if</span> (creature_ability <span class="sc">==</span> <span class="st">&quot;swimming&quot;</span>) {</span>
+<span id="cb15-26"><a href="#cb15-26" aria-hidden="true" tabindex="-1"></a>      <span class="fu">print</span>(<span class="st">&quot;🐉🌊 You found a swimming baby dragon!&quot;</span>)</span>
+<span id="cb15-27"><a href="#cb15-27" aria-hidden="true" tabindex="-1"></a>      <span class="fu">print</span>(<span class="st">&quot;💧 It can breathe underwater and shoots water blasts!&quot;</span>)</span>
+<span id="cb15-28"><a href="#cb15-28" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> {</span>
+<span id="cb15-29"><a href="#cb15-29" aria-hidden="true" tabindex="-1"></a>      <span class="fu">print</span>(<span class="st">&quot;🐉 You found a baby dragon!&quot;</span>)</span>
+<span id="cb15-30"><a href="#cb15-30" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb15-31"><a href="#cb15-31" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> <span class="cf">if</span> (creature_color <span class="sc">==</span> <span class="st">&quot;purple&quot;</span>) {</span>
+<span id="cb15-32"><a href="#cb15-32" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (creature_ability <span class="sc">==</span> <span class="st">&quot;flying&quot;</span>) {</span>
+<span id="cb15-33"><a href="#cb15-33" aria-hidden="true" tabindex="-1"></a>      <span class="fu">print</span>(<span class="st">&quot;🦄✈️ You found a flying unicorn!&quot;</span>)</span>
+<span id="cb15-34"><a href="#cb15-34" aria-hidden="true" tabindex="-1"></a>      <span class="fu">print</span>(<span class="st">&quot;🌈 It leaves rainbow trails in the sky!&quot;</span>)</span>
+<span id="cb15-35"><a href="#cb15-35" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> {</span>
+<span id="cb15-36"><a href="#cb15-36" aria-hidden="true" tabindex="-1"></a>      <span class="fu">print</span>(<span class="st">&quot;🦄 You found a unicorn!&quot;</span>)</span>
+<span id="cb15-37"><a href="#cb15-37" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb15-38"><a href="#cb15-38" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb15-39"><a href="#cb15-39" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="st">&quot;🦦 You found Oda the Otter!&quot;</span>)</span>
+<span id="cb15-40"><a href="#cb15-40" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb15-41"><a href="#cb15-41" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> <span class="cf">if</span> (creature_size <span class="sc">&gt;=</span> <span class="dv">101</span>) {</span>
+<span id="cb15-42"><a href="#cb15-42" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (creature_ability <span class="sc">==</span> <span class="st">&quot;flying&quot;</span>) {</span>
+<span id="cb15-43"><a href="#cb15-43" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="st">&quot;👹✈️ You found a flying friendly giant!&quot;</span>)</span>
+<span id="cb15-44"><a href="#cb15-44" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="st">&quot;☁️ The ground shakes when it lands!&quot;</span>)</span>
+<span id="cb15-45"><a href="#cb15-45" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb15-46"><a href="#cb15-46" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="st">&quot;👹 You found a friendly giant!&quot;</span>)</span>
+<span id="cb15-47"><a href="#cb15-47" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb15-48"><a href="#cb15-48" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb15-49"><a href="#cb15-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-50"><a href="#cb15-50" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">&quot;📏 Your creature is&quot;</span>, creature_size, <span class="st">&quot;cm tall,&quot;</span>, creature_color, <span class="st">&quot;colored, and has&quot;</span>, creature_ability, <span class="st">&quot;ability!&quot;</span>))</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>[1] &quot;&lt;U+0001F409&gt;&lt;U+2708&gt;&lt;U+FE0F&gt; You found a flying baby dragon!&quot;
+[1] &quot;&lt;U+0001F525&gt; It breathes fire while soaring through the clouds!&quot;
+[1] &quot;&lt;U+0001F4CF&gt; Your creature is 50 cm tall, gold colored, and has flying ability!&quot;
+</code></pre>
+</div>
+</div>
+<div class="cell markdown">
+<p><em>(Because creature_size = 50, creature_color = "gold", and
+creature_ability = "flying" all match the flying baby dragon
+conditions)</em></p>
+<hr />
+<p><em>🎉 Congratulations! You've mastered all 12 magical spells! You're
+now ready to cast decision-making magic in any R adventure!
+🦦✨</em></p>
+</div>
+</body>
+</html>
