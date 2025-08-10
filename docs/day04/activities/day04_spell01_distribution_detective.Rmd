@@ -16,8 +16,7 @@ library(dplyr)
 library(gridExtra)
 
 # Load our magical creature dataset
-#creatures <- read.csv("../datasets/magical_creatures_stats.csv")
-creatures <- read.csv("docs/day04/datasets/magical_creatures_stats.csv")
+creatures <- read.csv("../datasets/magical_creatures_stats.csv")
 
 # Let's peek at our data first
 head(creatures)

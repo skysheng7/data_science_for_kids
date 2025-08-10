@@ -162,6 +162,8 @@ Imagine you want to know what percentage of creatures in the entire Enchanted Fo
 
 The Mgaic Council of Halloween has received reports that the Shadow Monster has been cursing neighborhoods, turning precious candies into worthless shadow stones! As young Statistical Wizards, your mission is to determine if the **Enchanted Forest Neighborhood** is safe for trick-or-treating.
 
+![candy](../../images/candy.png)
+
 **⚡ The Challenge:** 
 
 The neighborhood has a magical protection spell - if it contains 80% or more real candies (not shadow stones), it's safe to visit. But beware! You only have **3 minutes of magical sight** to examine your sample before the spell fades.
@@ -218,6 +220,8 @@ If the true percentage of dragons in the forest is 30%, and you take 100 differe
 
 > 🎉 Good News! The magical council has prepared more "Time Crystal Bag" for us!
 
+![candy](../../images/candy.png)
+
 **🪄 You will get:**
 
 - Everyone gets 2 more "Time Crystal Bag"
@@ -238,9 +242,9 @@ If the true percentage of dragons in the forest is 30%, and you take 100 differe
 ### Spell 2: Digital Sampling Magic
 *Duration: 15 minutes*
 
-#### 🎈 Activity: The Magical Creature Population Study
+#### 3.2.4 🎈 Activity: The Magical Creature Population Study
 
-**🐉 The Setup:** We have a population of 1000 magical creatures where exactly 30% are dragons. Let's see what happens when we take different sized samples!
+**🐉 The Setup:** In the Enchanted Forest, we have a population of 1000 magical creatures where exactly 30% are dragons. Let's see what happens when we take different sized samples!
 
 📁 **Find this spell in Posit Cloud:** Look for the file `day04_spell02_sampling_adventure.Rmd` in your project files!
 
@@ -249,13 +253,13 @@ If the true percentage of dragons in the forest is 30%, and you take 100 differe
 2. **Medium Samples (Size 50):** Take 100 samples of 50 creatures each  
 3. **Large Samples (Size 100):** Take 100 samples of 100 creatures each
 
-**🎯 Key Discoveries We'll Make:**
+**🎯 Key Discoveries:**
 - All sample sizes give averages close to the truth (30% dragons)
-- Larger samples are more consistent and reliable
+- Larger samples are more reliable
 - Sampling distributions form beautiful bell shapes!
 - The **spread** decreases as sample size increases
 
-💡 **The Magic Moment:** When we increase sample size, we don't change the average, but we make our estimates much more reliable!
+💡 **The Magic Moment:** When we increase sample size, we make our estimates much more reliable!
 
 ### 3.3 Game 2: The Great Dragon Fire Sheep Rescue 🐑🔥
 *Duration: 20 minutes*
