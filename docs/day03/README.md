@@ -443,13 +443,15 @@ Take a look at this real bar plot that was shared when GPT-5 was announced last 
 
 #### 5.4.2 **🚔 Visualization crime 2**
 
-Here is a plot to show where do participants come from attending an AI conference
+Here is a plot to show "where do participants come from" attending an AI conference
 
 ![acm facct 2025 bar plot 1](../../images/acm_facct2025_1.png)
 
-> 🤔 Where do you think most participants come from from this plot?
+> 🤔 Where do you think most participants come from according to this plot?
 
 Here is another plot to show where do participants come from attending the **SAME** AI conference (using the same data set)
+
+> 🤯 So most people are from the US not Europe! Europe just has more countries than US!
 
 ![acm facct 2025 bar plot 2](../../images/acm_facct2025_2.png)
 
@@ -462,7 +464,7 @@ Here is a plot showing the global temperature changes from 1880 - 2015.
 > 🤔 Looks pretty flat to me! So global warming is not real??
 
 
-Here is another visualization that is zoomed in, using the same data: 
+Here is another visualization that is zoomed in, using the same dataset: 
 
 ![global_warming](../../images/global_warming2.png)
 
@@ -470,7 +472,7 @@ Here is another visualization that is zoomed in, using the same data:
 
 #### 5.4.4 **🚔 Visualization crime 4**
 
-Here is a plot from a scientific paper, showing there is a relationship between the prevalence of autisim and the population covergae of measles, mumps, and rubella vaccine. 
+Here is a plot from a scientific paper, showing there is a relationship between the prevalence of autisim and the population covergae of measles, mumps, and rubella (MMR) vaccine. 
 
 ![MMR1](../../images/mmr1.png)
 
