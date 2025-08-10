@@ -94,7 +94,7 @@ https://forms.gle/TG2dgNwknN6KGTcE6
 💡 **What are Data Distributions?**
 Just like how people can be tall, short, or in-between, data comes in different shapes! Some data is perfectly balanced (symmetrical), some leans to one side (skewed), and some has unusual outliers that surprise us.
 
-**Today's Mission:** Investigate three magical creature types with completely different power distributions!
+**Today's Mission:** Investigate three magical creature types with completely different distributions!
 
 ### Spell 1: Distribution Detective Investigation  
 *Duration: 30 minutes*

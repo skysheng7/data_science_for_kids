@@ -23,6 +23,8 @@ By the end of today, you'll be magical data wizards who can:
 ## 1. Ice Breaker: Mixed Treasure Bag Sorting Game
 *Duration: 10 minutes*
 
+### 1.1 Activity: The Great Treasure Sort Competition
+
 🎈 **Activity: The Great Treasure Sort Competition**
 
 Let's start with a treasure sort! Your team will get a bag of mixed treasures and a mission.
@@ -37,12 +39,12 @@ Let's start with a treasure sort! Your team will get a bag of mixed treasures an
 3. **Your challenge:** Work together to count how many items you have for each category. For example, your result might be "5 red tokens, 3 blue tokens, and 2 green LEGOs."
 4. 🏆 The first team to get their counts **wins**!
 
-### 🤔 Team Reflection
+### 1.2 Team Reflection
 *Once you have your counts, think about this:*
 - What steps did your team take to complete the mission?
 - Did you sort the items first? Why?
 
-### 💡 Connecting to Code
+### 1.3 Connecting to Code
 Guess what? The steps you took are the *exact* steps data wizards use to wrangle data with code!
 
 - When you sorted items into piles (like all the red things together), you were performing a **`group_by()`** operation.
@@ -53,6 +55,8 @@ You just acted out a real data analysis workflow! Today, we'll teach you the spe
 
 ## 2. Let's Create Our Own Magical Creatures!
 *Duration: 15 minutes*
+
+### 2.1 Activity: Become a Creature Creator
 
 🎈 **Activity: Become a Creature Creator**
 
@@ -88,11 +92,10 @@ Once everyone has submitted their creature, I will export the data and upload it
 ### 3.1 Spell 1: Reading CSV Files
 *Duration: 15 minutes*
 
+🎈 **Activity: Opening Data Treasure Chests**
 
-#### 🎈 Activity: Opening Data Treasure Chests
-
-##### 💡 What is a CSV file?
-A CSV (Comma-Separated Values) file is like a super organized spreadsheet saved in a simple text format. Think of it as a list where every piece of information is separated by a comma. It's a bit like writing a list of your magical creatures and their powers:
+#### 3.1.1 **💡 What is a CSV file?**
+A CSV (Comma-Separated Values) file is like a super organized spreadsheet saved in a simple text format. Think of it as a list where every piece of information is separated by a comma. It's a bit like writing a list of your magical creatures and their powers: 
 
 ```
 Creature_Name, Type, Magic_Power
@@ -103,16 +106,16 @@ Thunder, phoenix, 9
 
 R can easily read these files to bring data into our magical world!
 
-##### 💡 Understanding File Paths - A Treasure Map for Your Computer!
+#### 3.1.2 **💡 Understanding File Paths - A Treasure Map for Your Computer!**
 Before we can load our data, we need to tell R exactly where to find it. Think of a file path as a treasure map that guides R to your file. There are two kinds of maps!
 
-##### 📍 The World Treasure Map (Absolute Path):
+**The World Treasure Map (Absolute Path):**
 This is like a full address that can find a treasure from anywhere in the world, but it only works for *one specific treasure chest*.
 - **Example:** `C:/Users/Sky/Sky_documents/projects/datasets/creatures.csv`
 - **What it means:** This path starts from the very beginning of Sky's computer's storage (`C:/`) and gives every single step to find the file.
 - **Problem:** If I give this map to you, it won't work! Your computer doesn't have a folder called `Sky`, or `Sky_documents`. It's too specific to Sky's computer!
 
-##### 🏴‍☠️ Your Secret Treasure Map (Relative Path):**
+**Your Secret Treasure Map (Relative Path):**
 This is like a map that works from a starting point that you both know, the `projects` folder that you both have! 
 - **Example:** `"datasets/creatures.csv"`
 - **What it means:** "From right here inside our `projects` folder, go into the `datasets` folder, and you'll find the `creatures.csv` file."
@@ -120,7 +123,42 @@ This is like a map that works from a starting point that you both know, the `pro
 
 🎯 **Always use relative paths in your R spells!** This way, your magic will work on any computer, not just your own.
 
-🔍 Let's explore our magical creature data:
+#### 3.1.3 **💡 What does `..` mean?**
+The `..` symbol means "go up one level" to the parent folder from where you are currently located.
+
+**📁 Example Folder Structure:**
+```
+🏰 otter_castle
+├── 📚 library/
+│   ├── 🎣 fish_catching/
+│   │   ├── 🐟 salmon/
+│   │   └── 🦪 clam/
+│   ├── 🔮 magic_spells/
+│   │   ├── 🧪 potion_magic/
+│   │   └── 🪶 flying_magic/
+│   └── 🐾 creatures/
+│       ├── 👹 giants/        ← You are **HERE** !
+│       ├── 🦄 unicorns/
+|       |    └── 🦄 unicorn_data.csv
+│       └── 🐱 cats/
+└── 🖼️ museums/
+```
+
+**🎯 Example: Going Up One Level**
+
+If you're currently in the `giants` folder and want to access the  `unicorn_data.csv` inside of the `unicorns` folder:
+- **Your current location:** `creatures/giants/` 
+- **Target location:** `creatures/unicorns/`
+- **Magic path:** `../unicorns/unicorn_data.csv`
+
+**✨ Breaking it down:**
+- `..` = "Go up from inside of the `giants` folder to inside of the `creatures` folder"  
+- `/unicorns/` = "Then go into the unicorns folder"
+- `/unicorn_data.csv` = "And grab this magical file!"
+
+**🎈 Think of it like exploring Otter Castle:** You're in the Giants' Lair, but the magical unicorn data is in the Unicorns' Garden next door. You need to go back to the main Creatures Hall first (`..`), then enter the Unicorns' Garden (`/unicorns/`)!
+
+#### 3.1.4 **Our own magical creature data:**
 
 📁 **Find this spell in Posit Cloud:** Look for the file `day03_spell01_loading_data.R` in your project files!
 
@@ -147,15 +185,15 @@ dim(creatures_raw)   # how many rows and how many columns?
 ### 3.2 Spell 1B: Cleaning Real Data (Optional)
 *Duration: 10 minutes (Optional)*
 
-
-#### 🎈 Activity: Turn Messy Data into Magic
+🎈 **Activity: Turn Messy Data into Magic**
 
 - Real data from Google Forms is often messy (typos, missing numbers, funny answers).
 
 <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNTB6ZTVqbXdsMW81aG03M2pueTg5Y3EyY3ppdTQ4Z2lzNWJxbjZqOSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/XwzmDnasOtKmY/giphy.gif" alt="dirty" style="width: 70%; height: auto;">
 
 - We clean the data once, then use the clean file for all other spells.
-##### 💡 What did we clean?
+
+##### 3.2.1 **What did we clean?**
 - Renamed long form questions to simple column names like `creature_name`, `creature_type`, `creature_age`, `magic_power`, `has_wings`
 - Turned text data into real numbers (e.g., ages and magic power)
 - Fixed `has_wings` answers to just `yes` or `no`
@@ -169,7 +207,7 @@ dim(creatures_raw)   # how many rows and how many columns?
 ### 4.1 Spell 2: The Ultimate Data Toolkit
 *Duration: 20 minutes*
 
-#### 🎈 Activity: Play with our own creatures!
+🎈 **Activity: Play with our own creatures!**
 
 <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExeDZ2ZmlkM3E1ZW82NmVsMWl3dnlyNTQ5ZzRxdWZsOWdldTQ5NmI1NSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/a1QLZUUtCcgyA/giphy.gif" alt="stitch_hi" style="width: 70%; height: auto;">
 
@@ -190,7 +228,7 @@ creature_basics <- select(creature_data, creature_name, creature_type)
 # creature_basics
 ```
 
-**💡 What is `select()`?**
+#### 4.1.1 **💡 What is `select()`?**
 The `select()` spell is like choosing which characteristics about your creature you want to look at. Instead of trying to understand every aspect about every single creature at once (their name, age, type, power level, if they have wings), you might `select()` only 1 or a few characteristics to look at first. You might `select()` just the `creature_name` and `magic_power` to see who's the strongest. This chooses characteristics (columns) only — it **does not remove any creatures (rows)**; you are still looking at all the creatures but focusing on just their name and power. It helps you focus on only the columns you need and discard irrelevant information.
 
 ```R
@@ -200,7 +238,7 @@ winged_creatures <- filter(creature_data, has_wings == "yes")
 # winged_creatures
 ```
 
-**💡 What is `filter()`?**
+#### 4.1.2 **💡 What is `filter()`?**
 The `filter()` spell **keeps only the creatures (rows) that meet your rule**. You set a criterion on a characteristic (column), like `magic_power >= 80` or `type == "dragon"`. This does not change which characteristics (columns) you see — it **does not remove any characteristics (columns)**; it chooses which rows stay based on your threshold or criteria.
 
 ```R
@@ -210,7 +248,7 @@ creatures_by_age <- arrange(creature_data, creature_age)
 # creatures_by_age
 ```
 
-**💡 What is `arrange()`?**
+#### 4.1.3 **💡 What is `arrange()`?**
 The `arrange()` spell is like lining up your creatures from shortest to tallest, or weakest to strongest. It sorts your data based on 1 or a few characteristics of the creatures. By default, `arrange()` sorts your data from smallest to biggest. Use `arrange(your_data, desc(column_name))` to sort from biggest to smallest.
 
 ```R
@@ -221,14 +259,13 @@ top_3_oldest <- slice(oldest_creatures, 1:3)
 # top_3_oldest
 ```
 
-**💡 What is `slice()`?**
+#### 4.1.4 **💡 What is `slice()`?**
 The `slice()` spell picks rows by their position in the table. It’s like choosing creatures from a lineup by their position in the queue. You can grab the first three with `slice(1:3)`, or just the tenth one with `slice(10)`.
 
 ### 4.2 Spell 3: Grouping and Mutating Magic
 *Duration: 20 minutes*
 
-
-#### 🎈 Activity: Sorting Creatures into Teams
+🎈 **Activity: Sorting Creatures into Teams**
 
 📁 **Find this spell in Posit Cloud:** Look for the file `day03_spell03_grouping.R` in your project files!
 
@@ -247,13 +284,13 @@ creature_summary <- summarize(by_type,
 # creature_summary
 ```
 
-**💡 What is `group_by()`?**
+#### 4.2.1 **💡 What is `group_by()`?**
 Think of `group_by()` like sorting your creatures into teams. All the dragons stand together, all the phoenixes together, and so on. This helps us compare teams easily.
 
-**💡 What is `summarize()`?**
+#### 4.2.2 **💡 What is `summarize()`?**
 After the teams are made, `summarize()` asks each team one clear question and gets one clear answer back. For example: “How many are in your team?” or “What is your team’s average magic power?”
 
-**💡 What are `n()` and `mean()`?**
+#### 4.2.3 **💡 What are `n()` and `mean()`?**
 - `n()` counts how many are in the team.
 - `mean()` finds the average of a characteristic in the team (like what is the average `magic_power` of all creatures in the team).
 
@@ -267,7 +304,7 @@ creatures_enhanced <- mutate(creature_data,
 # creatures_enhanced
 ```
 
-**💡 What is `mutate()`?**
+#### 4.2.4 **💡 What is `mutate()`?**
 `mutate()` creates a brand-new column using the ones you already have. It’s like giving each creature a new label based on a rule.
 
 <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3ZnY1NDRiZWh4OXlrb3NpdXI0Nml1amNocDJiNHN6dmVsbGh0b2R2NyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/47CUUhb9c2I7uepkyw/giphy.gif" alt="count_arm" style="width: 70%; height: auto;">
@@ -276,8 +313,7 @@ creatures_enhanced <- mutate(creature_data,
 ### 4.3 Spell 4: Pipeline Magic
 *Duration: 20 minutes*
 
-
-#### 🎈 Activity: Chaining Commands Like Magic
+🎈 **Activity: Chaining Commands Like Magic**
 
 
 📁 **Find this spell in Posit Cloud:** Look for the file `day03_spell04_piping.R` in your project files!
@@ -302,7 +338,7 @@ top_winged_creatures <- creature_data %>%
   select(creature_name)
 ```
 
-**💡 What is the Pipe `%>%`?**
+#### 4.3.1 **💡 What is the Pipe `%>%`?**
 The pipe `%>%` is one of the most magical spells in R! It lets you chain your commands together in a clear, readable way. It takes the result from the step before and "pipes" it directly into the next step.
 
 **💡 `%>%` vs `|>` in R**
@@ -324,9 +360,9 @@ Think of it like cooking a meal:
 ### 5.1 Spell 5: Histogram Stories
 *Duration: 15 minutes*
 
-#### 🎈 Activity: Shape Detective
+🎈 **Activity: Shape Detective**
 
-**💡 What is a Histogram?**
+#### 5.1.1 **💡 What is a Histogram?**
 A histogram is a picture that shows how your numbers are spread out. Imagine sorting creature ages into boxes (called bins): 0–10, 10–20, 20–30, and so on. Each bar tells you how many creatures are in each box. The bars touch because ages go in order with no gaps. This helps you see the overall shape — are most creatures young, old, or in-between?
 
 📁 **Find this spell in Posit Cloud:** Look for the file `day03_spell05_histograms.R` in your project files!
@@ -345,9 +381,9 @@ ggplot(creature_data, aes(x = creature_age)) +
 ### 5.2 Spell 6: Scatter Plot Adventures
 *Duration: 10 minutes*
 
-#### 🎈 Activity: Relationship Detective
+🎈 **Activity: Relationship Detective**
 
-**💡 What is a Scatter Plot?**
+#### 5.2.1 **💡 What is a Scatter Plot?**
 A scatter plot is the perfect tool for a relationship detective! It helps you see if two things are connected. For example, does a creature who is older have more magic power? Each dot on the plot represents one creature, showing both their age and their magic level. If the dots form a pattern (like going up and to the right), it suggests a relationship!
 
 📁 **Find this spell in Posit Cloud:** Look for the file `day03_spell06_scatter_plots.R` in your project files!
@@ -365,13 +401,13 @@ ggplot(creature_data, aes(x = creature_age, y = magic_power)) +
 ### 5.3 Spell 7: Bar Chart Champions
 *Duration: 10 minutes*
 
-#### 🎈 Physical Activity: Human Bar Chart:**
+**🎈 Physical Activity: Human Bar Chart:**
 - Teams line up behind their category signs
 - The longest line "wins" - you can see the comparison instantly!
 
-#### 🎈 Activity: Which group has the most creatures?
+**Which group has the most creatures?**
 
-**💡 What is a Bar Chart?**
+#### 5.3.1 **💡 What is a Bar Chart?**
 A bar chart is perfect for comparing different groups (categorical data). Each bar represents a group, and its height shows the count or value. It makes it super easy to see which group is the biggest! Which type of magical creature is most popular? A bar chart will tell you. 
 
 
@@ -395,17 +431,17 @@ ggplot(creature_counts, aes(x = creature_type, y = total)) +
 - **Histograms** are for numbers that are continuous (like height, score)
 - **Bar Charts** are for comparing separate groups or categories (like creature types: "dragon", "Fairy", "Phoenix").
 
-#### 🤡 Visualization Crime Alert: Can You Spot What's Wrong?
+### 5.4 🤡 Visualization Crime Alert: Can You Spot What's Wrong?
 *Duration: 10 minutes*
 
-##### 🚔 **Visualization crime 1**
+#### 5.4.1 **🚔 Visualization crime 1**
 Take a look at this real bar plot that was shared when GPT-5 was announced last week by OpenAI:
 
 ![GPT-5 performance comparison chart](../../images/gpt5.png)
 
  > 🤔 What's wrong with this bar plot?
 
-##### 🚔 **Visualization crime 2**
+#### 5.4.2 **🚔 Visualization crime 2**
 
 Here is a plot to show where do participants come from attending an AI conference
 
@@ -417,7 +453,7 @@ Here is another plot to show where do participants come from attending the **SAM
 
 ![acm facct 2025 bar plot 2](../../images/acm_facct2025_2.png)
 
-##### 🚔 **Visualization crime 3**
+#### 5.4.3 **🚔 Visualization crime 3**
 
 Here is a plot showing the global temperature changes from 1880 - 2015. 
 
@@ -432,7 +468,7 @@ Here is another visualization that is zoomed in, using the same data:
 
 > 🤯 Global warming is real!!
 
-##### 🚔 **Visualization crime 4**
+#### 5.4.4 **🚔 Visualization crime 4**
 
 Here is a plot from a scientific paper, showing there is a relationship between the prevalence of autisim and the population covergae of measles, mumps, and rubella vaccine. 
 
@@ -460,7 +496,9 @@ Here is another visualization that is more properly plotted, there is barely any
 - `day03_spell08C_creature_sightings_project.R` (uses `creature_sightings.csv`)
 - `day03_spell08D_magic_school_project.R` (uses `magic_school_grades.csv`)
 
-#### 🎈 Activity: Partner Data Investigation
+#### 6.1.1 Activity: Partner Data Investigation
+
+🎈 **Activity: Partner Data Investigation**
 
 **🕵️‍♀️ Mission: Solve a Data Mystery!**
 
@@ -492,7 +530,7 @@ Work with a partner to become data detectives! Choose one or many mysteries to s
 
 ## 7. 📋 Pro Tips Cheatsheet
 
-### Data Loading Essentials
+### 7.1 Data Loading Essentials
 - `read.csv("filename.csv")` opens data files like treasure chests
 - `head(data)` shows first 6 rows (peek inside the chest)
 - `tail(data)` shows last 6 rows (peek inside the chest)
@@ -502,7 +540,7 @@ Work with a partner to become data detectives! Choose one or many mysteries to s
 - Always check your data after loading it!
 - Use relative paths like `"datasets/creatures.csv"` so your code works on any computer.
 
-### Data Wrangling with dplyr
+### 7.2 Data Wrangling with dplyr
 - `library(dplyr)` loads an open-source R package with code written by someone else (don't forget this!).
 - `select(data, column1, column2)` picks specific columns.
 - `filter(data, condition)` keeps only rows that match a rule.
@@ -512,7 +550,7 @@ Work with a partner to become data detectives! Choose one or many mysteries to s
 - `summarize(count = n())` calculates a summary for each team (like counting or averaging).
 - `mutate(data, new_col = calculation)` creates new columns.
 
-### Data Cleaning Essentials (from Spell 1B)
+### 7.3 Data Cleaning Essentials (from Spell 1B)
 - `rename()` shortens long column names to simple ones (lowercase)
 - `as.numeric()` turns number-like text into real numbers
 - `gsub()` removes unwanted characters from text before converting
@@ -520,13 +558,13 @@ Work with a partner to become data detectives! Choose one or many mysteries to s
 - `filter()` removes rows with missing or impossible values
 - `write.csv()` saves your cleaned data for everyone to use
 
-### Pipeline Magic
+### 7.4 Pipeline Magic
 - `%>%` means "then do this next", from `dplyr` package
 - `|>` also means "then do this next", from base R (do not need to load packages), most of the time it's interchangable with `%>%`
 - `data %>% filter() %>% select() %>% arrange()` chains commands together
 - Read like instructions: "take data, then filter, then select, then sort"
 
-### Visualization Basics with ggplot2
+### 7.5 Visualization Basics with ggplot2
 - `library(ggplot2)` loads your plotting toolbox (ggplot2 R package).
 - `geom_histogram()` creates histograms, shows the shape of numbers (for continuous data).
 - `geom_point()` creates scatterplots, shows relationships between two variables (characteristics of each data point).
@@ -536,7 +574,7 @@ Work with a partner to become data detectives! Choose one or many mysteries to s
 
 ## 8. 🆘 Troubleshooting Cheatsheet
 
-### Data Loading Problems
+### 8.1 Data Loading Problems
 🐛 **Error: "cannot open file"**
 - **What it means:** R can't find a way to walk to your file
 - **Why it happens:** File name is wrong or file isn't where you think it is (path is wrong)
@@ -547,7 +585,7 @@ Work with a partner to become data detectives! Choose one or many mysteries to s
 - **Why it happens:** Forgot to run the code that loads your creature data
 - **The Fix:** Run the `creature_data <- read.csv("datasets/creatures.csv")` line first
 
-### Function Problems
+### 8.2 Function Problems
 🐛 **Error: "could not find function"**
 - **What it means:** R doesn't know what `select()` or `filter()` means
 - **Why it happens:** Forgot to load the dplyr package
@@ -558,13 +596,13 @@ Work with a partner to become data detectives! Choose one or many mysteries to s
 - **Why it happens:** Typo in column name or your columns are named differently
 - **The Fix:** Check column names with `names(creature_data)` and fix spelling
 
-### Pipeline Problems
+### 8.3 Pipeline Problems
 🐛 **Pipeline not working**
 - **What it means:** Something wrong in the chain of `%>%` commands
 - **Why it happens:** Forgot to load dplyr, or syntax error in pipeline
 - **The Fix:** Load `library(dplyr)` first, test each step separately
 
-### Plotting Issues
+### 8.4 Plotting Issues
 🐛 **"continuous value supplied to discrete scale"**
 - **What it means:** Trying to color by a number when ggplot expects categories
 - **Why it happens:** Using `color = creature_age` instead of `color = creature_type`
