@@ -4,7 +4,7 @@
 
 set.seed(42)
 
-# Dragons - TRUE Normal Distribution using rejection sampling (KEEP THIS!)
+# Dragons - Normal Distribution (0-100, all positive)
 generate_bounded_normal <- function(n, mean, sd, min_val, max_val) {
   result <- numeric(n)
   count <- 0
@@ -25,11 +25,11 @@ generate_bounded_normal <- function(n, mean, sd, min_val, max_val) {
   return(result)
 }
 
-# Dragons - Perfect normal distribution within bounds
+# Dragons - Normal distribution within 0-100 bounds
 dragons <- data.frame(
   creature_id = 1:1000,
   creature_type = "dragon",
-  power_level = round(generate_bounded_normal(1000, mean=50, sd=12, min_val=25, max_val=75))
+  power_level = round(generate_bounded_normal(1000, mean=50, sd=15, min_val=0, max_val=100))
 )
 
 # Unicorns - Left Skewed (0-100)

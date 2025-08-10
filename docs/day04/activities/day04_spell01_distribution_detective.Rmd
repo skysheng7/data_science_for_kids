@@ -39,7 +39,7 @@ Dragons have very balanced power - most dragons are medium strength, with fewer 
 ```{r dragon-analysis}
 # Create a histogram of dragon power
 ggplot(dragons, aes(x = power_level)) +
-  geom_histogram(fill = "pink", color = "white", alpha = 0.7) +
+  geom_histogram(fill ="#a4ce89", color = "white", alpha = 0.7, bins = 25) +
   labs(title = "🐉 Dragon Power Distribution (Normal/Symmetrical)", 
        x = "Dragon Power Level", 
        y = "Number of Dragons") +
@@ -70,7 +70,7 @@ Most unicorns have high power, but a few have very low power - this creates a "t
 ```{r unicorn-analysis}
 # Create histogram of unicorn magic
 ggplot(unicorns, aes(x = power_level)) +
-  geom_histogram(fill = "lightblue", color = "white", alpha = 0.7) +
+  geom_histogram(fill = "pink", color = "white", alpha = 0.7, bins = 25) +
   labs(title = "🦄 Unicorn Power Distribution (Left-Skewed)", 
        x = "Unicorn Power Level", 
        y = "Number of Unicorns") +
@@ -101,7 +101,7 @@ Most phoenixes have low power, but a few have extremely high power - this create
 ```{r phoenix-analysis}
 # Create histogram of phoenix energy
 ggplot(phoenixes, aes(x = power_level)) +
-  geom_histogram(fill = "orange", color = "white", alpha = 0.7) +
+  geom_histogram(fill = "#f1c979", color = "white", alpha = 0.7, bins = 25) +
   labs(title = "🔥 Phoenix Power Distribution (Right-Skewed)", 
        x = "Phoenix Power Level", 
        y = "Number of Phoenixes") +
@@ -132,7 +132,7 @@ Let's see all three distributions stacked vertically in one beautiful view!
 ```{r stacked-distributions}
 # Create individual plots
 p1 <- ggplot(dragons, aes(x = power_level)) +
-  geom_histogram(fill = "#48c33f", color = "black", alpha = 0.7, bins = 25) +
+  geom_histogram(fill ="#a4ce89", color = "white", alpha = 0.7, bins = 25)  +
   labs(title = "🐉 Dragon Power (Normal Distribution)", 
        x = "Power Level", 
        y = "Count") +
@@ -140,7 +140,7 @@ p1 <- ggplot(dragons, aes(x = power_level)) +
   theme(plot.title = element_text(size = 12, hjust = 0.5))
 
 p2 <- ggplot(unicorns, aes(x = power_level)) +
-  geom_histogram(fill = "purple", color = "black", alpha = 0.7, bins = 25) +
+  geom_histogram(fill = "pink", color = "white", alpha = 0.7, bins = 25) +
   labs(title = "🦄 Unicorn Power (Left-Skewed Distribution)", 
        x = "Power Level", 
        y = "Count") +
@@ -148,7 +148,7 @@ p2 <- ggplot(unicorns, aes(x = power_level)) +
   theme(plot.title = element_text(size = 12, hjust = 0.5))
 
 p3 <- ggplot(phoenixes, aes(x = power_level)) +
-  geom_histogram(fill = "orange", color = "black", alpha = 0.7, bins = 25) +
+  geom_histogram(fill = "#f1c979", color = "white", alpha = 0.7, bins = 25)  +
   labs(title = "🔥 Phoenix Power (Right-Skewed Distribution)", 
        x = "Power Level", 
        y = "Count") +

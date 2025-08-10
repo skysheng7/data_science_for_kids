@@ -127,8 +127,12 @@ Just like how people can be tall, short, or in-between, data comes in different 
 
 💡 **Detective Rules:**
 - **Symmetrical data:** Mean ≈ Median (use either one!)
-- **Skewed data:** Median is often more "typical" than mean
+- **Left-skewed distributions:** Mean < Median (mean gets pulled down because of outliers with small values sitting on the left side)
+- **Right-skewed distributions:** Mean > Median (mean gets pulled up because of outliers with large values sitting on the right side)
+- **When data is skewed,** median is often a better measure of "typical" value
 - **Outliers:** Can pull the mean away from where most data sits
+
+![skewness file](../../images/distribution.png)
 
 
 ## 2. The Great Sampling Adventure 🎲
