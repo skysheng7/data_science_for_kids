@@ -110,7 +110,7 @@ for (number in 1:10){
 ### 2.1 Spell 1: Basic Loop Magic
 *Duration: 15 minutes*
 
-📁 **Find this spell in Posit Cloud:** Look for the file `day02_spell01_basic_loops.Rmd` in your project files!
+📁 **Find this spell in [Posit Cloud](https://posit.cloud):** Look for the file `day02_spell01_basic_loops.Rmd` in your project files!
 
 #### 2.1.1 🔮 R Markdown Files (.Rmd)
 

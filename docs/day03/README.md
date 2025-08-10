@@ -160,7 +160,7 @@ If you're currently in the `giants` folder and want to access the  `unicorn_data
 
 #### 3.1.4 **Our own magical creature data:**
 
-📁 **Find this spell in Posit Cloud:** Look for the file `day03_spell01_loading_data.Rmd` in your project files!
+📁 **Find this spell in [Posit Cloud](https://posit.cloud):** Look for the file `day03_spell01_loading_data.Rmd` in your project files!
 
 ```R
 # Step 1: Load the treasure chest (read the data)

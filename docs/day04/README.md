@@ -179,7 +179,7 @@ variability** - and it's totally normal!
 
 **🐉 The Setup:** We have a population of 1000 magical creatures where exactly 30% are dragons. Let's see what happens when we take different sized samples!
 
-📁 **Find this spell in Posit Cloud:** Look for the file `day04_spell02_sampling_adventure.Rmd` in your project files!
+📁 **Find this spell in [Posit Cloud](https://posit.cloud):** Look for the file `day04_spell02_sampling_adventure.Rmd` in your project files!
 
 **🔬 The Three Great Experiments:**
 1. **Small Samples (Size 10):** Take 100 samples of 10 creatures each

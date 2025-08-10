@@ -91,7 +91,7 @@ Just like studying for a test, computers need practice data (training) and then 
 
 ### Spell 1: KNN Classification with Magical Creatures
 
-**📁 Find this spell in Posit Cloud:** Look for the file `day05_spell01_magical_knn.R` in your project files!
+**📁 Find this spell in [Posit Cloud](https://posit.cloud):** Look for the file `day05_spell01_magical_knn.R` in your project files!
 
 #### 🎈 Activity: Predict Magical Creature Types
 Using Oda's magical creature dataset, predict whether a new creature is friendly or mischievous based on their characteristics!
