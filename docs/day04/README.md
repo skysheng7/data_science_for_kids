@@ -358,7 +358,7 @@ If you want to know the average height of all kids in your school but can only m
 
 📁 **Find this spell in Posit Cloud:** Look for the file `day04_spell03_bootstrap_bootcamp.Rmd` in your project files!
 
-<img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3bmJxaXQ2MTRrNjNzOHhqMDJwa3FlemE1Ymw3NzhvcDlpN3dsZW5tYiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/9eM1SWnqjrc40/giphy.gif" alt="bye" style="width: 60%; height: auto;">
+<img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3bmJxaXQ2MTRrNjNzOHhqMDJwa3FlemE1Ymw3NzhvcDlpN3dsZW5tYiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/9eM1SWnqjrc40/giphy.gif" alt="bye" style="width: 80%; height: auto;">
 
 ## 5. 📋 Pro Tips Cheatsheet
 
