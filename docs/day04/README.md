@@ -216,7 +216,7 @@ If the true percentage of dragons in the forest is 30%, and you take 100 differe
 <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3NW9pN2MxdGF6Y25jcXRtdml6Y3RpMmlsYmpxaTJ6YmFiam1ueXUwNyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/V6fMm9TDwdb5K7yjt8/giphy.gif" alt="" style="width: 70%; height: auto;">
 
 #### 3.2.3 🎈 Activity: Statistical Wizards Save Halloween - Round 2!!
-*Duration: 20 minutes*
+*Duration: 25 minutes*
 
 > 🎉 Good News! The magical council has prepared more "Time Crystal Bag" for us!
 
@@ -239,10 +239,9 @@ If the true percentage of dragons in the forest is 30%, and you take 100 differe
 
 <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWxsZXN1NTJyaXYwejNsbDEwNHlocjA3cWdqemRibnVuZ3B0YTBzMCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/3oz8xLZ1qiYR43jYE8/giphy.gif" alt="rabbit_dance" style="width: 60%; height: auto;">
 
-### Spell 2: Digital Sampling Magic
-*Duration: 15 minutes*
 
 #### 3.2.4 🎈 Activity: The Magical Creature Population Study
+*Duration: 15 minutes*
 
 **🐉 The Setup:** In the Enchanted Forest, we have a population of 1000 magical creatures where exactly 30% are dragons. Let's see what happens when we take different sized samples!
 
