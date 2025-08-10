@@ -275,6 +275,8 @@ The two farmers are worried and need to know how many of their sheep are mixed t
 **⚡ The Challenge**
 As Junior Statistical Shepherds, you must use the ancient art of **Bootstrap Magic** to estimate what percentage of the total flock is black sheep, and create a **Confidence Prophecy** (confidence interval) for your estimate.
 
+![sheep](../../images/sheep.png)
+
 **🧙‍♀️ Materials Needed:**
 - Bags containing black and white tokens (representing sheep)
 - Each bag has the same true proportion (suggest 60% black, 40% white)
@@ -306,12 +308,14 @@ As Junior Statistical Shepherds, you must use the ancient art of **Bootstrap Mag
 - **Precision Prize:** Narrowest confidence interval that still captures the truth gets **BONUS TREATS!**
 - **Team Oracle Challenge:** Everyone who participates gets candy, and the group celebrates their combined statistical power!
 
+<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMWt1ZzN0dnkyYWRkZW9xbmxic2Z5dDVxYW5mMG1xOWQ0N3B6Y2Q2aSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Qw4X3FyDEfQrNgjl6M0/giphy.gif" alt="dance_2" style="width: 100%; height: auto;">
+
+
 💡 **What is Bootstrapping?**
 Imagine you have only one bag of candies, but you want to know what would happen if you had many bags like it. Bootstrapping is like a time machine - you sample from your one bag WITH replacement (putting candies back) to simulate having many similar bags!
 
 **🕐 The Magic:** We can travel through time by sampling WITH replacement!
 
-<img src="PLACEHOLDER_GIF_URL" alt="Kids doing bootstrap sampling with tokens" style="width: 100%; height: auto;">
 
 ## 4. R Magic + Confidence Interval Casino 🎰
 *Duration: 40 minutes*
@@ -361,7 +365,6 @@ Think of it like this: If someone asks "How tall are the students in your school
 
 💡 **Casino Wisdom:** Being more confident (99% vs 90%) means you need a wider net to catch the true answer - but you're more likely to win!
 
-<img src="PLACEHOLDER_GIF_URL" alt="Kids cheering at computer screens showing confidence intervals" style="width: 100%; height: auto;">
 
 ## 5. Sampling Chaos Challenge 🌪️
 *Duration: 25 minutes*
@@ -389,7 +392,7 @@ Think of it like this: If someone asks "How tall are the students in your school
 
 **🤯 The Epic Discovery:** Different sampling methods give WILDLY different results! Good sampling is CRUCIAL for good science!
 
-<img src="PLACEHOLDER_GIF_URL" alt="Kids rotating between sampling stations" style="width: 100%; height: auto;">
+<img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3N2Y0MzJia281OWU4ZmFlbHJpdTJzeGJ2cXMyczQ1NW45eGVoaWczeSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/3oz8xElsKyL1Pdostq/giphy.gif" alt="racoon" style="width: 100%; height: auto;">
 
 ## 6. Victory Celebration & Reflection Circle 🎉
 *Duration: 10 minutes*

@@ -6,4 +6,5 @@ jupytext
 myst-nb
 jupyter-client
 ipykernel
+PyYAML
 
