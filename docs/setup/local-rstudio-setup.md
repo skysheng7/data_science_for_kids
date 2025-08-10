@@ -57,6 +57,7 @@ install.packages(c(
   "dplyr",        # Data wrangling
   "gridExtra"     # Visualization grid
   "tidymodels"    # Machine learning models
+  "infer"         # Sampling
   "knitr",        # Document creation
   "rmarkdown"     # Reports and presentations
 ))

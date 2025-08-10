@@ -11,10 +11,11 @@ Imagine you want to know how many dragons live in the entire Enchanted Forest, b
 **📊 Statistic** = Something we calculate using our sample (like "30% of creatures in our sample are dragons")  
 **🎯 Inference** = Using our sample to make a conclusion about the whole population
 
-```{r}
+```{r setup}
 knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 library(ggplot2)
 library(dplyr)
+library(infer)  # For rep_sample_n function
 set.seed(123)  # For reproducible results
 ```
 
@@ -24,17 +25,17 @@ Let's create our population of 1000 magical creatures where exactly 30% are drag
 ```{r create-population}
 # Create our population of 1000 creatures
 # 300 dragons (30%) and 700 other creatures (70%)
-population <- data.frame(
+magical_creatures <- tibble(
   creature_id = 1:1000,
-  creature_type = c(rep("dragon", 300), rep("other", 700))
+  creature_type = factor(c(rep("dragon", 300), rep("other", 700)))
 )
 
 # Let's verify our true population proportion
-true_dragon_proportion <- sum(population$creature_type == "dragon") / nrow(population)
+true_dragon_proportion <- sum(magical_creatures$creature_type == "dragon") / nrow(magical_creatures)
 print(paste("🎯 True proportion of dragons in population:", true_dragon_proportion))
 
 # Visualize our population
-population_summary <- population %>%
+population_summary <- magical_creatures %>%
   count(creature_type) %>%
   mutate(proportion = n / sum(n))
 
@@ -49,146 +50,119 @@ ggplot(population_summary, aes(x = creature_type, y = proportion, fill = creatur
   theme(legend.position = "none")
 ```
 
-## 🎣 Experiment 1: Small Samples (Size 10)
-Let's take many small samples and see what happens!
+## 🎣 Taking Our First Sample (Size 40)
+Let's explore one area of the forest and see what creatures we find!
 
-```{r small-samples}
-# Function to take a random sample and calculate dragon proportion
-take_sample <- function(population, sample_size) {
-  sample_data <- population[sample(nrow(population), sample_size), ]
-  dragon_count <- sum(sample_data$creature_type == "dragon")
-  proportion <- dragon_count / sample_size
-  return(proportion)
-}
+```{r first-sample}
+# Take one random sample of 40 creatures
+creature_sample_1 <- rep_sample_n(magical_creatures, size = 40)
+creature_sample_1
 
-# Take 100 samples of size 10
-n_samples <- 100
-sample_size_10 <- 10
+# What's the proportion of dragons in our sample?
+dragon_estimate_1 <- creature_sample_1 %>%
+  summarize(count = sum(creature_type == "dragon"),
+            proportion = sum(creature_type == "dragon") / 40)
 
-sample_proportions_10 <- replicate(n_samples, take_sample(population, sample_size_10))
+print("🔍 Our first sample results:")
+dragon_estimate_1
+```
 
-# Create a data frame for plotting
-results_10 <- data.frame(
-  sample_number = 1:n_samples,
-  proportion = sample_proportions_10,
-  sample_size = paste("Sample Size:", sample_size_10)
-)
+## 🎣 Taking Another Sample
+What happens if we explore a different area of the forest? Will we get the same result?
+
+```{r second-sample}
+# Take another random sample of 40 creatures
+dragon_estimate_2 <- rep_sample_n(magical_creatures, size = 40) %>%
+  summarize(count = sum(creature_type == "dragon"),
+            proportion = sum(creature_type == "dragon") / 40)
+
+print("🔍 Our second sample results:")
+dragon_estimate_2
+```
+
+## 🎣 And One More Sample!
+Let's try once more to see the variability between samples:
+
+```{r third-sample}
+# Take a third random sample of 40 creatures
+dragon_estimate_3 <- rep_sample_n(magical_creatures, size = 40) %>%
+  summarize(count = sum(creature_type == "dragon"),
+            proportion = sum(creature_type == "dragon") / 40)
+
+print("🔍 Our third sample results:")
+dragon_estimate_3
+```
+
+## 📊 The Sampling Distribution: Taking LOTS of Samples!
+What if we explore 1000 different areas of the forest? Let's see what the distribution of our estimates looks like!
+
+```{r sampling-distribution}
+# Take 1000 samples of size 40 and calculate proportions for each
+sampling_results <- rep_sample_n(magical_creatures, size = 40, reps = 1000) %>%
+  group_by(replicate) %>%
+  summarize(proportion = sum(creature_type == "dragon") / 40)
 
 # Plot the sampling distribution
-ggplot(results_10, aes(x = proportion)) +
-  geom_histogram(bins = 15, fill = "lightblue", color = "black", alpha = 0.7) +
+ggplot(sampling_results, aes(x = proportion)) +
+  geom_histogram(binwidth = 0.05, fill = "lightblue", color = "black", alpha = 0.7) +
   geom_vline(xintercept = true_dragon_proportion, color = "red", linetype = "dashed", linewidth = 1) +
-  labs(title = "🎲 Sampling Distribution: Sample Size 10",
+  labs(title = "🎲 Sampling Distribution: 1000 Samples of Size 40",
        x = "Sample Proportion of Dragons", 
-       y = "Frequency",
+       y = "Count",
        subtitle = "Red line shows true population proportion (0.30)") +
   theme_minimal()
 
 # Calculate statistics about our sampling distribution
-mean_proportion_10 <- mean(sample_proportions_10)
-sd_proportion_10 <- sd(sample_proportions_10)
+mean_proportion <- mean(sampling_results$proportion)
+sd_proportion <- sd(sampling_results$proportion)
 
-print(paste("📊 Average of sample proportions (size 10):", round(mean_proportion_10, 3)))
-print(paste("📏 Spread (standard deviation) of sample proportions:", round(sd_proportion_10, 3)))
+print(paste("📊 Average of all sample proportions:", round(mean_proportion, 3)))
+print(paste("📏 Spread (standard deviation) of sample proportions:", round(sd_proportion, 3)))
+print(paste("🎯 True population proportion:", true_dragon_proportion))
 ```
 
-## 🎣 Experiment 2: Medium Samples (Size 50)
-What happens when we use bigger samples?
+## 📊 The Magic of Sample Size: What If We Change Sample Size?
+Let's see what happens when we use different sample sizes!
 
-```{r medium-samples}
-# Take 100 samples of size 50
-sample_size_50 <- 50
-sample_proportions_50 <- replicate(n_samples, take_sample(population, sample_size_50))
+```{r sample-size-comparison}
+# Compare different sample sizes: 20, 40, and 100
+sample_sizes <- c(20, 40, 100)
+all_results <- tibble()
 
-results_50 <- data.frame(
-  sample_number = 1:n_samples,
-  proportion = sample_proportions_50,
-  sample_size = paste("Sample Size:", sample_size_50)
-)
-
-# Plot the sampling distribution
-ggplot(results_50, aes(x = proportion)) +
-  geom_histogram(bins = 15, fill = "lightgreen", color = "black", alpha = 0.7) +
-  geom_vline(xintercept = true_dragon_proportion, color = "red", linetype = "dashed", linewidth = 1) +
-  labs(title = "🎯 Sampling Distribution: Sample Size 50",
-       x = "Sample Proportion of Dragons", 
-       y = "Frequency",
-       subtitle = "Red line shows true population proportion (0.30)") +
-  theme_minimal()
-
-# Calculate statistics
-mean_proportion_50 <- mean(sample_proportions_50)
-sd_proportion_50 <- sd(sample_proportions_50)
-
-print(paste("📊 Average of sample proportions (size 50):", round(mean_proportion_50, 3)))
-print(paste("📏 Spread (standard deviation) of sample proportions:", round(sd_proportion_50, 3)))
-```
-
-## 🎣 Experiment 3: Large Samples (Size 100)
-Let's try even bigger samples!
-
-```{r large-samples}
-# Take 100 samples of size 100
-sample_size_100 <- 100
-sample_proportions_100 <- replicate(n_samples, take_sample(population, sample_size_100))
-
-results_100 <- data.frame(
-  sample_number = 1:n_samples,
-  proportion = sample_proportions_100,
-  sample_size = paste("Sample Size:", sample_size_100)
-)
-
-# Plot the sampling distribution
-ggplot(results_100, aes(x = proportion)) +
-  geom_histogram(bins = 15, fill = "lightcoral", color = "black", alpha = 0.7) +
-  geom_vline(xintercept = true_dragon_proportion, color = "red", linetype = "dashed", linewidth = 1) +
-  labs(title = "🎪 Sampling Distribution: Sample Size 100",
-       x = "Sample Proportion of Dragons", 
-       y = "Frequency",
-       subtitle = "Red line shows true population proportion (0.30)") +
-  theme_minimal()
-
-# Calculate statistics
-mean_proportion_100 <- mean(sample_proportions_100)
-sd_proportion_100 <- sd(sample_proportions_100)
-
-print(paste("📊 Average of sample proportions (size 100):", round(mean_proportion_100, 3)))
-print(paste("📏 Spread (standard deviation) of sample proportions:", round(sd_proportion_100, 3)))
-```
-
-## 📊 The Great Comparison: All Sample Sizes Together!
-
-```{r comparison}
-# Combine all results
-all_results <- rbind(
-  data.frame(proportion = sample_proportions_10, sample_size = "Size 10"),
-  data.frame(proportion = sample_proportions_50, sample_size = "Size 50"),
-  data.frame(proportion = sample_proportions_100, sample_size = "Size 100")
-)
+for (size in sample_sizes) {
+  results <- rep_sample_n(magical_creatures, size = size, reps = 1000) %>%
+    group_by(replicate) %>%
+    summarize(proportion = sum(creature_type == "dragon") / size,
+              sample_size = paste("Size", size))
+  
+  all_results <- bind_rows(all_results, results)
+}
 
 # Create comparison plot
 ggplot(all_results, aes(x = proportion, fill = sample_size)) +
-  geom_histogram(bins = 15, alpha = 0.7, position = "identity") +
+  geom_histogram(binwidth = 0.05, alpha = 0.7) +
   geom_vline(xintercept = true_dragon_proportion, color = "red", linetype = "dashed", linewidth = 1) +
   facet_wrap(~sample_size, ncol = 1) +
-  scale_fill_manual(values = c("lightblue", "lightgreen", "lightcoral")) +
+  scale_fill_manual(values = c("lightcoral", "lightblue", "lightgreen")) +
   labs(title = "🌟 The Magic of Sample Size: All Distributions Compared",
        x = "Sample Proportion of Dragons", 
-       y = "Frequency",
+       y = "Count",
        subtitle = "Notice how larger samples cluster more tightly around the true value!") +
   theme_minimal() +
   theme(legend.position = "none")
 
-# Summary table
-summary_table <- data.frame(
-  Sample_Size = c(10, 50, 100),
-  Average_Proportion = c(mean_proportion_10, mean_proportion_50, mean_proportion_100),
-  Spread_SD = c(sd_proportion_10, sd_proportion_50, sd_proportion_100),
-  True_Proportion = rep(true_dragon_proportion, 3)
-)
+# Calculate summary statistics
+summary_stats <- all_results %>%
+  group_by(sample_size) %>%
+  summarize(
+    Average_Proportion = mean(proportion),
+    Spread_SD = sd(proportion),
+    .groups = "drop"
+  ) %>%
+  mutate(True_Proportion = true_dragon_proportion)
 
 print("🏆 Summary of All Experiments:")
-print(round(summary_table, 3))
+print(summary_stats)
 ```
 
 ## 🎯 Key Magical Discoveries!

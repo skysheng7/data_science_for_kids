@@ -28,7 +28,7 @@ title: Day 4 - Statistics Ocean
 🎉 Today, YOU become the data points! We'll use our own heights and birthdays to discover the magic of mean, median, and mode.
 
 ### 1.1 Height Histogram & Mean Discovery
-*Duration: 15 minutes*
+*Duration: 20 minutes*
 
 1. **🧙‍♀️ Human Lineup:** Line up by height from shortest to tallest
 2. **🔍 In-Person Investigation:** 
@@ -132,7 +132,7 @@ Just like how people can be tall, short, or in-between, data comes in different 
 
 ![skewness file](../../images/distribution.png)
 
-## 3. The Great Sampling Adventure 🎲
+## 3. 🎲 The Great Sampling Adventure 
 *Duration: 65 minutes*
 
 ### 3.1 Understanding Populations vs Samples
@@ -154,7 +154,7 @@ Imagine you want to know what percentage of creatures in the entire Enchanted Fo
 - **🎯 Inference** = Using our sample to make conclusions about the whole population, knowing how uncertain we are
 
 ### 3.2 Game 1: The Enchanted Halloween Neighborhood Mystery 🎃
-*Duration: 20 minutes*
+*Duration: 25 minutes*
 
 #### 3.2.1 🎈 Activity: Statistical Wizards Save Halloween
 
@@ -260,18 +260,20 @@ If the true percentage of dragons in the forest is 30%, and you take 100 differe
 
 💡 **The Magic Moment:** When we increase sample size, we make our estimates much more reliable!
 
-### 3.3 Game 2: The Great Dragon Fire Sheep Rescue 🐑🔥
+## 4. The Great Bootstrapping Adventure
+#### 4.1 The Great Dragon Fire Sheep Rescue 🐑🔥
 *Duration: 20 minutes*
 
-#### 🎈 Activity: Bootstrap Magic & Confidence Prophecies
-*Teaching Concept: Bootstrapping & Confidence Intervals*
+**🎈 Activity: Bootstrap Magic & Confidence Prophecies**
 
-**📖 The Story**
+**📖 The Story:**
+
 **URGENT QUEST ALERT!** The ancient Dragon of Mount Statistics has accidentally breathed fire across the Enchanted Meadows, where Farmer Luna (white sheep) and Farmer Obsidian (black sheep) graze their magical flocks. The fire didn't harm the sheep, but created a massive cloud of magical smoke that mixed all the flocks together!
 
 The two farmers are worried and need to know how many of their sheep are mixed together in the smoky field. But here's the problem: the smoke is so thick that shepherds can only see a small group of sheep at a time, and all the water was used to put out the fire, so they can't wash the sheep to see their true colors clearly!
 
-**⚡ The Challenge**
+**⚡ The Challenge:**
+
 As Junior Statistical Shepherds, you must use the ancient art of **Bootstrap Magic** to estimate what percentage of the total flock is black sheep, and create a **Confidence Prophecy** (confidence interval) for your estimate.
 
 ![sheep](../../images/sheep.png)
@@ -309,112 +311,21 @@ As Junior Statistical Shepherds, you must use the ancient art of **Bootstrap Mag
 
 <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMWt1ZzN0dnkyYWRkZW9xbmxic2Z5dDVxYW5mMG1xOWQ0N3B6Y2Q2aSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Qw4X3FyDEfQrNgjl6M0/giphy.gif" alt="dance_2" style="width: 100%; height: auto;">
 
-
-💡 **What is Bootstrapping?**
-Imagine you have only one bag of candies, but you want to know what would happen if you had many bags like it. Bootstrapping is like a time machine - you sample from your one bag WITH replacement (putting candies back) to simulate having many similar bags!
-
-**🕐 The Magic:** We can travel through time by sampling WITH replacement!
-
-
-## 4. R Magic + Confidence Interval Casino 🎰
-*Duration: 40 minutes*
-
-### 4.1 Welcome to the Statistical Casino
-*Duration: 10 minutes*
-
-💡 **What is a Confidence Interval?**
-Think of it like this: If someone asks "How tall are the students in your school?" you might say "Most are between 140cm and 160cm tall." That's a confidence interval - a range where we think the true answer lies!
-
-**🎰 Casino Challenge:** Use your bootstrap data to "bet" on where the true population mean lies!
-
-### Spell 3: Bootstrap Bootcamp Challenge
-*Duration: 15 minutes*
-
-#### 🎈 Activity: Digital Bootstrap Training
-
+#### 4.2 The Great Dragon Fire Sheep Rescue 🐑🔥 -- R edition
 📁 **Find this spell in Posit Cloud:** Look for the file `day04_spell03_bootstrap_bootcamp.Rmd` in your project files!
 
-**🎯 Bootstrap Training Mission:**
-1. **Load Your Physical Data:** Enter your sheep rescue bootstrap results
-2. **R Bootstrap Magic:** Watch R perform thousands of bootstrap samples instantly
-3. **Confidence Interval Creation:** Generate 90%, 95%, and 99% confidence intervals
-4. **Visual Prophecy:** Create beautiful graphs showing your confidence ranges
+#### 4.3 🐑 **What is Bootstrapping?**:  
 
-💡 **The Big Discovery:** Bootstrapping from one sample gives us similar information to taking many samples from the population!
+You can only see 20 sheep through the smoke, but you want to know what the whole flock looks like. Bootstrapping is like having a magic hat - you put your 20 sheep in the hat, pull one out, write down its color, PUT IT BACK, then do it again! You do this 20 times to create a "pretend new sample". By doing this magic trick hundreds of times, you can imagine what it would be like if you could take hundreds of real samples from the field!
 
-### Spell 4: Confidence Interval Casino Challenge
-*Duration: 15 minutes*
+#### 4.4 💡 **What is a Confidence Interval?**
 
-#### 🎈 Activity: The Greatest Statistical Bet Ever
+🎯 **Your Confidence Prophecy!** After doing the bootstrap magic many times, you notice that most of your "pretend samples" gave you black sheep percentages between 40% and 80%. So you tell the farmers: "I'm 90% confident that between 40% and 80% of your mixed flock is black sheep!" It's like saying "I'm pretty sure the answer is somewhere in this range, but I can't be 100% certain because I could only see a small part through the smoke."
 
-**🎮 Casino Game Setup:**
-1. **Input Your Data:** Enter your bootstrap results into the pre-loaded R script
-2. **R Magic Happens:** Watch R generate cool confidence interval visualizations
-3. **Place Your Bet:** Predict whether the true population mean falls in your interval
-4. **The Big Reveal:** Teacher reveals the actual population parameters
-5. **Winners Circle:** Teams with correct intervals get extra candy!
-
-📁 **Find this spell in Posit Cloud:** Look for the file `day04_spell04_confidence_casino.Rmd` in your project files!
-
-**🏆 Casino Scoring:**
-- Correct 90% confidence interval bet: 5 points
-- Correct 95% confidence interval bet: 10 points  
-- Correct 99% confidence interval bet: 15 points
-- **Jackpot:** If your interval captures the true mean: 20 bonus points!
-
-💡 **Casino Wisdom:** Being more confident (99% vs 90%) means you need a wider net to catch the true answer - but you're more likely to win!
-
-
-## 5. Sampling Chaos Challenge 🌪️
-*Duration: 25 minutes*
-
-### Spell 5: The Ultimate Sampling Method Showdown
-*Duration: 25 minutes*
-
-#### 🎈 Activity: Chaos Stations Discovery
-
-**🚨 The Setup:** Five stations around the room with different sampling methods - discover how method affects results!
-
-**🎯 Station Challenges:**
-- **Station 1: "Careful Counter"** - Systematic sampling (every 3rd candy)
-- **Station 2: "Speed Sampler"** - Rushed random (grab fast!)
-- **Station 3: "Color Picker"** - Biased sampling (only grab your favorite colors)
-- **Station 4: "Blindfold Challenge"** - True random sampling (eyes closed)
-- **Station 5: "Tiny Sample Snatcher"** - Small samples (only 3 candies)
-
-**🔄 Rotation Rules:**
-- 4 minutes per station
-- Record results at each station
-- Compare final results across all methods
-
-📁 **Find this spell in Posit Cloud:** Look for the file `day04_spell05_sampling_chaos.Rmd` in your project files!
-
-**🤯 The Epic Discovery:** Different sampling methods give WILDLY different results! Good sampling is CRUCIAL for good science!
 
 <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3N2Y0MzJia281OWU4ZmFlbHJpdTJzeGJ2cXMyczQ1NW45eGVoaWczeSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/3oz8xElsKyL1Pdostq/giphy.gif" alt="racoon" style="width: 100%; height: auto;">
 
-## 6. Victory Celebration & Reflection Circle 🎉
-*Duration: 10 minutes*
-
-### 6.1 What Did We Discover?
-
-**🏆 Champions Recognition:**
-- Announce team winners from each game
-- Award "Statistician Badges" for different achievements:
-  - 🕵️ Master Detective Badge
-  - 🎲 Sampling Champion Badge  
-  - 🔄 Bootstrap Wizard Badge
-  - 🎰 Casino Winner Badge
-  - 🌪️ Chaos Survivor Badge
-
-**🤔 Reflection Questions:**
-- What was the most surprising thing you learned today?
-- Which game taught you the most about statistics?
-- How could you use these detective skills in real life?
-
-**📸 Memory Moment:** Take team photos with your badges and candy evidence!
-
-## 7. 📋 Pro Tips Cheatsheet
+## 5. 📋 Pro Tips Cheatsheet
 
 ### Detective Skills (Central Tendency)
 - **Mean**: Add all candy counts and divide by number of colors
@@ -428,37 +339,35 @@ Think of it like this: If someone asks "How tall are the students in your school
 - **Sampling Variability**: Everyone gets different results - that's normal!
 - **Good Sampling**: Random, unbiased, representative of population
 
-### Bootstrap Magic Tricks
-- **Bootstrap Sample**: Sample WITH replacement (put candies back!)
-- **Bootstrap Power**: One sample can simulate many samples
-- **Key Discovery**: Bootstrap results tell us about population patterns
-- **Physical Rule**: Always shake the bag after replacing!
+### Bootstrap Magic Tricks (Sheep Edition)
+- **Magic Hat Rule**: Always PUT THE SHEEP BACK! (sample WITH replacement)
+- **Bootstrap Power**: Your 20 sheep can create hundreds of "pretend samples"
+- **Key Discovery**: Bootstrap shows how much your estimate might vary
+- **Confidence Prophecy**: Use bootstrap results to create ranges for farmers
 
-### Confidence Interval Casino
-- **90% Confidence**: "We're 90% sure the true answer is in this range"
-- **95% Confidence**: More sure, but need wider range
-- **99% Confidence**: Very sure, but need very wide range
-- **Casino Rule**: Higher confidence = wider net = better chance of winning
-
-### Game Strategy Tips
-- **Detective Work**: Sort candies carefully before counting
-- **Random Sampling**: Keep eyes closed, no peeking!
-- **Bootstrap Racing**: Speed + accuracy = winning combination
-- **Casino Betting**: Pick confidence level based on how sure you want to be
+### Confidence Prophecy Magic
+- **90% Confidence**: "I'm 90% confident the true percentage is in this range"
+- **95% Confidence**: More confident, but need wider range
+- **99% Confidence**: Very confident, but need very wide range
+- **Shepherd Wisdom**: Higher confidence = wider range = safer prophecy
 
 ### R Magic Commands
 ```r
 # Basic stats detective tools
-mean(candy_counts)           # Calculate average
-median(candy_counts)         # Find middle value
-table(candy_colors)          # Count each color
+mean(creature_ages)                    # Calculate average
+median(creature_ages)                  # Find middle value
+table(creature_types)                  # Count each type
 
-# Sampling and bootstrap
-sample(colors, 10, replace = TRUE)    # Bootstrap sample
-quantile(bootstrap_means, c(0.05, 0.95))  # 90% confidence interval
+# Sheep rescue sampling magic
+rep_sample_n(magical_sheep, size = 20)  # Take one sample
+rep_sample_n(sheep_sample, size = 20, replace = TRUE, reps = 1000)  # Bootstrap magic
+quantile(bootstrap_results$black_proportion, c(0.05, 0.95))  # 90% confidence prophecy
+
+# Create magical visualizations
+ggplot(data, aes(x = variable)) + geom_histogram()  # Distribution shapes
 ```
 
-## 8. 🆘 Troubleshooting Cheatsheet
+## 6. 🆘 Troubleshooting Cheatsheet
 
 ### Game Day Troubleshooting
 
@@ -467,10 +376,10 @@ quantile(bootstrap_means, c(0.05, 0.95))  # 90% confidence interval
 - **Why it happens:** This is sampling variability - totally normal!
 - **The Fix:** No fix needed - this is the magic of statistics!
 
-**🐛 "I forgot to put the token back during bootstrap!"**
-- **What it means:** You broke the bootstrap rule
-- **Why it happens:** Excitement and rushing
-- **The Fix:** Start that round over, always replace the token!
+**🐛 "I forgot to put the sheep back in the magic hat!"**
+- **What it means:** You broke the bootstrap magic rule (sampling without replacement)
+- **Why it happens:** Excitement and rushing during the sheep rescue
+- **The Fix:** Start that bootstrap round over, always PUT THE SHEEP BACK!
 
 **🐛 "Our confidence interval missed the true answer!"**
 - **What it means:** Sometimes intervals don't capture the truth
