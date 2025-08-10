@@ -260,11 +260,29 @@ If the true percentage of dragons in the forest is 30%, and you take 100 differe
 
 💡 **The Magic Moment:** When we increase sample size, we make our estimates much more reliable!
 
-## 4. The Great Bootstrapping Adventure
-#### 4.1 The Great Dragon Fire Sheep Rescue 🐑🔥
-*Duration: 20 minutes*
+## 4. 🐑 The Great Dragon Fire Sheep Rescue
+*Duration: 65 minutes*
 
-**🎈 Activity: Bootstrap Magic & Confidence Prophecies**
+### 4.1 Understanding Bootstrap Magic & Confidence Prophecies
+*Duration: 5 minutes*
+
+💡 **The Big Picture:**
+Imagine you're a shepherd trying to count sheep in a thick fog! You can only see a small group at a time, but you need to know about the entire flock. Bootstrap magic lets you use your small sample to imagine what hundreds of other samples might look like!
+
+<img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3N2Y0MzJia281OWU4ZmFlbHJpdTJzeGJ2cXMyczQ1NW45eGVoaWczeSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/3oz8xElsKyL1Pdostq/giphy.gif" alt="racoon" style="width: 60%; height: auto;">
+
+- **🐑 Bootstrap Magic** = Using your small sheep sample to create hundreds of "pretend samples" with replacement
+
+- **🎯 Confidence Prophecy** = Your estimate range: "I'm 90% confident the true percentage is between X% and Y%"
+
+- **🔮 The Magic Hat Rule** = Always put the sheep back! (sampling WITH replacement)
+
+- **🎯 Inference Goal** = Use your small flock sample to make educated guesses about the entire meadow
+
+### 4.2 Game 1: The Great Dragon Fire Sheep Rescue 🐑🔥
+*Duration: 30 minutes*
+
+#### 4.2.1 🎈 Activity: Bootstrap Magic & Confidence Prophecies
 
 **📖 The Story:**
 
@@ -272,58 +290,78 @@ If the true percentage of dragons in the forest is 30%, and you take 100 differe
 
 The two farmers are worried and need to know how many of their sheep are mixed together in the smoky field. But here's the problem: the smoke is so thick that shepherds can only see a small group of sheep at a time, and all the water was used to put out the fire, so they can't wash the sheep to see their true colors clearly!
 
+![sheep](../../images/sheep.png)
+
 **⚡ The Challenge:**
 
 As Junior Statistical Shepherds, you must use the ancient art of **Bootstrap Magic** to estimate what percentage of the total flock is black sheep, and create a **Confidence Prophecy** (confidence interval) for your estimate.
 
-![sheep](../../images/sheep.png)
+**🧙‍♀️ The Shepherd's Council Has Prepared:**
 
-**🧙‍♀️ Materials Needed:**
-- Bags containing black and white tokens (representing sheep)
-- Each bag has the same true proportion (suggest 60% black, 40% white)
-- Small containers for bootstrap sampling
-- Timer
-- Google Form for CI submissions
-- "Shepherd's Badge" stickers
+- "Smoke Sample Bags" containing black and white tokens (representing sheep)
+- Each bag has the same true proportion (60% black, 40% white)
+- Small containers for bootstrap resampling
+- Timer for the rescue mission
+- Magical Google Form for Confidence Prophecy submissions
+- "Shepherd's Badge" stickers for successful rescuers
 
-**🎮 Game Setup & Rules**
+**🪄 You will get:**
 
-**Phase 1: The Original Vision (Initial Sample)**
-- Each child receives a "Smoke Sample Bag" with 15-20 tokens
-- Count the black vs. white sheep in their original sample
-- Calculate their initial estimate of the black sheep percentage
+- Everyone gets one "Smoke Sample Bag" containing 15-20 tokens
 
-**Phase 2: The Bootstrap Prophecy Ritual**
-1. **The Resampling Spell:** From their original sample, draw 10 tokens WITH REPLACEMENT (put each token back before drawing the next)
-2. **Repeat the Magic:** Do this resampling 8-10 times, recording the percentage of black sheep each time
-3. **The Confidence Prophecy:** Calculate their 90% confidence interval using their bootstrap samples
-   - Simple method: Remove the highest and lowest values, use the range of remaining values
+**⚡ The Rescue Rules:**
 
-**Phase 3: The Grand Revelation**
-- All shepherds enter their confidence intervals into the Royal Registry (Google Form)
-- The Oracle (you) reveals the true population percentage
-- **Victory Celebration:** Crown the Statistical Shepherds whose confidence intervals captured the true value!
+1. **Incantation Phase:** Shepherds chant "Bootstrap powers, reveal the flock!" before opening their bags
+2. **Initial Vision Phase:** Count black vs. white sheep in your original sample (5 minutes)
+3. **Bootstrap Prophecy Phase:** Use magic hat sampling to create 8-10 pretend samples (10 minutes)
+4. **Confidence Prophecy Phase:** Calculate your 90% confidence interval for black sheep percentage
+5. **Royal Registry Phase:** Enter your confidence prophecy into the magical Google Form
 
-**🏆 Competitive Elements:**
-- **Prophecy Accuracy Award:** Whose CI contains the true value? **WIN EXTRA CANDY!**
-- **Precision Prize:** Narrowest confidence interval that still captures the truth gets **BONUS TREATS!**
-- **Team Oracle Challenge:** Everyone who participates gets candy, and the group celebrates their combined statistical power!
+💡 **The Rescue Discovery:** Your confidence prophecy shows how uncertain your estimate is - this is statistical honesty!
+
+<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMWt1ZzN0dnkyYWRkZW9xbmxic2Z5dDVxYW5mMG1xOWQ0N3B6Y2Q2aSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Qw4X3FyDEfQrNgjl6M0/giphy.gif" alt="dance_2" style="width: 60%; height: auto;">
+
+#### 4.2.2 💡 Pro Tips: Understanding Bootstrap Magic
+*Duration: 5 minutes*
+
+**🎯 What is Bootstrapping?**
+You can only see 20 sheep through the smoke, but you want to know what the whole flock looks like. Bootstrapping is like having a magic hat - you put your 20 sheep in the hat, pull one out, write down its color, PUT IT BACK, then do it again! You do this 20 times to create a "pretend new sample". By doing this magic trick hundreds of times, you can imagine what it would be like if you could take hundreds of real samples from the field!
+
+**🎯 What is a Confidence Interval?**
+🎯 **Your Confidence Prophecy!** After doing the bootstrap magic many times, you notice that most of your "pretend samples" gave you black sheep percentages between 40% and 80%. So you tell the farmers: "I'm 90% confident that between 40% and 80% of your mixed flock is black sheep!" It's like saying "I'm pretty sure the answer is somewhere in this range, but I can't be 100% certain because I could only see a small part through the smoke."
+
+**🔍 Real-Life Bootstrap Examples:**
+If you want to know the average height of all kids in your school but can only measure 30 kids:
+- Bootstrap lets you use those 30 kids to create hundreds of "pretend samples"
+- Each pretend sample gives you a different average height
+- The range of those averages becomes your confidence interval!
 
 <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMWt1ZzN0dnkyYWRkZW9xbmxic2Z5dDVxYW5mMG1xOWQ0N3B6Y2Q2aSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Qw4X3FyDEfQrNgjl6M0/giphy.gif" alt="dance_2" style="width: 100%; height: auto;">
 
-#### 4.2 The Great Dragon Fire Sheep Rescue 🐑🔥 -- R edition
+#### 4.2.3 🎈 Activity: The Grand Shepherd Revelation & Rewards
+*Duration: 25 minutes*
+> 🎉 The Oracle is ready to reveal the truth about the flock! Time for the grand celebration!
+
+**🏆 Competitive Elements & Rewards:**
+
+- **Prophecy Accuracy Award:** Whose confidence interval captures the true value? **WIN EXTRA CANDY!**
+- **Precision Prize:** Narrowest confidence interval that still captures the truth gets **BONUS TREATS!**
+- **Team Oracle Challenge:** Everyone who participates gets candy, and the group celebrates their combined statistical power!
+
+**⚡ The Grand Revelation Rules:**
+
+1. **Prophecy Sharing Phase:** Each shepherd announces their confidence interval
+2. **Oracle Revelation Phase:** The instructor reveals the true population percentage
+3. **Victory Celebration Phase:** Crown the Statistical Shepherds whose confidence intervals captured the true value!
+4. **Learning Reflection Phase:** Discuss why some prophecies missed and others hit
+
+**🔍 Spell 3: Bootstrap Bootcamp - R Edition**
+
 📁 **Find this spell in Posit Cloud:** Look for the file `day04_spell03_bootstrap_bootcamp.Rmd` in your project files!
 
-#### 4.3 🐑 **What is Bootstrapping?**:  
-
-You can only see 20 sheep through the smoke, but you want to know what the whole flock looks like. Bootstrapping is like having a magic hat - you put your 20 sheep in the hat, pull one out, write down its color, PUT IT BACK, then do it again! You do this 20 times to create a "pretend new sample". By doing this magic trick hundreds of times, you can imagine what it would be like if you could take hundreds of real samples from the field!
-
-#### 4.4 💡 **What is a Confidence Interval?**
-
-🎯 **Your Confidence Prophecy!** After doing the bootstrap magic many times, you notice that most of your "pretend samples" gave you black sheep percentages between 40% and 80%. So you tell the farmers: "I'm 90% confident that between 40% and 80% of your mixed flock is black sheep!" It's like saying "I'm pretty sure the answer is somewhere in this range, but I can't be 100% certain because I could only see a small part through the smoke."
-
-
-<img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3N2Y0MzJia281OWU4ZmFlbHJpdTJzeGJ2cXMyczQ1NW45eGVoaWczeSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/3oz8xElsKyL1Pdostq/giphy.gif" alt="racoon" style="width: 100%; height: auto;">
+<img src="https://media.giphy.com/media/v1.
+Y2lkPWVjZjA1ZTQ3N2Y0MzJia281OWU4ZmFlbHJpdTJzeGJ2cXMyczQ1NW45eGVoaWczeSZlcD12MV9naWZzX3NlYXJjaC
+ZjdD1n/3oz8xElsKyL1Pdostq/giphy.gif" alt="racoon" style="width: 100%; height: auto;">
 
 ## 5. 📋 Pro Tips Cheatsheet
 
