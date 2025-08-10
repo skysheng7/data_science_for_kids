@@ -213,7 +213,7 @@ If the true percentage of dragons in the forest is 30%, and you take 100 differe
 - Some might give you 35% dragons  
 - But the AVERAGE of all 100 sample percentages will be very close to 30%!
 
-<img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3NW9pN2MxdGF6Y25jcXRtdml6Y3RpMmlsYmpxaTJ6YmFiam1ueXUwNyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/V6fMm9TDwdb5K7yjt8/giphy.gif" alt="" style="width: 70%; height: auto;">
+<img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3NW9pN2MxdGF6Y25jcXRtdml6Y3RpMmlsYmpxaTJ6YmFiam1ueXUwNyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/V6fMm9TDwdb5K7yjt8/giphy.gif" alt="clap" style="width: 70%; height: auto;">
 
 #### 3.2.3 🎈 Activity: Statistical Wizards Save Halloween - Round 2!!
 *Duration: 25 minutes*
@@ -269,7 +269,7 @@ If the true percentage of dragons in the forest is 30%, and you take 100 differe
 💡 **The Big Picture:**
 Imagine you're a shepherd trying to count sheep in a thick fog! You can only see a small group at a time, but you need to know about the entire flock. Bootstrap magic lets you use your small sample to imagine what hundreds of other samples might look like!
 
-<img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3N2Y0MzJia281OWU4ZmFlbHJpdTJzeGJ2cXMyczQ1NW45eGVoaWczeSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/3oz8xElsKyL1Pdostq/giphy.gif" alt="racoon" style="width: 60%; height: auto;">
+<img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3N2Y0MzJia281OWU4ZmFlbHJpdTJzeGJ2cXMyczQ1NW45eGVoaWczeSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/3oz8xElsKyL1Pdostq/giphy.gif" alt="racoon" style="width: 100%; height: auto;">
 
 - **🐑 Bootstrap Magic** = Using your small sheep sample to create hundreds of "pretend samples" with replacement
 
@@ -319,7 +319,7 @@ As Junior Statistical Shepherds, you must use the ancient art of **Bootstrap Mag
 
 💡 **The Rescue Discovery:** Your confidence prophecy shows how uncertain your estimate is - this is statistical honesty!
 
-<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMWt1ZzN0dnkyYWRkZW9xbmxic2Z5dDVxYW5mMG1xOWQ0N3B6Y2Q2aSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Qw4X3FyDEfQrNgjl6M0/giphy.gif" alt="dance_2" style="width: 60%; height: auto;">
+<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMWt1ZzN0dnkyYWRkZW9xbmxic2Z5dDVxYW5mMG1xOWQ0N3B6Y2Q2aSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Qw4X3FyDEfQrNgjl6M0/giphy.gif" alt="dance_2" style="width: 100%; height: auto;">
 
 #### 4.2.2 💡 Pro Tips: Understanding Bootstrap Magic
 *Duration: 5 minutes*
@@ -335,8 +335,6 @@ If you want to know the average height of all kids in your school but can only m
 - Bootstrap lets you use those 30 kids to create hundreds of "pretend samples"
 - Each pretend sample gives you a different average height
 - The range of those averages becomes your confidence interval!
-
-<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMWt1ZzN0dnkyYWRkZW9xbmxic2Z5dDVxYW5mMG1xOWQ0N3B6Y2Q2aSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Qw4X3FyDEfQrNgjl6M0/giphy.gif" alt="dance_2" style="width: 100%; height: auto;">
 
 #### 4.2.3 🎈 Activity: The Grand Shepherd Revelation & Rewards
 *Duration: 25 minutes*
@@ -358,10 +356,6 @@ If you want to know the average height of all kids in your school but can only m
 **🔍 Spell 3: Bootstrap Bootcamp - R Edition**
 
 📁 **Find this spell in Posit Cloud:** Look for the file `day04_spell03_bootstrap_bootcamp.Rmd` in your project files!
-
-<img src="https://media.giphy.com/media/v1.
-Y2lkPWVjZjA1ZTQ3N2Y0MzJia281OWU4ZmFlbHJpdTJzeGJ2cXMyczQ1NW45eGVoaWczeSZlcD12MV9naWZzX3NlYXJjaC
-ZjdD1n/3oz8xElsKyL1Pdostq/giphy.gif" alt="racoon" style="width: 100%; height: auto;">
 
 ## 5. 📋 Pro Tips Cheatsheet
 
