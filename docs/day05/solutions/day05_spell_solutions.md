@@ -5,6 +5,9 @@
 ### Loading and Exploring Data
 
 ```R
+# set the UTF-8 encoding so that emojis are rendered correctly
+Sys.setlocale("LC_CTYPE", "en_US.UTF-8")
+
 library(tidymodels)
 library(tidyverse)
 
