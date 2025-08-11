@@ -1,5 +1,7 @@
 # 🔮 Day 3 - Spell 1B: Clean Our Real-World Creatures Data (Optional)
 
+Sys.setlocale("LC_CTYPE", "en_US.UTF-8")
+
 # This spell cleans the raw form responses in ../datasets/creature_of_sky.csv
 # and saves a clean file ../datasets/creatures.csv for the rest of today's activities.
 

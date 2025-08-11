@@ -3,6 +3,10 @@ title: "🔮 Day 4 - Spell 3: Bootstrap Bootcamp - The Great Dragon Fire Sheep R
 output: html_document
 ---
 
+```{r setup-locale, include=FALSE}
+Sys.setlocale("LC_CTYPE", "en_US.UTF-8")
+```
+
 ## 📖 The Story: Dragon Fire Sheep Rescue! 🐑🔥
 
 **URGENT QUEST ALERT!** The ancient Dragon of Mount Statistics has accidentally breathed fire across the Enchanted Meadows, where Farmer Luna (white sheep) and Farmer Obsidian (black sheep) graze their magical flocks. The fire didn't harm the sheep, but created a massive cloud of magical smoke that mixed all the flocks together!

@@ -3,6 +3,10 @@ title: "🔮 Day 4 - Spell 2: The Great Creature Sampling Adventure"
 output: html_document
 ---
 
+```{r setup-locale, include=FALSE}
+Sys.setlocale("LC_CTYPE", "en_US.UTF-8")
+```
+
 ## 💡 What is Sampling?
 Imagine you want to know how many dragons live in the entire Enchanted Forest, but you can't count them all! So you explore small areas, count the dragons there, and use that to guess about the whole forest. That's sampling!
 

@@ -3,6 +3,10 @@ title: "🔮 Day 3 - Spell 4: Pipeline Magic"
 output: html_document
 ---
 
+```{r setup-locale, include=FALSE}
+Sys.setlocale("LC_CTYPE", "en_US.UTF-8")
+```
+
 Learn to chain commands together like magic!
 It's like making a sandwich - first this, then that, then this!
 

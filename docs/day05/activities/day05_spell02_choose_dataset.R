@@ -1,6 +1,8 @@
 # 🔮 Day 5 - Spell 2: Your Own KNN Adventure
 # Choose your quest and build your own classification model!
 
+Sys.setlocale("LC_CTYPE", "en_US.UTF-8")
+
 # Load our magical libraries
 library(tidymodels)
 library(tidyverse)

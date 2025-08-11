@@ -3,6 +3,10 @@ title: "🔮 Day 3 - Spell 8: Team Data Detective Project (Overview)"
 output: html_document
 ---
 
+```{r setup-locale, include=FALSE}
+Sys.setlocale("LC_CTYPE", "en_US.UTF-8")
+```
+
 Work with a partner to solve a data mystery!
 Use all your new data magic skills together
 

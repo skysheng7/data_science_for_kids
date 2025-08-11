@@ -3,6 +3,10 @@ title: "🔮 Day 3 - Spell 7: Bar Chart Magic"
 output: html_document
 ---
 
+```{r setup-locale, include=FALSE}
+Sys.setlocale("LC_CTYPE", "en_US.UTF-8")
+```
+
 Compare different groups and see who wins!
 Bar charts are perfect for competitions and comparisons
 

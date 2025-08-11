@@ -3,6 +3,10 @@ title: "🔮 Day 2 - Spell 2: Loop Detective Challenge"
 output: html_document
 ---
 
+```{r setup-locale, include=FALSE}
+Sys.setlocale("LC_CTYPE", "en_US.UTF-8")
+```
+
 # 🎈 Activity: Fix the Broken Code
 🕵️ Detective Mission: Someone cast incomplete loop spells! 
 Your job is to debug the broken code and fill in the blanks.

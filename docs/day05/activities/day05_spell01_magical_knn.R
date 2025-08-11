@@ -1,6 +1,8 @@
 # 🔮 Day 5 - Spell 1: KNN Classification with Magical Creatures
 # Learn to predict whether magical creatures are friendly or mischievous!
 
+Sys.setlocale("LC_CTYPE", "en_US.UTF-8")
+
 # Load our magical libraries
 library(tidymodels)
 library(tidyverse)

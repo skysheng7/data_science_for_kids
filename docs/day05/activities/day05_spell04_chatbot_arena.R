@@ -1,6 +1,8 @@
 # 🔮 Day 5 - Spell 4: Chatbot Arena Experiment
 # Conduct your own AI model comparison study!
 
+Sys.setlocale("LC_CTYPE", "en_US.UTF-8")
+
 # Load our magical libraries
 library(tidyverse)
 library(ggplot2)

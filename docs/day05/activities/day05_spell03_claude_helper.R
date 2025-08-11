@@ -1,6 +1,8 @@
 # 🔮 Day 5 - Spell 3: Claude Coding Assistant
 # Learn to use AI to help write better R code!
 
+Sys.setlocale("LC_CTYPE", "en_US.UTF-8")
+
 # Load our magical libraries
 library(tidyverse)
 library(ggplot2)

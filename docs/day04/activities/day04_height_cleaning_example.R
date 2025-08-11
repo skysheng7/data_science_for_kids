@@ -1,5 +1,7 @@
 # 🔮 Day 4 - Height Data Cleaning Example
 
+Sys.setlocale("LC_CTYPE", "en_US.UTF-8")
+
 # This script shows you how to:
 # 1. Load messy height data
 # 2. Clean and fix common data problems
