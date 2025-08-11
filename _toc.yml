@@ -11,8 +11,8 @@ parts:
   #- file: docs/day03/README
   #- file: docs/day04/README
   #- file: docs/day05/README
-- caption: Solutions
-  chapters:
+#- caption: Solutions
+#  chapters:
   #- file: docs/day01/solutions/day01_spell_solutions_nb
   #- file: docs/day02/solutions/day02_spell_solutions_nb
   #- file: docs/day03/solutions/day03_spell_solutions_nb
