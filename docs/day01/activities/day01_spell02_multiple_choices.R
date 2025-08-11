@@ -1,4 +1,5 @@
 # 🔮 Day 1 - Spell 2: Multiple Choices (If-ElseIf-Else)
+Sys.setlocale("LC_CTYPE", "en_US.UTF-8")
 
 # 🌈 Oda's color mood detector
 favorite_color <- "blue"

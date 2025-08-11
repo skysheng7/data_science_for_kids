@@ -1,5 +1,8 @@
 # 🔮 Day 1 - Spell 9: Order Matters - The Racing Game!
 
+Sys.setlocale("LC_CTYPE", "en_US.UTF-8")
+
+
 # ✨ Spell 9A: Order Matters - The Racing Game!
 # 🏁 Oda's magical racing game - Position matters!
 position <- 2

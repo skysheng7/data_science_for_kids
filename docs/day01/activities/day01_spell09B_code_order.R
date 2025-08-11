@@ -1,5 +1,8 @@
 # 🔮 Day 1 - Spell 9: Order Matters - The Racing Game!
 
+Sys.setlocale("LC_CTYPE", "en_US.UTF-8")
+
+
 # ✨ Spell 9B: Wrong Order - The Broken Magic!
 # ⚠️ What happens if we check from LAST place to FIRST place?
 print("=== VERSION 2: Wrong Order ===")

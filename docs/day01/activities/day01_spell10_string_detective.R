@@ -1,5 +1,8 @@
 # 🔮 Day 1 - Spell 10: String Detective (Text Comparison Magic!)
 
+Sys.setlocale("LC_CTYPE", "en_US.UTF-8")
+
+
 # 🔍 Oda is trying to find a old friend of her, whose name is Mike
 name <- "Mike"
 

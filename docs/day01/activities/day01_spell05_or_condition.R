@@ -1,6 +1,9 @@
 # 🔮 Day 1 - Spell 5: OR Condition Magic (Either Thing Can Be True!)
 
 # 🍎 Oda's snack time detector
+
+Sys.setlocale("LC_CTYPE", "en_US.UTF-8")
+
 snack <- "apple"
 
 if (snack == "apple" | snack == "banana" | snack == "carrot") {

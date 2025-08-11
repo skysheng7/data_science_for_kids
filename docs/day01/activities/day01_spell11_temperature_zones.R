@@ -1,4 +1,6 @@
 # 🔮 Day 1 - Spell 11: Temperature Zone Detective (Real World >= <= Examples!)
+Sys.setlocale("LC_CTYPE", "en_US.UTF-8")
+
 
 # 🌡️ Oda's temperature zone detector
 temperature <- 22  # In Celsius

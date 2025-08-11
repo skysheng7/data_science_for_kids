@@ -1,5 +1,7 @@
 # 🔮 Day 1 - Spell 6: Age Group Sorter (Like the Physical Activity!)
 
+Sys.setlocale("LC_CTYPE", "en_US.UTF-8")
+
 # 🎂 Oda's age group magic (just like our shirt color game!)
 age <- 4
 

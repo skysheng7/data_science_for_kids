@@ -34,7 +34,7 @@ Today we'll join Oda on our first adventure into the magical world of R programm
 *Duration: 10 minutes*
 
 How to Play:
-1. For small groups of 4-5 people. Try to sit with people you don't know very well!
+1. For small groups of 3-4 people. Try to sit with people you don't know very well!
 
 2. Each person shares 3 things about themselves:
    - ✅ Two TRUE things (real facts about you)

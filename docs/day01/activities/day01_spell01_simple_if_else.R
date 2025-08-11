@@ -1,4 +1,5 @@
 # 🔮 Day 1 - Spell 1: Simple If-Else Magic
+Sys.setlocale("LC_CTYPE", "en_US.UTF-8")
 
 my_favorite_number <- 7
 

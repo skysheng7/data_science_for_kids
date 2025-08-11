@@ -1,6 +1,9 @@
 # 🔮 Day 1 - Spell 7: Multiple Actions Spell (Do Several Things!)
 
 # 🎪 Oda's magic show with multiple tricks
+
+Sys.setlocale("LC_CTYPE", "en_US.UTF-8")
+
 magic_word <- "abracadabra"
 
 if (magic_word == "abracadabra") {

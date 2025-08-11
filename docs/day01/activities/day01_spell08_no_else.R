@@ -1,5 +1,7 @@
 # 🔮 Day 1 - Spell 8: No Else Challenge (Sometimes Nothing Happens!)
 
+Sys.setlocale("LC_CTYPE", "en_US.UTF-8")
+
 # 🏆 Oda's achievement unlocked detector
 points <- 85
 

@@ -1,5 +1,8 @@
 # 🔮 Day 1 - Spell 12: Magical Creature Detector!
 
+Sys.setlocale("LC_CTYPE", "en_US.UTF-8")
+
+
 # 🦄 Magical Creature Classifier
 creature_size <- 50   # Size in cm - Try: 10, 50, 200
 creature_color <- "purple" # Try: "purple", "gold", "rainbow"

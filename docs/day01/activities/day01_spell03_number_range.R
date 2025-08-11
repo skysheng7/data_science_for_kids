@@ -1,5 +1,8 @@
 # 🔮 Day 1 - Spell 3: Number Range Detective
 # 🔍 Oda's number detective game
+
+Sys.setlocale("LC_CTYPE", "en_US.UTF-8")
+
 mystery_number <- 4
 
 if (mystery_number < 10) {

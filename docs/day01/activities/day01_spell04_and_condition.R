@@ -1,5 +1,8 @@
 # 🔮 Day 1 - Spell 4: AND Condition Magic (Both Things Must Be True!)
 # 🎭 Oda's perfect day detector
+
+Sys.setlocale("LC_CTYPE", "en_US.UTF-8")
+
 temperature <- 25
 weather <- "sunny"
 
