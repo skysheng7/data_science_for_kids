@@ -159,6 +159,57 @@ Let's use `.Rmd` files to learn how to make R repeat actions automatically! We'l
 
 #### 🎈 Activity: Printing Practice
 
+```R
+# Without a loop (tiring!)
+print("Hello, magical world!")
+print("Hello, magical world!")
+print("Hello, magical world!")
+print("Hello, magical world!")
+print("Hello, magical world!")
+```
+
+```R
+# 🌟 Basic loop - repeat 5 times
+for (i in 1:5) {
+  print("Hello, magical world!")
+}
+```
+
+```R
+# 🎯 Challenge 1: Print your name 3 times using a for loop
+# Fill in the blanks, replace the ... with the correct number or string
+for (i in 1:...) {
+  print("My name is ...")
+}
+```
+
+```R
+# See what 'i' actually does
+for (i in 1:5) {
+  print(paste("This is loop number", i))
+}
+```
+
+```R
+# 🎯 Challenge 2: Create a countdown from 10 to 1
+# Hint: Use 10:1 instead of 1:10
+# Note: paste() glues strings together
+for (countdown in ...:...) {
+  print(paste("Countdown:", countdown))
+}
+print("🚀 Blast off!")
+```
+
+```R
+# ✨ Advanced Challenge: Print different animals on each loop
+# Note: c() creates a collection of items
+animals <- c("🐶 dog", "🐱 cat", "🐰 rabbit", "🐸 frog", "🦆 duck")
+
+for (i in 1:5) {
+  print(paste("Animal", i, "is a", animals[i]))
+}
+```
+
 💡 **Pro Tips from this spell:**
 - Think of `i` as a magical counter that changes each time!
 - The loop runs once for each number in the range you give it
@@ -225,6 +276,60 @@ Let's use `.Rmd` files to learn how to make R repeat actions automatically! We'l
 
 🕵️ **Detective Mission:** Someone cast incomplete loop spells! Your job is to debug the broken code and fill in the blanks to make loops work perfectly. Follow the clues and fix the missing pieces!
 
+```R
+# 🐛 Broken Spell #1: Missing loop variable
+# Goal: print numbers 1 through 7
+for ( in 1:7) {
+  print(paste("Number:", i))
+}
+```
+
+```R
+# 🐛 Broken Spell #2: Missing closing brace
+# Goal: print "Magic spell" 4 times
+for (spell in 1:4) {
+  print("Magic spell")
+
+```
+
+```R
+# 🐛 Broken Spell #3: Wrong range
+# Goal: count from 1 to 10
+for (num in 1:) {
+  print(paste("Counting:", num))
+}
+```
+
+```R
+# 🐛 Broken Spell #4: Missing quotes
+# Goal: print a message with each student's name
+students <- c("Alex", "Sam", "Jordan", "Taylor")
+for (student in students) {
+  print(paste(Hello, student))
+}
+```
+
+```R
+# 🐛 Broken Spell #5: Incomplete calculation
+# Goal: print the square of each number
+for (number in 1:5) {
+  square <- number * 
+  print(paste(number, "squared is", square))
+}
+```
+
+```R
+# ✨ Advanced Detective Challenge:
+# Target pattern: ⭐, ⭐⭐, ⭐⭐⭐, ⭐⭐⭐⭐
+for (i in 1:4) {
+  stars <- 
+  for (j in 1:) {
+    stars <- paste(stars, "⭐", sep="")
+  }
+  print(stars)
+}
+```
+
 ### 2.4 Spell 3: Art with Loops
 *Duration: 20 minutes*
 
@@ -233,6 +338,130 @@ Let's use `.Rmd` files to learn how to make R repeat actions automatically! We'l
 #### 🎈 Activity: Creative Programming Patterns
 
 ✨ **Challenge:** Create beautiful art using loops and programming patterns - from simple stars to colorful grids and even Christmas trees!
+
+```R
+# 🎨 Art Example 1: Simple patterns with basic symbols
+print("--- Simple Hash Pattern ---")
+for (row in 1:5) {
+  pattern <- ""
+  for (col in 1:row) {
+    pattern <- paste(pattern, "#", sep="")
+  }
+  print(pattern)
+}
+```
+
+```R
+# 🐟 Fish Pattern Example: Create a fish shape using # symbols
+print("\n--- Fish Pattern ---")
+fish_pattern <- c(
+  "    ##",
+  "   ##@#",
+  "  ######",
+  " #------#",
+  "##########",
+  " ########",
+  "  ######",
+  "   ####",
+  "    ##",
+  "   ####",
+  "  ######"
+)
+
+for (line in fish_pattern) {
+  print(line)
+}
+```
+
+```R
+# 🎨 Art Example 2: Emoji patterns
+print("\n--- Simple Star Pattern ---")
+for (row in 1:5) {
+  stars <- ""
+  for (col in 1:row) {
+    stars <- paste(stars, "⭐", sep="")
+  }
+  print(stars)
+}
+```
+
+```R
+# 🎨 Art Example 3: Colorful symbol patterns
+print("\n--- Rainbow Pattern ---")
+symbols <- c("🔴", "🟠", "🟡", "🟢", "🔵", "🟣")
+
+for (row in 1:6) {
+  line <- ""
+  for (col in 1:row) {
+    symbol_index <- col %% 6 + 1
+    line <- paste(line, symbols[symbol_index], sep="")
+  }
+  print(line)
+}
+```
+
+```R
+# 🎨 Art Example 4: Grid patterns
+print("\n--- Grid Art ---")
+symbols <- c("⭐", "🌙", "☀️", "💫")
+
+for (row in 1:4) {
+  line <- ""
+  for (col in 1:6) {
+    symbol_index <- (row + col) %% 4 + 1
+    line <- paste(line, symbols[symbol_index], sep="")
+  }
+  print(line)
+}
+```
+
+```R
+# 🎨 Art Example 5: Christmas tree pattern
+print("\n--- Christmas Tree Pattern ---")
+for (row in 1:5) {
+  # Add spaces for centering
+  spaces <- ""
+  for (space in 1:(5-row)) {
+    spaces <- paste(spaces, " ", sep="")
+  }
+  
+  # Add stars for the tree
+  stars <- ""
+  for (star in 1:(2*row-1)) {
+    stars <- paste(stars, "🎄", sep="")
+  }
+  
+  # Print the complete line
+  print(paste(spaces, stars, sep=""))
+}
+
+# Add the tree trunk
+print("    🪵")
+```
+
+```R
+# 🎨 Art Example 6: Number triangle
+print("\n--- Number Triangle ---")
+for (row in 1:5) {
+  line <- ""
+  for (col in 1:row) {
+    if (col == 1) {
+      line <- paste(line, col, sep="")
+    } else {
+      line <- paste(line, col, sep=" ")
+    }
+  }
+  print(line)
+}
+```
+
+```R
+# ✨ YOUR TURN: Create your own artistic pattern
+print("\n--- Your Creative Pattern ---")
+# for (row in 1:...) {
+#   ...
+# }
+```
 
 ### 2.5 🤯 Challenging Magic -- Spell 4: Story Scrambler Challenge (Optional)
 *Duration: 20 minutes (excluded from time in chapter 2)*
@@ -253,6 +482,102 @@ Let's use `.Rmd` files to learn how to make R repeat actions automatically! We'l
 - **Method 2:** Every-other-word scramble (mix odd and even positioned words!)
 
 Create secret codes to share with friends using mini messages like "Meet me at the playground after school" or "The password is rainbow unicorn."
+
+```R
+# 📚 The Magic Story to scramble
+original_story <- "In the Magic Forest, a smart rabbit and a tiny dragon became friends, built a flying boat out of leaves, and sailed through the sky to save a sleepy bear cub who was stuck on a candy cloud."
+
+# Split the story into individual words
+# Note: unlist(strsplit()) splits a string into a list of words
+story_words <- unlist(strsplit(original_story, " "))
+print("🔤 Original story words:")
+print(story_words)
+print(paste("📊 Total words:", length(story_words)))
+```
+
+```R
+# 🎯 Challenge 1: Reverse Word Order Spy Code
+print("\n🚀 === CHALLENGE 1: REVERSE SPY CODE ===")
+
+# Step 1: Create reversed word list
+reversed_words <- c()
+for (i in length(story_words):1) {
+  reversed_words <- c(reversed_words, story_words[i])
+}
+
+# Step 2: Print the reversed story
+print("🔒 ENCODED (Backwards):")
+reversed_story <- paste(reversed_words, collapse = " ")
+print(...)  # TODO: what should we print?
+
+# Step 3: Restore original order
+original_words <- c()
+for (i in length(reversed_words):1) {
+  original_words <- c(original_words, reversed_words[...])  # TODO: fill in
+}
+print("\n🔓 DECODED (Original Order):")
+original_restored <- paste(original_words, collapse = " ")
+print(...)  # TODO: what should we print?
+```
+
+```R
+# 🎯 Challenge 2: Every-Other-Word Spy Code
+print("\n🚀 === CHALLENGE 2: EVERY-OTHER-WORD SPY CODE ===")
+
+# Step 1: Create empty lists for odd and even positioned words
+odd_words <- c()
+even_words <- c()
+
+# Step 2: Separate words by position (odd vs even)
+for (i in 1:length(story_words)) {
+  # Note: %% is the remainder operator (great for odd/even)
+  if (i %% 2 == 1) {  # Odd positions (1, 3, 5, ...)
+    odd_words <- c(odd_words, story_words[...])  # TODO
+  } else {            # Even positions (2, 4, 6, ...)
+    even_words <- c(even_words, story_words[...]) # TODO
+  }
+}
+
+# Step 3: Create encoded message (odds + separator + evens)
+encoded_words <- c(odd_words, "---", even_words)
+print("🔒 ENCODED (Every-other-word):")
+encoded_story <- paste(encoded_words, collapse = " ")
+print(encoded_story)
+
+# Step 4: Decode back to original (combine odd and even in correct order)
+decoded_words <- c()
+for (i in 1:max(length(odd_words), length(even_words))) {
+  if (i <= length(odd_words)) {
+    decoded_words <- c(decoded_words, odd_words[...])  # TODO
+  }
+  if (i <= length(even_words)) {
+    decoded_words <- c(decoded_words, even_words[...]) # TODO
+  }
+}
+
+print("🔓 DECODED (Original Order):")
+decoded_story <- paste(decoded_words, collapse = " ")
+print(...)  # TODO
+```
+
+```R
+# 🎮 Bonus: Try Your Own Secret Messages!
+print("\n🎮 === BONUS: YOUR SECRET MESSAGES ===")
+
+# Try these mini stories or create your own!
+mini_secret1 <- "Meet me at the playground after school."
+mini_secret2 <- "I found the hidden treasure map."
+mini_secret3 <- "The password is rainbow unicorn."
+
+# Your turn: Pick one of the mini secrets and encode it!
+my_secret <- "..."  # Choose one of the mini_secret messages above
+
+# Split your secret into words
+my_words <- unlist(strsplit(my_secret, " "))
+
+# Encode using Method 1 (Reverse) or Method 2 (Every-other-word)
+# Write your encoding code here:
+```
 
 💡 **Pro Tips from this spell:**
 - `length()` tells you how many items are in a list
@@ -360,6 +685,11 @@ library(ggplot2)
 🎭 **Let's start simple:** We can make plots even without complicated data! We'll use simple lists of information.
 
 ```R
+# Load our magical plotting package
+library(ggplot2)
+```
+
+```R
 # Simple lists (these are called vectors)
 animals <- c("pikachu", "dog", "rabbit", "hamster", "fish")
 counts <- c(3, 5, 2, 1, 4)
@@ -378,6 +708,50 @@ ggplot() +
 - `aes()` tells R what goes where (x and y axes)
 
 ✨ **Challenge:** Try changing the animals or numbers and see what happens!
+
+```R
+# Create simple lists
+animals <- c("cat", "dog", "rabbit", "hamster", "fish")
+counts <- c(3, 5, 2, 1, 4)
+
+print("🐾 Our animal data:")
+print(paste("Animals:", paste(animals, collapse = ", ")))
+print(paste("Counts:", paste(counts, collapse = ", ")))
+
+# Make your first plot!
+plot1 <- ggplot() + 
+  geom_col(aes(x = animals, y = counts))
+
+print(plot1)
+```
+
+```R
+# 🎯 Challenge 2: Try your own food ratings data
+print("\n🍕 Creating a plot with your own food ratings data!")
+
+# Create your own lists - change these ... to your favorites!
+my_foods <- c(...)
+my_ratings <- c(...)
+
+# Make a plot with your data
+plot2 <- ggplot() + 
+  geom_col(aes(x = my_foods, y = my_ratings))
+
+print(plot2)
+```
+
+```R
+# ✨ Challenge: Create your own plot!
+# Fill in your own data and create a plot:
+# (Run this after replacing the blanks)
+my_categories <- c("___", "___", "___")  # Fill in 3 things you want to compare
+my_values <- c(___, ___, ___)               # Fill in numbers for each thing
+
+# Fill in the code below in ... and run them:
+my_plot <- ... + 
+   geom_col(aes(x = ..., y = ...))
+print(...)
+```
 
 ## 4. Introducing Dataframes: R's Magic Tables
 *Duration: 20 minutes*
@@ -420,6 +794,44 @@ print(pets)
 
 <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3a2lldTloc3draTh4czdocDJpam8zNWxjdWpqMXprZXJyMzAyMWZzeSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/3oxRmcuIY3gIhOwLOE/giphy.gif" alt="friend" style="width: 100%; height: auto;">
 
+```R
+# 🎯 Challenge 2: Create your own dataframe
+print("\n👫 Creating a dataframe about your friends!")
+
+# Make a dataframe about your friends (change the data to match your real friends!)
+friends <- data.frame(
+  name = c("Sky", "...", "..."),
+  favorite_color = c("...", "...", "gre...en"),
+  age = c(28, ..., ...)
+)
+
+print(friends)
+```
+
+```R
+# 🎯 Challenge 3: Let's explore our dataframes
+print("\n🔍 Exploring our data:")
+
+# How many rows and columns?
+print(paste("Pets dataframe has", nrow(pets), "rows and", ncol(pets), "columns"))
+print(paste("Friends dataframe has", nrow(friends), "rows and", ncol(friends), "columns"))
+
+# What are the column names?
+print(paste("Pet columns:", paste(names(pets), collapse = ", ")))
+print(paste("Friend columns:", paste(names(friends), collapse = ", ")))
+```
+
+```R
+# ✨ Challenge 4: Create your own dataframe!
+# Pick a topic you're interested in and create a dataframe with at least 3 columns and 3 rows
+# my_topic <- data.frame(
+#   column1 = c("___", "___", "___"),
+#   column2 = c("___", "___", "___"),
+#   column3 = c(___, ___, ___)
+# )
+# print(my_topic)
+```
+
 ### 4.2 Spell 9: Visualizing Your Data Magic
 *Duration: 20 minutes*
 
@@ -430,6 +842,78 @@ print(pets)
 #### 🎈 Activity: From Data to Art
 
 🎯 **Your Mission:** Take the dataframe you created in Spell 8 and transform it into stunning visual art! We'll explore different chart styles, colors, and themes - it's like having a magical art studio for your data!
+
+```R
+library(ggplot2)
+```
+
+```R
+# 🎯 Challenge 1: Visualize your dataframe from Spell 8
+# Use the dataframe you created in Spell 8 here (example shown):
+my_data <- data.frame(
+  name = c("Pizza", "Ice Cream", "Tacos", "Cookies"),
+  rating = c(10, 9, 8, 10),
+  category = c("dinner", "dessert", "dinner", "dessert")
+)
+
+ggplot(my_data, aes(x = name, y = rating)) +
+  geom_col()
+```
+
+```R
+# 🎯 Challenge 2: Add some color magic!
+ggplot(my_data, aes(x = name, y = rating)) +
+  geom_col(fill = "orange")    # Try different colors: "red", "green", "purple", "orange"
+
+# Try this too - different color for each bar!
+ggplot(my_data, aes(x = name, y = rating, fill = name)) +
+  geom_col()  +
+  theme(text = element_text(size = 16),  # Set text size for all elements
+        plot.title = element_text(size = 20), # Set title size
+        axis.title = element_text(size = 18), # Set axis title size
+        axis.text = element_text(size = 19)) # Set axis text size
+```
+
+```R
+# 🎯 Challenge 3: Make it professional with themes!
+ggplot(my_data, aes(x = name, y = rating)) +
+  geom_col(fill = "pink") +
+  theme_minimal() +    # Makes it look clean and modern!
+  theme(text = element_text(size = 16),  # Set text size for all elements
+        plot.title = element_text(size = 20), # Set title size
+        axis.title = element_text(size = 18), # Set axis title size
+        axis.text = element_text(size = 19)) # Set axis text size
+
+# Try other themes: theme_classic(), theme_dark(), theme_void()
+```
+
+```R
+# 🎯 Challenge 4: Add titles and labels
+ggplot(my_data, aes(x = name, y = rating)) +
+  geom_col(fill = "purple") +
+  theme_minimal() +
+  labs(
+    title = "My Favorite Foods Rating",     # Main title
+    x = "Food Items",                       # X-axis label  
+    y = "How Much I Like It (1-10)"        # Y-axis label
+  ) +
+  theme(text = element_text(size = 16),  # Set text size for all elements
+        plot.title = element_text(size = 20), # Set title size
+        axis.title = element_text(size = 18), # Set axis title size
+        axis.text = element_text(size = 19)) # Set axis text size
+```
+
+```R
+# 🎯 Challenge 5: Color by category (if your data has categories)
+ggplot(my_data, aes(x = name, y = rating, fill = category)) +
+  geom_col() +
+  theme_minimal() +
+  labs(title = "My Food Ratings by Category") +
+  theme(text = element_text(size = 16),  # Set text size for all elements
+        plot.title = element_text(size = 20), # Set title size
+        axis.title = element_text(size = 18), # Set axis title size
+        axis.text = element_text(size = 19)) # Set axis text size
+```
 
 💡 **Pro Tips for this spell:**
 - `aes()` tells ggplot what data to use for x, y, and colors
