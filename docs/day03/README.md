@@ -182,6 +182,12 @@ ncol(creatures_raw)  # how many details about each response? (how many columns)
 dim(creatures_raw)   # how many rows and how many columns?
 ```
 
+```R
+# Step 5.5: What kind of details do we have? (column names)
+print("📝 Columns in our raw creatures data:")
+names(creatures_raw)
+```
+
 ### 3.2 Spell 1B: Cleaning Real Data (Optional)
 *Duration: 10 minutes (Optional)*
 
@@ -226,6 +232,28 @@ creature_data <- read.csv("datasets/creatures.csv")
 creature_basics <- select(creature_data, creature_name, creature_type)
 # Un-comment the code below to see the new dataframe
 # creature_basics
+```
+
+```R
+# FILTER: Keep only creatures with wings (choose rows by a rule)
+winged_creatures <- filter(creature_data, has_wings == "yes")
+# Un-comment the code below to see the new dataframe
+# winged_creatures
+```
+
+```R
+# ARRANGE: Sort creatures by age (youngest first)
+creatures_by_age <- arrange(creature_data, creature_age)
+# Un-comment the code below to see the new dataframe
+# creatures_by_age
+```
+
+```R
+# SLICE: Get the top 3 oldest creatures (pick rows by position)
+oldest_creatures <- arrange(creature_data, desc(creature_age))
+top_3_oldest <- slice(oldest_creatures, 1:3)
+# Un-comment the code below to see the new dataframe
+# top_3_oldest
 ```
 
 #### 4.1.1 **💡 What is `select()`?**
@@ -375,7 +403,12 @@ ggplot(creature_data, aes(x = creature_age)) +
   geom_histogram(fill = "purple", color = "black") +
   labs(title = "How Old Are Our Magical Creatures?",
        x = "Age in Years",
-       y = "Number of Creatures")
+       y = "Number of Creatures")+
+  theme_minimal() +
+  theme(text = element_text(size = 16),
+        plot.title = element_text(size = 20),
+        axis.title = element_text(size = 18),
+        axis.text = element_text(size = 19))
 ```
 
 ### 5.2 Spell 6: Scatter Plot Adventures
@@ -394,7 +427,12 @@ ggplot(creature_data, aes(x = creature_age, y = magic_power)) +
   geom_point(size = 3, color = "blue") +
   labs(title = "Do Older Creatures Have More Magic?",
        x = "Age in Years",
-       y = "Magic Power Level")
+       y = "Magic Power Level")+
+  theme_minimal() +
+  theme(text = element_text(size = 16),
+        plot.title = element_text(size = 20),
+        axis.title = element_text(size = 18),
+        axis.text = element_text(size = 19))
 ```
 
 
@@ -424,7 +462,12 @@ ggplot(creature_counts, aes(x = creature_type, y = total)) +
   geom_col(fill = "orange", color = "black") +
   labs(title = "Which Creature Type is Most Popular?",
        x = "Creature Type",
-       y = "Number of Creatures")
+       y = "Number of Creatures")+
+  theme_minimal() +
+  theme(text = element_text(size = 16),
+        plot.title = element_text(size = 20),
+        axis.title = element_text(size = 18),
+        axis.text = element_text(size = 19))
 ```
 
 **Histogram vs. Bar Chart: What's the Difference?**
