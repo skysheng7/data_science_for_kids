@@ -23,6 +23,27 @@ title: Day 4 - Statistics Ocean
 
 <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMWt1ZzN0dnkyYWRkZW9xbmxic2Z5dDVxYW5mMG1xOWQ0N3B6Y2Q2aSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Qw4X3FyDEfQrNgjl6M0/giphy.gif" alt="dance_2" style="width: 100%; height: auto;">
 
+
+> ✨ Extra Challenge (Optional)
+> 
+> - Ready for something more challenging? Try these extra challenging scripts in [Posit Cloud](https://posit.cloud)!:
+>   1. Work through the extra challenging worksheet `activities/day04_extra_challenge.Rmd`.
+> - If you get stuck, reach out to your instructor for help!
+
+
+## 📥 How to Download Your Folder/Files from Posit Cloud
+
+Follow these quick steps to save your work to your computer:
+
+1. In Posit Cloud, open the Files pane (bottom-right).
+2. Click the checkbox next to the folder or files you want (for example, `day04/` or a single `.Rmd`).
+3. Click More (with blue gear icon) → Export.
+4. A `.zip` file will download with your selected items.
+
+<img src="../../images/save.png" alt="How to export/download from Posit Cloud" style="width: 100%; height: auto;">
+
+💡 Pro tip: If you don’t select anything, Export will download the current folder you’re viewing.
+
 ## 1. 🎈 Ice Breaker Activity: Human Histogram & Statistics Discovery
 *Duration: 30 minutes*
 

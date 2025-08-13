@@ -29,6 +29,20 @@ By the end of today, you'll be magical data wizards who can:
 >   2. Work through the extra challenging worksheet `activities/day03_extra_challenge.Rmd`.
 > - If you get stuck, reach out to your instructor for help!
 
+
+## 📥 How to Download Your Folder/Files from Posit Cloud
+
+Follow these quick steps to save your work to your computer:
+
+1. In Posit Cloud, open the Files pane (bottom-right).
+2. Click the checkbox next to the folder or files you want (for example, `day03/` or a single `.Rmd`).
+3. Click More (with blue gear icon) → Export.
+4. A `.zip` file will download with your selected items.
+
+<img src="../../images/save.png" alt="How to export/download from Posit Cloud" style="width: 100%; height: auto;">
+
+💡 Pro tip: If you don’t select anything, Export will download the current folder you’re viewing.
+
 ## 1. Ice Breaker: Mixed Treasure Bag Sorting Game
 *Duration: 10 minutes*
 
