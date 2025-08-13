@@ -144,18 +144,6 @@ The `..` symbol means "go up one level" to the parent folder from where you are 
 └── 🖼️ museums/
 ```
 
-In R, to find out where you are at currently (which folder are you in), you can use this magic function: 
-
-```
-getwd()
-```
-
-To move to a folder that you want to be in, you can use this magic function: 
-
-```
-setwd("path/to/your/folder")
-```
-
 **🎯 Example: Going Up One Level**
 
 If you're currently in the `giants` folder and want to access the  `unicorn_data.csv` inside of the `unicorns` folder:
@@ -170,7 +158,47 @@ If you're currently in the `giants` folder and want to access the  `unicorn_data
 
 **🎈 Think of it like exploring Otter Castle:** You're in the Giants' Lair, but the magical unicorn data is in the Unicorns' Garden next door. You need to go back to the main Creatures Hall first (`..`), then enter the Unicorns' Garden (`/unicorns/`)!
 
-#### 3.1.4 **Our own magical creature data:**
+#### 3.1.4 🎈 Try to move around in Oda's castle yourself! 
+
+In R, to find out where you are at currently (which folder are you in), you can use this magic function: 
+
+```
+getwd()
+```
+
+To move to a folder that you want to be in, you can use this magic function: 
+
+```
+setwd("path/to/your/folder")
+```
+
+**🎈  A self- guided tour at Oda's castle:**
+
+📁 **Find this spell in [Posit Cloud](https://posit.cloud):** Look for the file `day03_spell01A_castle_navigation.R` in your project files!
+
+You start at the base of Day 3's folder. Let's visit rooms in Oda's castle in this order:
+
+1) Go to `otter_castle/library/creatures/`
+
+2) Go back to `otter_castle/library/`
+
+3) Go into `otter_castle/library/fish_catching/`
+
+4) Finally, go to `otter_castle/museums/`
+
+*Example:*
+
+```R
+# Tiny demo (you'll complete the full version in the script!)
+getwd()                                  # Where am I now?
+setwd("otter_castle/library/creatures") # Move to creatures
+getwd()                                  # Confirm where you are
+setwd("../")                            # Back to library
+getwd()                                  # Confirm where you are
+```
+
+
+#### 3.1.5 **Our own magical creature data:**
 
 📁 **Find this spell in [Posit Cloud](https://posit.cloud):** Look for the file `day03_spell01_loading_data.Rmd` in your project files!
 
