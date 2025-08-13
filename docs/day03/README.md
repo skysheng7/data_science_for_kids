@@ -111,15 +111,15 @@ Before we can load our data, we need to tell R exactly where to find it. Think o
 
 **The World Treasure Map (Absolute Path):**
 This is like a full address that can find a treasure from anywhere in the world, but it only works for *one specific treasure chest*.
-- **Example:** `C:/Users/Sky/Sky_documents/projects/datasets/creatures.csv`
+- **Example:** `C:/Users/Sky/Sky_documents/Day_3/activities/day03_spell01_loading_data.Rmd`
 - **What it means:** This path starts from the very beginning of Sky's computer's storage (`C:/`) and gives every single step to find the file.
 - **Problem:** If I give this map to you, it won't work! Your computer doesn't have a folder called `Sky`, or `Sky_documents`. It's too specific to Sky's computer!
 
 **Your Secret Treasure Map (Relative Path):**
-This is like a map that works from a starting point that you both know, the `projects` folder that you both have! 
-- **Example:** `"datasets/creatures.csv"`
-- **What it means:** "From right here inside our `projects` folder, go into the `datasets` folder, and you'll find the `creatures.csv` file."
-- **Why it's better:** This map works for anyone who has the `projects` folder! When you share your project, your friend can use the same map to find the treasure on their computer.
+This is like a map that works from a starting point that you both know, the `Day_3` folder that you both have! 
+- **Example:** `"activities/day03_spell01_loading_data.csv"`
+- **What it means:** "From right here inside our `Day_3` folder, go into the `datasets` folder, and you'll find the `day03_spell01_loading_data.Rmd` file."
+- **Why it's better:** This map works for anyone who has the `Day_3` folder! When you share your project, your friend can use the same map to find the treasure on their computer.
 
 🎯 **Always use relative paths in your R spells!** This way, your magic will work on any computer, not just your own.
 
@@ -144,6 +144,18 @@ The `..` symbol means "go up one level" to the parent folder from where you are 
 └── 🖼️ museums/
 ```
 
+In R, to find out where you are at currently (which folder are you in), you can use this magic function: 
+
+```
+getwd()
+```
+
+To move to a folder that you want to be in, you can use this magic function: 
+
+```
+setwd("path/to/your/folder")
+```
+
 **🎯 Example: Going Up One Level**
 
 If you're currently in the `giants` folder and want to access the  `unicorn_data.csv` inside of the `unicorns` folder:
@@ -161,6 +173,8 @@ If you're currently in the `giants` folder and want to access the  `unicorn_data
 #### 3.1.4 **Our own magical creature data:**
 
 📁 **Find this spell in [Posit Cloud](https://posit.cloud):** Look for the file `day03_spell01_loading_data.Rmd` in your project files!
+
+> 💡 If you are confused about any functions, remember to use the magic of `?`! 
 
 ```R
 # Step 1: Load the treasure chest (read the data)
@@ -585,6 +599,8 @@ Work with a partner to become data detectives! Choose one or many mysteries to s
 - Always check your data after loading it!
 - Use relative paths like `"datasets/creatures.csv"` so your code works on any computer
 - `..` means "go up one level" to the parent folder from where you are currently located
+- Use `getwd()` to print current folder that you are in
+- Use `setwd("path/to/your/folder")` to move to a folder you want to be in
 
 ### 7.2 Data Wrangling with dplyr
 - `library(dplyr)` loads an open-source R package with code written by someone else (don't forget this!).
