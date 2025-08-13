@@ -42,7 +42,7 @@ fish_pattern <- c(
   "   ####",
   "    ##",
   "   ####",
-  "  ######",
+  "  ######"
 )
 
 for (line in fish_pattern) {
