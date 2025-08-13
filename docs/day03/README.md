@@ -11,6 +11,8 @@ title: Day 3 - Data Storytelling Adventures
 :alt: viz
 :width: 50%
 ```
+
+
 ## 🎯 Learning Objectives
 
 By the end of today, you'll be magical data wizards who can:
@@ -19,6 +21,13 @@ By the end of today, you'll be magical data wizards who can:
 - 🌊 Chain commands together with the magical pipe operator
 - 📊 Create three types of data stories: histograms, scatter plots, and bar charts
 - 👥 Work as a team to solve real data mysteries
+
+> ✨ Extra Challenge (Optional)
+> 
+> - Ready for something more challenging? Try these extra challenging scripts in [Posit Cloud](https://posit.cloud)!:
+>   1. Explore and understand the cleaning script `activities/day03_spell01B_clean_creatures.R` — can you explain what each step does and why?
+>   2. Work through the extra challenging worksheet `activities/day03_extra_challenge.Rmd`.
+> - If you get stuck, reach out to your instructor for help!
 
 ## 1. Ice Breaker: Mixed Treasure Bag Sorting Game
 *Duration: 10 minutes*
