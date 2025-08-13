@@ -40,7 +40,10 @@ Follow these quick steps to save your work to your computer:
 3. Click More (with blue gear icon) → Export.
 4. A `.zip` file will download with your selected items.
 
-<img src="../../images/save.png" alt="How to export/download from Posit Cloud" style="width: 100%; height: auto;">
+```{image} ../../images/save.png
+:alt: save
+:width: 100%
+```
 
 💡 Pro tip: If you don’t select anything, Export will download the current folder you’re viewing.
 
