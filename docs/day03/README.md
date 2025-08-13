@@ -269,6 +269,9 @@ library(dplyr)
 creature_data <- read.csv("datasets/creatures.csv")
 ```
 
+#### 4.1.1 **💡 What is `select()`?**
+The `select()` spell is like choosing which characteristics about your creature you want to look at. Instead of trying to understand every aspect about every single creature at once (their name, age, type, power level, if they have wings), you might `select()` only 1 or a few characteristics to look at first. You might `select()` just the `creature_name` and `magic_power` to see who's the strongest. This chooses characteristics (columns) only — it **does not remove any creatures (rows)**; you are still looking at all the creatures but focusing on just their name and power. It helps you focus on only the columns you need and discard irrelevant information.
+
 ```R
 # SELECT: Pick only the name and type columns (choose features/columns)
 creature_basics <- select(creature_data, creature_name, creature_type)
@@ -276,52 +279,30 @@ creature_basics <- select(creature_data, creature_name, creature_type)
 # creature_basics
 ```
 
-```R
-# FILTER: Keep only creatures with wings (choose rows by a rule)
-winged_creatures <- filter(creature_data, has_wings == "yes")
-# Un-comment the code below to see the new dataframe
-# winged_creatures
-```
-
-```R
-# ARRANGE: Sort creatures by age (youngest first)
-creatures_by_age <- arrange(creature_data, creature_age)
-# Un-comment the code below to see the new dataframe
-# creatures_by_age
-```
-
-```R
-# SLICE: Get the top 3 oldest creatures (pick rows by position)
-oldest_creatures <- arrange(creature_data, desc(creature_age))
-top_3_oldest <- slice(oldest_creatures, 1:3)
-# Un-comment the code below to see the new dataframe
-# top_3_oldest
-```
-
-#### 4.1.1 **💡 What is `select()`?**
-The `select()` spell is like choosing which characteristics about your creature you want to look at. Instead of trying to understand every aspect about every single creature at once (their name, age, type, power level, if they have wings), you might `select()` only 1 or a few characteristics to look at first. You might `select()` just the `creature_name` and `magic_power` to see who's the strongest. This chooses characteristics (columns) only — it **does not remove any creatures (rows)**; you are still looking at all the creatures but focusing on just their name and power. It helps you focus on only the columns you need and discard irrelevant information.
-
-```R
-# FILTER: Keep only creatures with wings (choose rows by a rule)
-winged_creatures <- filter(creature_data, has_wings == "yes")
-# Un-comment the code below to see the new dataframe
-# winged_creatures
-```
-
 #### 4.1.2 **💡 What is `filter()`?**
 The `filter()` spell **keeps only the creatures (rows) that meet your rule**. You set a criterion on a characteristic (column), like `magic_power >= 80` or `type == "dragon"`. This does not change which characteristics (columns) you see — it **does not remove any characteristics (columns)**; it chooses which rows stay based on your threshold or criteria.
 
 ```R
-# ARRANGE: Sort creatures by age (youngest first)
-creatures_by_age <- arrange(creature_data, creature_age)
+# FILTER: Keep only creatures with wings (choose rows by a rule)
+winged_creatures <- filter(creature_data, has_wings == "yes")
 # Un-comment the code below to see the new dataframe
-# creatures_by_age
+# winged_creatures
 ```
 
 #### 4.1.3 **💡 What is `arrange()`?**
 The `arrange()` spell is like lining up your creatures from shortest to tallest, or weakest to strongest. It sorts your data based on 1 or a few characteristics of the creatures. By default, `arrange()` sorts your data from smallest to biggest. Use `arrange(your_data, desc(column_name))` to sort from biggest to smallest.
 
 ```R
+# ARRANGE: Sort creatures by age (youngest first)
+creatures_by_age <- arrange(creature_data, creature_age)
+# Un-comment the code below to see the new dataframe
+# creatures_by_age
+```
+
+#### 4.1.4 **💡 What is `slice()`?**
+The `slice()` spell picks rows by their position in the table. It’s like choosing creatures from a lineup by their position in the queue. You can grab the first three with `slice(1:3)`, or just the tenth one with `slice(10)`.
+
+```R
 # SLICE: Get the top 3 oldest creatures (pick rows by position)
 oldest_creatures <- arrange(creature_data, desc(creature_age))
 top_3_oldest <- slice(oldest_creatures, 1:3)
@@ -329,8 +310,6 @@ top_3_oldest <- slice(oldest_creatures, 1:3)
 # top_3_oldest
 ```
 
-#### 4.1.4 **💡 What is `slice()`?**
-The `slice()` spell picks rows by their position in the table. It’s like choosing creatures from a lineup by their position in the queue. You can grab the first three with `slice(1:3)`, or just the tenth one with `slice(10)`.
 
 ### 4.2 Spell 3: Grouping and Mutating Magic
 *Duration: 20 minutes*
