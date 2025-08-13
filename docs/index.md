@@ -3,7 +3,7 @@ layout: default
 title: Home
 ---
 
-# 🌟 Data Science for Kids Summer Camp at VISST
+# 🌟 Data Science for Kids at VISST
 
 > *A magical 5-day journey into the world of data science for young explorers aged 10-14*
 
