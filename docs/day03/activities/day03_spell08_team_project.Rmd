@@ -3,10 +3,6 @@ title: "🔮 Day 3 - Spell 8: Team Data Detective Project (Overview)"
 output: html_document
 ---
 
-```{r setup-locale, include=FALSE}
-Sys.setlocale("LC_CTYPE", "en_US.UTF-8")
-```
-
 Work with a partner to solve a data mystery!
 Use all your new data magic skills together
 
@@ -26,6 +22,10 @@ Each script uses ONE dataset so you can focus clearly:
 ## Step 1: Load your detective toolkit
 
 ```{r}
+# set the locale to English and UTF-8 encoding so that emojis can be displayed correctly
+Sys.setlocale("LC_CTYPE", "en_US.UTF-8")
+
+# load the dplyr package
 library(dplyr)
 library(ggplot2)
 

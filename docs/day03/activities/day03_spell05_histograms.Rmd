@@ -3,10 +3,6 @@ title: "🔮 Day 3 - Spell 5: Histogram Magic"
 output: html_document
 ---
 
-```{r setup-locale, include=FALSE}
-Sys.setlocale("LC_CTYPE", "en_US.UTF-8")
-```
-
 Learn to see the shape of your data!
 Histograms show us patterns like mountains and valleys in our data
 
@@ -15,6 +11,10 @@ Histograms show us patterns like mountains and valleys in our data
 ## Step 1: Load tools and data
 
 ```{r}
+# set the locale to English and UTF-8 encoding so that emojis can be displayed correctly
+Sys.setlocale("LC_CTYPE", "en_US.UTF-8")
+
+# load the ggplot2 package
 library(ggplot2)  # Our plotting magic toolbox
 library(dplyr)
 creature_data <- read.csv("../datasets/creatures.csv")

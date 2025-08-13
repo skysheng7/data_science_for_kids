@@ -3,10 +3,6 @@ title: "🔮 Day 3 - Spell 2: Select and Filter Magic"
 output: html_document
 ---
 
-```{r setup-locale, include=FALSE}
-Sys.setlocale("LC_CTYPE", "en_US.UTF-8")
-```
-
 Today we learn to pick exactly what we want from our data!
 Like choosing specific toys from a toy box
 
@@ -15,6 +11,10 @@ Like choosing specific toys from a toy box
 ## Step 1: Load our data and toolbox
 
 ```{r}
+# set the locale to English and UTF-8 encoding so that emojis can be displayed correctly
+Sys.setlocale("LC_CTYPE", "en_US.UTF-8")
+
+# load the dplyr package
 library(dplyr)  # Our data wrangling toolbox
 
 # Load the cleaned creatures data (created from the form by our cleaning spell)

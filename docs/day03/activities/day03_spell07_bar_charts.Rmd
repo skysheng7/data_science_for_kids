@@ -3,10 +3,6 @@ title: "🔮 Day 3 - Spell 7: Bar Chart Magic"
 output: html_document
 ---
 
-```{r setup-locale, include=FALSE}
-Sys.setlocale("LC_CTYPE", "en_US.UTF-8")
-```
-
 Compare different groups and see who wins!
 Bar charts are perfect for competitions and comparisons
 
@@ -15,8 +11,13 @@ Bar charts are perfect for competitions and comparisons
 ## Step 1: Load tools and data
 
 ```{r}
+# set the locale to English and UTF-8 encoding so that emojis can be displayed correctly
+Sys.setlocale("LC_CTYPE", "en_US.UTF-8")
+
+# load the ggplot2 package
 library(ggplot2)
 library(dplyr)
+
 creature_data <- read.csv("../datasets/creatures.csv")
 
 print("🏆 Ready for the creature competition!")
