@@ -9,7 +9,7 @@ title: Home
 
 Welcome to an enchanting adventure where mathematics meets magic, and data tells stories! This summer camp introduces fundamental data science concepts through hands-on activities, storytelling, and creative projects using R programming.
 
-- Location: Vancouver Institute for the Scholarship of Sustainability and Technology **[(VISST)](https://www.visst.ca/)**
+- Location: **[Vancouver Institute for the Scholarship of Sustainability and Technology (VISST)](https://www.visst.ca/)**
 - Date and Time: 
     - 📅 August 11-15, 2025 (Monday-Friday) 
     - ⏰ 1:00-4:00 PM
