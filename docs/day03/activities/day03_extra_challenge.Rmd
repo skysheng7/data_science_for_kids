@@ -1,0 +1,175 @@
+---
+title: "Day 3 Extra Challenge Worksheet"
+bibliography: ../../references/references.bib
+---
+# Day 3 Extra Challenge Worksheet
+
+## About the data
+
+In this worksheet, we will be using a data set obtained from the Spotify Web API the top 50 tracks from 2023 (more details can be found [here](https://www.kaggle.com/datasets/yukawithdata/spotify-top-tracks-2023)).
+
+<img src=https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_Green.png width="500">
+
+I have reduced the data set to include the following variables:
+
+- artist_name: the artist name
+- track_name: the title of the track
+- album_release_date: The date when the track was released
+- genres: A list of genres associated with the track's artist(s)
+- danceability: A measure from 0.0 to 1.0 indicating how suitable a track is for dancing based on a combination of musical elements
+- energy: A measure from 0.0 to 1.0 representing a perceptual measure of intensity and activity
+- loudness: The overall loudness of a track in decibels (dB)
+- key: The key the track is in. Integers map to pitches using standard Pitch Class notation.
+- tempo: The overall estimated tempo of a track in beats per minute (BPM)
+- duration_ms: The length of the track in milliseconds
+- time_signature: An estimated overall time signature of a track
+- popularity: A score between 0 and 100, with 100 being the most popular
+
+I also included a new variable called `pop` which is yes if the song falls into any type of pop genre and no otherwise.
+
+```{r}
+# Load libraries
+
+library(tidyverse)
+```
+
+```{r}
+# Read in the data
+
+spotify <- read_csv("../datasets/spotify_top_50_2023.csv")
+```
+
+```{r}
+spotify <- spotify |> 
+                mutate(pop = if_else(str_detect(genres, "pop"), "yes", "no"))
+```
+
+# Exercise 1: Wrangling
+
+## 1.1 
+
+Is the spotify data tidy? Why or why not?
+
+> **YOUR ANSWER HERE**
+
+## 1.2 
+
+Using code, what are the dimensions of this data set (i.e., the number of rows and columns)?
+
+```{r}
+### YOUR CODE HERE
+```
+
+## 1.3 
+
+Without examining the entire data set, which artist and track is in the 35th row of the data set? Note that your code should return only the required variables (`artist_name` and `track_name`).
+
+```{r}
+### YOUR CODE HERE
+```
+
+## 1.4 
+
+Create a subset of the data that only includes tracks with a popularity score over 90. Assign this to an object called `pop_90`. How many songs have a popularity score over 90?
+
+```{r}
+### YOUR CODE HERE
+```
+
+## 1.5
+
+Now, I want to look at pop songs that have a danceability score over 0.7. Create a subset of the `spotify` data set to achieve this task, ordered from highest to lowest danceability.
+
+```{r}
+### YOUR CODE HERE
+```
+
+## 1.6
+
+What is the average danceability score for Taylor Swift songs?
+
+```{r}
+### YOUR CODE HERE
+```
+
+## 1.7
+
+Are Taylor Swfit's songs more danceable than The Weeknd's? *Hint: use `group_by`*.
+
+```{r}
+### YOUR CODE HERE
+```
+
+## 1.8 
+
+Are pop songs more popular than other genres? Compare the average popularity scores between pop songs vs. other genres.
+
+```{r}
+### YOUR CODE HERE
+```
+
+> **YOUR ANSWER HERE**
+
+# Exercise 2: Data Visualization
+
+## 2.1
+
+Using a histogram, visualize the distribution of popularity scores for Spotify's top 50 tracks from 2023. Describe what you see.
+
+```{r}
+### YOUR CODE HERE
+```
+
+> **YOUR ANSWER HERE**
+
+## 2.2 
+
+Are pop songs more popular than other genres? You answered this in question 1.8 using summary statistics, but now use histograms to visualize the popularity groups for the two groups on the same graph. Do you notice anything different?
+
+> Hint: use `facet_grid`
+
+```{r}
+### YOUR CODE HERE
+```
+
+> **YOUR ANSWER HERE**
+
+## 2.3 
+
+Create a barplot comparing the counts of pop songs vs. non-pop songs.
+
+```{r}
+### YOUR CODE HERE
+```
+
+## 2.4 
+
+Is there a relationship between how loud a song is in decibels and its popularity? Visualize the relationship between loudness and popularity with a scatterplot, plotting loudness on the $y$-axis and popularity on the $x$-axis. What do you notice?
+
+```{r}
+### YOUR CODE HERE
+```
+
+> **YOUR ANSWER HERE**
+
+## 2.5 (Challenge)
+
+Find the song that has the highest popularity score, but a relatively moderate loudness. Highlight the point on the graph and label it. 
+
+> Hint: Use the `annotate` function to highlight a point
+
+```{r}
+### YOUR CODE HERE
+```
+
+## 2.6 (Challenge)
+
+List the artists who have more than one track in the top 50. For each artist, show the number of tracks and their average popularity score.
+
+```{r}
+### YOUR CODE HERE
+```
+
+## Acknowledgements
+
+This workshop was originally created by - [**Girls in Data Science**](https://katieburak.github.io/girls-in-DS/) workshop by Dr. Katie Burak, Jenny Lee, and Mona Zhu

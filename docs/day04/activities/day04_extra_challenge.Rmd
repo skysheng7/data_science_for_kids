@@ -1,0 +1,189 @@
+---
+title: "Day 4 Extra Challenge Worksheet"
+bibliography: ../../references/references.bib
+---
+
+# Day 4 Extra Challenge Worksheet
+
+## About the data
+
+In this worksheet, we will be working with the [Pokemon dataset](https://www.kaggle.com/datasets/rounakbanik/pokemon/data), which contains 800+ Pokemon from all seven generations!
+
+<img src=https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/2560px-International_Pok%C3%A9mon_logo.svg.png width="500">
+
+The dataset has been reduced with some columns removed. The dataset we will be working with contains the following information: 
+
+- **name:** The English name of the Pokemon
+- **pokedex_number:** The entry number of the Pokemon in the National Pokedex
+- **percentage_male:** The percentage of the species that are male. Blank if the Pokemon is genderless.
+- **type1:** The Primary Type of the Pokemon
+- **type2:** The Secondary Type of the Pokemon
+- **classification:** The Classification of the Pokemon as described by the Sun and Moon Pokedex
+- **capture_rate:** Capture Rate of the Pokemon
+- **height_m:** Height of the Pokemon in metres
+- **weight_kg:** The Weight of the Pokemon in kilograms
+- **hp:** The Base HP of the Pokemon
+- **attack:** The Base Attack of the Pokemon
+- **defense:** The Base Defense of the Pokemon
+- **speed:** The Base Speed of the Pokemon
+- **generation:** The numbered generation which the Pokemon was first introduced
+- **is_legendary:** Denotes if the Pokemon is legendary.
+
+```{r}
+# Load libraries
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load(tidyverse, infer)
+```
+
+```{r}
+# Read in the data
+pokemon <- read_csv("data/pokemon.csv")
+head(pokemon)
+```
+
+## Exercise 1: Creating scatter plots
+
+### 1.1
+
+How does the weight of the Pokemon change as they increase in height? 
+
+Create a scatter plot of the Pokemon in the data set, with `height_m` on the x-axis and `weight_kg` on the y-axis.
+
+What pattern do you observe in the data? Answer in 1-2 sentences.
+
+```{r}
+### YOUR CODE HERE
+```
+
+> **YOUR ANSWER HERE**
+
+### 1.2
+
+Let's clean up the plot further and make it more "human readable".
+
+Change the x- and y-axis by capitalizing the variable names; put any unit information inside brackets.
+
+In addition, add a title to the plot. The title should **concisely** describe to the audience what the plot is showing (hint: what observation did more make in the previous exercise?)
+
+```{r}
+### YOUR CODE HERE
+```
+
+### 1.3
+
+Make **at least 1** additional adjustments to the plot. This could be changing the size/colour/shape of the circles inside the scatter plot, changing the font size of the axis labels or title, overall look-and-feel of the plot aesthetics, etc. 
+
+You can reference the below resources (or make use of Google if you want to try something else):
+
+1. Changing plot colour: http://www.cookbook-r.com/Graphs/Colors_(ggplot2)/
+   - Colour Cheat Sheet: https://sape.inf.usi.ch/sites/default/files/ggplot2-colour-names.png
+3. Changing the shape/size of the point: http://www.cookbook-r.com/Graphs/Shapes_and_line_types/
+4. Changing the overall aesthetic of the plot: https://book.rfortherestofus.com/themes
+
+```{r}
+### YOUR CODE HERE
+```
+
+### 1.4 (Challenge)
+
+Is the relation between height and weight different for legendary vs non-legendary Pokemon? How could you inspect this visually?
+
+(**Hint:** you can group your dataset by having 1 colour for the legendary Pokemon and 1 colour for the non-legendary ones.)
+
+```{r}
+### YOUR CODE HERE
+```
+
+## Exercise 2: Understanding Distributions
+
+### 2.1
+
+What is the distribution of **hp points** of all Pokemon in this dataset?
+
+Plot a histogram of this information using a `binwidth` of 10 units. Make sure that the x- and y-axes are human readable and make sure to include a title.
+
+```{r}
+### YOUR CODE HERE
+```
+
+### 2.2
+
+What is the mean and standard deviation of Pokemons' HP points?
+
+```{r}
+### YOUR CODE HERE
+```
+
+### 2.3 
+
+Is this distribution symmetric? Are there any outliers in the data? How did you determine if there were or weren't outliers (e.g., did you use a numeric cutoff, inspect the data visually, etc)?
+
+> **YOUR ANSWER HERE**
+
+```{r}
+### A CODE CHUNK TO PLAY AROUND WITH THE DATA IF YOU NEED IT
+```
+
+## Exercise 3: Sampling
+
+Run the following cell - we will be using this data frame for the remaining questions in this worksheet.
+
+```{r}
+set.seed(930) # ensures that the sampling is reproducible
+pokemon_encounters <- pokemon |> 
+    drop_na(capture_rate, weight_kg) |> 
+    uncount(weights = capture_rate) |> 
+    slice(sample(1:n())) 
+
+head(pokemon_encounters)
+```
+
+### 3.1
+
+Assume the above dataframe represents a **population** of Pokemon in a given region. 
+
+Imagine if you were to encounter and capture a random sample of **30 Pokemon** in this region. Create this sample using code and stored it in a new data frame called `pokemon_sample_30`.
+
+```{r}
+set.seed(930) # ensures that the sampling is reproducible
+
+### YOUR CODE HERE
+
+head(pokemon_sample_30)
+```
+
+# 3.2
+
+Plot a histogram of the **weight** of this sample of Pokemon. Use a `binwidth` of 15.
+
+Compare the **average weight of this sample of 30 Pokemon** with the **average weight of all Pokemon in this region** by drawing 2 vertical lines on the graph: 
+1. A solid red line that represents the average weight of the sample of 30 Pokemon 
+2. A dotted blue line that represents the average weight lf all Pokemon in this region
+
+Make sure that your axes are properly labelled and choose an appropriate title for the plot.
+
+```{r}
+### YOUR CODE HERE
+```
+
+### 3.3
+
+What do you notice about the two means? Is the sample mean higher or lower compared to the population mean?
+
+> **YOUR ANSWER HERE**
+
+### 3.4
+
+Now, if you were take take a bigger sample of **100 Pokemon** from this region. What would the distribution look like? How does the mean of this sample compare to the population mean?
+
+```{r}
+set.seed(930) # ensures that the sampling is reproducible
+
+### YOUR CODE HERE
+```
+
+> **YOUR ANSWER HERE**
+
+## Acknowledgements
+
+This workshop was originally created by - [**Girls in Data Science**](https://katieburak.github.io/girls-in-DS/) workshop by Dr. Katie Burak, Jenny Lee, and Mona Zhu
