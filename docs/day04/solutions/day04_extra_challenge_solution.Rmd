@@ -1,9 +1,9 @@
 ---
-title: "Day 4 Extra Challenge Worksheet"
+title: "Day 4 Extra Challenge Solution"
 bibliography: ../../references/references.bib
 ---
 
-# Day 4 Extra Challenge Worksheet
+# Day 4 Extra Challenge Solution
 
 ## About the data
 
@@ -50,10 +50,12 @@ Create a scatter plot of the Pokemon in the data set, with `height_m` on the x-a
 What pattern do you observe in the data? Answer in 1-2 sentences.
 
 ```{r}
-### YOUR CODE HERE
+pokemon |> 
+    ggplot(aes(x = height_m, y = weight_kg)) + 
+       geom_point()
 ```
 
-> **YOUR ANSWER HERE**
+> **Answer:** As a Pokemon's height increases, the weight of the Pokemon also tends to increase.
 
 ### 1.2
 
@@ -64,7 +66,13 @@ Change the x- and y-axis by capitalizing the variable names; put any unit inform
 In addition, add a title to the plot. The title should **concisely** describe to the audience what the plot is showing (hint: what observation did more make in the previous exercise?)
 
 ```{r}
-### YOUR CODE HERE
+pokemon |> 
+    ggplot(aes(x = height_m, y = weight_kg)) + 
+        geom_point() + 
+        labs(x = "Height (m)", 
+             y = "Weight (kg)",
+             title = "Correlation between Height and Weight of Pokemons"
+        )
 ```
 
 ### 1.3
@@ -79,17 +87,33 @@ You can reference the below resources (or make use of Google if you want to try 
 4. Changing the overall aesthetic of the plot: https://book.rfortherestofus.com/themes
 
 ```{r}
-### YOUR CODE HERE
+pokemon |> 
+    ggplot(aes(x = height_m, y = weight_kg)) + 
+        geom_point(size = 3, colour = 'salmon', alpha = 0.2) + 
+        labs(x = "Height (m)", 
+             y = "Weight (kg)",
+             title = "Correlation between Height and Weight of Pokemons"
+        ) + 
+        theme_bw()
 ```
 
 ### 1.4 (Challenge)
 
-Is the relation between height and weight different for legendary vs non-legendary Pokemon? How could you inspect this visually?
+Is the relationship between height and weight different for legendary vs non-legendary Pokemon? How could you inspect this visually?
 
 (**Hint:** you can group your dataset by having 1 colour for the legendary Pokemon and 1 colour for the non-legendary ones.)
 
 ```{r}
-### YOUR CODE HERE
+pokemon |> 
+    ggplot(aes(x = height_m, y = weight_kg, colour=is_legendary)) + 
+        geom_point(size = 3, alpha = 0.4) + 
+        labs(x = "Height (m)", 
+             y = "Weight (kg)",
+             title = "Scatterplot of Weight vs. Height of Pokemons"
+        ) + 
+        theme_bw() + 
+        # you can also customize the plot further
+        scale_colour_manual("Is the Pokemon\nLegendary?", values=c("#F1BB7B", "#7294D4"))
 ```
 
 ## Exercise 2: Understanding Distributions
@@ -101,7 +125,14 @@ What is the distribution of **hp points** of all Pokemon in this dataset?
 Plot a histogram of this information using a `binwidth` of 10 units. Make sure that the x- and y-axes are human readable and make sure to include a title.
 
 ```{r}
-### YOUR CODE HERE
+pokemon |> 
+    ggplot(aes(x = hp)) +
+        geom_histogram(binwidth = 10, colour = "white") + 
+        labs(
+            x = "HP Points", 
+            y = "Count",
+            title = "Distribution of HP points of Pokemon"
+        )
 ```
 
 ### 2.2
@@ -109,17 +140,29 @@ Plot a histogram of this information using a `binwidth` of 10 units. Make sure t
 What is the mean and standard deviation of Pokemons' HP points?
 
 ```{r}
-### YOUR CODE HERE
+pokemon |> 
+    summarise(
+        Mean = mean(hp),
+        SD = sd(hp)
+    )
 ```
 
 ### 2.3 
 
 Is this distribution symmetric? Are there any outliers in the data? How did you determine if there were or weren't outliers (e.g., did you use a numeric cutoff, inspect the data visually, etc)?
 
-> **YOUR ANSWER HERE**
+> **Answer:** No, the distribution is not symmetric; there is positive skew (i.e., a longer tail to the distribution in higher values).
+>
+> In looking at the distribution, it does look like there are potential outliers in the data. If we consider outliers to be Pokemon whose HP points are 5 standard deviations above the mean, we see that there are 4 Pokemon that meet this criteria.
 
 ```{r}
-### A CODE CHUNK TO PLAY AROUND WITH THE DATA IF YOU NEED IT
+outlier_criteria = mean(pokemon$hp) + 5 * sd(pokemon$hp)
+```
+
+```{r}
+pokemon |> 
+    filter(hp > outlier_criteria) |> 
+    select(name, hp)
 ```
 
 ## Exercise 3: Sampling
@@ -144,8 +187,8 @@ Imagine if you were to encounter and capture a random sample of **30 Pokemon** i
 
 ```{r}
 set.seed(930) # ensures that the sampling is reproducible
-
-### YOUR CODE HERE
+pokemon_sample_30 <- pokemon_encounters |> 
+                        rep_sample_n(size = 30) 
 
 head(pokemon_sample_30)
 ```
@@ -161,14 +204,23 @@ Compare the **average weight of this sample of 30 Pokemon** with the **average w
 Make sure that your axes are properly labelled and choose an appropriate title for the plot.
 
 ```{r}
-### YOUR CODE HERE
+pokemon_sample_30 |> 
+    ggplot(aes(x = weight_kg)) +
+        geom_histogram(binwidth = 25, colour = "white") + 
+        labs(
+            x = "Weight (kg)", 
+            y = "Count",
+            title = "Distribution of the weight of a sample of 30 Pokemon"
+        )+
+        geom_vline(xintercept = mean(pokemon_sample_30$weight_kg), colour="red") + 
+        geom_vline(xintercept = mean(pokemon_encounters$weight_kg), linetype="dotdash", colour="blue")
 ```
 
 ### 3.3
 
 What do you notice about the two means? Is the sample mean higher or lower compared to the population mean?
 
-> **YOUR ANSWER HERE**
+> **Answer:** The sample mean is HIGHER than the population mean, meaning that in the sample, we've over estimated the population mean
 
 ### 3.4
 
@@ -176,11 +228,23 @@ Now, if you were take take a bigger sample of **100 Pokemon** from this region. 
 
 ```{r}
 set.seed(930) # ensures that the sampling is reproducible
+pokemon_encounters |> 
+    rep_sample_n(size = 100) -> pokemon_sample_100
 
-### YOUR CODE HERE
+pokemon_sample_100 |> 
+    ggplot(aes(x = weight_kg)) +
+        geom_histogram(binwidth = 25, colour = "white") + 
+        labs(
+            x = "Weight (kg)", 
+            y = "Count",
+            title = "Distribution of the weight of a sample of 100 Pokemon"
+        )+
+        geom_vline(xintercept = mean(pokemon_sample_100$weight_kg), colour="red") + 
+        geom_vline(xintercept = mean(pokemon_encounters$weight_kg), linetype="dotdash", colour="blue")
 ```
 
-> **YOUR ANSWER HERE**
+> **Answer:** The sample mean is now much closer to the population mean.
+
 
 ## Acknowledgements
 

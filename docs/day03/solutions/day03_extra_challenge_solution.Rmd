@@ -1,0 +1,239 @@
+---
+title: "Day 3 Extra Challenge Solution"
+bibliography: ../../references/references.bib
+---
+
+# Day 3 Extra Challenge Solution
+
+## About the data
+
+In this worksheet, we will be using a data set obtained from the Spotify Web API the top 50 tracks from 2023 (more details can be found [here](https://www.kaggle.com/datasets/yukawithdata/spotify-top-tracks-2023)).
+
+I have reduced the data set to include the following variables:
+
+- artist_name: the artist name
+- track_name: the title of the track
+- album_release_date: The date when the track was released
+- genres: A list of genres associated with the track's artist(s)
+- danceability: A measure from 0.0 to 1.0 indicating how suitable a track is for dancing based on a combination of musical elements
+- energy: A measure from 0.0 to 1.0 representing a perceptual measure of intensity and activity
+- loudness: The overall loudness of a track in decibels (dB)
+- key: The key the track is in. Integers map to pitches using standard Pitch Class notation.
+- tempo: The overall estimated tempo of a track in beats per minute (BPM)
+- duration_ms: The length of the track in milliseconds
+- time_signature: An estimated overall time signature of a track
+- popularity: A score between 0 and 100, with 100 being the most popular
+
+I also included a new variable called `pop` which is yes if the song falls into any type of pop genre and no otherwise.
+
+```{r}
+# Load libraries
+
+library(tidyverse)
+```
+
+```{r}
+# Read in the data
+
+spotify <- read_csv("data/spotify_top_50_2023.csv")
+```
+
+```{r}
+# Create 'pop' column 
+
+spotify <- spotify |> 
+                mutate(pop = if_else(str_detect(genres, "pop"), "yes", "no"))
+```
+
+```{r}
+head(spotify)
+```
+
+# Exercise 1: Wrangling
+
+## 1.1 
+
+Is the spotify data tidy? Why or why not?
+
+> Answer: The data set is mostly tidy: each row corresponds to a single observation and each column corresponds to a single variable. However, each cell does not always correspond to a single value. For example, the genres column sometimes displays multiple genres per song (e.g., the song "Kill Bill" is clsasified as three genres: pop, r&b and rap).
+
+## 1.2 
+
+What are the dimensions of this data set (i.e., the number of rows and columns)?
+
+```{r}
+dim(spotify)
+```
+
+## 1.3 
+
+Without examining the entire data set, which artist and track is in the 35th row of the data set? Note that your code should return only the required variables (`artist_name` and `track_name`).
+
+```{r}
+spotify |> 
+    slice(35) |>
+    select(artist_name, track_name)
+```
+
+## 1.4 
+
+Create a subset of the data that only includes tracks with a popularity score over 90. Assign this to an object called `pop_90`. How many songs have a popularity score over 90?
+
+```{r}
+pop_90 <- spotify |> 
+            filter(popularity > 90)
+
+pop_90
+```
+
+```{r}
+nrow(pop_90)
+```
+
+> 20 tracks have a popularity score over 90.
+
+## 1.5
+
+Now, I want to look at pop songs that have a danceability score over 0.7. Create a subset of the `spotify` data set to achieve this task, ordered from highest to lowest danceability.
+
+```{r}
+spotify |>
+    filter(danceability > 0.7 & pop == "yes") |> 
+    arrange(by = desc(danceability))
+```
+
+## 1.6
+
+What is the average danceability score for Taylor Swift songs?
+
+```{r}
+# Filter for only Taylor Swift songs
+spotify |>
+    filter(artist_name == "Taylor Swift")
+```
+
+```{r}
+# Compute the average danceability score using `summarize`
+spotify |>
+    filter(artist_name == "Taylor Swift") |>
+    summarize(avg_dance_TS = mean(danceability))
+```
+
+## 1.7
+
+Are Taylor Swfit's songs more danceable than The Weekend's? *Hint: use `group_by`*.
+
+```{r}
+spotify |>
+     group_by(artist_name) |>
+     summarize(avg_dance = mean(danceability)) |> 
+     filter(artist_name == "Taylor Swift" | artist_name == "The Weeknd")
+```
+
+## 1.8 
+
+Are pop songs more popular than other genres? Compare the average popularity scores between pop songs vs. other genres.
+
+```{r}
+spotify |>
+     group_by(pop) |>
+     summarize(avg_popularity = mean(popularity))
+```
+
+# Exercise 2: Data Visualization
+
+## 2.1
+
+Using a histogram, visualize the distribution of popularity scores for Spotify's top 50 tracks from 2023. Describe what you see.
+
+```{r}
+ggplot(spotify, aes(x = popularity)) +
+    geom_histogram(bins=25, fill = "cornflowerblue", color = "black") + 
+    theme(text = element_text(size = 26)) + # increase text size
+    labs(x='Popularity Score', y='Count', title='Popularity Score')
+```
+
+> The popularity scores are distributed from about 72-99, with two main points of concentration around approximately 85 and 95.
+
+## 2.2 
+
+Are pop songs more popular than other genres? You answered this in question 1.8 using summary statistics, but now use histograms to visualize the popularity groups for the two groups on the same graph. Do you notice anything different?
+
+> Hint: use `facet_grid`
+
+```{r}
+ggplot(spotify, aes(x = popularity, fill = pop)) +
+    geom_histogram(bins=25, color = "black") +
+    facet_grid(rows = vars(pop)) +
+    theme(text = element_text(size = 26)) +
+    labs(x='Popularity Score', y='Count', title='Histogram of Popularity Score ')
+```
+
+> While the center of the two distributions are very similar (both around 88), we can see that the distribution of popularity scores for pop songs has more variability and a wider spread than songs that are not classified as pop.
+
+## 2.3 
+
+Create a barplot comparing the counts of pop songs vs. non-pop songs.
+
+```{r}
+ggplot(spotify, aes(x = pop)) +
+    geom_bar(fill = "cornflowerblue", color = "black") +
+    theme(text = element_text(size = 26)) + 
+    labs(x = 'Pop', y = 'Count', title = 'Barplot of Pop vs. Non-Pop Songs')
+```
+
+## 2.4 
+
+Is there a relationship between how loud a song is in decibels and its popularity? Visualize the relationship between loudness and popularity with a scatterplot, plotting loudness on the $y$-axis and popularity on the $x$-axis. What do you notice?
+
+```{r}
+options(repr.plot.width = 10, repr.plot.height = 8)
+
+ggplot(spotify, aes(x = popularity, y = loudness)) + 
+    geom_point(size=4) +
+    theme(text = element_text(size = 26)) + 
+    labs(x='Popularity Score', y='Loudness (dB)',title='Scatterplot of Loudness vs. Popularity') # rename axes and add title
+```
+
+> It seems like there is a relatively weak positive relationship between loudness and popularity score.
+
+## 2.5 (Challenge)
+
+Find the song that has the highest popularity score, but a relatively moderate loudness. Highlight the point on the graph and label it. 
+
+> Hint: Use the `annotate` function to highlight a point
+
+```{r}
+spotify |> 
+    arrange(desc(popularity)) |>
+    slice(1) |>
+    select(artist_name, track_name, popularity, loudness)
+```
+
+```{r}
+options(repr.plot.width = 10, repr.plot.height = 8)
+
+ggplot(spotify, aes(x = popularity, y = loudness)) + 
+    geom_point(size=4) +
+    annotate("point", x = 99, y = -5.707, color = 'violet', size = 4) + 
+    geom_text(x = 98, y = -5.4 , label = "Cruel Summer", color = "violet", size = 5) + # add text to plot
+    theme(text = element_text(size = 26)) + 
+    labs(x='Popularity Score', y='Loudness (dB)',title='Scatterplot of Loudness vs. Popularity') # rename axes and add title
+```
+
+## 2.6 (Challenge)
+
+List the artists who have more than one track in the top 50. For each artist, show the number of tracks and their average popularity score.
+
+```{r}
+popular_artists <- spotify |>
+    group_by(artist_name) |> 
+    summarize(track_count = n(), avg_popularity = mean(popularity)) |>
+    filter(track_count > 1)
+
+popular_artists
+```
+
+## Acknowledgements
+
+This workshop was originally created by - [**Girls in Data Science**](https://katieburak.github.io/girls-in-DS/) workshop by Dr. Katie Burak, Jenny Lee, and Mona Zhu

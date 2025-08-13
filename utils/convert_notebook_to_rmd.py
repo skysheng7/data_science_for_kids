@@ -49,7 +49,7 @@ def _chunk_options_from_tags(tags):
     return ", ".join(options)
 
 
-def parse_notebook_to_rmd(notebook_file_path: str, output_file_path: str) -> str:
+def parse_notebook_to_rmd(notebook_file_path: str, output_file_path: str, include_acknowledgement: bool = True) -> str:
     """
     Convert a Jupyter notebook with R kernel to an Rmd file.
     - Preserves markdown cells as-is
@@ -76,12 +76,12 @@ def parse_notebook_to_rmd(notebook_file_path: str, output_file_path: str) -> str
         "---\n\n"
     )
 
-    # Required acknowledgement block (per user request)
-    acknowledgement = (
-        "Created by - **Girls in Data Science** workshop by Dr. Katie Burak, Jenny Lee, and Mona Zhu {cite}`Burak2023GirlsDS`\n\n"
-    )
-
-    rmd_lines = [yaml_header, acknowledgement]
+    rmd_lines = [yaml_header]
+    if include_acknowledgement:
+        acknowledgement = (
+            "Created by - **Girls in Data Science** workshop by Dr. Katie Burak, Jenny Lee, and Mona Zhu {cite}`Burak2023GirlsDS`\n\n"
+        )
+        rmd_lines.append(acknowledgement)
 
     for cell in cells:
         ctype = cell.get("cell_type")
@@ -115,14 +115,21 @@ def parse_notebook_to_rmd(notebook_file_path: str, output_file_path: str) -> str
 
 def main():
     # CLI usage similar to convert_rmd_to_notebook.py
-    if len(sys.argv) > 1:
-        input_file = sys.argv[1]
+    include_ack = True
+    args = [a for a in sys.argv[1:] if not a.startswith("--")]
+    flags = [a for a in sys.argv[1:] if a.startswith("--")]
+
+    if "--no-ack" in flags:
+        include_ack = False
+
+    if len(args) > 0:
+        input_file = args[0]
         if not input_file.endswith(".ipynb"):
             print("❌ Error: Input file must be a .ipynb file")
             return
         # Optional explicit output path
-        if len(sys.argv) > 2:
-            output_file = sys.argv[2]
+        if len(args) > 1:
+            output_file = args[1]
         else:
             output_file = input_file.replace(".ipynb", ".Rmd")
     else:
@@ -140,7 +147,7 @@ def main():
     os.makedirs(output_dir, exist_ok=True)
 
     try:
-        result = parse_notebook_to_rmd(input_file, output_file)
+        result = parse_notebook_to_rmd(input_file, output_file, include_acknowledgement=include_ack)
         print(f"🎉 Successfully created Rmd: {result}")
         print("📁 You can now open this file in your editor or knit/render it in R!")
     except Exception as e:
