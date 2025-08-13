@@ -174,7 +174,7 @@ setwd("path/to/your/folder")
 
 **🎈  A self- guided tour at Oda's castle:**
 
-📁 **Find this spell in [Posit Cloud](https://posit.cloud):** Look for the file `day03_spell01A_castle_navigation.R` in your project files!
+📁 **Find this spell in [Posit Cloud](https://posit.cloud):** Look for the file `day03_spell01A_castle_navigation.R`!
 
 You start at the base of Day 3's folder. Let's visit rooms in Oda's castle in this order:
 
