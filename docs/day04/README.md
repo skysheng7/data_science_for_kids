@@ -344,7 +344,7 @@ black_percentage <- c(0.5, 0.6, 0.7)
 
 # calculate 90% confidence interval
 confidence_interval <- quantile(black_percentage, 
-                               probs = c(0.5, 0.95))
+                               probs = c(0.05, 0.95))
 ```
 5. **Royal Registry Phase:** Write down your confidence prophecy on a piece of paper
 
