@@ -78,6 +78,16 @@ original_count <- original_sample %>%
 print("🔍 Our original sample through the smoke:")
 print(original_count)
 
+ggplot(original_count, aes(x = sheep_color, y = proportion, fill = sheep_color)) +
+  geom_bar(stat = "identity") +
+  scale_fill_manual(values = c("black" = "black", "white" = "lightgray")) +
+  labs(title = "🐑 First sample through the smoke",
+       x = "Sheep Color", 
+       y = "Proportion",
+       subtitle = "Sample Size: 20 sheep") +
+  theme_minimal() +
+  theme(legend.position = "none")
+
 # Calculate our initial estimate
 original_black_prop <- sum(original_sample$sheep_color == "black") / 20
 print(paste("📊 Our estimate of black sheep percentage:", round(original_black_prop * 100, 1), "%"))
@@ -95,6 +105,20 @@ bootstrap_sample_1 <- original_sample %>%
   select(sheep_color) %>%
   rep_sample_n(size = 20, replace = TRUE)
 
+bootstrap_count <- bootstrap_sample_1 %>%
+  count(sheep_color) %>%
+  mutate(proportion = n / sum(n))
+
+ggplot(bootstrap_count, aes(x = sheep_color, y = proportion, fill = sheep_color)) +
+  geom_bar(stat = "identity") +
+  scale_fill_manual(values = c("black" = "black", "white" = "lightgray")) +
+  labs(title = "🐑 First bootstrap sample",
+       x = "Sheep Color", 
+       y = "Proportion",
+       subtitle = "BootstrapSample Size: 20 sheep (with replacement)") +
+  theme_minimal() +
+  theme(legend.position = "none")
+
 bootstrap_prop_1 <- sum(bootstrap_sample_1$sheep_color == "black") / 20
 print(paste("🎲 Bootstrap sample 1 - black sheep proportion:", round(bootstrap_prop_1, 3)))
 ```
@@ -106,6 +130,20 @@ bootstrap_sample_2 <- original_sample %>%
   select(sheep_color) %>%
   rep_sample_n(size = 20, replace = TRUE)
 
+bootstrap_count <- bootstrap_sample_2 %>%
+  count(sheep_color) %>%
+  mutate(proportion = n / sum(n))
+
+ggplot(bootstrap_count, aes(x = sheep_color, y = proportion, fill = sheep_color)) +
+  geom_bar(stat = "identity") +
+  scale_fill_manual(values = c("black" = "black", "white" = "lightgray")) +
+  labs(title = "🐑 Second bootstrap sample",
+       x = "Sheep Color", 
+       y = "Proportion",
+       subtitle = "BootstrapSample Size: 20 sheep (with replacement)") +
+  theme_minimal() +
+  theme(legend.position = "none")
+
 bootstrap_prop_2 <- sum(bootstrap_sample_2$sheep_color == "black") / 20
 print(paste("🎲 Bootstrap sample 2 - black sheep proportion:", round(bootstrap_prop_2, 3)))
 ```
@@ -116,6 +154,20 @@ bootstrap_sample_3 <- original_sample %>%
   ungroup() %>%
   select(sheep_color) %>%
   rep_sample_n(size = 20, replace = TRUE)
+
+bootstrap_count <- bootstrap_sample_3 %>%
+  count(sheep_color) %>%
+  mutate(proportion = n / sum(n))
+
+ggplot(bootstrap_count, aes(x = sheep_color, y = proportion, fill = sheep_color)) +
+  geom_bar(stat = "identity") +
+  scale_fill_manual(values = c("black" = "black", "white" = "lightgray")) +
+  labs(title = "🐑 Third bootstrap sample",
+       x = "Sheep Color", 
+       y = "Proportion",
+       subtitle = "BootstrapSample Size: 20 sheep (with replacement)") +
+  theme_minimal() +
+  theme(legend.position = "none")
 
 bootstrap_prop_3 <- sum(bootstrap_sample_3$sheep_color == "black") / 20
 print(paste("🎲 Bootstrap sample 3 - black sheep proportion:", round(bootstrap_prop_3, 3)))
@@ -237,7 +289,7 @@ create_bootstrap_ci <- function(sample_size, n_bootstrap = 500) {
 }
 
 # Compare different sample sizes
-sample_sizes <- c(10, 20, 50, 100)
+sample_sizes <- c(10, 20, 50, 200, 500)
 ci_results <- tibble()
 
 for (size in sample_sizes) {

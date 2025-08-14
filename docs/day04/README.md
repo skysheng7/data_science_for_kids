@@ -158,28 +158,10 @@ Just like how people can be tall, short, or in-between, data comes in different 
 ## 3. 🎲 The Great Sampling Adventure 
 *Duration: 65 minutes*
 
-### 3.1 Understanding Populations vs Samples
-*Duration: 5 minutes*
-
-💡 **The Big Picture:**
-Imagine you want to know what percentage of creatures in the entire Enchanted Forest are dragons, but you can't count all million creatures! So you explore small areas and use those to make educated guesses.
-
-<img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3djkxamhiZ3FmZDMzOWszY3dmdTJlbTM4eHM1MjAxa2ltdHZzZWI3biZlcD12MV9naWZzX3JlbGF0ZWQmY3Q9Zw/143ujxyRoVMJVK/giphy.gif" alt="dragon" style="width: 60%; height: auto;">
-
-- **🌲 Population** = All creatures in the entire Enchanted Forest (everything we want to know about)
-
-- **🔍 Sample** = The creatures we find in one small area (the small group we actually study)
-
-- **🎯 Parameter** = The true characteristic of the entire population (like "exactly 30% of all forest creatures are dragons")
-
-- **📊 Statistic** = Something we calculate from our sample (like "25% of creatures in our sample are dragons")
-
-- **🎯 Inference** = Using our sample to make conclusions about the whole population, knowing how uncertain we are
-
-### 3.2 Game 1: The Enchanted Halloween Neighborhood Mystery 🎃
+### 3.1 Game 1: The Enchanted Halloween Neighborhood Mystery 🎃
 *Duration: 25 minutes*
 
-#### 3.2.1 🎈 Activity: Statistical Wizards Save Halloween
+#### 3.1.1 🎈 Activity: Statistical Wizards Save Halloween
 
 **📖 The Story:**
 
@@ -189,7 +171,7 @@ The Mgaic Council of Halloween has received reports that the Shadow Monster has 
 
 **⚡ The Challenge:** 
 
-The neighborhood has a magical protection spell - if it contains 80% or more real candies (not shadow stones), it's safe to visit. But beware! You only have **3 minutes of magical sight** to examine your sample before the spell fades.
+The neighborhood has a magical protection spell - if it contains 60% or more real candies (not shadow stones), it's safe to visit. But beware! You only have **3 minutes of magical sight** to examine your sample before the spell fades.
 
 **🧙‍♀️ You will get:**
 
@@ -207,7 +189,7 @@ The neighborhood has a magical protection spell - if it contains 80% or more rea
 💡 **The Magic Discovery:** Different samples give different results! This is called **sampling variability** - and it's totally normal!
 
 
-#### 3.2.2 🎈 Activity: Statistical Wizards Save Halloween - Round 2!!
+#### 3.1.2 🎈 Activity: Statistical Wizards Save Halloween - Round 2!!
 *Duration: 25 minutes*
 
 > 🎉 Good News! The magical council has prepared more "Time Crystal Bag" for us!
@@ -220,18 +202,18 @@ The neighborhood has a magical protection spell - if it contains 80% or more rea
 
 **⚡ The Magic Rules:**
 
-1. **Incantation Phase:** Kids chant "Statistical powers, reveal the truth!" before opening their bags
-2. **Counting Phase:** 5 minutes to count candies vs. shadow stones
+1. **Incantation Phase:** you will chant "Statistical powers, reveal the truth!" before opening their bags
+2. **Counting Phase:** 5 minutes to count candies vs. shadow stones (how many candies do you have total among the **20** items you got from 2 bags!)
 3. **Decision Phase:** Each wizard declares if they think the neighborhood is "SAFE" or "CURSED"
 4. **Data Crystal Phase:** Enter candy count, and your decision into the magical Google Form: [https://forms.gle/dwMLreYBN4CHmWwh8](https://forms.gle/dwMLreYBN4CHmWwh8)
 
 **🏆 Rewards & Competition:**
 
-- **Prediction Points:** Kids who make the right prediction earn **EXTRA CANDY!**
+- **Prediction Points:** Kids who make the right prediction earn **rewards!**
 
 <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWxsZXN1NTJyaXYwejNsbDEwNHlocjA3cWdqemRibnVuZ3B0YTBzMCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/3oz8xLZ1qiYR43jYE8/giphy.gif" alt="rabbit_dance" style="width: 60%; height: auto;">
 
-#### 3.2.3 💡 Pro Tips: Understanding Sampling Magic
+#### 3.1.3 💡 Pro Tips: Understanding Sampling Magic
 *Duration: 5 minutes*
 
 **🎯 What is a Sampling Distribution?**
@@ -255,7 +237,25 @@ If the true percentage of dragons in the forest is 30%, and you take 100 differe
 <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3NW9pN2MxdGF6Y25jcXRtdml6Y3RpMmlsYmpxaTJ6YmFiam1ueXUwNyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/V6fMm9TDwdb5K7yjt8/giphy.gif" alt="clap" style="width: 70%; height: auto;">
 
 
-#### 3.2.4 🎈 Activity: The Magical Creature Population Study
+### 3.2 Understanding Populations vs Samples
+*Duration: 5 minutes*
+
+💡 **The Big Picture:**
+Imagine you want to know what percentage of creatures in the entire Enchanted Forest are dragons, but you can't count all million creatures! So you explore small areas and use those to make educated guesses.
+
+<img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3djkxamhiZ3FmZDMzOWszY3dmdTJlbTM4eHM1MjAxa2ltdHZzZWI3biZlcD12MV9naWZzX3JlbGF0ZWQmY3Q9Zw/143ujxyRoVMJVK/giphy.gif" alt="dragon" style="width: 60%; height: auto;">
+
+- **🌲 Population** = All creatures in the entire Enchanted Forest (everything we want to know about)
+
+- **🔍 Sample** = The creatures we find in one small area (the small group we actually study)
+
+- **🎯 Parameter** = The true characteristic of the entire population (like "exactly 30% of all forest creatures are dragons")
+
+- **📊 Statistic** = Something we calculate from our sample (like "25% of creatures in our sample are dragons")
+
+- **🎯 Inference** = Using our sample to make conclusions about the whole population, knowing how uncertain we are
+
+#### 3.2.1 🎈 Activity: The Magical Creature Population Study
 *Duration: 20 minutes*
 
 **🐉 The Setup:** In the Enchanted Forest, we have a population of 1000 magical creatures where exactly 30% are dragons. Let's see what happens when we take different sized samples!
@@ -327,13 +327,13 @@ As Junior Statistical Shepherds, you must use the ancient art of **Bootstrap Mag
 
 **🪄 You will get:**
 
-- Everyone gets to take random samples from the smoke sample bag
+- Everyone gets to take random samples from the smoke sample bag (easier to count if you only take 10)
 
 **⚡ The Rescue Rules:**
 
 1. **Initial Vision Phase:** Count black vs. white sheep in your original sample
 1. **Percentage of Black Sheep:** Calculate and write down what's the percentage of black sheep in your sample
-3. **Bootstrap Prophecy Phase:** Use magic hat sampling to create 5-10 pretend samples
+3. **Bootstrap Prophecy Phase:** Use magic hat sampling to create > 3 bootstrap samples
 - Remember to write down the percentage of black sheep in each bootstrapped sample!
 4. **Confidence Prophecy Phase:** Calculate your 90% confidence interval for black sheep percentage using the code below (if you have trouble calculating this, raise your hand and get help from your instructor and mentors!): 
 
@@ -350,6 +350,75 @@ confidence_interval <- quantile(black_percentage,
 
 **🎯 Bootstrapping Example -- Sheep Edition**
 You can only see 20 sheep through the smoke, but you want to know what the whole flock looks like. Bootstrapping is like having a magic hat - you put your 20 sheep in the hat, pull one out, write down its color, PUT IT BACK, then do it again! You do this 20 times to create one "pretend new sample". By doing this magic trick hundreds of times, you can imagine what it would be like if you could take hundreds of real samples from the field!
+
+
+##### 4.2.1.1 📝 Example Recording Sheet (Write Down Your Results)
+📁 **Find this recording sheet in Posit Cloud:** Look for the file `day04_sheep_recording_sheet.md` in your project files!
+
+---
+
+###### 1. Team Info
+- Team name: _______________________
+- Names: ___________________________
+- Date: __________  Class: _________
+
+---
+
+###### 2. Initial Vision Phase (First Real Sample)
+Write what you observe in your first sample.
+
+- Total sample size (n): __________
+- Black sheep count: __________
+- White sheep count: __________
+- % Black sheep: __________ %
+
+How to compute % Black: (Black count / (Black + White)) × 100
+
+---
+
+###### 3. Bootstrap Prophecy Phase (Pretend Samples)
+For each pretend sample, write the counts and compute % Black.
+
+| Sample # | Black count | White count | Total n | % Black |
+|---|---:|---:|---:|---:|
+| 1 | _____ | _____ | _____ | _____ % |
+| 2 | _____ | _____ | _____ | _____ % |
+| 3 | _____ | _____ | _____ | _____ % |
+| 4 | _____ | _____ | _____ | _____ % |
+| 5 | _____ | _____ | _____ | _____ % |
+| 6 | _____ | _____ | _____ | _____ % |
+| 7 | _____ | _____ | _____ | _____ % |
+| 8 | _____ | _____ | _____ | _____ % |
+| 9 | _____ | _____ | _____ | _____ % |
+| 10 | _____ | _____ | _____ | _____ % |
+
+Optional notes:
+
+____________________________________________________________________
+
+---
+
+###### 4. Confidence Prophecy Phase (90% Confidence Interval)
+
+Use the R code to calculate 90% confidence interval
+
+```
+# enter the percentage of black sheep in each of your bootstrapped sample below: 
+# for example:
+black_percentage <- c(0.5, 0.6, 0.7)
+
+# calculate 90% confidence interval
+confidence_interval <- quantile(black_percentage, 
+                               probs = c(0.5, 0.95))
+```
+
+---
+
+###### 5. Royal Registry (Final Answer to Share)
+- Team name: __________________
+- “We are 90% confident that the true % of black sheep is between ______ % and ______ %.”
+
+
 
 **🎯 What is a Confidence Interval?**
 🎯 **Your Confidence Prophecy!** After doing the bootstrap magic many times, you may tell the farmers: "I'm 90% confident that between 40% and 80% of your mixed flock is black sheep!" It's like saying "I'm pretty sure the answer is somewhere in this range, but I can't be 100% certain because I could only see a small part through the smoke."
