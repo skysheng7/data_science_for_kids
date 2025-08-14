@@ -263,9 +263,9 @@ If the true percentage of dragons in the forest is 30%, and you take 100 differe
 📁 **Find this spell in Posit Cloud:** Look for the file `day04_spell02_sampling_adventure.Rmd` in your project files!
 
 **🔬 The Three Great Experiments:**
-1. **Small Samples (Size 10):** Take 100 samples of 10 creatures each
-2. **Medium Samples (Size 50):** Take 100 samples of 50 creatures each  
-3. **Large Samples (Size 100):** Take 100 samples of 100 creatures each
+1. **Small Samples (Size 20):** Take 300 samples of 20 creatures each
+2. **Medium Samples (Size 40):** Take 300 samples of 40 creatures each  
+3. **Large Samples (Size 200):** Take 300 samples of 200 creatures each
 
 **🎯 Key Discoveries:**
 - All sample sizes give averages close to the truth (30% dragons)
@@ -294,6 +294,20 @@ Imagine you're a shepherd trying to count sheep in a thick fog! You can only see
 
 - **🎯 Inference Goal** = Use your small flock sample to make educated guesses about the entire meadow
 
+#### 4.1.1 What is Bootstrapping?
+*Duration: 2 minutes*
+
+The word **bootstrapping** comes from the saying "*pulling yourself up by your bootstraps*," which means doing something hard without outside help. Here, the hard job is to estimate a population value and explain how precise our estimate is—using only one sample of data.
+
+This approach only works well if the original sample represents the population. We treat that sample as a stand‑in for the whole population—that’s the key idea of bootstrapping. This connects back to why good sampling methods matter, just like we discussed earlier.
+
+#### 4.1.2 What are the basic bootstrapping steps?
+
+1. Draw a bootstrap sample: randomly sample **with replacement** from the original data until you have the same size $n$.
+2. Compute the statistic (point estimate) on that bootstrap sample.
+3. Repeat steps *(1)* and *(2)* $b$ times to build the bootstrap distribution—the collection of those point estimates.
+4. Use that distribution to find a plausible range for the parameter (an *empirical confidence interval*).
+
 ### 4.2 Game 1: The Great Dragon Fire Sheep Rescue 🐑🔥
 *Duration: 30 minutes*
 
@@ -311,62 +325,48 @@ The two farmers are worried and need to know how many of their sheep are mixed t
 
 As Junior Statistical Shepherds, you must use the ancient art of **Bootstrap Magic** to estimate what percentage of the total flock is black sheep, and create a **Confidence Prophecy** (confidence interval) for your estimate.
 
-**🧙‍♀️ The Shepherd's Council Has Prepared:**
-
-- "Smoke Sample Bags" containing black and white tokens (representing sheep)
-- Each bag has the same true proportion (60% black, 40% white)
-- Small containers for bootstrap resampling
-- Timer for the rescue mission
-- Magical Google Form for Confidence Prophecy submissions
-- "Shepherd's Badge" stickers for successful rescuers
-
 **🪄 You will get:**
 
-- Everyone gets one "Smoke Sample Bag" containing 15-20 tokens
+- Everyone gets to take random samples from the smoke sample bag
 
 **⚡ The Rescue Rules:**
 
-1. **Incantation Phase:** Shepherds chant "Bootstrap powers, reveal the flock!" before opening their bags
-2. **Initial Vision Phase:** Count black vs. white sheep in your original sample (5 minutes)
-3. **Bootstrap Prophecy Phase:** Use magic hat sampling to create 8-10 pretend samples (10 minutes)
-4. **Confidence Prophecy Phase:** Calculate your 90% confidence interval for black sheep percentage
-5. **Royal Registry Phase:** Enter your confidence prophecy into the magical Google Form
+1. **Initial Vision Phase:** Count black vs. white sheep in your original sample
+1. **Percentage of Black Sheep:** Calculate and write down what's the percentage of black sheep in your sample
+3. **Bootstrap Prophecy Phase:** Use magic hat sampling to create 5-10 pretend samples
+- Remember to write down the percentage of black sheep in each bootstrapped sample!
+4. **Confidence Prophecy Phase:** Calculate your 90% confidence interval for black sheep percentage using the code below (if you have trouble calculating this, raise your hand and get help from your instructor and mentors!): 
+
+```
+# enter the percentage of black sheep in each of your bootstrapped sample below: 
+# for example:
+black_percentage <- c(0.5, 0.6, 0.7)
+
+# calculate 90% confidence interval
+confidence_interval <- quantile(black_percentage, 
+                               probs = c(0.5, 0.95))
+```
+5. **Royal Registry Phase:** Write down your confidence prophecy on a piece of paper
+
+**🎯 Bootstrapping Example -- Sheep Edition**
+You can only see 20 sheep through the smoke, but you want to know what the whole flock looks like. Bootstrapping is like having a magic hat - you put your 20 sheep in the hat, pull one out, write down its color, PUT IT BACK, then do it again! You do this 20 times to create one "pretend new sample". By doing this magic trick hundreds of times, you can imagine what it would be like if you could take hundreds of real samples from the field!
+
+**🎯 What is a Confidence Interval?**
+🎯 **Your Confidence Prophecy!** After doing the bootstrap magic many times, you may tell the farmers: "I'm 90% confident that between 40% and 80% of your mixed flock is black sheep!" It's like saying "I'm pretty sure the answer is somewhere in this range, but I can't be 100% certain because I could only see a small part through the smoke."
 
 💡 **The Rescue Discovery:** Your confidence prophecy shows how uncertain your estimate is - this is statistical honesty!
 
 <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3ankza3F2ZmRqdWUybzd4MTE2aXNwOG45cTlqb2V4cmh3OHFnNGM2dCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/V5zZwAejmS58I/giphy.gif" alt="dance_2" style="width: 60%; height: auto;">
 
-#### 4.2.2 💡 Pro Tips: Understanding Bootstrap Magic
-*Duration: 5 minutes*
 
-**🎯 What is Bootstrapping?**
-You can only see 20 sheep through the smoke, but you want to know what the whole flock looks like. Bootstrapping is like having a magic hat - you put your 20 sheep in the hat, pull one out, write down its color, PUT IT BACK, then do it again! You do this 20 times to create a "pretend new sample". By doing this magic trick hundreds of times, you can imagine what it would be like if you could take hundreds of real samples from the field!
-
-**🎯 What is a Confidence Interval?**
-🎯 **Your Confidence Prophecy!** After doing the bootstrap magic many times, you notice that most of your "pretend samples" gave you black sheep percentages between 40% and 80%. So you tell the farmers: "I'm 90% confident that between 40% and 80% of your mixed flock is black sheep!" It's like saying "I'm pretty sure the answer is somewhere in this range, but I can't be 100% certain because I could only see a small part through the smoke."
-
-**🔍 Real-Life Bootstrap Examples:**
-If you want to know the average height of all kids in your school but can only measure 30 kids:
-- Bootstrap lets you use those 30 kids to create hundreds of "pretend samples"
-- Each pretend sample gives you a different average height
-- The range of those averages becomes your confidence interval!
-
-#### 4.2.3 🎈 Activity: The Grand Shepherd Revelation & Rewards
+#### 4.2.2 🎈 Activity: The Grand Shepherd Revelation & Rewards
 *Duration: 25 minutes*
 > 🎉 The Oracle is ready to reveal the truth about the flock! Time for the grand celebration!
 
 **🏆 Competitive Elements & Rewards:**
 
-- **Prophecy Accuracy Award:** Whose confidence interval captures the true value? **WIN EXTRA CANDY!**
-- **Precision Prize:** Narrowest confidence interval that still captures the truth gets **BONUS TREATS!**
-- **Team Oracle Challenge:** Everyone who participates gets candy, and the group celebrates their combined statistical power!
-
-**⚡ The Grand Revelation Rules:**
-
-1. **Prophecy Sharing Phase:** Each shepherd announces their confidence interval
-2. **Oracle Revelation Phase:** The instructor reveals the true population percentage
-3. **Victory Celebration Phase:** Crown the Statistical Shepherds whose confidence intervals captured the true value!
-4. **Learning Reflection Phase:** Discuss why some prophecies missed and others hit
+- **Prophecy Accuracy Award:** Whose confidence interval captures the true value? 
+- **Precision Prize:** Who has the narrowest confidence interval that still captures the truth?
 
 **🔍 Spell 3: Bootstrap Bootcamp - R Edition**
 

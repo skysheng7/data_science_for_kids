@@ -3,10 +3,6 @@ title: "🔮 Day 4 - Spell 3: Bootstrap Bootcamp - The Great Dragon Fire Sheep R
 output: html_document
 ---
 
-```{r setup-locale, include=FALSE}
-Sys.setlocale("LC_CTYPE", "en_US.UTF-8")
-```
-
 ## 📖 The Story: Dragon Fire Sheep Rescue! 🐑🔥
 
 **URGENT QUEST ALERT!** The ancient Dragon of Mount Statistics has accidentally breathed fire across the Enchanted Meadows, where Farmer Luna (white sheep) and Farmer Obsidian (black sheep) graze their magical flocks. The fire didn't harm the sheep, but created a massive cloud of magical smoke that mixed all the flocks together!
@@ -17,6 +13,7 @@ The two farmers are worried and need to know how many of their sheep are mixed t
 
 ```{r setup}
 knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+Sys.setlocale("LC_CTYPE", "en_US.UTF-8")
 library(ggplot2)
 library(dplyr)
 library(infer)  # For rep_sample_n function
@@ -27,11 +24,11 @@ set.seed(123)  # For reproducible results
 Let's create our mixed flock where 60% are black sheep and 40% are white sheep!
 
 ```{r create-sheep-population}
-# Create our population of 1000 magical sheep
-# 600 black sheep (60%) and 400 white sheep (40%)
+# Create our population of 10000 magical sheep
+# 6000 black sheep (60%) and 4000 white sheep (40%)
 magical_sheep <- tibble(
-  sheep_id = 1:1000,
-  sheep_color = factor(c(rep("black", 600), rep("white", 400)))
+  sheep_id = 1:10000,
+  sheep_color = factor(c(rep("black", 6000), rep("white", 4000)))
 )
 
 # Let's verify our true population proportion
@@ -139,20 +136,22 @@ bootstrap_results <- original_sample_clean %>%
   summarize(black_proportion = sum(sheep_color == "black") / 20,
             .groups = "drop")
 
-# Plot the bootstrap distribution
-ggplot(bootstrap_results, aes(x = black_proportion)) +
-  geom_histogram(binwidth = 0.05, fill = "purple", color = "black", alpha = 0.7) +
-  geom_vline(xintercept = original_black_prop, color = "red", linetype = "dashed", linewidth = 1) +
-  geom_vline(xintercept = true_black_proportion, color = "blue", linetype = "dashed", linewidth = 1) +
-  labs(title = "🔮 Bootstrap Distribution: 1000 Magic Resamples",
-       x = "Bootstrap Sample Proportion of Black Sheep", 
-       y = "Count",
-       subtitle = "Red line: Our original estimate, Blue line: True proportion") +
-  theme_minimal()
-
 # Calculate statistics about our bootstrap distribution
 bootstrap_mean <- mean(bootstrap_results$black_proportion)
 bootstrap_sd <- sd(bootstrap_results$black_proportion)
+
+# Plot the bootstrap distribution
+ggplot(bootstrap_results, aes(x = black_proportion)) +
+  geom_histogram(binwidth = 0.05, fill = "#89e5ed", color = "white", alpha = 0.7) +
+  geom_vline(xintercept = original_black_prop, color = "#ce8ff0", linetype = "dashed", linewidth = 2) +
+  geom_vline(xintercept = true_black_proportion, color = "#ea9d69", linetype = "solid", linewidth = 2) +
+  geom_vline(xintercept = bootstrap_mean, color = "#62aa55", linetype = "longdash", linewidth = 2) +
+  labs(title = "🔮 Bootstrap Distribution: 1000 Magic Resamples",
+       x = "Bootstrap Sample Proportion of Black Sheep", 
+       y = "Count",
+       subtitle = "Purple line: Our original sample estimate, \n Orange line: True proportion, \n Green line: Mean of bootstrap distribution") +
+  theme_minimal()
+
 
 print(paste("📊 Average of bootstrap proportions:", round(bootstrap_mean, 3)))
 print(paste("📏 Spread (standard deviation) of bootstrap proportions:", round(bootstrap_sd, 3)))
@@ -191,18 +190,21 @@ if (captured_truth) {
 }
 
 # Visualize our confidence interval
+
 ggplot(bootstrap_results, aes(x = black_proportion)) +
-  geom_histogram(binwidth = 0.05, fill = "lightblue", color = "black", alpha = 0.7) +
-  geom_vline(xintercept = confidence_interval[1], color = "green", linetype = "solid", linewidth = 2) +
-  geom_vline(xintercept = confidence_interval[2], color = "green", linetype = "solid", linewidth = 2) +
-  geom_vline(xintercept = true_black_proportion, color = "red", linetype = "dashed", linewidth = 1) +
-  annotate("rect", xmin = confidence_interval[1], xmax = confidence_interval[2], 
-           ymin = 0, ymax = Inf, alpha = 0.2, fill = "green") +
-  labs(title = "🏆 Our 90% Confidence Prophecy",
+  geom_histogram(binwidth = 0.05, fill = "#89e5ed", color = "white", alpha = 0.7) +
+  geom_vline(xintercept = original_black_prop, color = "#ce8ff0", linetype = "dashed", linewidth = 2) +
+  geom_vline(xintercept = true_black_proportion, color = "#ea9d69", linetype = "solid", linewidth = 2) +
+  geom_vline(xintercept = bootstrap_mean, color = "#62aa55", linetype = "longdash", linewidth = 2) +
+  geom_vline(xintercept = confidence_interval[1], color = "#9ecb97", linetype = "dotted", linewidth = 1) +
+  geom_vline(xintercept = confidence_interval[2], color = "#9ecb97", linetype = "dotted", linewidth = 1) +
+  labs(title = "🔮 Bootstrap Distribution: 1000 Magic Resamples with 90% Confidence Prophecy",
        x = "Bootstrap Sample Proportion of Black Sheep", 
        y = "Count",
-       subtitle = "Green area: Our 90% confidence interval, Red line: True proportion") +
+       subtitle = "Purple line: Our original sample estimate, \n Orange line: True proportion, \n Green line: Mean of bootstrap distribution \n Green dotted lines: 90% Confidence Prophecy") +
   theme_minimal()
+
+
 ```
 
 ## 🎲 Experiment: What If We Had Different Sample Sizes?
@@ -254,12 +256,12 @@ print(ci_results)
 
 # Visualize the effect of sample size
 ggplot(ci_results, aes(x = factor(sample_size))) +
-  geom_linerange(aes(ymin = ci_lower, ymax = ci_upper), linewidth = 3, color = "blue") +
-  geom_hline(yintercept = true_black_proportion, color = "red", linetype = "dashed") +
-  labs(title = "🎯 Magic of Sample Size: Confidence Intervals Get Narrower!",
+  geom_linerange(aes(ymin = ci_lower, ymax = ci_upper), linewidth = 3, color = "#9ecb97") +
+  geom_hline(yintercept = true_black_proportion, color = "#ea9d69", linetype = "dashed") +
+  labs(title = "🎯 Magic of Sample Size: Confidence Intervals \nGet Narrower!",
        x = "Sample Size",
        y = "90% Confidence Interval",
-       subtitle = "Red line: True proportion. Blue lines: Confidence intervals") +
+       subtitle = "Orange line: True proportion. Green lines: Confidence intervals") +
   theme_minimal()
 ```
 
