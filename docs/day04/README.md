@@ -79,15 +79,13 @@ https://forms.gle/TG2dgNwknN6KGTcE6
 ### 1.2 Birthday Block Building & Mode/Median Discovery
 *Duration: 15 minutes*
 
-1. **🧱 Block Distribution:** Each wizard gets one block
-2. **📅 Month Stations:** Set up 12 month stations at the front of the classroom  
-3. **🏗️ Building Together:** Place your block on your birth month pile
-4. **💻 R Data Collection:** As each wizard places their block, we'll enter their birth month into our R list
-5. **📊 Visual Discovery:** Watch our classroom histogram grow in real-time!
-6. **🔍 Statistical Magic:** 
+1. **📅 Which Month Is Your Birthday?:** 
+2. **💻 R Data Collection:** We'll enter each wizard's birth month into our R list
+3. **📊 Visual Discovery:** Watch our classroom histogram grow in real-time!
+4. **🔍 Statistical Magic:** 
    - Find the **mode** (tallest stack = most popular month)
    - Calculate the **mean** month using R
-7. **🤔 Pattern Spotting:** Which months are popular? Any empty months?
+5. **🤔 Pattern Spotting:** Which months are popular? Any empty months?
 
 💡 **Pro Tips:** Different types of data need different measures!
 - **Mean** = Add everyone's height up and divide by total number of students in the class
