@@ -191,54 +191,23 @@ The Mgaic Council of Halloween has received reports that the Shadow Monster has 
 
 The neighborhood has a magical protection spell - if it contains 80% or more real candies (not shadow stones), it's safe to visit. But beware! You only have **3 minutes of magical sight** to examine your sample before the spell fades.
 
-**🧙‍♀️ The Mgaic Council Has Prepared:**
+**🧙‍♀️ You will get:**
 
-- "Time Crystal Bag" containing 10 items each (Mix of wrapped candies and shadow stones)
-- Timer will be set to 3 minutes for **magical sighting**
-- Magical google Form for data collection
-    - URL: [https://forms.gle/pVVK2zBVovA1637Z9](https://forms.gle/pVVK2zBVovA1637Z9)
-    - Enter "how many candies are in your bag" after you finish counting
-
-**🪄 You will get:**
-
-- Everyone gets one "Time Crystal Bag" containing 10 items
+- The Mgaic Council Has Prepared "Time Crystal Bag" for everyone. You will each get one "Time Crystal Bag" containing 10 items
 
 **⚡ The Magic Rules:**
 
-1. **Incantation Phase:** Kids chant "Statistical powers, reveal the truth!" before opening their bags
-2. **Counting Phase:** 5 minutes to count candies vs. shadow stones
+1. **Incantation Phase:** You will chant "Statistical powers, reveal the truth!" before opening your bags
+2. **Counting Phase:** 3 minutes for **magical sighting** to count candies vs. shadow stones
 3. **Decision Phase:** Each wizard declares if they think the neighborhood is "SAFE" or "CURSED"
 4. **Data Crystal Phase:** Enter candy count, and your decision into the magical Google Form: [https://forms.gle/pVVK2zBVovA1637Z9](https://forms.gle/pVVK2zBVovA1637Z9)
 
-💡 **The Magic Discovery:** Different samples give different results! This is called **sampling variability** - and it's totally normal!
-
 <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnV0YzFleHFjNjMyemxzc2M5emkwZTl6cmMyeTl5NW1sYWFsZnZzMSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/50WoQ8JdjyqzhxpBjP/giphy.gif" alt="surprise" style="width: 60%; height: auto;">
 
+💡 **The Magic Discovery:** Different samples give different results! This is called **sampling variability** - and it's totally normal!
 
-#### 3.2.2 💡 Pro Tips: Understanding Sampling Magic
-*Duration: 5 minutes*
 
-**🎯 What is a Sampling Distribution?**
-Remember our candy bag game? Imagine if 100 different kids each got their own "Time Crystal Bag" with 10 items from the same magical neighborhood. Each kid counts their candies and gets a different result - maybe 6 candies, 8 candies, 7 candies, etc. If we collected ALL 100 results and made a graph showing how many kids got 6 candies, how many got 7, etc., that graph is called a **sampling distribution**! It shows us the pattern of what happens when **lots of samples** are taken from the same **population**.
-
-**📊 What is Spread (Variability)?**
-Spread tells us how "spread out" or scattered our data points are:
-- **Small spread**: All your data points are close together (like 28%, 30%, 32% candies)
-- **Large spread**: Your data points are far apart (like 15%, 30%, 45% candies)
-- **Magic Rule**: Larger samples = smaller spread = more reliable results!
-
-**🧮 What Does the Mean of the Sampling Distribution Tell Us?**
-Here's the coolest part about our candy bag game! Let's say the magical neighborhood REALLY has 80% candies (that's the truth). If 100 kids each count their bags, some might get 6 candies, some 8, some 7, etc. But here's the magic: if you add up ALL their candy counts and find the average, you'll get very close to 8 candies (which equals 80%)! Even though each kid got different results, when we combine everyone's results, we get closer to the truth about the neighborhood!
-
-**🔍 Real-Life Example:**
-If the true percentage of dragons in the forest is 30%, and you take 100 different samples:
-- Some samples might give you 25% dragons
-- Some might give you 35% dragons  
-- But the AVERAGE of all 100 sample percentages will be very close to 30%!
-
-<img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3NW9pN2MxdGF6Y25jcXRtdml6Y3RpMmlsYmpxaTJ6YmFiam1ueXUwNyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/V6fMm9TDwdb5K7yjt8/giphy.gif" alt="clap" style="width: 70%; height: auto;">
-
-#### 3.2.3 🎈 Activity: Statistical Wizards Save Halloween - Round 2!!
+#### 3.2.2 🎈 Activity: Statistical Wizards Save Halloween - Round 2!!
 *Duration: 25 minutes*
 
 > 🎉 Good News! The magical council has prepared more "Time Crystal Bag" for us!
@@ -247,7 +216,7 @@ If the true percentage of dragons in the forest is 30%, and you take 100 differe
 
 **🪄 You will get:**
 
-- Everyone gets 2 more "Time Crystal Bag"
+- Everyone gets 1 more "Time Crystal Bag"
 
 **⚡ The Magic Rules:**
 
@@ -261,6 +230,29 @@ If the true percentage of dragons in the forest is 30%, and you take 100 differe
 - **Prediction Points:** Kids who make the right prediction earn **EXTRA CANDY!**
 
 <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWxsZXN1NTJyaXYwejNsbDEwNHlocjA3cWdqemRibnVuZ3B0YTBzMCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/3oz8xLZ1qiYR43jYE8/giphy.gif" alt="rabbit_dance" style="width: 60%; height: auto;">
+
+#### 3.2.3 💡 Pro Tips: Understanding Sampling Magic
+*Duration: 5 minutes*
+
+**🎯 What is a Sampling Distribution?**
+Remember our candy bag game? Imagine if 100 different kids each got their own "Time Crystal Bag" with 10 items from the same magical neighborhood. Each kid counts their candies and gets a different result - maybe 6 candies, 8 candies, 7 candies, etc. If we collected ALL 100 results and made a graph showing how many kids got 6 candies, how many got 7, etc., that graph is called a **sampling distribution**! It shows us the pattern of what happens when **lots of samples** are taken from the same **population**.
+
+**📊 What is Spread (Variability)?**
+Spread tells us how "spread out" or scattered our data points are:
+- **Small spread**: All your data points are close together (like 28%, 30%, 32% candies)
+- **Large spread**: Your data points are far apart (like 15%, 30%, 45% candies)
+- **Magic Rule**: Larger samples = smaller spread = more reliable results!
+
+**🧮 What Does the Mean of the Sampling Distribution Tell Us?**
+Here's the coolest part about our candy bag game! Let's say the magical neighborhood actually has 20% candies. If 100 kids each count their bags, some might get 1 candies, some 2, some 3, etc. But here's the magic: if you add up ALL their candy counts and find the average, you'll get very close to 2 candies (which equals 20%)! Even though each kid got different results, when we combine everyone's results, we get closer to the truth about the neighborhood!
+
+**🔍 Real-Life Example:**
+If the true percentage of dragons in the forest is 30%, and you take 100 different samples:
+- Some samples might give you 25% dragons
+- Some might give you 35% dragons  
+- But the AVERAGE of all 100 sample percentages will be very close to 30%!
+
+<img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3NW9pN2MxdGF6Y25jcXRtdml6Y3RpMmlsYmpxaTJ6YmFiam1ueXUwNyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/V6fMm9TDwdb5K7yjt8/giphy.gif" alt="clap" style="width: 70%; height: auto;">
 
 
 #### 3.2.4 🎈 Activity: The Magical Creature Population Study
@@ -292,7 +284,7 @@ If the true percentage of dragons in the forest is 30%, and you take 100 differe
 💡 **The Big Picture:**
 Imagine you're a shepherd trying to count sheep in a thick fog! You can only see a small group at a time, but you need to know about the entire flock. Bootstrap magic lets you use your small sample to imagine what hundreds of other samples might look like!
 
-<img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3N2Y0MzJia281OWU4ZmFlbHJpdTJzeGJ2cXMyczQ1NW45eGVoaWczeSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/3oz8xElsKyL1Pdostq/giphy.gif" alt="racoon" style="width: 100%; height: auto;">
+<img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3cGxyM3BremQ4eDMxM2ltZjhnNHQycGtrenhkYmM5dzVpc3JxemxvaCZlcD12MV9naWZzX3JlbGF0ZWQmY3Q9Zw/z5Rwj7izcMc3S/giphy.gif" alt="sheep" style="width: 100%; height: auto;">
 
 - **🐑 Bootstrap Magic** = Using your small sheep sample to create hundreds of "pretend samples" with replacement
 

@@ -24,14 +24,14 @@ set.seed(123)  # For reproducible results
 ```
 
 ## 🐉 Our Magical Population: The Enchanted Forest
-Let's create our population of 1000 magical creatures where exactly 30% are dragons!
+Let's create our population of 100000 magical creatures where exactly 30% are dragons!
 
 ```{r create-population}
-# Create our population of 1000 creatures
-# 300 dragons (30%) and 700 other creatures (70%)
+# Create our population of 100000 creatures
+# 30000 dragons (30%) and 70000 other creatures (70%)
 magical_creatures <- tibble(
-  creature_id = 1:1000,
-  creature_type = factor(c(rep("dragon", 300), rep("other", 700)))
+  creature_id = 1:100000,
+  creature_type = factor(c(rep("dragon", 30000), rep("other", 70000)))
 )
 
 # Let's verify our true population proportion
@@ -45,13 +45,17 @@ population_summary <- magical_creatures %>%
 
 ggplot(population_summary, aes(x = creature_type, y = proportion, fill = creature_type)) +
   geom_bar(stat = "identity") +
-  scale_fill_manual(values = c("dragon" = "red", "other" = "gray")) +
+  scale_fill_manual(values = c("dragon" = "orange", "other" = "gray")) +
   labs(title = "🌲 True Population: Enchanted Forest Creatures",
        x = "Creature Type", 
        y = "Proportion",
-       subtitle = "Population Size: 1000 creatures, 30% dragons") +
+       subtitle = "Population Size: 100000 creatures, 30% dragons") +
   theme_minimal() +
-  theme(legend.position = "none")
+  theme(text = element_text(size = 16),
+        plot.title = element_text(size = 20),
+        axis.title = element_text(size = 18),
+        axis.text = element_text(size = 19),
+        legend.position = "none")
 ```
 
 ## 🎣 Taking Our First Sample (Size 40)
@@ -64,11 +68,25 @@ creature_sample_1
 
 # What's the proportion of dragons in our sample?
 dragon_estimate_1 <- creature_sample_1 %>%
-  summarize(count = sum(creature_type == "dragon"),
-            proportion = sum(creature_type == "dragon") / 40)
+  count(creature_type) %>%
+  mutate(proportion = n / sum(n))
 
 print("🔍 Our first sample results:")
 dragon_estimate_1
+
+ggplot(dragon_estimate_1, aes(x = creature_type, y = proportion, fill = creature_type)) +
+  geom_bar(stat = "identity") +
+  scale_fill_manual(values = c("dragon" = "orange", "other" = "gray")) +
+  labs(title = "🌲 First Sample: Enchanted Forest Creatures",
+       x = "Creature Type", 
+       y = "Proportion",
+       subtitle = "Sample Size: 40 creatures") +
+  theme_minimal() +
+  theme(text = element_text(size = 16),
+        plot.title = element_text(size = 20),
+        axis.title = element_text(size = 18),
+        axis.text = element_text(size = 19),
+        legend.position = "none")
 ```
 
 ## 🎣 Taking Another Sample
@@ -77,11 +95,26 @@ What happens if we explore a different area of the forest? Will we get the same 
 ```{r second-sample}
 # Take another random sample of 40 creatures
 dragon_estimate_2 <- rep_sample_n(magical_creatures, size = 40) %>%
-  summarize(count = sum(creature_type == "dragon"),
-            proportion = sum(creature_type == "dragon") / 40)
+  count(creature_type) %>%
+  mutate(proportion = n / sum(n))
 
 print("🔍 Our second sample results:")
 dragon_estimate_2
+
+ggplot(dragon_estimate_2, aes(x = creature_type, y = proportion, fill = creature_type)) +
+  geom_bar(stat = "identity") +
+  scale_fill_manual(values = c("dragon" = "orange", "other" = "gray")) +
+  labs(title = "🌲 Second Sample: Enchanted Forest Creatures",
+       x = "Creature Type", 
+       y = "Proportion",
+       subtitle = "Sample Size: 40 creatures") +
+  theme_minimal() +
+  theme(text = element_text(size = 16),
+        plot.title = element_text(size = 20),
+        axis.title = element_text(size = 18),
+        axis.text = element_text(size = 19),
+        legend.position = "none")
+
 ```
 
 ## 🎣 And One More Sample!
@@ -90,11 +123,25 @@ Let's try once more to see the variability between samples:
 ```{r third-sample}
 # Take a third random sample of 40 creatures
 dragon_estimate_3 <- rep_sample_n(magical_creatures, size = 40) %>%
-  summarize(count = sum(creature_type == "dragon"),
-            proportion = sum(creature_type == "dragon") / 40)
+    count(creature_type) %>%
+  mutate(proportion = n / sum(n))
 
 print("🔍 Our third sample results:")
 dragon_estimate_3
+
+ggplot(dragon_estimate_3, aes(x = creature_type, y = proportion, fill = creature_type)) +
+  geom_bar(stat = "identity") +
+  scale_fill_manual(values = c("dragon" = "orange", "other" = "gray")) +
+  labs(title = "🌲 Third Sample: Enchanted Forest Creatures",
+       x = "Creature Type", 
+       y = "Proportion",
+       subtitle = "Sample Size: 40 creatures") +
+  theme_minimal() +
+  theme(text = element_text(size = 16),
+        plot.title = element_text(size = 20),
+        axis.title = element_text(size = 18),
+        axis.text = element_text(size = 19),
+        legend.position = "none")
 ```
 
 ## 📊 The Sampling Distribution: Taking LOTS of Samples!
@@ -102,26 +149,33 @@ What if we explore 1000 different areas of the forest? Let's see what the distri
 
 ```{r sampling-distribution}
 # Take 1000 samples of size 40 and calculate proportions for each
-sampling_results <- rep_sample_n(magical_creatures, size = 40, reps = 1000) %>%
+sampling_results <- rep_sample_n(magical_creatures, size = 40, reps = 100) %>%
   group_by(replicate) %>%
   summarize(proportion = sum(creature_type == "dragon") / 40)
 
+mean_of_sampling <- mean(sampling_results$proportion)
+sd_of_sampling <- sd(sampling_results$proportion)
+
 # Plot the sampling distribution
 ggplot(sampling_results, aes(x = proportion)) +
-  geom_histogram(binwidth = 0.05, fill = "lightblue", color = "black", alpha = 0.7) +
-  geom_vline(xintercept = true_dragon_proportion, color = "red", linetype = "dashed", linewidth = 1) +
+  geom_histogram(binwidth = 0.05, fill = "#91d4eb", color = "white", alpha = 0.7) +
+  geom_vline(xintercept = true_dragon_proportion, color = "#9090ea", linetype = "solid", linewidth = 1) +
+  geom_vline(xintercept = mean_of_sampling, color = "#e1b086", linetype = "dashed", linewidth = 1) +
   labs(title = "🎲 Sampling Distribution: 1000 Samples of Size 40",
        x = "Sample Proportion of Dragons", 
        y = "Count",
-       subtitle = "Red line shows true population proportion (0.30)") +
-  theme_minimal()
+       subtitle = "Purple solid line shows true population proportion (0.30), Orange dashed line shows mean of sampling distribution") +
+  theme_minimal() +
+  theme(text = element_text(size = 12),
+        plot.title = element_text(size = 16),
+        axis.title = element_text(size = 15),
+        axis.text = element_text(size = 12),
+        legend.position = "none")
+
 
 # Calculate statistics about our sampling distribution
-mean_proportion <- mean(sampling_results$proportion)
-sd_proportion <- sd(sampling_results$proportion)
-
-print(paste("📊 Average of all sample proportions:", round(mean_proportion, 3)))
-print(paste("📏 Spread (standard deviation) of sample proportions:", round(sd_proportion, 3)))
+print(paste("📊 Average of all sample proportions:", round(mean_of_sampling, 3)))
+print(paste("📏 Spread (standard deviation) of sample proportions:", round(sd_of_sampling, 3)))
 print(paste("🎯 True population proportion:", true_dragon_proportion))
 ```
 
@@ -141,19 +195,38 @@ for (size in sample_sizes) {
   
   all_results <- bind_rows(all_results, results)
 }
+  
+  # Order facets small → large and compute mean per sample size for dashed lines
+  all_results <- all_results %>%
+    mutate(sample_size = factor(sample_size, levels = c("Size 20", "Size 40", "Size 100")))
 
-# Create comparison plot
-ggplot(all_results, aes(x = proportion, fill = sample_size)) +
-  geom_histogram(binwidth = 0.05, alpha = 0.7) +
-  geom_vline(xintercept = true_dragon_proportion, color = "red", linetype = "dashed", linewidth = 1) +
-  facet_wrap(~sample_size, ncol = 1) +
-  scale_fill_manual(values = c("lightcoral", "lightblue", "lightgreen")) +
-  labs(title = "🌟 The Magic of Sample Size: All Distributions Compared",
-       x = "Sample Proportion of Dragons", 
-       y = "Count",
-       subtitle = "Notice how larger samples cluster more tightly around the true value!") +
-  theme_minimal() +
-  theme(legend.position = "none")
+  sample_means <- all_results %>%
+    group_by(sample_size) %>%
+    summarize(mean_proportion = mean(proportion), .groups = "drop")
+
+  # Create comparison plot (3x1 facets, styled like the chart above)
+  ggplot(all_results, aes(x = proportion, fill = sample_size)) +
+    geom_histogram(binwidth = 0.05, color = "white", alpha = 0.7) +
+    geom_vline(xintercept = true_dragon_proportion, color = "#9090ea", linetype = "solid", linewidth = 1) +
+    geom_vline(data = sample_means, aes(xintercept = mean_proportion), color = "#e1b086", linetype = "dashed", linewidth = 1) +
+    facet_wrap(~sample_size, ncol = 1) +
+    scale_fill_manual(values = c(
+      "Size 20" = "#cfe8ff",  # light blue
+      "Size 40" = "#91d4eb",  # medium blue (matches above)
+      "Size 100" = "#4da3d9"  # darker blue
+    )) +
+    labs(title = "🌟 The Magic of Sample Size: All Distributions Compared",
+         x = "Sample Proportion of Dragons", 
+         y = "Count",
+         subtitle = "Purple line = true proportion (0.30). Orange dashed line = mean of each sampling distribution.") +
+    theme_minimal() +
+    theme(
+      legend.position = "none",
+      text = element_text(size = 12),
+      plot.title = element_text(size = 16),
+      axis.title = element_text(size = 15),
+      axis.text = element_text(size = 12)
+    )
 
 # Calculate summary statistics
 summary_stats <- all_results %>%
@@ -163,7 +236,8 @@ summary_stats <- all_results %>%
     Spread_SD = sd(proportion),
     .groups = "drop"
   ) %>%
-  mutate(True_Proportion = true_dragon_proportion)
+  mutate(True_Proportion = true_dragon_proportion,
+         Difference = abs(Average_Proportion - True_Proportion))
 
 print("🏆 Summary of All Experiments:")
 print(summary_stats)
