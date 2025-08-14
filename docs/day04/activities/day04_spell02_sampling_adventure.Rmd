@@ -149,7 +149,7 @@ What if we explore 1000 different areas of the forest? Let's see what the distri
 
 ```{r sampling-distribution}
 # Take 1000 samples of size 40 and calculate proportions for each
-sampling_results <- rep_sample_n(magical_creatures, size = 40, reps = 100) %>%
+sampling_results <- rep_sample_n(magical_creatures, size = 40, reps = 500) %>%
   group_by(replicate) %>%
   summarize(proportion = sum(creature_type == "dragon") / 40)
 
@@ -184,11 +184,11 @@ Let's see what happens when we use different sample sizes!
 
 ```{r sample-size-comparison}
 # Compare different sample sizes: 20, 40, and 100
-sample_sizes <- c(20, 40, 100)
+sample_sizes <- c(20, 40, 200)
 all_results <- tibble()
 
 for (size in sample_sizes) {
-  results <- rep_sample_n(magical_creatures, size = size, reps = 1000) %>%
+  results <- rep_sample_n(magical_creatures, size = size, reps = 500) %>%
     group_by(replicate) %>%
     summarize(proportion = sum(creature_type == "dragon") / size,
               sample_size = paste("Size", size))
@@ -198,7 +198,7 @@ for (size in sample_sizes) {
   
   # Order facets small → large and compute mean per sample size for dashed lines
   all_results <- all_results %>%
-    mutate(sample_size = factor(sample_size, levels = c("Size 20", "Size 40", "Size 100")))
+    mutate(sample_size = factor(sample_size, levels = c("Size 20", "Size 40", "Size 200")))
 
   sample_means <- all_results %>%
     group_by(sample_size) %>%
@@ -213,7 +213,7 @@ for (size in sample_sizes) {
     scale_fill_manual(values = c(
       "Size 20" = "#cfe8ff",  # light blue
       "Size 40" = "#91d4eb",  # medium blue (matches above)
-      "Size 100" = "#4da3d9"  # darker blue
+      "Size 200" = "#4da3d9"  # darker blue
     )) +
     labs(title = "🌟 The Magic of Sample Size: All Distributions Compared",
          x = "Sample Proportion of Dragons", 
