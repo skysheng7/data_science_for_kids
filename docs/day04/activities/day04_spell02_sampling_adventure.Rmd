@@ -149,7 +149,7 @@ What if we explore 1000 different areas of the forest? Let's see what the distri
 
 ```{r sampling-distribution}
 # Take 1000 samples of size 40 and calculate proportions for each
-sampling_results <- rep_sample_n(magical_creatures, size = 40, reps = 500) %>%
+sampling_results <- rep_sample_n(magical_creatures, size = 40, reps = 300) %>%
   group_by(replicate) %>%
   summarize(proportion = sum(creature_type == "dragon") / 40)
 
@@ -183,12 +183,12 @@ print(paste("🎯 True population proportion:", true_dragon_proportion))
 Let's see what happens when we use different sample sizes!
 
 ```{r sample-size-comparison}
-# Compare different sample sizes: 20, 40, and 100
+# Compare different sample sizes: 20, 40, and 200
 sample_sizes <- c(20, 40, 200)
 all_results <- tibble()
 
 for (size in sample_sizes) {
-  results <- rep_sample_n(magical_creatures, size = size, reps = 500) %>%
+  results <- rep_sample_n(magical_creatures, size = size, reps = 300) %>%
     group_by(replicate) %>%
     summarize(proportion = sum(creature_type == "dragon") / size,
               sample_size = paste("Size", size))
@@ -242,6 +242,7 @@ summary_stats <- all_results %>%
 print("🏆 Summary of All Experiments:")
 print(summary_stats)
 ```
+
 
 ## 🎯 Key Magical Discoveries!
 
