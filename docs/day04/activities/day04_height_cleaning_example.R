@@ -13,7 +13,7 @@ Sys.setlocale("LC_CTYPE", "en_US.UTF-8")
 ########################################################
 
 # Load the height data from our CSV file
-height_data <- read.csv("../datasets/height_test.csv")
+height_data <- read.csv("datasets/height.csv")
 
 # Let's see what we have
 print("Raw data:")
@@ -29,8 +29,8 @@ str(height_data)
 height_data <- height_data[, c(2:3)] 
 
 # The height column has a very long name! Let's rename it
-colnames(height_data)[2] <- "wizard_name"
-colnames(height_data)[3] <- "height_cm"
+colnames(height_data)[1] <- "wizard_name"
+colnames(height_data)[2] <- "height_cm"
 
 # Let's see the updated column names
 print("New column names:")
