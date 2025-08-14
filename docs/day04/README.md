@@ -420,15 +420,35 @@ confidence_interval <- quantile(black_percentage,
 
 
 
+#### 4.2.2 Confidence Interval
+
 **🎯 What is a Confidence Interval?**
-🎯 **Your Confidence Prophecy!** After doing the bootstrap magic many times, you may tell the farmers: "I'm 90% confident that between 40% and 80% of your mixed flock is black sheep!" It's like saying "I'm pretty sure the answer is somewhere in this range, but I can't be 100% certain because I could only see a small part through the smoke."
+🎯 Think of a confidence interval as a smart guess with a safety zone. After doing many bootstrap samples, you might say: "We’re 90% confident the true percent of black sheep is between 40% and 80%." This means we give a range where the true value likely lives, instead of pretending we know the exact number.
+
+**Why use confidence intervals?**
+- A single number (a point estimate) is rarely exactly equal to the true population value.
+- A range of reasonable values gives us a much better chance of including the truth.
+
+**Bootstrap percentile method (how we build the range)**
+Take all the estimates from your many bootstrap samples, line them up from smallest to largest, and keep the middle chunk. 
+
+- For a 90% interval, keep the middle 90% of those estimates. The endpoints of the interval are the 5th and 95th percentiles.
+
+- For a 95% interval, keep the middle 95% of those estimates. The endpoints of the interval are the 2.5th and 97.5th percentiles.
+
+**What does “90% confidence” really mean?**
+It means that if we were to repeat the process of sampling and calculating a 90% confidence interval multiple 
+times, 90% of the time, we would expect our population parameter’s value to lie within the confidence interval. 
+
+**Why pick 95% (and what about 90% or 99%)?**
+95% is a common choice in statistics. Other usual picks are 90% and 99%. Holding everything else the same (like sample size), higher confidence means a wider interval; lower confidence means a narrower interval. Choose the level based on how cautious you need to be for the decision you’re making.
 
 💡 **The Rescue Discovery:** Your confidence prophecy shows how uncertain your estimate is - this is statistical honesty!
 
 <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3ankza3F2ZmRqdWUybzd4MTE2aXNwOG45cTlqb2V4cmh3OHFnNGM2dCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/V5zZwAejmS58I/giphy.gif" alt="dance_2" style="width: 60%; height: auto;">
 
 
-#### 4.2.2 🎈 Activity: The Grand Shepherd Revelation & Rewards
+#### 4.2.3 🎈 Activity: The Grand Shepherd Revelation & Rewards
 *Duration: 25 minutes*
 > 🎉 The Oracle is ready to reveal the truth about the flock! Time for the grand celebration!
 
