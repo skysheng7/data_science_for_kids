@@ -394,7 +394,6 @@ For each pretend sample, write the counts and compute % Black.
 
 Optional notes:
 
-____________________________________________________________________
 
 ---
 
