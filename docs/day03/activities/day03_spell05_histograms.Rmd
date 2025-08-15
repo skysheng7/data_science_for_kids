@@ -52,7 +52,8 @@ age_histogram <- ggplot(creature_data, aes(x = creature_age)) +
   theme(text = element_text(size = 16),
         plot.title = element_text(size = 20),
         axis.title = element_text(size = 18),
-        axis.text = element_text(size = 19))
+        axis.text = element_text(size = 19),
+        axis.text.x = element_text(angle = 60, hjust = 1))
 
 print(age_histogram)
 ```
@@ -72,37 +73,18 @@ magic_histogram <- ggplot(creature_data, aes(x = magic_power)) +
   theme(text = element_text(size = 16),
         plot.title = element_text(size = 20),
         axis.title = element_text(size = 18),
-        axis.text = element_text(size = 19))
+        axis.text = element_text(size = 19),
+        axis.text.x = element_text(angle = 60, hjust = 1))
 
 print(magic_histogram)
 ```
 
----
-
-## Step 5: Make it colorful by groups
-
-```{r}
-# Different colors for different creature types
-colorful_histogram <- ggplot(creature_data, aes(x = magic_power, fill = creature_type)) +
-  geom_histogram(color = "black") +
-  labs(title = "Magic Levels by creature Type",
-       x = "Magic Level",
-       y = "Number of Creatures",
-       fill = "Creature Type")+
-  theme_minimal() +
-  theme(text = element_text(size = 16),
-        plot.title = element_text(size = 20),
-        axis.title = element_text(size = 18),
-        axis.text = element_text(size = 19))
-
-print(colorful_histogram)
-```
 
 ---
 
 ## 🎈 Your turn to create!
 
-### Challenge 1: Create a histogram of ages with different colors for different creature types
+### Challenge 1: Create a histogram of ages with customized color 
 
 ```{r eval=FALSE}
 # YOUR CODE HERE:
@@ -115,7 +97,8 @@ my_histogram <- ggplot(creature_data, aes(x = ...)) +
   theme(text = element_text(size = 16),
         plot.title = element_text(size = 20),
         axis.title = element_text(size = 18),
-        axis.text = element_text(size = 19))
+        axis.text = element_text(size = 19),
+        axis.text.x = element_text(angle = 60, hjust = 1))
 ```
 
 ## 💡 Memory Tip:

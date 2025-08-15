@@ -49,7 +49,8 @@ avg_magic_plot <- ggplot(avg_magic_by_type, aes(x = ..., y = ...)) +
   theme(text = element_text(size = 16),
         plot.title = element_text(size = 20),
         axis.title = element_text(size = 18),
-        axis.text = element_text(size = 19))
+        axis.text = element_text(size = 19),
+        axis.text.x = element_text(angle = 60, hjust = 1))
 print(avg_magic_plot)
 ```
 
@@ -75,7 +76,8 @@ winged_plot <- ggplot(winged_compare, aes(x = has_wings, y = average_magic, fill
   theme(text = element_text(size = 16),
         plot.title = element_text(size = 20),
         axis.title = element_text(size = 18),
-        axis.text = element_text(size = 19))
+        axis.text = element_text(size = 19),
+        axis.text.x = element_text(angle = 60, hjust = 1))
 print(winged_plot)
 ```
 
