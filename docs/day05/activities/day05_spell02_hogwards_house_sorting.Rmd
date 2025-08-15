@@ -1,27 +1,62 @@
-# 🔮 Day 5 - Spell 2: Hogwarts House Sorting with KNN
-# Build your own Sorting Hat using machine learning!
+---
+title: "🔮 Day 5 - Spell 2: Hogwarts House Sorting with KNN"
+subtitle: "Build your own Sorting Hat using machine learning!"
+output: html_document
+---
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 Sys.setlocale("LC_CTYPE", "en_US.UTF-8")
+```
 
+## 🎯 Learning Goals
+
+In this magical spell, you'll learn to:
+- 🏰 Explore Hogwarts student personality data
+- 🎩 Build a KNN model to sort students into houses
+- 📊 Use cross-validation to find the optimal K value
+- 🔍 Evaluate multi-class classification performance
+- ✨ Create your own student profile and get sorted!
+
+---
+
+## 📚 Load Our Magical Libraries
+
+```{r load-libraries}
 # Load our magical libraries
-library(tidymodels)
-library(tidyverse)
+library(tidymodels)  # For machine learning magic
+library(tidyverse)   # For data manipulation and visualization
+```
 
-########################################################
-# PART 1: Welcome to Hogwarts! 🏰
-########################################################
+---
 
+## 🏰 Part 1: Welcome to Hogwarts!
+
+Let's explore the magical world of Hogwarts student data!
+
+```{r load-hogwarts-data}
 # Load the Hogwarts student data
 # This contains personality traits of students and their houses
 hogwarts <- read_csv("../datasets/hogwarts_students.csv")
 
 # Explore the magical data
 head(hogwarts)
-glimpse(hogwarts)
+```
 
+```{r explore-structure}
+glimpse(hogwarts)
+```
+
+```{r count-houses}
 # See how many students are in each house
 hogwarts %>% count(house)
+```
 
+### 🎨 Visualize Student Personalities
+
+Let's see if we can spot patterns in how different houses cluster!
+
+```{r plot-courage-intelligence}
 # Visualize personality traits by house
 ggplot(hogwarts, aes(x = courage, y = intelligence, color = house)) +
   geom_point(alpha = 0.7, size = 2) +
@@ -30,14 +65,21 @@ ggplot(hogwarts, aes(x = courage, y = intelligence, color = house)) +
        y = "Intelligence Score",
        color = "House") +
   theme_minimal()
+```
 
-# 💡 Question: Can you see any patterns? 
-# Which house tends to have high courage? High intelligence?
+### 🤔 Think About It!
 
-########################################################
-# PART 2: Build Your Sorting Hat Model 🎩
-########################################################
+💡 **Question:** Can you see any patterns? Which house tends to have high courage? High intelligence?
 
+---
+
+## 🎩 Part 2: Build Your Sorting Hat Model
+
+Time to create our own magical Sorting Hat using machine learning!
+
+### 📊 Split the Data for Training and Testing
+
+```{r split-data}
 # Split the data into training and testing sets
 set.seed(456)  # For reproducible magic!
 
@@ -45,14 +87,22 @@ set.seed(456)  # For reproducible magic!
 hogwarts_split <- initial_split(hogwarts, prop = 0.75, strata = house)
 train_data <- training(hogwarts_split)
 test_data <- testing(hogwarts_split)
+```
 
+```{r check-splits}
 # Check our splits - each house should be represented
-print("Training data distribution:")
+cat("Training data distribution:\n")
 train_data %>% count(house)
 
-print("Testing data distribution:")
+cat("\nTesting data distribution:\n")
 test_data %>% count(house)
+```
 
+### 🍳 Create the Sorting Hat Recipe
+
+Our recipe will prepare the personality data for the Sorting Hat!
+
+```{r create-recipe}
 # Create a recipe for preprocessing
 # We'll use all personality traits to predict house
 hogwarts_recipe <- recipe(house ~ courage + intelligence + ambition + loyalty, data = train_data) %>%
@@ -61,16 +111,28 @@ hogwarts_recipe <- recipe(house ~ courage + intelligence + ambition + loyalty, d
 
 print("Sorting Hat recipe created!")
 print(hogwarts_recipe)
+```
 
-########################################################
-# PART 3: Find the Best K Value Using Cross-Validation 📊
-########################################################
+---
 
+## 📊 Part 3: Find the Best K Value Using Cross-Validation
+
+Instead of just guessing what K value to use, let's use cross-validation to find the best one!
+
+### 🔄 Set Up Cross-Validation
+
+```{r setup-cv}
 set.seed(789)
 
 # Create cross-validation folds (like 5 mini train/test splits)
 cv_folds <- vfold_cv(train_data, v = 5, strata = house)
 
+print("Created 5-fold cross-validation setup!")
+```
+
+### 🤖 Create a Tunable KNN Model
+
+```{r create-tunable-model}
 # Create a KNN model that we can tune
 knn_model <- nearest_neighbor(neighbors = tune()) %>%
   set_engine("kknn") %>%
@@ -81,6 +143,12 @@ sorting_hat_workflow <- workflow() %>%
   add_recipe(hogwarts_recipe) %>%
   add_model(knn_model)
 
+print("Tunable Sorting Hat workflow created!")
+```
+
+### ⚡ Test Different K Values
+
+```{r tune-k-values}
 # Test different K values (how many "neighbors" to ask)
 k_grid <- tibble(neighbors = c(1, 3, 5, 7, 9, 11, 15, 20, 25))
 
@@ -89,6 +157,12 @@ print("Training the Sorting Hat... please wait!")
 tune_results <- sorting_hat_workflow %>%
   tune_grid(resamples = cv_folds, grid = k_grid)
 
+print("Tuning complete! 🎉")
+```
+
+### 📈 Analyze the Results
+
+```{r analyze-results}
 # Collect the results
 tune_metrics <- tune_results %>% collect_metrics()
 
@@ -99,7 +173,11 @@ accuracy_results <- tune_metrics %>%
 
 print("K values ranked by accuracy (best first):")
 print(accuracy_results)
+```
 
+### 📊 The Elbow Method Visualization
+
+```{r plot-elbow-method}
 # Plot the elbow method - K vs accuracy
 accuracy_results %>%
   ggplot(aes(x = neighbors, y = mean)) +
@@ -112,11 +190,15 @@ accuracy_results %>%
        x = "Number of Neighbors (K)",
        y = "Accuracy") +
   theme_minimal()
+```
 
-########################################################
-# PART 4: Train Your Final Sorting Hat 🎩✨
-########################################################
+---
 
+## 🎩✨ Part 4: Train Your Final Sorting Hat
+
+Now let's build our final Sorting Hat with the best K value!
+
+```{r select-best-k}
 # Select the best K value
 best_k <- accuracy_results %>%
   slice_head(n = 1) %>%
@@ -124,7 +206,9 @@ best_k <- accuracy_results %>%
 
 print(paste("🎉 Best K value:", best_k))
 print(paste("🎯 Best accuracy:", round(accuracy_results$mean[1], 3)))
+```
 
+```{r train-final-model}
 # Create final Sorting Hat with best K
 final_sorting_hat <- nearest_neighbor(neighbors = best_k) %>%
   set_engine("kknn") %>%
@@ -138,6 +222,12 @@ final_workflow <- workflow() %>%
 sorting_hat_fit <- final_workflow %>%
   fit(data = train_data)
 
+print("Final Sorting Hat trained and ready! 🎩")
+```
+
+### 🧪 Test on New Students
+
+```{r test-final-model}
 # Make predictions on test set (students the hat has never seen!)
 test_predictions <- predict(sorting_hat_fit, test_data) %>%
   bind_cols(test_data)
@@ -148,17 +238,27 @@ final_metrics <- test_predictions %>%
 
 print("🏆 Final Sorting Hat performance on new students:")
 print(final_metrics)
+```
 
+### 📊 Confusion Matrix Analysis
+
+```{r confusion-matrix}
 # Show confusion matrix - which houses get confused?
 print("📊 Confusion Matrix (where mistakes happen):")
 confusion_matrix <- test_predictions %>%
   conf_mat(truth = house, estimate = .pred_class)
 print(confusion_matrix)
+```
 
-########################################################
-# PART 5: Visualize Your Sorting Hat Results 🎨
-########################################################
+---
 
+## 🎨 Part 5: Visualize Your Sorting Hat Results
+
+Let's create beautiful visualizations to understand our Sorting Hat's decisions!
+
+### 🎯 Courage vs Intelligence View
+
+```{r plot-courage-intelligence-pred}
 # Plot actual vs predicted houses
 ggplot(test_predictions, aes(x = courage, y = intelligence)) +
   geom_point(aes(color = house, shape = .pred_class), 
@@ -170,7 +270,11 @@ ggplot(test_predictions, aes(x = courage, y = intelligence)) +
        color = "Actual House",
        shape = "Predicted House") +
   theme_minimal()
+```
 
+### ⚔️ Ambition vs Loyalty View
+
+```{r plot-ambition-loyalty}
 # Another view: ambition vs loyalty
 ggplot(test_predictions, aes(x = ambition, y = loyalty)) +
   geom_point(aes(color = house, shape = .pred_class), 
@@ -182,11 +286,15 @@ ggplot(test_predictions, aes(x = ambition, y = loyalty)) +
        color = "Actual House",
        shape = "Predicted House") +
   theme_minimal()
+```
 
-########################################################
-# PART 6: Sort Some New Students! 🆕
-########################################################
+---
 
+## 🆕 Part 6: Sort Some New Students!
+
+Let's test our Sorting Hat on some brand new students!
+
+```{r new-students}
 # Create some new mystery students to sort
 new_students <- tibble(
   name = c("Alex Smith", "Jordan Lee", "Casey Brown", "Riley Johnson"),
@@ -198,7 +306,9 @@ new_students <- tibble(
 
 print("🎓 New students waiting to be sorted:")
 print(new_students)
+```
 
+```{r sort-new-students}
 # Use our Sorting Hat to predict their houses!
 new_predictions <- predict(sorting_hat_fit, new_students) %>%
   bind_cols(new_students)
@@ -208,11 +318,17 @@ new_predictions %>%
   select(name, .pred_class, everything()) %>%
   rename(predicted_house = .pred_class) %>%
   print()
+```
 
-########################################################
-# PART 7: Understanding Your Sorting Hat 🧠
-########################################################
+---
 
+## 🧠 Part 7: Understanding Your Sorting Hat
+
+Let's dive deeper into how our Sorting Hat makes decisions!
+
+### 🏰 House Personality Profiles
+
+```{r house-profiles}
 # Let's see which traits matter most for each house
 trait_summary <- train_data %>%
   group_by(house) %>%
@@ -226,7 +342,11 @@ trait_summary <- train_data %>%
 
 print("🏰 Average traits by house:")
 print(trait_summary)
+```
 
+### 📊 How Much Better Than Random Guessing?
+
+```{r baseline-comparison}
 # Calculate baseline accuracy (what if we always guessed the most common house?)
 most_common_house <- train_data %>% 
   count(house) %>% 
@@ -246,19 +366,25 @@ final_accuracy <- final_metrics %>%
 print(paste("📊 Baseline accuracy (always guess", most_common_house, "):", round(baseline_accuracy, 3)))
 print(paste("🎯 Our Sorting Hat accuracy:", round(final_accuracy, 3)))
 print(paste("✨ Improvement over baseline:", round(final_accuracy - baseline_accuracy, 3)))
+```
 
-########################################################
-# 🎈 Your Turn: Analysis Questions!
-########################################################
+---
 
-# Answer these based on your results:
+## 🎈 Your Turn: Analysis Questions!
 
+### 🤔 Think About These Questions:
+
+```{r analysis-questions}
 print("🤔 Think about these questions:")
 print("1. Which house was hardest for the Sorting Hat to predict correctly?")
 print("2. Why do you think some houses get confused with others?")
 print("3. If you were a Hogwarts student, what would your traits be?")
+```
 
-# ✨ Challenge: Create your own student profile!
+### ✨ Challenge: Create Your Own Student Profile!
+
+```{r create-my-profile}
+# Create your own student profile!
 my_profile <- tibble(
   name = "Your Name Here",
   courage = 8.0,      # Rate yourself 1-10
@@ -271,14 +397,29 @@ print("🏠 Where would YOU be sorted?")
 my_house <- predict(sorting_hat_fit, my_profile) %>%
   bind_cols(my_profile)
 print(my_house)
+```
 
-########################################################
-# 💡 Key Learning Points:
-########################################################
+### 🎯 Advanced Challenges
 
-# - KNN classification can sort students into houses based on personality
-# - Cross-validation helps us find the best K value
-# - Some houses are easier to predict than others  
-# - Standardizing features is crucial when traits have similar scales
-# - The elbow method shows us how K affects performance
-# - Even the Sorting Hat makes mistakes sometimes!
+Try these if you want to go further:
+
+1. **✨ Challenge 1:** Can you improve the accuracy by adding new features or transforming existing ones?
+
+2. **✨ Challenge 2:** Create a web app interface where people can input their traits and get sorted!
+
+3. **✨ Challenge 3:** Compare KNN with other classification algorithms like decision trees or logistic regression.
+
+---
+
+## 💡 Key Learning Points
+
+🎯 **What we learned today:**
+
+- **KNN classification can sort students into houses based on personality** - it finds similar students and sees what houses they're in
+- **Cross-validation helps us find the best K value** - it's like testing our model multiple times to be sure
+- **Some houses are easier to predict than others** - some have more distinct personality patterns
+- **Standardizing features is crucial when traits have similar scales** - ensures fair comparison across all traits
+- **The elbow method shows us how K affects performance** - helps us choose the sweet spot
+- **Even the Sorting Hat makes mistakes sometimes!** - no model is perfect, and that's okay
+
+🔮 **Remember:** Machine learning models learn patterns from data, just like how the real Sorting Hat learned from centuries of students. The more data we have, the better our predictions become!

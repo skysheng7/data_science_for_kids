@@ -193,6 +193,99 @@ Just like studying for a test, computers need practice data (training) and then 
 
 <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3M213ZTZraWtndTdoOXhjMmd0Mnhwczg3ZnRrY3I1eWJkdWp4ZTVqZCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/GtmmEUMZbo1hhRAi96/giphy.gif" alt="robot_running" style="width: 100%; height: auto;">
 
+### 4.3 How K-Nearest Neighbors Works (*Duration: 15 minutes*)
+
+**💡 What is K-Nearest Neighbors (KNN)?**
+Imagine you're new at school and want to know if you'll like the cafeteria pizza. You could ask the 5 students sitting closest to you. If 3 out of 5 say "yes," you predict you'll like it too! That's similar to how KNN works.
+
+**🔍 The KNN Process:**
+1. Compute the distance between the new observation and each observation in our training set
+2. Sort the data in ascending order according to the distances
+3. Choose the top K rows as “neighbours”
+4. Classify the new observation based on majority vote.
+
+**📏 How do we measure "closeness"?**
+We use **Euclidean distance** - like measuring the straight-line distance between two points on a map:
+
+Distance = √[(x₁-x₂)² + (y₁-y₂)²]
+
+### 4.4 Why Standardizing Data Matters (*Duration: 10 minutes*)
+
+Variables could be on different scale.
+
+**💡 What is Standardization?**
+Transform all variables to have:
+- Mean (average) = 0  
+- Standard deviation = 1
+
+**🎯 Why it's crucial for KNN:**
+- KNN uses distance between points
+- Variables with bigger numbers unfairly influence the distance
+- Standardization makes all variables equally important
+
+**✅ In R with tidymodels:**
+```r
+recipe(outcome ~ predictors, data = training_data) %>%
+  step_center(all_predictors()) %>%  # Center around 0
+  step_scale(all_predictors())       # Scale to standard deviation 1
+```
+
+### 4.5 The Tidymodels Workflow (*Duration: 10 minutes*)
+
+**🧪 The Recipe Analogy**
+Think of machine learning like cooking - you need a recipe for preprocessing and a method for cooking!
+
+**1. Create a Recipe 📋**
+```r
+my_recipe <- recipe(behavior ~ size + magic_power, data = train_data) %>%
+  step_center(all_predictors()) %>%
+  step_scale(all_predictors())
+```
+
+**2. Specify the Model 🔧**
+```r
+knn_model <- nearest_neighbor(neighbors = 5) %>%
+  set_engine("kknn") %>%
+  set_mode("classification")
+```
+
+**3. Create a Workflow ⚙️**
+```r
+my_workflow <- workflow() %>%
+  add_recipe(my_recipe) %>%
+  add_model(knn_model)
+```
+
+**4. Fit and Predict 🔮**
+```r
+fitted_model <- my_workflow %>% fit(data = train_data)
+predictions <- predict(fitted_model, test_data)
+```
+
+### 4.6 Choosing the Best K: The Elbow Method (*Duration: 10 minutes*)
+
+**🤔 How do we pick the best K value?**
+Too small K (like K=1) = overly sensitive to noise
+Too large K = too simple, misses patterns
+
+**📈 The Elbow Method:**
+1. Test many different K values (1, 3, 5, 7, 9, 11, ...)
+2. Calculate accuracy for each K using cross-validation
+3. Plot K vs Accuracy
+4. Look for the "elbow" - where accuracy stops improving much
+
+```r
+# Test different K values
+k_values <- c(1, 3, 5, 7, 9, 11, 15, 20)
+# Use cross-validation to get reliable estimates
+cv_folds <- vfold_cv(train_data, v = 5)
+# Find best K
+best_k <- tune_grid(workflow, resamples = cv_folds, grid = k_grid)
+```
+
+**💡 Cross-Validation Magic:**
+Instead of one train/test split, we split the training data 5 different ways and average the results. This gives us more reliable estimates!
+
 ### Spell 1: KNN Classification with Magical Creatures
 
 **📁 Find this spell in [Posit Cloud](https://posit.cloud):** Look for the file `day05_spell01_magical_knn.R` in your project files!
@@ -202,19 +295,20 @@ Using Oda's magical creature dataset, predict whether a new creature is friendly
 
 **✨ Challenge:** Try different K values and see which works best!
 
-### Spell 2: Your Own KNN Adventure
+### Spell 2: Hogwarts House Sorting
 
-**📁 Find this spell in Posit Cloud:** Look for the file `day05_spell02_choose_dataset.R` in your project files!
+**📁 Find this spell in Posit Cloud:** Look for the file `day05_spell02_hogwards_house_sorting.R` in your project files!
 
-#### 🎈 Activity: Pick Your Classification Quest
-Choose from three magical datasets:
-1. 🏰 Hogwarts House Sorting (personality traits → house)
-2. 🌟 Pokemon Type Prediction (stats → type) 
-3. 🎵 Music Genre Classification (features → genre)
+#### 🎈 Activity: Build Your Own Sorting Hat
+Use KNN to predict which Hogwarts house students belong to based on their personality traits:
+- 🦁 **Gryffindor:** Brave and daring
+- 🦅 **Ravenclaw:** Wise and clever  
+- 🦡 **Hufflepuff:** Loyal and kind
+- 🐍 **Slytherin:** Ambitious and cunning
 
-Build your own KNN model and test its accuracy!
+Learn about cross-validation and the elbow method to find the best K!
 
-**✨ Challenge:** Can you get over 80% accuracy?
+**✨ Challenge:** Can you get over 75% accuracy? Create your own student profile and see where you'd be sorted!
 
 
 ## 5. AI Exploration (*Duration: 75 minutes*)

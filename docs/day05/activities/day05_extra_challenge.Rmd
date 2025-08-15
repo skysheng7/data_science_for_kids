@@ -20,7 +20,7 @@ set.seed(100)
 ```
 
 ```{r}
-mcdonalds <- read_csv("data/menu.csv")
+mcdonalds <- read_csv("../datasets/menu_data.csv")
 head(mcdonalds, 5)
 dim(mcdonalds)
 ```
