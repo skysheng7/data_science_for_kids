@@ -17,7 +17,7 @@ parts:
   - file: docs/day02/solutions/day02_spell_solutions_nb
   - file: docs/day03/solutions/day03_spell_solutions_nb
   - file: docs/day04/solutions/day04_spell_solutions_nb
-  #- file: docs/day05/solutions/day05_spell_solutions_nb
+  - file: docs/day05/solutions/day05_spell_solutions_nb
 - caption: Technology Setup
   chapters:
   - file: docs/setup/index

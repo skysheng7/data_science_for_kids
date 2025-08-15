@@ -300,21 +300,6 @@ Using Oda's magical creature dataset, predict whether a new creature is friendly
 
 **✨ Challenge:** Try different K values and see which works best!
 
-### Spell 2: Hogwarts House Sorting
-
-**📁 Find this spell in Posit Cloud:** Look for the file `day05_spell02_hogwards_house_sorting.R` in your project files!
-
-#### 🎈 Activity: Build Your Own Sorting Hat
-Use KNN to predict which Hogwarts house students belong to based on their personality traits:
-- 🦁 **Gryffindor:** Brave and daring
-- 🦅 **Ravenclaw:** Wise and clever  
-- 🦡 **Hufflepuff:** Loyal and kind
-- 🐍 **Slytherin:** Ambitious and cunning
-
-Learn about cross-validation and the elbow method to find the best K!
-
-**✨ Challenge:** Can you get over 75% accuracy? Create your own student profile and see where you'd be sorted!
-
 
 ## 5. AI Exploration (*Duration: 75 minutes*)
 
