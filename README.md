@@ -16,7 +16,6 @@ Welcome to an enchanting adventure where mathematics meets magic, and data tells
 
 - **Pavel Timofeev**
 - **Ify Anene**
-- **Anushka Biju**
 - **Sarah Eshafi**
 
 ## ✨ What Makes This Camp Special?
