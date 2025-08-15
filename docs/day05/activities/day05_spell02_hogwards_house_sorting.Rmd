@@ -26,6 +26,7 @@ In this magical spell, you'll learn to:
 # Load our magical libraries
 library(tidymodels)  # For machine learning magic
 library(tidyverse)   # For data manipulation and visualization
+library(kknn)        # For KNN classification
 ```
 
 ---
@@ -181,8 +182,8 @@ print(accuracy_results)
 # Plot the elbow method - K vs accuracy
 accuracy_results %>%
   ggplot(aes(x = neighbors, y = mean)) +
-  geom_line(color = "blue", linewidth = 1) +
-  geom_point(color = "red", size = 3) +
+  geom_line(color = "orange", linewidth = 1) +
+  geom_point(color = "lightblue", size = 3) +
   geom_errorbar(aes(ymin = mean - std_err, ymax = mean + std_err), 
                 width = 0.5, alpha = 0.7) +
   labs(title = "Finding the Best K: The Elbow Method",
@@ -233,11 +234,25 @@ test_predictions <- predict(sorting_hat_fit, test_data) %>%
   bind_cols(test_data)
 
 # Evaluate how well our Sorting Hat performs
-final_metrics <- test_predictions %>%
-  metrics(truth = house, estimate = .pred_class)
+# Convert to factors for proper classification metrics
+test_predictions_factor <- test_predictions %>%
+  mutate(
+    house = as.factor(house),
+    .pred_class = as.factor(.pred_class)
+  )
+
+final_accuracy <- test_predictions_factor %>%
+  accuracy(truth = house, estimate = .pred_class)
+
+# Also get other useful metrics for multiclass classification
+classification_metrics <- metric_set(accuracy, kap)
+all_metrics <- test_predictions_factor %>%
+  classification_metrics(truth = house, estimate = .pred_class)
 
 print("🏆 Final Sorting Hat performance on new students:")
-print(final_metrics)
+print(final_accuracy)
+print("\n📊 Additional metrics:")
+print(all_metrics)
 ```
 
 ### 📊 Confusion Matrix Analysis
@@ -245,7 +260,7 @@ print(final_metrics)
 ```{r confusion-matrix}
 # Show confusion matrix - which houses get confused?
 print("📊 Confusion Matrix (where mistakes happen):")
-confusion_matrix <- test_predictions %>%
+confusion_matrix <- test_predictions_factor %>%
   conf_mat(truth = house, estimate = .pred_class)
 print(confusion_matrix)
 ```
@@ -359,13 +374,12 @@ baseline_accuracy <- test_data %>%
   filter(house == most_common_house) %>% 
   pull(n) / nrow(test_data)
 
-final_accuracy <- final_metrics %>% 
-  filter(.metric == "accuracy") %>% 
+final_accuracy_value <- final_accuracy %>% 
   pull(.estimate)
 
 print(paste("📊 Baseline accuracy (always guess", most_common_house, "):", round(baseline_accuracy, 3)))
-print(paste("🎯 Our Sorting Hat accuracy:", round(final_accuracy, 3)))
-print(paste("✨ Improvement over baseline:", round(final_accuracy - baseline_accuracy, 3)))
+print(paste("🎯 Our Sorting Hat accuracy:", round(final_accuracy_value, 3)))
+print(paste("✨ Improvement over baseline:", round(final_accuracy_value - baseline_accuracy, 3)))
 ```
 
 ---
@@ -399,27 +413,4 @@ my_house <- predict(sorting_hat_fit, my_profile) %>%
 print(my_house)
 ```
 
-### 🎯 Advanced Challenges
-
-Try these if you want to go further:
-
-1. **✨ Challenge 1:** Can you improve the accuracy by adding new features or transforming existing ones?
-
-2. **✨ Challenge 2:** Create a web app interface where people can input their traits and get sorted!
-
-3. **✨ Challenge 3:** Compare KNN with other classification algorithms like decision trees or logistic regression.
-
 ---
-
-## 💡 Key Learning Points
-
-🎯 **What we learned today:**
-
-- **KNN classification can sort students into houses based on personality** - it finds similar students and sees what houses they're in
-- **Cross-validation helps us find the best K value** - it's like testing our model multiple times to be sure
-- **Some houses are easier to predict than others** - some have more distinct personality patterns
-- **Standardizing features is crucial when traits have similar scales** - ensures fair comparison across all traits
-- **The elbow method shows us how K affects performance** - helps us choose the sweet spot
-- **Even the Sorting Hat makes mistakes sometimes!** - no model is perfect, and that's okay
-
-🔮 **Remember:** Machine learning models learn patterns from data, just like how the real Sorting Hat learned from centuries of students. The more data we have, the better our predictions become!

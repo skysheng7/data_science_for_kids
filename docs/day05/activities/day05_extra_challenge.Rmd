@@ -124,10 +124,8 @@ This section of the worksheet needs you to fill in the blanks with the right ans
 # head(validation, 5)
 
 # acc <- validation |>
-#   metrics(truth = Category, estimate = ...) |>
-#   filter(.metric == ...) |>
-#   select(...) |>
-#   pull()
+#   accuracy(truth = Category, estimate = ...) |>
+#   pull(.estimate)
 
 # acc
 ```
@@ -166,10 +164,12 @@ run_model <- function(k_value, train_data, test_data) {
             rename(Category_pred = .pred_class)
 
       acc <- validation |>
-            metrics(truth = Category, estimate = Category_pred) |>
-            filter(.metric == "accuracy") |>
-            select(.estimate) |>
-            pull()
+            mutate(
+              Category = as.factor(Category),
+              Category_pred = as.factor(Category_pred)
+            ) |>
+            accuracy(truth = Category, estimate = Category_pred) |>
+            pull(.estimate)
       
       acc
 

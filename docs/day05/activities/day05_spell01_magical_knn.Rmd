@@ -28,6 +28,7 @@ First, let's load the libraries we need for our machine learning magic!
 # Load our magical libraries
 library(tidymodels)  # For machine learning magic
 library(tidyverse)   # For data manipulation and visualization
+library(kknn)        # For KNN classification
 ```
 
 ## 📖 Load the Magical Creature Dataset
@@ -180,9 +181,15 @@ How well did our model do? Let's find out!
 
 ```{r calculate-accuracy}
 # Calculate the accuracy of our predictions
-accuracy_result <- creature_predictions %>%
-  metrics(truth = behavior, estimate = .pred_class) %>%
-  filter(.metric == "accuracy")
+# Convert to factors for proper classification metrics
+creature_predictions_factor <- creature_predictions %>%
+  mutate(
+    behavior = as.factor(behavior),
+    .pred_class = as.factor(.pred_class)
+  )
+
+accuracy_result <- creature_predictions_factor %>%
+  accuracy(truth = behavior, estimate = .pred_class)
 
 print(paste("Our KNN model accuracy:", round(accuracy_result$.estimate, 3)))
 ```
@@ -193,7 +200,7 @@ A confusion matrix shows us exactly where our model made mistakes.
 
 ```{r confusion-matrix}
 # Create a confusion matrix to see where we made mistakes
-creature_predictions %>%
+creature_predictions_factor %>%
   conf_mat(truth = behavior, estimate = .pred_class)
 ```
 
@@ -235,8 +242,11 @@ test_k_values <- function(k_val) {
     bind_cols(creature_test)
   
   accuracy_k <- predictions_k %>%
-    metrics(truth = behavior, estimate = .pred_class) %>%
-    filter(.metric == "accuracy") %>%
+    mutate(
+      behavior = as.factor(behavior),
+      .pred_class = as.factor(.pred_class)
+    ) %>%
+    accuracy(truth = behavior, estimate = .pred_class) %>%
     pull(.estimate)
   
   return(accuracy_k)
@@ -314,44 +324,3 @@ print(new_predictions)
 ```
 
 ---
-
-## 🎈 Your Turn: Challenges!
-
-### ✨ Challenge 1: Add friendliness_score as a third predictor
-**Hint:** Modify the recipe to include all three variables
-
-```{r challenge1, eval=FALSE}
-# Your code here:
-# creature_recipe_3vars <- recipe(behavior ~ size + magic_power + friendliness_score, data = creature_train) %>%
-#   step_scale(all_predictors()) %>%
-#   step_center(all_predictors())
-```
-
-### ✨ Challenge 2: Try to get accuracy above 85%
-**Hint:** Experiment with different combinations of predictors and K values
-
-```{r challenge2, eval=FALSE}
-# Your code here:
-# Try different combinations and K values!
-```
-
-### ✨ Challenge 3: Create a beautiful visualization showing the decision boundaries
-**Hint:** Make predictions on a grid of points and color the background
-
-```{r challenge3, eval=FALSE}
-# Your code here:
-# Create a grid of points, make predictions, and visualize!
-```
-
----
-
-## 💡 Key Learning Points
-
-🎯 **What we learned today:**
-
-- **KNN makes predictions based on the K closest neighbors** - like asking your K nearest friends for advice!
-- **The choice of K affects how flexible vs stable our predictions are** - too small and it's noisy, too big and it's too simple
-- **Standardizing features is important when they have different scales** - we want all features to have equal influence
-- **Always test on data the model hasn't seen before!** - this tells us how well it will work in the real world
-
-🔮 **Remember:** Machine learning is like teaching a computer to recognize patterns, just like how you learned to recognize different types of magical creatures!
