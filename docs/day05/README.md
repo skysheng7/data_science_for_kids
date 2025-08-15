@@ -46,28 +46,74 @@ Follow these quick steps to save your work to your computer:
 ```
 
 
-💡 Pro tip: If you don’t select anything, Export will download the current folder you’re viewing.
+💡 Pro tip: If you don't select anything, Export will download the current folder you're viewing.
 
-## 1. Ice Breaker: Human KNN Game (*Duration: 10 minutes*)
+## 1. What is Data Science?
 
-*Just like Oda the Data Otter, we'll start by understanding how neighbors help us make decisions!*
+### 1.1 Define Data Science 
 
-**🎈 Activity: Sticky Note Classification**
-- Each student gets a colored sticky note (red, blue, or green)
-- Spread out randomly across the classroom
-- Instructor walks to a random spot and predicts their "color" based on the K=3 closest students
-- Try different K values (1, 5, 7) and see how predictions change!
-- Let's start **Moving**!
+**🎈 What is data science for you?**
 
-<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbTlrM2U4NmJvODRqZDJ6ZWF4ZWk3Y2J3eHFkajZzMW5wYnUwdGMxMCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/X7jjWeC03QDT2/giphy.gif" alt="snail walking" style="width: 100%; height: auto;">
+### 1.2 Expert Definitions 
 
-**💡 Key Discovery:** *The number of neighbors (K) affects our predictions!*
+#### Definition 1: The Three Circles 🔵🟡🔴
+> *"Data science is the intersection between computer science, statistics and domain knowledge"*
 
-## 2. Meet Ada: Oda's Inspiration (*Duration: 15 minutes*)
+- **Computer Science** 💻 = The tools and programming to handle data
+- **Statistics** 📊 = The math to find patterns and make predictions  
+- **Domain Knowledge** 🏥🏫🌱 = Understanding the real-world problem (medicine, education, environment, etc.)
+
+```{image} ../../images/ds.png
+:alt: ds
+:width: 50%
+```
+
+Examples of combining domain knowledge with data science skills: **Using AI to monitor animal welfare**
+
+```{image} ../../images/ds_example.png
+:alt: ds_example
+:width: 100%
+```
+
+#### Definition 2: Reproducible and auditable 🔄
+> *"The study, development and practice of reproducible and auditable processes to obtain insight from data"* {cite}`Timbers2024Reproducible`
+
+```{image} ../../images/reproducible.png
+:alt: reproducible
+:width: 100%
+```
+
+
+```{image} ../../images/auditable.png  
+:alt: auditable
+:width: 100%
+```
+
+**💡 Key words explained:**
+- **Reproducible** 🔄 = Others can follow your steps and get the same results
+- **Auditable** 🔍 = Your work can be checked and verified by others
+- **Processes** ⚙️ = Step-by-step methods, not just one-time analyses
+- **Insights** 💡 = Meaningful discoveries that help make decisions
+
+### 1.3 Connecting to Our Week
+
+In the past 4 days, we have been learning: 
+
+- **Computer Science skills** 💻 (R programming, if-else conditions, for loops)
+- **Statistics concepts** 📊 (distributions, sampling, bootstrapping) 
+- **Domain knowledge** 🌍 (apply data science skills to solve real problems, e.g., halloween candy investigation)
+- **Reproducible work** 🔄 (documented steps, reusable code)
+- **Auditable processes** 🔍 (step by step explanations, checkable results)
+
+**💡 Key:** *You've been doing REAL data science all week!*
+
+**💡 Take home message:** The definitions of data science we listed above are just for your reference. Ultimately, YOU define what is data science for yourself!
+
+## 2. Meet Ada: Oda's Inspiration 
 
 ### 2.1 Why is Oda called "Oda"? 
 
-Oda the Data Otter is named after **Ada Lovelace** (1815-1852), the world's first computer programmer! Ada wrote the first algorithm intended to be processed by a machine and envisioned that computers could do more than just calculate numbers.
+Oda the Data Otter is named after **Ada Lovelace** (1815-1852), the world's first computer programmer! Ada wrote the first algorithm intended to be processed by a machine and was the first to envision that computers could do more than just calculate numbers. 
 
 ```{image} ../../images/ada.png
 :alt: ada
@@ -80,9 +126,25 @@ Oda the Data Otter is named after **Ada Lovelace** (1815-1852), the world's firs
 - Share what you think computers can do today that Ada might not have imagined
 - Discuss: What might computers do in the future that we can't imagine yet?
 
-## 3. KNN Machine Learning Magic (*Duration: 45 minutes*)
 
-### 3.1 What is Machine Learning? (*Duration: 10 minutes*)
+## 3. Human KNN Game (*Duration: 10 minutes*)
+
+*Just like Oda the Data Otter, we'll start by understanding how neighbors help us make decisions!*
+
+**🎈 Activity: Sticky Note Classification**
+- Each student gets a colored sticky note (orange or blue)
+- Students spread out randomly across the classroom
+- One person walks to a random spot and predicts their "color" based on the K=3 closest students
+- Try different K values (1, 5, 7) and see how predictions change!
+- Let's start **Moving**!
+
+<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbTlrM2U4NmJvODRqZDJ6ZWF4ZWk3Y2J3eHFkajZzMW5wYnUwdGMxMCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/X7jjWeC03QDT2/giphy.gif" alt="snail walking" style="width: 100%; height: auto;">
+
+**💡 Key Discovery:** *The number of neighbors (K) affects our predictions!*
+
+## 4. KNN Machine Learning Magic (*Duration: 45 minutes*)
+
+### 4.1 What is Machine Learning? (*Duration: 10 minutes*)
 
 **💡 What is Machine Learning?**
 Think of machine learning like teaching a computer to recognize patterns, just like how you learned to recognize different dog breeds or your friends' handwriting!
@@ -93,16 +155,35 @@ Think of machine learning like teaching a computer to recognize patterns, just l
 - Photo apps recognizing faces
 - Voice assistants understanding speech
 
-**🎈 Activity: Pattern Recognition Challenge**
-Look at these examples and guess what the computer learned to do:
-- Show images of email classification
-- Show recommendation examples
-- Discuss: How do you think the computer "learned" these patterns?
+**Real-world examples from Sky's research:**
 
-### 3.2 Training vs Testing: The Golden Rule (*Duration: 10 minutes*)
+1.  Automatically identify "who is this cow" based on their unique black and white body patterns
+
+```{image} ../../images/cow_cv.png
+:alt: cow_cv
+:width: 100%
+```
+
+
+2.  Identify sick cows early in time based on behavioural data collected from sensors
+
+```{image} ../../images/cow_ml.png
+:alt: cow_ml
+:width: 100%
+```
+
+**🎈 Discussion**
+- How do you think the computer "learned" these patterns?
+
+### 4.2 Training vs Testing: The Golden Rule (*Duration: 10 minutes*)
 
 **💡 What is Training and Testing Data?**
 Just like studying for a test, computers need practice data (training) and then get tested on new data they've never seen before!
+
+```{image} ../../images/ml.png
+:alt: ml
+:width: 100%
+```
 
 **The Golden Rule:** Never let your computer "cheat" by seeing the test answers during training!
 
@@ -136,25 +217,43 @@ Build your own KNN model and test its accuracy!
 
 **✨ Challenge:** Can you get over 80% accuracy?
 
+
+## 5. AI Exploration (*Duration: 75 minutes*)
+
+### 5.1 What is AI? 
+
+1. **🎈 What is AI to you?** 
+
+2. **🎈 What are some examples of AI we use in real life?** 
+
 <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3d3JoczFnc2wzbzMwN3JqeXNhM2Nxd3AwdGN4NTU1bHBtdHUza3p3bCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/aDKMe14FKM1TEyjm1l/giphy.gif" alt="robot_learning" style="width: 100%; height: auto;">
 
-## 4. AI Exploration & Ethics (*Duration: 75 minutes*)
 
-### 4.1 What is AI? Brainstorm Session (*Duration: 15 minutes*)
+### 5.2 Definition from expert
 
-#### 🎈 Activity: AI Definition Challenge
-**Step 1:** With your neighbor, come up with a definition of AI
-**Step 2:** Your neighbor tries to find something that fits your definition but ISN'T actually AI
-**Step 3:** Refine your definition!
+1. Definition from Dr. Joy Buolamiwini {cite}`Buolamwini2023UnmaskingAI`:
 
-**Examples to consider:**
-- Calculator vs ChatGPT
-- GPS navigation vs self-driving car
-- Thermostat vs smart home assistant
+> "Artificial Intelligence is the ongoing quest to give computers the ability to perceive the world (that is, make meaning of visual, aural, and other sensory inputs), to make judgments, to generate creative work, and to give them the ability to communicate with humans."
 
-<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDJnNmZmNDMzaXZqZTk1NmQxejB6ZnNlcWhrMjN2ZmtpbXhkemI0ZyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/An4vQcXaC6xjiA6ZX3/giphy.gif" alt="otters" style="width: 100%; height: auto;">
+2. Definition from Drs. Stuart Russell and Peter Norvig {cite}`Russell2020AIModernApproach`:
 
-### 4.2 Programming with AI: Claude Magic (*Duration: 25 minutes*)
+```{image} ../../images/russell.png
+:alt: russell
+:width: 70%
+```
+
+3. More Definitions:
+
+```{image} ../../images/ai.png
+:alt: ai
+:width: 100%
+```
+
+*Image credit: {cite}`Russell2020AIModernApproach`
+
+**💡 Take home message:** The definitions of AI we listed above are just for your reference. Ultimately, YOU define what is AI for yourself!
+
+### 5.3 Programming with AI: Claude Magic (*Duration: 25 minutes*)
 
 ### Spell 3: Claude Coding Assistant
 
@@ -171,7 +270,7 @@ Learn how to use Claude (AI assistant) to help write R code:
 
 **✨ Challenge:** Use Claude to create a visualization you've never made before!
 
-### 4.3 AI Model Battle Arena (*Duration: 25 minutes*)
+### 5.4 AI Model Battle Arena (*Duration: 25 minutes*)
 
 ### Spell 4: Chatbot Arena Experiment
 
@@ -190,25 +289,217 @@ Compare responses from different AI models and record results!
 
 <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3cnVnOGQ4bXFwcjdmMGhjeGIzcjI3ZGwyano2bTN6NzZnYW4zdGV0ciZlcD12MV9naWZzX3NlYXJjaCZjdD1n/GiNyo8KD5j9mM/giphy.gif" alt="minion_yeah" style="width: 100%; height: auto;">
 
-### 4.4 AI Ethics Deep Dive (*Duration: 10 minutes*)
+## 6. Introduction to AI Ethics 
 
-#### 🎈 Activity: Ethics Discussion Circle
+> "AI reflects both the aspirations and the limitations of its makers." {cite}`Buolamwini2023UnmaskingAI`
+
+### 6.1 How does generative AI learn?
+
+ChatGPT belongs to a family called **generative AI**. These are AI models that can create new text, images, and other content based on what we ask them to do.
+
+**✨ Question:** How do you think ChatGPT learned to write so well? Where does its training data come from?
+
+```{image} ../../images/training_genAI.png  
+:alt: training_genAI
+:width: 100%
+```
+
+**💡 What is training data?**
+Think of training data like all the books, websites, and social media posts that AI reads to learn how to write. AI companies automatically collect (or "scrape") millions of texts from the internet - including posts from Twitter, Instagram, Reddit, and countless websites.
+
+**🤔 The problem:** People online have very different beliefs and opinions. Some people believe the Earth is flat, others think WiFi causes cancer. Some people have unfair biases - like thinking people with lighter skin are smarter, or that men are naturally better at math than women. We know these beliefs are wrong, but they're still part of the internet.
+
+**⚠️ Here's what happens:** Since AI learns from what humans wrote online, it can pick up these wrong ideas and biases too. The AI doesn't know which information is true or false - it just learns patterns from everything it reads.
+
+```{image} ../../images/training_genAI2.png  
+:alt: training_genAI2
+:width: 100%
+```
+
+**🎮 Think of it like this:** Imagine you've read every book in the Vancouver library, plus millions of websites and scientific papers. Now someone plays a fill-in-the-blank game with you: "Chickens lay..." (eggs!), "The capital of France is..." (Paris!). Because you've read so much, you know which words usually go together. That's similar to how ChatGPT works - it predicts what word should come next based on patterns it learned from reading massive amounts of text.
+
+**🚨 Example of the problem:** If an AI that creates images learned from lots of fake pictures showing cats being born from green-blue egg shells and using their whiskers like solar panels, what do you think it would create if someone asked for a picture of a newborn cat?
+
+```{image} ../../images/fake_content2.png  
+:alt: fake_content2
+:width: 100%
+```
+
+### 6.2 🎈 Activity: Ethics Discussion Circle
 
 **Big Questions:**
-- Why did different students rate AI models differently?
 - Is AI objective or does it reflect human bias?
+- Who decides which data are filtered out, which data are kept in for training AI?
+
 - Whose values are being encoded in AI systems?
+
+> "The voice of everyday people with lived experiences of what it means to be excluded -- indeed, excoded -- from systems not designed with you in mind." {cite}`Buolamwini2023UnmaskingAI`
+
+- Whose perspectives are erased or ignored during AI development
 - How can we make AI more fair and inclusive?
 
-**Real-world examples:**
-- Facial recognition working differently for different skin tones
-- AI hiring tools showing gender bias
-- Language models reflecting cultural biases
+> "We need to recognize that not building a tool or not collecting intrusive data is an option,and that should be the first consideration." {cite}`Buolamwini2023UnmaskingAI`
+
+### 6.3 Real-world examples:
+
+### 6.3.1 Facial recognition AI system (computer vision model) can not recognize people with darker skin tones
+
+**🤖 What happened?** Scientists discovered that many facial recognition systems work much better on people with lighter skin than people with darker skin. These AI systems are used in phones, security cameras, and even by police.
+
+**🤔 Why did this happen?** The training data used to teach these AI systems had mostly photos of people with lighter skin. Since the AI didn't see enough examples of people with darker skin, it became really bad at recognizing them.
+
+**😢 Real consequences:** This means some people can't unlock their phones with their face, or worse - innocent people might be wrongly identified as criminals by police facial recognition systems.
+
+> "The *coded gze* describes the ways in which the priorities, preferences, and prejudices of those who have the power to shape technolgy can propagate harm, such as discrimination and erasure. We can encode prejudice into technology even if it is not intentional" {cite}`Buolamwini2023UnmaskingAI`
+
+```{image} ../../images/unmasking_ai.png  
+:alt: unmasking_ai
+:width: 100%
+```
+
+### 6.3.2. AI hiring tools showing gender bias
+
+**💼 What happened?** Amazon created an AI system to help them hire the best employees by automatically reviewing job applications. But there was a big problem - the AI was biased against women!
+
+**🤔 Why did this happen?** The AI learned from Amazon's past hiring data, which showed that most of their tech employees were men. So the AI thought "men = good employees" and started giving lower scores to any resume that mentioned women's activities (like "women's chess club captain") or women's colleges.
+
+**😠 Real consequences:** This meant qualified women were getting rejected not because they weren't good enough, but because the AI had learned unfair patterns from the past. Amazon had to stop using this system.
+
+**💭 The bigger problem:** Many companies still use AI for hiring, and people often trust these systems more than human decisions, thinking they're "fair and objective" when they're not.
+
+> "We swap fallible human gatekeepers for machines that are also flawed but assumed to be objective. And when machines fail, the people who often have the least resources and most limited access to power structures are those who have to experience the worst outcomes." {cite}`Buolamwini2023UnmaskingAI`
+
+```{image} ../../images/amazon.png  
+:alt: amazon
+:width: 100%
+```
+
+### 6.3.3. Who reviews and removes the toxic contents that are unsafe for AI to learn?
+
+**🧹 What happens behind the scenes?** Before AI systems like ChatGPT are trained, real humans have to look through millions of pieces of content from the internet to remove harmful material - like hate speech, violence, or disturbing images.
+
+**👷 Who does this work?** Often, this difficult job is given to workers in other countries who are paid very little. They spend 8 hours a day looking at some of the worst content on the internet to "clean" the data for AI training.
+
+**💔 What are the consequences?** Imagine having to look at horrible, disturbing content all day, every day. These workers often develop mental health problems, anxiety, and depression from constantly seeing such negative material.
+
+**🤔 The bigger questions:** 
+- What are the consequences of reviewing toxic contents all day long?
+- Is it fair to ask people to do this harmful work so that others can have "clean" AI?
+- Should we be building these AI systems in the first place if they require people to suffer?
+
+> "Do we need this AI system or this data in the first place, or does it allow us to direct money at inadequate technical Band-Aids without addressing much larger systemic societal issues?" {cite}`Buolamwini2023UnmaskingAI`
+
+> "AI will not solve poverty, because the conditions that lead to societies that pursue profit over people are not technical."  {cite}`Buolamwini2023UnmaskingAI`
+
+```{image} ../../images/toxic_content.png  
+:alt: toxic
+:width: 100%
+```
+
+### 6.3.4. What do surgeons look like to AI (text-to-image generative AI)? 
+
+A comprehensive study by Ali et al. {cite}`Ali2023FaceSurgeon` investigated demographic representation in AI-generated images of surgeons across three leading text-to-image generators. The researchers analyzed how these AI systems portray surgeons in terms of race, gender, and other demographic characteristics.
+
+The study found significant biases in AI representations, with surgeons predominantly depicted as white and male across all platforms tested. This research highlights how AI systems may reinforce existing stereotypes about medical professionals and the importance of addressing these biases in training data and algorithms.
+
+```{image} ../../images/surgeon.png  
+:alt: surgeon
+:width: 100%
+```
+
+**Real world statistics:** Roughly 1 in 4 general surgeons in North America is a woman today, and the number is rising every year. Asian, black, Hispanic and other minotiries make up about 22% of surgeons in the U.S. Also, surgeons would not look like this in other parts of the world like Asia.
+
+### 6.3.5. **Prompt revision** with good intention
+
+we are at a time in history where we have the opportunity to make things right using AI. To solve the problem and represent human in a more diverse way, OpenAI created something called prompt revision.
+
+When users ask DALL-E 3, their image generation model, DALL-E 3 first asks GPT-4, a language model, to use its imagination to add more details to this prompt, before actually creating an image. When a user asks for a surgeon, DALL-E 3 asks GPT-4 to imagine what a surgeon looks like while encouraging it to describe human in diverse race and skin-tones. So GPT-4 will rewrite the user prompt to be, a middle-aged female surgeon with light brown skin, or an African-American surgeon standing confidently. 
+
+For human representation, prompt revision went from only showing white men to be more diverse and inclusive. 
+
+```{image} ../../images/prompt_revision.png  
+:alt: prompt_revision
+:width: 100%
+```
+
+### 6.3.6. **Prompt revision** could erase reality
+
+**💡 What happens when AI tries to make things "prettier"?**
+
+Sometimes AI tries to make images look nicer by changing them from reality! Here's a real example from Sky's own AI bias research {cite}`Sheng2025LivestockAI`:
+
+🐄 **The Dairy Farm Example:**
+- When people ask AI to draw "dairy cows," it automatically does **prompt revision** to add in the details of sunshine, lush green pasture to show happy cows on green grass fields
+- But in real life, most dairy cows live only indoors in small spaces, on concrete floors, and don't get to run around outside or access pasture
+- The AI makes farming look more like a fairy tale than real life!
+- Base model of DALL-E 3 without **prompt revision** mostly depict dairy farms closer to reality
+-  **Prompt revision** erased the reality of livestock farming
+
+```{image} ../../images/sheng_2025.png  
+:alt: sheng_2025
+:width: 100%
+```
+
+**🤔 Why does this happen?**
+- AI wants to show "pretty" pictures that people will like
+- But sometimes the pretty version isn't the true version
+- This can make people think the world is different than it really is
+
+**💡 Key Learning:**
+AI doesn't always show reality - it might show what it thinks we want to see instead of what's actually true!
+
+## 6.4 What happens when AI trains on AI-made content?
+
+### 6.4.1 The Problem: AI Getting Confused About Reality
+
+**💡 What if AI only learned from other AI?**
+
+Think of it like a game of telephone - when people whisper messages from person to person, the message gets more and more wrong! The same thing happens when AI learns from other AI instead of real human content.
+
+#### 🐦 Do You Know What Real Baby Peacocks Look Like?
+
+```{image} ../../images/bird1.png  
+:alt: bird1
+:width: 100%
+```
+
+When you search for "baby peacocks" online, you might see lots of super cute, fluffy pictures. But many of these are actually made by AI! The AI makes baby peacocks look like adorable little cotton balls, which is very different from how they really look.
+
+#### 🐣 Real Baby Peacocks (Called Peachicks!)
+
+Real baby peacocks look quite different - they're brown and not as fluffy as AI pictures show! 
+
+```{image} ../../images/real.png  
+:alt: real
+:width: 100%
+```
+Image credit: a-z-animals.com
+
+#### 🔄 The "Model Collapse" Problem
+
+**What is Model Collapse?** {cite}`Shumailov2024ModelCollapse`
+ “Model collapse” describes how the performance of generative models degrades over generations of training, with the outputs gradually converging to represent only dominant groups, and ultimately losing representation of minority groups. 
+
+ When AI learns from other AI instead of real human content, it starts to "forget" what the real world looks like! This is called "model collapse."
+
+Here's how it works:
+1. **First AI:** Learns from real human content (pretty good!)
+2. **Second AI:** Learns from first AI's content (a little worse)
+3. **Third AI:** Learns from second AI's content (even worse!)
+4. **Keep going...** What would the world look like for AI in the long run??
+
+```{image} ../../images/model_collapse.png  
+:alt: model_collapse
+:width: 100%
+```
+
+**💡 Key Learning:**
+Just like in the telephone game, when AI learns from AI instead of humans, the information gets more and more wrong over time! That's why it's important for AI to keep learning from real human content.
 
 
-## 5. Optional: Cursor IDE Demo (*Duration: 10 minutes - if time allows*)
+## 7. Optional: Cursor IDE Demo (*Duration: 10 minutes - if time allows*)
 
-### 5.1 Advanced AI Coding Tools
+### 7.1 Advanced AI Coding Tools
 
 **💡 What is Cursor IDE?**
 An advanced code editor where AI helps you write code in real-time!
@@ -218,21 +509,16 @@ An advanced code editor where AI helps you write code in real-time!
 - Understand how professional developers use AI tools
 - Discuss: How might this change programming in the future?
 
-## 6. Camp Celebration & Survey (*Duration: 10 minutes*)
+## 8. Camp Celebration & Survey (*Duration: 10 minutes*)
 
-### 6.1 Final Reflection Circle
+### 8.1 Survey & Feedback
+Complete the camp evaluation survey below to help us make future camps even more magical!
 
-**🎈 Activity: Data Science Journey Reflection**
-- What was your favorite magical moment this week?
-- Which spell (activity) taught you the most?
-- How will you use your new data science powers?
-
-### 6.2 Survey & Feedback
-Complete the camp evaluation survey to help us make future camps even more magical!
+https://forms.gle/A16YUH3qzKtnAJFq8
 
 <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3cGlubDAwZnl1ZmFtZTYyNm9wc3VrNnQzYW1zOGRsbW9iYnRpY2VwYiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/FyH83LEK2hytq/giphy.gif" alt="friday" style="width: 100%; height: auto;">
 
-## 7. 📋 Pro Tips Cheatsheet
+## 9. 📋 Pro Tips Cheatsheet
 
 ### Machine Learning Essentials
 - **Training Data:** Data used to teach the computer patterns
@@ -252,7 +538,7 @@ Complete the camp evaluation survey to help us make future camps even more magic
 - **Iterate:** Refine your questions based on AI responses
 - **Learn Together:** Use AI as a learning partner, not a replacement for understanding
 
-## 8. 🆘 Troubleshooting Cheatsheet
+## 10. 🆘 Troubleshooting Cheatsheet
 
 ### Common KNN Issues
 **Problem:** My accuracy is very low
