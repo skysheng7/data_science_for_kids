@@ -49,3 +49,53 @@ creature_id,name,size,magic_power,friendliness_score,behavior
 48,Bitter Skunk,3.7,6.1,3.4,mischievous
 49,Cheerful Bunny,2.6,4.7,9.6,friendly
 50,Moody Owl,3.4,6.5,4.1,mischievous
+51,Glowing Phoenix,8.7,9.2,8.7,friendly
+52,Dark Witch,5.3,8.8,2.9,mischievous
+53,Singing Mermaid,4.9,6.9,9.3,friendly
+54,Venomous Spider,2.1,7.4,2.8,mischievous
+55,Dancing Firefly,1.3,5.7,9.5,friendly
+56,Howling Coyote,5.6,7.1,3.7,mischievous
+57,Prancing Pegasus,7.8,8.3,8.9,friendly
+58,Stalking Jaguar,6.7,8.5,3.2,mischievous
+59,Giggling Gnome,2.8,6.2,9.1,friendly
+60,Hissing Cobra,4.5,8.1,2.5,mischievous
+61,Bouncing Kangaroo,6.1,5.8,8.6,friendly
+62,Prowling Leopard,5.9,7.9,3.9,mischievous
+63,Floating Cloud Sheep,3.7,6.4,9.2,friendly
+64,Spitting Llama,4.8,6.6,4.1,mischievous
+65,Humming Bee,1.4,5.3,9.4,friendly
+66,Screeching Vulture,5.2,7.6,3.1,mischievous
+67,Twinkling Star Fish,2.9,6.1,8.8,friendly
+68,Snapping Turtle,6.3,7.3,3.8,mischievous
+69,Purring Lion Cub,4.6,6.7,9.1,friendly
+70,Growling Bear,7.5,8.2,2.7,mischievous
+71,Fluttering Angel,3.1,7.8,9.6,friendly
+72,Cackling Hyena,5.7,7.5,3.4,mischievous
+73,Sparkling Seahorse,2.3,5.9,8.9,friendly
+74,Roaring Minotaur,8.9,9.1,2.3,mischievous
+75,Gentle Giraffe,8.2,6.3,9.4,friendly
+76,Scratching Wolverine,6.8,8.4,3.5,mischievous
+77,Laughing Hyacinth,1.7,5.4,9.3,friendly
+78,Biting Piranha,3.2,7.7,2.6,mischievous
+79,Cuddling Koala,4.1,5.1,9.7,friendly
+80,Striking Viper,4.9,8.6,3.3,mischievous
+81,Peaceful Panda,6.4,6.8,8.8,friendly
+82,Clawing Falcon,4.3,7.8,4.2,mischievous
+83,Smiling Sloth,3.8,4.9,9.2,friendly
+84,Stinging Scorpion,3.9,8.3,2.9,mischievous
+85,Hopping Frog,2.2,5.6,8.7,friendly
+86,Lurking Shark,7.9,9.3,2.4,mischievous
+87,Wiggling Worm,1.1,4.2,9.8,friendly
+88,Chomping Crocodile,8.3,8.7,2.8,mischievous
+89,Snuggling Hamster,1.8,4.8,9.5,friendly
+90,Hunting Wolf,6.9,8.1,3.6,mischievous
+91,Spinning Spider Monkey,4.4,6.5,8.4,friendly
+92,Slithering Anaconda,7.6,8.9,3.1,mischievous
+93,Chirping Canary,1.9,5.2,9.1,friendly
+94,Pouncing Cheetah,6.2,8.8,3.7,mischievous
+95,Dreaming Dormouse,2.6,4.7,9.4,friendly
+96,Stalking Panther,7.1,8.5,2.9,mischievous
+97,Frolicking Seal,5.8,6.2,8.9,friendly
+98,Swooping Eagle,5.4,7.9,4.5,mischievous
+99,Napping Narwhal,7.4,6.9,9.2,friendly
+100,Snapping Alligator,8.4,8.6,2.5,mischievous

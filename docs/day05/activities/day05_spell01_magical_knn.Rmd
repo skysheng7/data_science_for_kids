@@ -90,16 +90,16 @@ Now let's prepare our data for machine learning magic!
 
 ### 📊 Split the Data
 
-We need to split our data so we can train our model and then test how well it works on "new" creatures.
+We need to split our data so we can train our model and then validate how well it works on "new" creatures.
 
 ```{r split-data}
-# Split our data into training and testing sets
-# We'll use 75% for training, 25% for testing
+# Split our data into training and validation sets
+# We'll use 75% for training, 25% for validation (to choose best K)
 set.seed(123)  # For reproducible results
 
 creature_split <- initial_split(creatures, prop = 0.75, strata = behavior)
 creature_train <- training(creature_split)
-creature_test <- testing(creature_split)
+creature_validation <- testing(creature_split)
 ```
 
 ```{r check-split}
@@ -107,8 +107,8 @@ creature_test <- testing(creature_split)
 cat("Training data:\n")
 creature_train %>% count(behavior)
 
-cat("\nTesting data:\n")
-creature_test %>% count(behavior)
+cat("\nValidation data:\n")
+creature_validation %>% count(behavior)
 ```
 
 ### 🍳 Create a Recipe for Data Preprocessing
@@ -163,9 +163,9 @@ print("🎉 Model training complete!")
 ```
 
 ```{r make-predictions}
-# Let's make predictions on our test data
-creature_predictions <- predict(creature_fit, creature_test) %>%
-  bind_cols(creature_test)
+# Let's make predictions on our validation data
+creature_predictions <- predict(creature_fit, creature_validation) %>%
+  bind_cols(creature_validation)
 
 # Look at our predictions
 head(creature_predictions)
@@ -238,8 +238,8 @@ test_k_values <- function(k_val) {
   
   fit_k <- workflow_k %>% fit(data = creature_train)
   
-  predictions_k <- predict(fit_k, creature_test) %>%
-    bind_cols(creature_test)
+  predictions_k <- predict(fit_k, creature_validation) %>%
+    bind_cols(creature_validation)
   
   accuracy_k <- predictions_k %>%
     mutate(
@@ -322,5 +322,69 @@ new_predictions <- predict(best_fit, new_creatures) %>%
 print("Predictions for new magical creatures:")
 print(new_predictions)
 ```
+
+---
+
+## 🧪 Part 7: Final Model Testing with Independent Test Set
+
+Now let's test our final model on completely unseen data to get an unbiased performance estimate!
+
+```{r load-test-data}
+# Load the independent test dataset
+# This data was never used for training or choosing K
+test_creatures <- read_csv("../datasets/magical_creatures_test.csv")
+
+print("Independent test dataset loaded:")
+print(paste("Number of test creatures:", nrow(test_creatures)))
+test_creatures %>% count(behavior)
+```
+
+```{r final-test-evaluation}
+# Use our best model (with optimal K) to make predictions on test set
+final_test_predictions <- predict(best_fit, test_creatures) %>%
+  bind_cols(test_creatures)
+
+# Calculate final test accuracy
+final_test_accuracy <- final_test_predictions %>%
+  mutate(
+    behavior = as.factor(behavior),
+    .pred_class = as.factor(.pred_class)
+  ) %>%
+  accuracy(truth = behavior, estimate = .pred_class)
+
+print(paste("🎯 Final Test Accuracy (K =", best_k, "):", round(final_test_accuracy$.estimate, 3)))
+```
+
+```{r final-confusion-matrix}
+# Final confusion matrix on test set
+print("🔍 Final Confusion Matrix on Test Set:")
+final_test_predictions %>%
+  mutate(
+    behavior = as.factor(behavior),
+    .pred_class = as.factor(.pred_class)
+  ) %>%
+  conf_mat(truth = behavior, estimate = .pred_class)
+```
+
+```{r final-visualization}
+# Visualize final test results
+ggplot(final_test_predictions, aes(x = size, y = magic_power)) +
+  geom_point(aes(color = behavior, shape = .pred_class), size = 3, alpha = 0.8) +
+  labs(title = "Final Model Performance on Independent Test Set",
+       subtitle = paste("Best K =", best_k, "| Test Accuracy =", round(final_test_accuracy$.estimate, 3)),
+       x = "Size", 
+       y = "Magic Power",
+       color = "True Behavior",
+       shape = "Predicted Behavior") +
+  theme_minimal()
+```
+
+### 🎓 Key Learning Points
+
+💡 **What we learned about model validation:**
+- **Training set**: Used to train the model
+- **Validation set**: Used to choose the best K value
+- **Test set**: Used for final, unbiased performance evaluation
+- This approach prevents overfitting and gives realistic performance estimates!
 
 ---

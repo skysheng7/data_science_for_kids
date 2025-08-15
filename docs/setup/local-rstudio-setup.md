@@ -60,6 +60,7 @@ install.packages(c(
   "infer"         # Sampling
   "knitr",        # Document creation
   "rmarkdown"     # Reports and presentations
+  "kknn"
 ))
 ```
 
