@@ -16,12 +16,11 @@ title: Day 5 - Machine Learning & AI
 
 By the end of today, you will:
 - 🧠 Understand what machine learning is and how computers learn from data
-- 🎯 Learn about training and testing data through hands-on activities
-- 🔍 Master K-Nearest Neighbors (KNN) classification with real datasets
+- 🎯 Learn about training and testing data, the golden rules in machine learning
+- 🔍 Master K-Nearest Neighbors (KNN) classification
 - 🤖 Explore different types of AI and their real-world applications
 - ⚖️ Discuss AI ethics, bias, and responsible technology use
-- 🔮 Use generative AI tools like Claude to help with coding
-- 📊 Conduct your own AI model comparison experiment
+- 🔮 Use generative AI tools like Claude and Cursor to help with coding
 
 <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDJnNmZmNDMzaXZqZTk1NmQxejB6ZnNlcWhrMjN2ZmtpbXhkemI0ZyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/OOmn3L2GZB1w38CFW3/giphy.gif" alt="hello_robot" style="width: 60%; height: auto;">
 
@@ -255,37 +254,472 @@ Build your own KNN model and test its accuracy!
 
 ### 5.3 Programming with AI: Claude Magic (*Duration: 25 minutes*)
 
-### Spell 3: Claude Coding Assistant
-
-**📁 Find this spell in Posit Cloud:** Look for the file `day05_spell03_claude_helper.R` in your project files!
-
 #### 🎈 Activity: AI-Powered Coding
-Learn how to use Claude (AI assistant) to help write R code:
+Learn how to use Claude (AI assistant) to help write R code and ask questions about what we've learned!
 
-**💡 How to Ask AI for Code Help:**
-1. Be specific about what you want
-2. Include examples of your data
-3. Ask for explanations, not just code
-4. Always test the code yourself!
+**💡 Practice Questions Based on Our 4-Day Journey:**
 
-**✨ Challenge:** Use Claude to create a visualization you've never made before!
+**Day 1 Review Questions:**
+- "Explain if-else statements in R with a simple example"
+- "How do for loops work in R? Give me a fun example with animals"
+- "What's the difference between a vector and a dataframe in R?"
 
-### 5.4 AI Model Battle Arena (*Duration: 25 minutes*)
+**Day 2-3 Review Questions:**
+- "Show me how to use %>% (pipe) to clean messy data"
+- "What does group_by() and summarize() do in R?"
+- "Explain what a histogram tells us about data distribution"
 
-### Spell 4: Chatbot Arena Experiment
+**Day 4 Review Questions:**
+- "Can you explain what is bootstrapping to me like I'm a 5-year-old?"
+- "Why do we need bootstrapping?"
+- "What is the difference between sampling distribution and boostrapping distribution?"
 
-**📁 Find this spell in Posit Cloud:** Look for the file `day05_spell04_chatbot_arena.R` in your project files!
+**Day 5 New Concepts:**
+- "What's the difference between training and testing data in machine learning?"
+- "How does K-Nearest Neighbors work? Use a simple example"
 
-#### 🎈 Activity: Secret AI Evaluation
-Each student gets a secret evaluation criteria:
-- 🎨 Most creative response
-- 📖 Most realistic answer  
-- 🤓 Most technical accuracy
-- 😊 Most helpful tone
+**🤡 Fun & Ridiculous Questions to Try:**
+- "Write R code to determine if I should eat pizza based on the weather"
+- "How would I use R to plan the perfect magical birthday party?"
+- "Write code to predict if my sock will go missing in the laundry"
 
-Compare responses from different AI models and record results!
+**🧙‍♀️ Questions with Ambiguous Answers:**
+- "What's the best way to visualize data?" (Many correct answers!)
+- "How do I know if my machine learning model is good?" (Depends on context!)
+- "Should I use mean or median?" (Depends on your data!)
 
-**✨ Challenge:** Analyze the class results - which AI model won overall?
+#### 🎯 Prompt Engineering Magic (VERY IMPORTANT!):**
+
+##### 🌟 The Golden Rule: Give Context!
+**Always tell the AI what situation you're in!**
+- ❌ "Help me with math"
+- ✅ "I'm a 7th grader working on fractions homework. Help me understand how to add 1/3 + 1/4"
+
+**Pro tip:** Start a new chat when your conversation gets really long (20+ messages) to keep the AI focused!
+
+---
+
+1. 🧠 **Ask the AI to Think Step by Step**
+*Make the AI show its work like in math class!*
+
+**Examples:**
+- "Step by step, how do I make a peanut butter sandwich?"
+- "Walk me through the process of solving 2x + 5 = 15 step by step"
+
+---
+
+2. ⏰ **Give the AI Time to Think**
+*Tell the AI it's okay to take its time - just like you do on tests!*
+
+**Examples:**
+- "Take your time and think carefully before answering"
+- "Use the maximum amount of thinking. It's better to think too much than too little"
+- "Don't rush - I want your best answer"
+
+---
+
+3. 📋 **Use Structured Formats**
+*Ask for answers in organized ways!*
+
+**JSON Format Example:**
+```
+"Give me information about dogs in this JSON format:
+{
+  'name': 'Golden Retriever',
+  'size': 'Large',
+  'personality': 'Friendly and energetic',
+  'good_with_kids': true
+}"
+```
+
+**List Format Example:**
+- "Give me 5 facts about space as a numbered list"
+- "Create a bullet point summary of this article"
+
+---
+
+4. 🎭 **Give the AI a Persona (Role-Play!)**
+*Make the AI pretend to be someone specific!*
+
+**Examples:**
+- "You are a friendly pirate captain. Teach me about ocean currents!"
+- "You are a wise wizard. Explain photosynthesis using magical terms"
+- "Pretend you're my cool older sibling. Help me understand why the sky is blue"
+- "You are an expert chef. Teach me cooking basics"
+- "You are an expert data scientist with 20 years old experience. Help me write a code to do ..."
+
+---
+
+5. 📚 **Provide Clear Examples**
+*Show the AI exactly what you want!*
+
+**Example:**
+```
+"Write animal facts in this format:
+🐘 Elephants: These gentle giants can weigh up to 6 tons and have amazing memories!
+🦁 Lions: Known as the king of the jungle, they actually live in grasslands!
+
+Now do the same for: dolphins, penguins, and butterflies"
+```
+
+---
+
+6. 🔍 **Ask for Explanations**
+*Don't just get answers - understand the "why"!*
+
+**Examples:**
+- "Don't just tell me the answer - explain why 2+2=4"
+- "Explain your reasoning behind this recommendation"
+- "Walk me through how you solved this problem"
+
+---
+
+7. 📐 **Request Specific Formats**
+*Tell the AI exactly how you want your answer!*
+
+**Examples:**
+- "Give me the result as a table"
+- "Format this as a poem"
+- "Write this as a story with dialogue"
+- "Create a recipe format with ingredients and steps"
+
+---
+
+8. 🍳 **Use Fun Analogies**
+*Make complex things simple with comparisons!*
+
+**Examples:**
+- "Explain how computers work using kitchen analogies"
+- "Describe the solar system like it's a neighborhood"
+- "Explain DNA using LEGO building blocks"
+- "Compare the internet to a giant library"
+
+---
+
+9. 🎨 **Ask for Alternatives**
+*Get multiple options to choose from!*
+
+**Examples:**
+- "Show me 3 different ways to solve this math problem"
+- "Give me 5 creative project ideas about butterflies"
+- "What are different ways I could organize my room?"
+
+---
+
+10. 📏 **Set Clear Constraints**
+*Give the AI specific rules to follow!*
+
+**Examples:**
+- "Explain this using only words a 10-year-old would know"
+- "Write a story that's exactly 100 words"
+- "Use only materials I can find at home"
+- "Solve this without using a calculator"
+
+---
+
+11. 😊 **Be Polite (It Really Helps!)**
+*Good manners work with AI too!*
+
+**Examples:**
+- "Please explain what stars are made of"
+- "Could you help me understand fractions?"
+- "Thank you! Could you give me one more example?"
+
+---
+
+12. 🎯 **Be Super Specific**
+*The more details you give, the better the answer!*
+
+**Examples:**
+- ❌ "Help with science"
+- ✅ "I'm studying the water cycle for 6th grade science. Can you explain evaporation in simple terms?"
+
+- ❌ "Write a story"
+- ✅ "Write a 200-word adventure story about a kid who discovers a secret door in their school library"
+
+---
+
+13. 🔄 **Ask for Improvements**
+*Make your answers even better!*
+
+**Examples:**
+- "Can you make this explanation simpler?"
+- "Add more examples to help me understand"
+- "Can you make this more fun and exciting?"
+
+---
+
+14. 🎲 **Use "What If" Questions**
+*Explore different possibilities!*
+
+**Examples:**
+- "What if gravity was half as strong on Earth?"
+- "What if dinosaurs never went extinct?"
+- "What if we could breathe underwater?"
+
+---
+
+15. 🏗️ **Build on Previous Answers**
+*Keep the conversation going!*
+
+**Examples:**
+- "That's great! Now can you give me a harder example?"
+- "I understand that part. What about...?"
+- "Can you connect this to what we talked about earlier?"
+
+---
+
+##### 🚀 **Pro Tips for Success:**
+
+✨ **The Magic Formula:**
+
+Context + Clear Request + Specific Format + Politeness = Amazing Results!
+
+#####  🔥 **Advanced Techniques:**
+- **Chain of Thought:** "Let me think through this step by step..."
+- **Multiple Perspectives:** "Show me this from a student's view and a teacher's view"
+- **Error Checking:** "Check this answer and tell me if anything seems wrong"
+
+##### 🎪 **Make It Fun:**
+- Turn learning into games: "Quiz me on this topic!"
+- Create characters: "Explain this as if you're a talking robot from the future"
+- Use storytelling: "Tell me about photosynthesis through the adventure of a water molecule"
+
+---
+
+##### 🎯 **Remember:**
+- **Start fresh:** New chat for new big topics
+- **Be patient:** Good prompts take practice
+- **Experiment:** Try different approaches
+- **Have fun:** The best learning happens when you're enjoying yourself!
+
+*Happy prompting, future AI wizards! 🧙‍♂️✨*
+
+---
+
+**✨ Challenge:** Use these prompt engineering techniques to get Claude to help you create a data story combining everything we've learned this week!
+
+### 5.4 🔍 How to Check if AI is Giving You the Right Code
+
+*Because even AI makes mistakes sometimes! Here's how to be a code detective 🕵️‍♂️*
+
+🎯 **Why Check AI Code?**
+Just like you double-check your math homework, you should double-check AI code! Even smart AI can make tiny mistakes or misunderstand what you wanted.
+
+---
+
+#### 5.4.1. 🤖 **Ask Two Different AI Models**
+*Get a second opinion, just like asking two teachers!*
+
+**How to do it:**
+- Ask ChatGPT: "Create R code to make a bar chart of favorite ice cream flavors"
+- Ask Claude: "Create R code to make a bar chart of favorite ice cream flavors"  
+- Compare the answers - are they similar? Do they both make sense?
+
+**Example Questions to Try:**
+```r
+"Write R code to create a histogram of student ages"
+"Write R code using ggplot2 to make a scatter plot of height vs weight"
+"Write R code using dplyr to find all students taller than 60 inches"
+```
+
+---
+
+#### 5.4.2. 🧪 **Create Test Data to Check Your Code**
+*Make fake data to see if your code actually works!*
+
+**Step 1: Ask AI to create simple test data**
+```r
+"Create a simple data frame in R with 5 students, their names, 
+ages (between 10-15), and favorite colors. Call it 'test_data'"
+```
+
+**Step 2: Test your code with this data**
+
+**Example:**
+Let's say you asked AI to write code that finds all students older than 12:
+
+```r
+# AI might give you this code:
+older_students <- test_data %>% 
+  filter(age > 12)
+
+# Check: Look at test_data and count how many students 
+# are actually older than 12. Does your result match?
+```
+
+**Fun Test Examples to Try:**
+1. **Testing a histogram:**
+   ```r
+   "Create test data with 10 people and their heights, 
+   then write code to make a histogram"
+   ```
+
+2. **Testing a filter:**
+   ```r
+   "Create test data with 8 animals and their weights, 
+   then filter for animals heavier than 50 pounds"
+   ```
+
+3. **Testing a summary:**
+   ```r
+   "Create test data with 6 students and their test scores, 
+   then calculate the average score"
+   ```
+
+---
+
+#### 5.4.3. 🎭 **Team Up Two AI Models**
+*Have one AI write code, another AI check it!*
+
+**The Process:**
+1. **AI #1 (The Coder):** "Write R code to create a pie chart of favorite pizza toppings using ggplot2"
+
+2. **AI #2 (The Checker):** "Look at this R code and tell me if it will work correctly. Also explain what each line does:
+   ```r
+   [paste the code from AI #1]
+   ```"
+
+**What to look for in the checker's response:**
+- Does it explain each line clearly?
+- Does it mention any potential problems?
+- Does it suggest improvements?
+
+---
+
+#### 5.4.4. 🔬 **Simple Code Testing Tricks**
+
+##### **Method 1: The "Does it Run?" Test**
+Copy the code into R and see if it runs without errors!
+
+##### **Method 2: The "Does it Make Sense?" Test**
+Ask yourself:
+- If I have 5 red apples and 3 green apples, should my bar chart show 2 bars?
+- If I'm filtering for ages > 10, should a 9-year-old appear in my results?
+
+##### **Method 3: The "Explain It Back" Test**
+Ask the AI: "Explain what this code does line by line"
+
+---
+
+#### 5.4.5 🎯 **Easy Practice Examples for Kids**
+
+##### **Example 1: Testing a Simple Bar Chart**
+```r
+# Ask AI: "Create R code to make a bar chart of pet types: 
+# 3 dogs, 2 cats, 1 hamster"
+
+# Then create test data and check:
+pets <- data.frame(
+  type = c("dog", "dog", "dog", "cat", "cat", "hamster"),
+  count = c(1, 1, 1, 1, 1, 1)
+)
+
+# Does your chart show 3 bars with the right heights?
+```
+
+##### **Example 2: Testing a Filter**
+```r
+# Ask AI: "Write code to find all movies longer than 2 hours"
+
+# Test with simple data:
+movies <- data.frame(
+  title = c("Short Movie", "Long Movie", "Medium Movie"),
+  length = c(90, 150, 120)  # in minutes
+)
+
+# Should only return "Long Movie" (150 minutes = 2.5 hours)
+```
+
+##### **Example 3: Testing a Loop**
+```r
+# Ask AI: "Write a for loop that prints numbers 1 to 5"
+
+# Easy check: Run it and count - do you see exactly 5 numbers?
+```
+
+---
+
+#### 5.4.6 🏆 **Become a Code Detective - Checklist**
+
+Before trusting AI code, ask yourself:
+
+- [ ] **Did I test it with simple data?**
+- [ ] **Does the output make logical sense?**
+- [ ] **Can I explain what each part does?**
+- [ ] **Does it actually answer my original question?**
+
+---
+
+#### 5.4.7 🌟 **Remember: You're the Boss!**
+
+- **AI is your helper, not your boss** - always check its work!
+- **It's okay if code has mistakes** - that's how we learn!
+- **When in doubt, ask questions** - "What does this line do?"
+- **Trust but verify** - like a good scientist! 🔬
+
+*Keep being awesome code detectives! 🕵️‍♀️✨*
+
+### 5.5 AI Model Battle Arena 
+
+#### 🎈 Activity: How Do AI Experts Evaluate Models?
+
+**💡 What is Chatbot Arena?**
+Real AI researchers use a system called "Chatbot Arena" where people compare different AI models to see which one performs better. Today, you become AI evaluation experts!
+
+**🔬 How Do We Know Which AI Model is Best?**
+Just like how we tested our KNN models, we need to test AI chatbots! But instead of accuracy scores, we use human judgment.
+
+**🏟️ Your Mission: Compare AI Models**
+
+**Part 1: Text Generation (LLM) Battle**
+Ask the SAME question to different AI models and compare their answers:
+
+**📝 Test Questions:**
+1. **R Programming Help:** "Explain how to make a scatter plot in R for beginners"
+2. **Creative Storytelling:** "Write a short story about an otter who discovers magic of data science"
+3. **Math Problem:** "If I have 100 candy pieces and want to share equally among 7 friends, how should I do it?"
+4. **Ethics Question:** "Should robots be allowed to make decisions about hiring people for jobs?"
+
+**Part 2: Image Generation (T2I) Battle**
+Compare different text-to-image AI models
+
+**🖼️ Test Prompts:**
+1. **Simple Object:** "A red apple on a wooden table"
+2. **Complex Scene:** "Otters learning data science in a magical classroom with floating charts"
+3. **Diverse People:** "A surgeon."
+4. **Abstract Concept:** "What does 'happiness' look like as a color and shape?"
+
+#### 🕵️ Secret Evaluation Mission
+Each student choose your own secret evaluation criteria:
+- 🎨 **Creativity Judge:** Which response is most creative and imaginative?
+- 📖 **Accuracy Judge:** Which response is most factually correct?
+- 🤓 **Clarity Judge:** Which response is easiest to understand?
+- 😊 **Helpfulness Judge:** Which response is most useful for solving the problem?
+- 🌈 **Diversity Judge:** Which response represents people most inclusively?
+- 🔍 **Honesty Judge:** Which response admits when it doesn't know something?
+
+**📊 Recording Your Results:**
+For each test, secretly record which models you end up selecting in each pairwise model comparisons.
+
+#### 🏆 The Grand Analysis
+
+**🎈 Class Discussion Questions:**
+- Which AI model won overall when we combine everyone's response?
+- Did different models excel at different types of tasks?
+- What surprised you about the AI responses?
+- Did you notice any biases in the AI outputs?
+- Which model would YOU choose as the best? Why?
+
+**🤔 Deeper Thinking:**
+- How do these results compare to what the "experts" say online?
+- What if we tested with different types of questions?
+- How might our age/background affect which AI we prefer?
+
+**💡 Key Learning:**
+Just like in data science, evaluation depends on what you're measuring and who's doing the judging!
+
+**✨ Challenge:** Design your own test question that you think will really challenge the AI models. What makes a question "hard" for AI to answer?
 
 <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3cnVnOGQ4bXFwcjdmMGhjeGIzcjI3ZGwyano2bTN6NzZnYW4zdGV0ciZlcD12MV9naWZzX3NlYXJjaCZjdD1n/GiNyo8KD5j9mM/giphy.gif" alt="minion_yeah" style="width: 100%; height: auto;">
 
@@ -496,18 +930,130 @@ Here's how it works:
 **💡 Key Learning:**
 Just like in the telephone game, when AI learns from AI instead of humans, the information gets more and more wrong over time! That's why it's important for AI to keep learning from real human content.
 
+## 7. Optional: Advanced AI Tools Demo (*Duration: 15 minutes - if time allows*)
 
-## 7. Optional: Cursor IDE Demo (*Duration: 10 minutes - if time allows*)
-
-### 7.1 Advanced AI Coding Tools
+### 7.1 Cursor IDE: AI-Powered Programming
 
 **💡 What is Cursor IDE?**
-An advanced code editor where AI helps you write code in real-time!
+[Cursor](https://cursor.com/agents) is an advanced code editor where AI agents helps you write code in real-time! It's like having a super-smart coding partner sitting next to you.
 
 **🎈 Activity: Watch the Magic**
 - See how AI can complete your code as you type
-- Understand how professional developers use AI tools
-- Discuss: How might this change programming in the future?
+- Watch AI understand your entire project context
+- See how it can fix bugs and suggest improvements
+
+**🧙‍♀️ The Power of System Prompts**
+
+**💡 What is a System Prompt?**
+A system prompt is like giving the AI a "personality" or "role" before it starts helping you. It's like telling someone "You are now a cooking teacher" before asking cooking questions!
+
+**🎭 Demo: How System Prompts Change Everything**
+
+**Scenario 1: Default AI**
+```
+User: "How do I make a plot in R?"
+```
+
+**Scenario 2: With System Prompt - "You are a patient teacher explaining to 12-year-olds"**
+```
+User: "How do I make a plot in R?"
+```
+
+**Scenario 3: With System Prompt - "You are a professional data scientist reviewing code"**
+```
+User: "How do I make a plot in R?"
+```
+
+**🤯 Mind-Blowing Demo Examples:**
+- AI reads your entire project and suggests improvements
+- AI explains complex code in your own words
+- AI can refactor (improve) your code while keeping it working
+- AI helps debug errors by understanding your specific context
+
+**🎈 Discussion Questions:**
+- How might this change the way people learn programming?
+- What skills will be most important for future programmers?
+- Should students learn to code without AI first, or with AI from the beginning?
+
+#### 🪄 Fun Cursor Project Ideas to Demo
+
+**💡 These are quick projects perfect for showcasing Cursor's magic!**
+
+**🎯 Project 1: Magical Creature Generator Website**
+- **System Prompt:** "You are a helpful web developer who explains code clearly to middle school students. Use fun comments and simple explanations."
+- **User Prompt:** "Create a colorful webpage that generates random magical creatures with names, powers, and descriptions. Include a button to generate new creatures and make it look magical with CSS! Create a new GitHub repository to host the code, and use GitHub pages to launch the website."
+
+**🎮 Project 2: Retro Snake Game**
+- **System Prompt:** "You are a fun game developer who loves creating simple, engaging games for kids. Explain your code with comments that make it easy to understand."
+- **User Prompt:** "Create a colorful Snake game that runs in the browser! Make the snake grow when it eats food, keep score, and add fun sound effects. Use arrow keys to control the snake. Make it look retro and cool with neon colors! Include a game over screen with the final score and a restart button. Host it on my GitHub repository, GitHub Pages so I can share it with friends!"
+
+**🏰 Project 3: Choose Your Own Adventure Story**
+- **System Prompt:** "You are a storytelling expert who creates engaging interactive stories for middle schoolers. Make stories that are exciting but appropriate for all ages."
+- **User Prompt:** "Create an interactive 'Choose Your Own Adventure' website! Start with a story about exploring a mysterious castle. At each story section, give users 2-3 choices that lead to different paths. Include fun illustrations using CSS art or emoji. Add different endings based on the choices they make. Make it feel like playing a text-based RPG game with inventory, character stats, and multiple storylines! Create a new GitHub repository to host the code, and use GitHub pages to launch the website."
+
+**🎮 Demo Tips:**
+- Start with a simple prompt and watch Cursor build the entire project
+- Show how Cursor understands context from previous messages
+- Demonstrate real-time code completion
+- Let Cursor explain the code it writes
+- Show how it can debug and improve the code
+
+### 7.2 Perplexity: AI-Powered Research Assistant
+
+**💡 What is Perplexity?**
+[Perplexity](https://www.perplexity.ai/) is like a super-smart search engine that reads the internet and gives you answers with sources, perfect for research!
+
+**🔍 How is Perplexity Different from Google?**
+- **Google:** Shows you links to websites
+- **Perplexity:** Reads those websites and summarizes the answer for you
+- **Bonus:** Tells you exactly which sources it used!
+
+**🎈 Activity: Research Challenge** (*if time allows*)
+Try asking Perplexity some research questions:
+
+**🧪 Science Questions:**
+- "What causes rainbows and how do they form?"
+- "Why do cats purr and what does it mean?"
+
+**📊 Data Science Questions:**
+- "What are the newest trends in AI for 2025?"
+- "How do companies use AI to recommend products?"
+
+**🌍 Current Events:**
+- "What are the latest developments in AI safety?"
+- "How are schools using AI tools to help students learn?"
+
+**💡 Key Learning:**
+Notice how Perplexity shows you its sources! This is super important for checking if information is reliable.
+
+**🤔 Discussion:**
+- How do you know if an AI research tool is giving you good information?
+- Why is it important to check the sources?
+- When should you use Perplexity vs. Google vs. asking a human expert?
+
+### 7.3 NotebookLM: AI-Powered Research and Learning Assistant
+
+**💡 What is NotebookLM?**
+[NotebookLM](https://notebooklm.google.com/) is Google's AI-powered research assistant that can read your documents, notes, and sources to create summaries, answer questions, and even generate study guides!
+
+**🎈 Amazing Features Demo:**
+- **Document Chat:** Ask questions about specific documents (PDFs, text files, websites, and more) you've uploaded
+- **Source Synthesis:** Knows all your sources and can connect ideas across them. Combines information from multiple sources
+- **Study Guide Creation:** Automatically creates organized notes and summaries
+- **Audio Overviews:** Generates engaging podcast conversations about your content!
+
+**🧪 Cool Use Cases for Students:**
+- Upload your class notes and ask questions to study for tests
+- Combine research from multiple websites into one summary
+- Create study guides from textbook chapters
+- Generate audio summaries to listen to while walking or exercising
+
+**🎯 Fun Demo:**
+- Upload our camp materials and ask NotebookLM to create a study guide
+- Demonstrate the audio overview feature with our camp content
+
+**💡 Key Learning:**
+NotebookLM helps you understand and organize information better by connecting ideas across multiple sources - perfect for research projects and studying!
 
 ## 8. Camp Celebration & Survey (*Duration: 10 minutes*)
 
