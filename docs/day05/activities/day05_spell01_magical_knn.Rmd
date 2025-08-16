@@ -27,7 +27,7 @@ First, let's load the libraries we need for our machine learning magic!
 ```{r load-libraries}
 # Load our magical libraries
 library(tidymodels)  # For machine learning magic
-library(tidyverse)   # For data manipulation and visualization
+library(dplyr)   # For data manipulation and visualization
 library(kknn)        # For KNN classification
 ```
 
@@ -38,7 +38,7 @@ Oda has been collecting data about various magical creatures she's encountered. 
 ```{r load-data}
 # Load the magical creature dataset
 # This dataset contains information about various magical creatures Oda has encountered
-creatures <- read_csv("../datasets/magical_creatures.csv")
+creatures <- read.csv("../datasets/magical_creatures.csv")
 
 # Take a look at our magical friends
 head(creatures)
@@ -332,7 +332,7 @@ Now let's test our final model on completely unseen data to get an unbiased perf
 ```{r load-test-data}
 # Load the independent test dataset
 # This data was never used for training or choosing K
-test_creatures <- read_csv("../datasets/magical_creatures_test.csv")
+test_creatures <- read.csv("../datasets/magical_creatures_test.csv")
 
 print("Independent test dataset loaded:")
 print(paste("Number of test creatures:", nrow(test_creatures)))
