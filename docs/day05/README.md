@@ -993,14 +993,6 @@ Image credit: a-z-animals.com
 **What is Model Collapse?** {cite}`Shumailov2024ModelCollapse`
  “Model collapse” describes how the performance of generative models degrades over generations of training, with the outputs gradually converging to represent only dominant groups, and ultimately losing representation of minority groups. 
 
- When AI learns from other AI instead of real human content, it starts to "forget" what the real world looks like! This is called "model collapse."
-
-Here's how it works:
-1. **First AI:** Learns from real human content (pretty good!)
-2. **Second AI:** Learns from first AI's content (a little worse)
-3. **Third AI:** Learns from second AI's content (even worse!)
-4. **Keep going...** What would the world look like for AI in the long run??
-
 ```{image} ../../images/model_collapse.png  
 :alt: model_collapse
 :width: 100%
