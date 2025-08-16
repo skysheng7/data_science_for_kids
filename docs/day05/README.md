@@ -198,11 +198,6 @@ Just like studying for a test, computers need practice data (training) and then 
 **💡 What is K-Nearest Neighbors (KNN)?**
 Imagine you're new at school and want to know if you'll like the cafeteria pizza. You could ask the 5 students sitting closest to you. If 3 out of 5 say "yes," you predict you'll like it too! That's similar to how KNN works.
 
-```{image} ../../images/knn.png  
-:alt: knn
-:width: 100%
-```
-
 **🔍 The KNN Process:**
 1. Compute the distance between the new observation and each observation in our training set
 2. Sort the data in ascending order according to the distances
