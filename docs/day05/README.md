@@ -1094,8 +1094,6 @@ NotebookLM helps you understand and organize information better by connecting id
 ### 8.1 Survey & Feedback
 Complete the camp evaluation survey below to help us make future camps even more magical!
 
-https://forms.gle/A16YUH3qzKtnAJFq8
-
 <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3cGlubDAwZnl1ZmFtZTYyNm9wc3VrNnQzYW1zOGRsbW9iYnRpY2VwYiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/FyH83LEK2hytq/giphy.gif" alt="friday" style="width: 100%; height: auto;">
 
 ## 9. 📋 Pro Tips Cheatsheet
