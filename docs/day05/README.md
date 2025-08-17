@@ -126,7 +126,7 @@ Oda the Data Otter is named after **Ada Lovelace** (1815-1852), the world's firs
 - Discuss: What might computers do in the future that we can't imagine yet?
 
 
-## 3. Human KNN Game (*Duration: 10 minutes*)
+## 3. Human KNN Game
 
 *Just like Oda the Data Otter, we'll start by understanding how neighbors help us make decisions!*
 
@@ -141,9 +141,9 @@ Oda the Data Otter is named after **Ada Lovelace** (1815-1852), the world's firs
 
 **💡 Key Discovery:** *The number of neighbors (K) affects our predictions!*
 
-## 4. KNN Machine Learning Magic (*Duration: 45 minutes*)
+## 4. KNN Machine Learning Magic
 
-### 4.1 What is Machine Learning? (*Duration: 10 minutes*)
+### 4.1 What is Machine Learning?
 
 **💡 What is Machine Learning?**
 Think of machine learning like teaching a computer to recognize patterns, just like how you learned to recognize different dog breeds or your friends' handwriting!
@@ -174,7 +174,7 @@ Think of machine learning like teaching a computer to recognize patterns, just l
 **🎈 Discussion**
 - How do you think the computer "learned" these patterns?
 
-### 4.2 Training vs Testing: The Golden Rule (*Duration: 10 minutes*)
+### 4.2 Training vs Testing: The Golden Rule
 
 **💡 What is Training and Testing Data?**
 Just like studying for a test, computers need practice data (training) and then get tested on new data they've never seen before!
@@ -193,7 +193,7 @@ Just like studying for a test, computers need practice data (training) and then 
 
 <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3M213ZTZraWtndTdoOXhjMmd0Mnhwczg3ZnRrY3I1eWJkdWp4ZTVqZCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/GtmmEUMZbo1hhRAi96/giphy.gif" alt="robot_running" style="width: 100%; height: auto;">
 
-### 4.3 How K-Nearest Neighbors Works (*Duration: 15 minutes*)
+### 4.3 How K-Nearest Neighbors Works
 
 **💡 What is K-Nearest Neighbors (KNN)?**
 Imagine you're new at school and want to know if you'll like the cafeteria pizza. You could ask the 5 students sitting closest to you. If 3 out of 5 say "yes," you predict you'll like it too! That's similar to how KNN works.
@@ -209,7 +209,7 @@ We use **Euclidean distance** - like measuring the straight-line distance betwee
 
 Distance = √[(x₁-x₂)² + (y₁-y₂)²]
 
-### 4.4 Why Standardizing Data Matters (*Duration: 10 minutes*)
+### 4.4 Why Standardizing Data Matters
 
 Variables could be on different scale.
 
@@ -230,7 +230,7 @@ recipe(outcome ~ predictors, data = training_data) %>%
   step_scale(all_predictors())       # Scale to standard deviation 1
 ```
 
-### 4.5 The Tidymodels Workflow (*Duration: 10 minutes*)
+### 4.5 The Tidymodels Workflow
 
 **🧪 The Recipe Analogy**
 Think of machine learning like cooking - you need a recipe for preprocessing and a method for cooking!
@@ -262,7 +262,7 @@ fitted_model <- my_workflow %>% fit(data = train_data)
 predictions <- predict(fitted_model, test_data)
 ```
 
-### 4.6 Choosing the Best K: The Elbow Method (*Duration: 10 minutes*)
+### 4.6 Choosing the Best K: The Elbow Method
 
 **🤔 How do we pick the best K value?**
 Too small K (like K=1) = overly sensitive to noise
@@ -296,7 +296,7 @@ Using Oda's magical creature dataset, predict whether a new creature is friendly
 **✨ Challenge:** Try different K values and see which works best!
 
 
-## 5. AI Exploration (*Duration: 75 minutes*)
+## 5. AI Exploration
 
 ### 5.1 What is AI? 
 
@@ -331,7 +331,7 @@ Using Oda's magical creature dataset, predict whether a new creature is friendly
 
 **💡 Take home message:** The definitions of AI we listed above are just for your reference. Ultimately, YOU define what is AI for yourself!
 
-### 5.3 Programming with AI: Claude Magic (*Duration: 25 minutes*)
+### 5.3 Programming with AI: Claude Magic
 
 #### 5.3.1 🎈 Activity: AI-Powered Coding
 Learn how to use Claude (AI assistant) to help write R code and ask questions about what we've learned!
@@ -369,7 +369,7 @@ Learn how to use Claude (AI assistant) to help write R code and ask questions ab
 
 #### 5.3.2 🎯 Prompt Engineering Tips (VERY IMPORTANT!):**
 
-##### 5.3.2.1 🧠 Ask the AI to Think Step by Step
+##### 1. 🧠 Ask the AI to Think Step by Step
 *Make the AI show its work like in math class!*
 
 **Examples:**
@@ -378,7 +378,7 @@ Learn how to use Claude (AI assistant) to help write R code and ask questions ab
 
 ---
 
-##### 5.3.2.2 ⏰ Give the AI Time to Think
+##### 2. ⏰ Give the AI Time to Think
 *Tell the AI it's okay to take its time - just like you do on tests!*
 
 **Examples:**
@@ -388,7 +388,7 @@ Learn how to use Claude (AI assistant) to help write R code and ask questions ab
 
 ---
 
-##### 5.3.2.3 📋 Use Structured Formats
+##### 3. 📋 Use Structured Formats
 *Ask for answers in organized ways!*
 
 **JSON Format Example:**
@@ -408,7 +408,7 @@ Learn how to use Claude (AI assistant) to help write R code and ask questions ab
 
 ---
 
-##### 5.3.2.4 🎭 Give the AI a Persona (Role-Play!)
+##### 4. 🎭 Give the AI a Persona (Role-Play!)
 *Make the AI pretend to be someone specific!*
 
 **Examples:**
@@ -420,7 +420,7 @@ Learn how to use Claude (AI assistant) to help write R code and ask questions ab
 
 ---
 
-##### 5.3.2.5 📚 Provide Clear Examples
+##### 5. 📚 Provide Clear Examples
 *Show the AI exactly what you want!*
 
 **Example:**
@@ -434,7 +434,7 @@ Now do the same for: dolphins, penguins, and butterflies"
 
 ---
 
-##### 5.3.2.6 🔍 Ask for Explanations
+##### 6. 🔍 Ask for Explanations
 *Don't just get answers - understand the "why"!*
 
 **Examples:**
@@ -443,7 +443,7 @@ Now do the same for: dolphins, penguins, and butterflies"
 
 ---
 
-##### 5.3.2.7 🍳 Use Fun Analogies
+##### 7. 🍳 Use Fun Analogies
 *Make complex things simple with comparisons!*
 
 **Examples:**
@@ -452,7 +452,7 @@ Now do the same for: dolphins, penguins, and butterflies"
 
 ---
 
-##### 5.3.2.8 🎨 Ask for Alternatives
+##### 8. 🎨 Ask for Alternatives
 *Get multiple options to choose from!*
 
 **Examples:**
@@ -461,7 +461,7 @@ Now do the same for: dolphins, penguins, and butterflies"
 
 ---
 
-##### 5.3.2.9 📏 Set Clear Constraints
+##### 9. 📏 Set Clear Constraints
 *Give the AI specific rules to follow!*
 
 **Examples:**
@@ -470,7 +470,7 @@ Now do the same for: dolphins, penguins, and butterflies"
 
 ---
 
-##### 5.3.2.10 😊 Be Polite (It Really Helps!)
+##### 10. 😊 Be Polite (It Really Helps!)
 *Good manners work with AI too!*
 
 <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3Z3diMjJnZjFvMHhhZmNjNmh0ODJlbjZ2cm9hMGEwYXhranphN2VqdSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/jLKvwWHIXUS4/giphy.gif" alt=“please” style="width: 60%; height: auto;">
@@ -483,7 +483,7 @@ Now do the same for: dolphins, penguins, and butterflies"
 
 ---
 
-##### 5.3.2.11 🎯 Be Super Specific
+##### 11. 🎯 Be Super Specific
 *The more details you give, the better the answer!*
 
 **Examples:**
@@ -495,7 +495,7 @@ Now do the same for: dolphins, penguins, and butterflies"
 
 ---
 
-##### 5.3.2.12 🏗️ Build on Previous Answers
+##### 12. 🏗️ Build on Previous Answers
 *Keep the conversation going!*
 
 **Examples:**
@@ -503,12 +503,12 @@ Now do the same for: dolphins, penguins, and butterflies"
 - "Can you make this explanation simpler?"
 - "I understand that part. What about...?"
 
-##### 5.3.2.13 🤯 Start a new chat for each task
+##### 13. 🤯 Start a new chat for each task
 *AI can be overwelmed by the large amount of information & lost, if the conversation gets too long*
 
 Start a new chat when your conversation gets really long (20+ messages) to keep the AI focused!
 
-##### 5.3.2.14 🤓 Ask questions in JSON format
+##### 14. 🤓 Ask questions in JSON format
 *AI loves structures!*
 
 Use JSON format when asking questions
@@ -970,7 +970,7 @@ Image credit: a-z-animals.com
 **💡 Key Learning:**
 Just like in the telephone game, when AI learns from AI instead of humans, the information gets more and more wrong over time! That's why it's important for AI to keep learning from real human content.
 
-## 7. Optional: Advanced AI Tools Demo (*Duration: 15 minutes - if time allows*)
+## 7. Advanced AI Tools Demo
 
 ### 7.1 Cursor IDE: AI-Powered Programming
 
@@ -1089,7 +1089,7 @@ Notice how Perplexity shows you its sources! This is super important for checkin
 **💡 Key Learning:**
 NotebookLM helps you understand and organize information better by connecting ideas across multiple sources - perfect for research projects and studying!
 
-## 8. Camp Celebration & Survey (*Duration: 10 minutes*)
+## 8. Camp Celebration & Survey
 
 ### 8.1 Survey & Feedback
 Complete the camp evaluation survey below to help us make future camps even more magical!
