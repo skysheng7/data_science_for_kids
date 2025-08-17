@@ -8,6 +8,11 @@
 
 Welcome to an enchanting adventure where mathematics meets magic, and data tells stories! This summer camp introduces fundamental data science concepts through hands-on activities, storytelling, and creative projects using R programming.
 
+```{image} ../../images/logo2.png
+:alt: logo2
+:width: 50%
+```
+
 ## 👋 Meet Your Instructor
 
 ** Sky (Kehan) Sheng** is a PhD candidate at UBC conducting interdisciplinary research in data science, AI bias, and animal welfare science. Sky is passionate about making data science and AI accessible and fun for young learners.

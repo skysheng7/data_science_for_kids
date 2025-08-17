@@ -548,7 +548,7 @@ Now do the same for: dolphins, penguins, and butterflies"
 
 ---
 
-##### 🚀 **Pro Tips for Success:**
+##### 🚀 Pro Tips for Success:
 
 ✨ **The Magic Formula:**
 
@@ -576,7 +576,6 @@ Context + Clear Request + Specific Format + Politeness = Amazing Results!
 
 ---
 
-**✨ Challenge:** Use these prompt engineering techniques to get Claude to help you create a data story combining everything we've learned this week!
 
 ### 5.4 🔍 How to Check if AI is Giving You the Right Code
 
@@ -587,8 +586,10 @@ Just like you double-check your math homework, you should double-check AI code! 
 
 ---
 
-#### 5.4.1. 🤖 **Ask Two Different AI Models**
+#### 5.4.1. 🤖 Ask Two Different AI Models
 *Get a second opinion, just like asking two teachers!*
+
+**[LMArena](https://lmarena.ai/)** would be a great platform to do so!
 
 **How to do it:**
 - Ask ChatGPT: "Create R code to make a bar chart of favorite ice cream flavors"
@@ -604,7 +605,7 @@ Just like you double-check your math homework, you should double-check AI code! 
 
 ---
 
-#### 5.4.2. 🧪 **Create Test Data to Check Your Code**
+#### 5.4.2. 🧪 Create Test Data to Check Your Code
 *Make fake data to see if your code actually works!*
 
 **Step 1: Ask AI to create simple test data**
@@ -626,29 +627,26 @@ older_students <- test_data %>%
 # Check: Look at test_data and count how many students 
 # are actually older than 12. Does your result match?
 ```
+---
 
-**Fun Test Examples to Try:**
-1. **Testing a histogram:**
-   ```r
-   "Create test data with 10 people and their heights, 
-   then write code to make a histogram"
-   ```
+#### 5.4.3. 💼 Professional Testing (Advanced Concept)
+*Learn how real data scientists test their code!*
 
-2. **Testing a filter:**
-   ```r
-   "Create test data with 8 animals and their weights, 
-   then filter for animals heavier than 50 pounds"
-   ```
+While we didn't cover functions in this camp, **professional data scientists write functions** and create **unit tests** to thoroughly test every piece of code they write.
 
-3. **Testing a summary:**
-   ```r
-   "Create test data with 6 students and their test scores, 
-   then calculate the average score"
-   ```
+**What are unit tests?** 🧪
+- Small tests that check if each part of your code works correctly
+- Professional data scientists write these tests to catch bugs before they cause problems
+- **Test-Driven Development:** Professional programmers often write their tests *before* writing the actual code! This helps them:
+  - Think clearly about what the code should do first
+  - Know immediately if they break something when making changes
+  - Find bugs faster because tests show exactly what went wrong 
+
+💡 **Professional Tip:** Real data scientists spend a large amount of their time writing tests! It might seem like extra work, but it saves huge amounts of time by catching errors early.
 
 ---
 
-#### 5.4.3. 🎭 **Team Up Two AI Models**
+#### 5.4.4. 🎭 Team Up Two AI Models
 *Have one AI write code, another AI check it!*
 
 **The Process:**
@@ -666,24 +664,24 @@ older_students <- test_data %>%
 
 ---
 
-#### 5.4.4. 🔬 **Simple Code Testing Tricks**
+#### 5.4.5. 🔬 Simple Code Testing Tricks
 
-##### **Method 1: The "Does it Run?" Test**
+##### Method 1: The "Does it Run?" Test
 Copy the code into R and see if it runs without errors!
 
-##### **Method 2: The "Does it Make Sense?" Test**
+##### Method 2: The "Does it Make Sense?" Test
 Ask yourself:
 - If I have 5 red apples and 3 green apples, should my bar chart show 2 bars?
 - If I'm filtering for ages > 10, should a 9-year-old appear in my results?
 
-##### **Method 3: The "Explain It Back" Test**
+##### Method 3: The "Explain It Back" Test
 Ask the AI: "Explain what this code does line by line"
 
 ---
 
-#### 5.4.5 🎯 **Easy Practice Examples for Kids**
+#### 5.4.6 🎯 Easy Practice Examples
 
-##### **Example 1: Testing a Simple Bar Chart**
+##### Example 1: Testing a Simple Bar Chart
 ```r
 # Ask AI: "Create R code to make a bar chart of pet types: 
 # 3 dogs, 2 cats, 1 hamster"
@@ -697,7 +695,7 @@ pets <- data.frame(
 # Does your chart show 3 bars with the right heights?
 ```
 
-##### **Example 2: Testing a Filter**
+##### Example 2: Testing a Filter
 ```r
 # Ask AI: "Write code to find all movies longer than 2 hours"
 
@@ -710,7 +708,7 @@ movies <- data.frame(
 # Should only return "Long Movie" (150 minutes = 2.5 hours)
 ```
 
-##### **Example 3: Testing a Loop**
+##### Example 3: Testing a Loop
 ```r
 # Ask AI: "Write a for loop that prints numbers 1 to 5"
 
@@ -719,18 +717,18 @@ movies <- data.frame(
 
 ---
 
-#### 5.4.6 🏆 **Become a Code Detective - Checklist**
+#### 5.4.7 🏆 Become a Code Detective - Checklist
 
 Before trusting AI code, ask yourself:
 
-- [ ] **Did I test it with simple data?**
-- [ ] **Does the output make logical sense?**
-- [ ] **Can I explain what each part does?**
-- [ ] **Does it actually answer my original question?**
+- [ ] Did I test it with simple data?**
+- [ ] Does the output make logical sense?**
+- [ ] Can I explain what each part does?**
+- [ ] Does it actually answer my original question?**
 
 ---
 
-#### 5.4.7 🌟 **Remember: You're the Boss!**
+#### 5.4.8 🌟 Remember: **You're the Boss!**
 
 - **AI is your helper, not your boss** - always check its work!
 - **It's okay if code has mistakes** - that's how we learn!
@@ -740,6 +738,10 @@ Before trusting AI code, ask yourself:
 *Keep being awesome code detectives! 🕵️‍♀️✨*
 
 ### 5.5 AI Model Battle Arena 
+
+[LMArena](https://lmarena.ai/) is a battle field for different large language generative models. Everytime you prompt a question, 2 anonymous AI model will be asked to answer your question, and you will vote which model gave better response. After you give your vote, the system will reveal the models' names. After millions of pairwise comparisons are made, an Elo-rating algorithm is used to rank the AI models based on people's preferences.
+
+[Text-to-image arena](https://lmarena.ai/?chat-modality=image) uses the same logic, but it is a battle field for different text-to-image generative models. 
 
 #### 🎈 Activity: How Do AI Experts Evaluate Models?
 
@@ -798,7 +800,6 @@ For each test, secretly record which models you end up selecting in each pairwis
 **💡 Key Learning:**
 Just like in data science, evaluation depends on what you're measuring and who's doing the judging!
 
-**✨ Challenge:** Design your own test question that you think will really challenge the AI models. What makes a question "hard" for AI to answer?
 
 <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3cnVnOGQ4bXFwcjdmMGhjeGIzcjI3ZGwyano2bTN6NzZnYW4zdGV0ciZlcD12MV9naWZzX3NlYXJjaCZjdD1n/GiNyo8KD5j9mM/giphy.gif" alt="minion_yeah" style="width: 100%; height: auto;">
 
@@ -855,7 +856,7 @@ Think of training data like all the books, websites, and social media posts that
 
 ### 6.3 Real-world examples:
 
-### 6.3.1 Facial recognition AI system (computer vision model) can not recognize people with darker skin tones
+#### 6.3.1 Facial recognition AI system (computer vision model) can not recognize people with darker skin tones
 
 **🤖 What happened?** Scientists discovered that many facial recognition systems work much better on people with lighter skin than people with darker skin. These AI systems are used in phones, security cameras, and even by police.
 
@@ -870,7 +871,7 @@ Think of training data like all the books, websites, and social media posts that
 :width: 100%
 ```
 
-### 6.3.2. AI hiring tools showing gender bias
+#### 6.3.2. AI hiring tools showing gender bias
 
 **💼 What happened?** Amazon created an AI system to help them hire the best employees by automatically reviewing job applications. But there was a big problem - the AI was biased against women!
 
@@ -887,7 +888,7 @@ Think of training data like all the books, websites, and social media posts that
 :width: 100%
 ```
 
-### 6.3.3. Who reviews and removes the toxic contents that are unsafe for AI to learn?
+#### 6.3.3. Who reviews and removes the toxic contents that are unsafe for AI to learn?
 
 **🧹 What happens behind the scenes?** Before AI systems like ChatGPT are trained, real humans have to look through millions of pieces of content from the internet to remove harmful material - like hate speech, violence, or disturbing images.
 
@@ -909,7 +910,7 @@ Think of training data like all the books, websites, and social media posts that
 :width: 100%
 ```
 
-### 6.3.4. What do surgeons look like to AI (text-to-image generative AI)? 
+#### 6.3.4. What do surgeons look like to AI (text-to-image generative AI)? 
 
 A comprehensive study by Ali et al. {cite}`Ali2023FaceSurgeon` investigated demographic representation in AI-generated images of surgeons across three leading text-to-image generators. The researchers analyzed how these AI systems portray surgeons in terms of race, gender, and other demographic characteristics.
 
@@ -922,7 +923,7 @@ The study found significant biases in AI representations, with surgeons predomin
 
 **Real world statistics:** Roughly 1 in 4 general surgeons in North America is a woman today, and the number is rising every year. Asian, black, Hispanic and other minotiries make up about 22% of surgeons in the U.S. Also, surgeons would not look like this in other parts of the world like Asia.
 
-### 6.3.5. **Prompt revision** with good intention
+#### 6.3.5. **Prompt revision** with good intention
 
 we are at a time in history where we have the opportunity to make things right using AI. To solve the problem and represent human in a more diverse way, OpenAI created something called prompt revision.
 
@@ -935,7 +936,7 @@ For human representation, prompt revision went from only showing white men to be
 :width: 100%
 ```
 
-### 6.3.6. **Prompt revision** could erase reality
+#### 6.3.6. **Prompt revision** could erase reality
 
 **💡 What happens when AI tries to make things "prettier"?**
 
@@ -961,9 +962,9 @@ Sometimes AI tries to make images look nicer by changing them from reality! Here
 **💡 Key Learning:**
 AI doesn't always show reality - it might show what it thinks we want to see instead of what's actually true!
 
-## 6.4 What happens when AI trains on AI-made content?
+### 6.4 What happens when AI trains on AI-made content?
 
-### 6.4.1 The Problem: AI Getting Confused About Reality
+#### 6.4.1 The Problem: AI Getting Confused About Reality
 
 **💡 What if AI only learned from other AI?**
 
@@ -978,7 +979,7 @@ Think of it like a game of telephone - when people whisper messages from person 
 
 When you search for "baby peacocks" online, you might see lots of super cute, fluffy pictures. But many of these are actually made by AI! The AI makes baby peacocks look like adorable little cotton balls, which is very different from how they really look.
 
-#### 🐣 Real Baby Peacocks (Called Peachicks!)
+##### 🐣 Real Baby Peacocks (Called Peachicks!)
 
 Real baby peacocks look quite different - they're brown and not as fluffy as AI pictures show! 
 
@@ -988,7 +989,7 @@ Real baby peacocks look quite different - they're brown and not as fluffy as AI 
 ```
 Image credit: a-z-animals.com
 
-#### 🔄 The "Model Collapse" Problem
+##### 🔄 The "Model Collapse" Problem
 
 **What is Model Collapse?** {cite}`Shumailov2024ModelCollapse`
  “Model collapse” describes how the performance of generative models degrades over generations of training, with the outputs gradually converging to represent only dominant groups, and ultimately losing representation of minority groups. 
@@ -1113,12 +1114,6 @@ Notice how Perplexity shows you its sources! This is super important for checkin
 - **Study Guide Creation:** Automatically creates organized notes and summaries
 - **Audio Overviews:** Generates engaging podcast conversations about your content!
 
-**🧪 Cool Use Cases for Students:**
-- Upload your class notes and ask questions to study for tests
-- Combine research from multiple websites into one summary
-- Create study guides from textbook chapters
-- Generate audio summaries to listen to while walking or exercising
-
 **🎯 Fun Demo:**
 - Upload our camp materials and ask NotebookLM to create a study guide
 - Demonstrate the audio overview feature with our camp content
@@ -1173,8 +1168,3 @@ https://forms.gle/A16YUH3qzKtnAJFq8
 - **What it means:** The AI didn't understand your specific context
 - **Why it happens:** Instructions weren't clear enough, missing data context
 - **The Fix:** Provide more specific details, share example data, ask for explanations
-
-**Problem:** Different students get very different results
-- **What it means:** This is normal! People have different perspectives
-- **Why it happens:** We all have different values and experiences
-- **The Fix:** This isn't a bug - it's a feature that teaches us about bias and perspective!
