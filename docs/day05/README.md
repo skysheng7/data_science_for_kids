@@ -333,7 +333,7 @@ Using Oda's magical creature dataset, predict whether a new creature is friendly
 
 ### 5.3 Programming with AI: Claude Magic (*Duration: 25 minutes*)
 
-#### 🎈 Activity: AI-Powered Coding
+#### 5.3.1 🎈 Activity: AI-Powered Coding
 Learn how to use Claude (AI assistant) to help write R code and ask questions about what we've learned!
 
 **💡 Practice Questions Based on Our 4-Day Journey:**
@@ -367,18 +367,9 @@ Learn how to use Claude (AI assistant) to help write R code and ask questions ab
 - "How do I know if my machine learning model is good?" (Depends on context!)
 - "Should I use mean or median?" (Depends on your data!)
 
-#### 🎯 Prompt Engineering Magic (VERY IMPORTANT!):**
+#### 5.3.2 🎯 Prompt Engineering Tips (VERY IMPORTANT!):**
 
-##### 🌟 The Golden Rule: Give Context!
-**Always tell the AI what situation you're in!**
-- ❌ "Help me with math"
-- ✅ "I'm a 7th grader working on fractions homework. Help me understand how to add 1/3 + 1/4"
-
-**Pro tip:** Start a new chat when your conversation gets really long (20+ messages) to keep the AI focused!
-
----
-
-1. 🧠 **Ask the AI to Think Step by Step**
+##### 5.3.2.1 🧠 Ask the AI to Think Step by Step
 *Make the AI show its work like in math class!*
 
 **Examples:**
@@ -387,7 +378,7 @@ Learn how to use Claude (AI assistant) to help write R code and ask questions ab
 
 ---
 
-2. ⏰ **Give the AI Time to Think**
+##### 5.3.2.2 ⏰ Give the AI Time to Think
 *Tell the AI it's okay to take its time - just like you do on tests!*
 
 **Examples:**
@@ -397,7 +388,7 @@ Learn how to use Claude (AI assistant) to help write R code and ask questions ab
 
 ---
 
-3. 📋 **Use Structured Formats**
+##### 5.3.2.3 📋 Use Structured Formats
 *Ask for answers in organized ways!*
 
 **JSON Format Example:**
@@ -417,7 +408,7 @@ Learn how to use Claude (AI assistant) to help write R code and ask questions ab
 
 ---
 
-4. 🎭 **Give the AI a Persona (Role-Play!)**
+##### 5.3.2.4 🎭 Give the AI a Persona (Role-Play!)
 *Make the AI pretend to be someone specific!*
 
 **Examples:**
@@ -429,7 +420,7 @@ Learn how to use Claude (AI assistant) to help write R code and ask questions ab
 
 ---
 
-5. 📚 **Provide Clear Examples**
+##### 5.3.2.5 📚 Provide Clear Examples
 *Show the AI exactly what you want!*
 
 **Example:**
@@ -443,61 +434,47 @@ Now do the same for: dolphins, penguins, and butterflies"
 
 ---
 
-6. 🔍 **Ask for Explanations**
+##### 5.3.2.6 🔍 Ask for Explanations
 *Don't just get answers - understand the "why"!*
 
 **Examples:**
 - "Don't just tell me the answer - explain why 2+2=4"
 - "Explain your reasoning behind this recommendation"
-- "Walk me through how you solved this problem"
 
 ---
 
-7. 📐 **Request Specific Formats**
-*Tell the AI exactly how you want your answer!*
-
-**Examples:**
-- "Give me the result as a table"
-- "Format this as a poem"
-- "Write this as a story with dialogue"
-- "Create a recipe format with ingredients and steps"
-
----
-
-8. 🍳 **Use Fun Analogies**
+##### 5.3.2.7 🍳 Use Fun Analogies
 *Make complex things simple with comparisons!*
 
 **Examples:**
-- "Explain how computers work using kitchen analogies"
-- "Describe the solar system like it's a neighborhood"
 - "Explain DNA using LEGO building blocks"
 - "Compare the internet to a giant library"
 
 ---
 
-9. 🎨 **Ask for Alternatives**
+##### 5.3.2.8 🎨 Ask for Alternatives
 *Get multiple options to choose from!*
 
 **Examples:**
 - "Show me 3 different ways to solve this math problem"
 - "Give me 5 creative project ideas about butterflies"
-- "What are different ways I could organize my room?"
 
 ---
 
-10. 📏 **Set Clear Constraints**
+##### 5.3.2.9 📏 Set Clear Constraints
 *Give the AI specific rules to follow!*
 
 **Examples:**
 - "Explain this using only words a 10-year-old would know"
 - "Write a story that's exactly 100 words"
-- "Use only materials I can find at home"
-- "Solve this without using a calculator"
 
 ---
 
-11. 😊 **Be Polite (It Really Helps!)**
+##### 5.3.2.10 😊 Be Polite (It Really Helps!)
 *Good manners work with AI too!*
+
+<img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3Z3diMjJnZjFvMHhhZmNjNmh0ODJlbjZ2cm9hMGEwYXhranphN2VqdSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/jLKvwWHIXUS4/giphy.gif" alt=“please” style="width: 60%; height: auto;">
+
 
 **Examples:**
 - "Please explain what stars are made of"
@@ -506,7 +483,7 @@ Now do the same for: dolphins, penguins, and butterflies"
 
 ---
 
-12. 🎯 **Be Super Specific**
+##### 5.3.2.11 🎯 Be Super Specific
 *The more details you give, the better the answer!*
 
 **Examples:**
@@ -518,33 +495,36 @@ Now do the same for: dolphins, penguins, and butterflies"
 
 ---
 
-13. 🔄 **Ask for Improvements**
-*Make your answers even better!*
-
-**Examples:**
-- "Can you make this explanation simpler?"
-- "Add more examples to help me understand"
-- "Can you make this more fun and exciting?"
-
----
-
-14. 🎲 **Use "What If" Questions**
-*Explore different possibilities!*
-
-**Examples:**
-- "What if gravity was half as strong on Earth?"
-- "What if dinosaurs never went extinct?"
-- "What if we could breathe underwater?"
-
----
-
-15. 🏗️ **Build on Previous Answers**
+##### 5.3.2.12 🏗️ Build on Previous Answers
 *Keep the conversation going!*
 
 **Examples:**
 - "That's great! Now can you give me a harder example?"
+- "Can you make this explanation simpler?"
 - "I understand that part. What about...?"
-- "Can you connect this to what we talked about earlier?"
+
+##### 5.3.2.13 🤯 Start a new chat for each task
+*AI can be overwelmed by the large amount of information & lost, if the conversation gets too long*
+
+Start a new chat when your conversation gets really long (20+ messages) to keep the AI focused!
+
+##### 5.3.2.14 🤓 Ask questions in JSON format
+*AI loves structures!*
+
+Use JSON format when asking questions
+
+**Examples:**
+- If I want to ask for book recommendations, I'll ask like this
+
+```
+{
+  "task": "book recommendations",
+  "topic": "prompt engineering",
+  "audience": "kids 10-15 years old who started learning about data science",
+  "output_format": "A list of book followed by a one sentence summary for each book"
+}
+```
+
 
 ---
 
@@ -554,19 +534,7 @@ Now do the same for: dolphins, penguins, and butterflies"
 
 Context + Clear Request + Specific Format + Politeness = Amazing Results!
 
-#####  🔥 **Advanced Techniques:**
-- **Chain of Thought:** "Let me think through this step by step..."
-- **Multiple Perspectives:** "Show me this from a student's view and a teacher's view"
-- **Error Checking:** "Check this answer and tell me if anything seems wrong"
-
-##### 🎪 **Make It Fun:**
-- Turn learning into games: "Quiz me on this topic!"
-- Create characters: "Explain this as if you're a talking robot from the future"
-- Use storytelling: "Tell me about photosynthesis through the adventure of a water molecule"
-
----
-
-##### 🎯 **Remember:**
+🎯 **Remember:**
 - **Start fresh:** New chat for new big topics
 - **Be patient:** Good prompts take practice
 - **Experiment:** Try different approaches
