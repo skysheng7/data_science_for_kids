@@ -16,7 +16,7 @@ Posit Cloud is our magical online coding environment where you'll write R code i
 3. 🆓 You will see the "Free" plan on the left most column, click **"Learn more"**
 4. ✍️ Click **"Sign up"**
 5. 📧 Enter your email address and create a password; Or sign up using your own Google account, GitHub account or Clever account
-6. ✅ Verify your email (check your email's inbox for an email from Posit Cloud, and click "verify email"!)
+6. ✅ Verify your email (check your email's inbox for an email from Posit Cloud, and click "verify email"! This step may be optional if you logged in using a third-party account like GitHub)
 7. 🎯 Go back to your Posit Cloud page and click **"Continue"**
 
 
@@ -40,7 +40,7 @@ https://tinyurl.com/3jurvv7m
 
 1. 📂 Open the **"day1"** project
    
-   💡 **Important**: When you open this project, Posit Cloud automatically creates your own permanent copy! This means you can make changes, play around, and save your work - it's all yours to keep and access later.
+   💡 **Important**: When you open this project, Posit Cloud will ask you if you wish to create your own permanent copy, please click "Save a permanent copy" on the top right. This means you can make changes, play around, and save your work - it's all yours to keep and access later.
 
 2. 🖱️ Under the **"Console"** tab (top left)
 3. ⌨️ Type: 
