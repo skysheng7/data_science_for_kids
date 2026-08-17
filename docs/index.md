@@ -11,18 +11,18 @@ Welcome to an enchanting adventure where mathematics meets magic, and data tells
 
 - Location: **[Vancouver Independent School for Science and Technology (VISST)](https://www.visst.ca/)**
 - Date and Time: 
-    - 📅 August 11-15, 2025 (Monday-Friday) 
+    - 📅 August 17-21, 2026 (Monday-Friday) 
     - ⏰ 1:00-4:00 PM
 
 ## 👋 Meet Your Instructor
 
-[**Sky (Kehan) Sheng**](http://www.skysheng.io/) is a PhD candidate at UBC conducting interdisciplinary research in data science, AI bias, and animal welfare science. Sky is passionate about making data science and AI accessible and fun for young learners.
+[**Sky (Kehan) Sheng**](http://www.skysheng.io/) is a PhD candidate at UBC conducting interdisciplinary research in data science, AI bias, and animal welfare science. She is also a lecturer teaching master of data science program at UBC. Sky is passionate about making data science and AI accessible and fun for young learners.
 
 ## 👋 Meet Your Mentors
 
-- **Pavel Timofeev**
-- **Ify Anene**
-- **Sarah Eshafi**
+- **Zei**
+- **Liam**
+- **Anushka**
 
 ## 🗓️ 5-Day Adventure Plan
 
