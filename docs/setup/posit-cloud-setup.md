@@ -24,21 +24,21 @@ Posit Cloud is our magical online coding environment where you'll write R code i
 
 Here is the workspace link we will use during this camp. It's called "data_playground". You can copy the link directly by hovering your mouse over the top right corner of the text box below:
 ```
-https://posit.cloud/spaces/624374/join?access_code=DPo4bWWzbmekRHTREK_nW0M8Sjmpjmjd3gXKHLFO`
+https://posit.cloud/spaces/806548/join?access_code=AFruf4jS_i9IZ1IN0EuHafzzMnGLtkviR1YEXT3h
 ```
 
 If the above link is too long for you, try this shorter one:
 ```
-https://shorturl.at/iM1Hk
+https://tinyurl.com/3jurvv7m
 ```
 
 1. 🔗 Click the workspace link from your instructor
 2. 🎯 Click **"Join Workspace"**
-3. ✨ You're in! You will see **"data_playground"** being listed on the left panel. If you click on "All Content", you should see project for **"Day_1"**.
+3. ✨ You're in! You will see **"data_science_camp"** being listed on the left panel. If you click on "All Content", you should see project for **"day1"**.
 
 ### Step 3: Test Your Setup
 
-1. 📂 Open the **"Day_1"** project
+1. 📂 Open the **"day1"** project
    
    💡 **Important**: When you open this project, Posit Cloud automatically creates your own permanent copy! This means you can make changes, play around, and save your work - it's all yours to keep and access later.
 
