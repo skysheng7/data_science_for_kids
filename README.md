@@ -2,7 +2,7 @@
 
 - Location: **[Vancouver Independent School for Science and Technology (VISST)](https://www.visst.ca/)**
 
-- Date and Time: **📅 August 11-15, 2025 (Monday-Friday) | ⏰ 1:00-4:00 PM**
+- Date and Time: **📅 August 17-21, 2026 (Monday-Friday) | ⏰ 1:00-4:00 PM**
 
 > *A magical 5-day journey into the world of data science for young explorers aged 10-14*
 
@@ -13,21 +13,13 @@ Welcome to an enchanting adventure where mathematics meets magic, and data tells
 
 ## 👋 Meet Your Instructor
 
-** Sky (Kehan) Sheng** is a PhD candidate at UBC conducting interdisciplinary research in data science, AI bias, and animal welfare science. Sky is passionate about making data science and AI accessible and fun for young learners.
+** Sky (Kehan) Sheng** is a PhD candidate at UBC conducting interdisciplinary research in data science, AI bias, and animal welfare science. She is also a lecturer teaching master of data science program at UBC. Sky is passionate about making data science and AI accessible and fun for young learners.
 
 ## 👋 Meet Your Mentors
 
-- **Pavel Timofeev**
-- **Ify Anene**
-- **Sarah Eshafi**
-
-## ✨ What Makes This Camp Special?
-
-- 🎯 **Learning through play**: Toys, games, and creative projects make abstract concepts concrete
-- 🤝 **Peer collaboration**: Pair programming and team challenges build friendships and skills
-- 📚 **Story-driven learning**: Every concept is wrapped in magical, engaging narratives
-- 📈 **Incremental complexity**: From simple variables to neural networks, step by step
-- 🎨 **Visual and hands-on**: Physical activities combined with beautiful digital programming
+- **Zei**
+- **Liam**
+- **Anushka**
 
 ## 🗓️ 5-Day Adventure Plan
 
