@@ -61,7 +61,7 @@ Follow these quick steps to save your work to your computer:
    - Find the tallest wizard (maximum) 
    - Find the middle wizard (median) - count from both ends!
 3. **📝 Data Collection:** Enter your wizard name and height into our magical data form: 
-https://forms.gle/TG2dgNwknN6KGTcE6
+[https://forms.gle/VpfKnDB4N5Q5uwms7](https://forms.gle/VpfKnDB4N5Q5uwms7)
 4. **📏 What if I don't know my height?:** 
     - Try to give a guess about your height using reference objects or people around you. 
         - For example, a regular paper is 21 cm in width and 30 cm in height. 
@@ -182,7 +182,7 @@ The neighborhood has a magical protection spell - if it contains 60% or more rea
 1. **Incantation Phase:** You will chant "Statistical powers, reveal the truth!" before opening your bags
 2. **Counting Phase:** 3 minutes for **magical sighting** to count candies vs. shadow stones
 3. **Decision Phase:** Each wizard declares if they think the neighborhood is "SAFE" or "CURSED"
-4. **Data Crystal Phase:** Enter candy count, and your decision into the magical Google Form: [https://forms.gle/pVVK2zBVovA1637Z9](https://forms.gle/pVVK2zBVovA1637Z9)
+4. **Data Crystal Phase:** Enter candy count, and your decision into the magical Google Form: [https://forms.gle/PzdYhv9bVKEgKzcX7](https://forms.gle/PzdYhv9bVKEgKzcX7)
 
 <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnV0YzFleHFjNjMyemxzc2M5emkwZTl6cmMyeTl5NW1sYWFsZnZzMSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/50WoQ8JdjyqzhxpBjP/giphy.gif" alt="surprise" style="width: 60%; height: auto;">
 
@@ -205,7 +205,7 @@ The neighborhood has a magical protection spell - if it contains 60% or more rea
 1. **Incantation Phase:** you will chant "Statistical powers, reveal the truth!" before opening their bags
 2. **Counting Phase:** 5 minutes to count candies vs. shadow stones (how many candies do you have total among the **20** items you got from 2 bags!)
 3. **Decision Phase:** Each wizard declares if they think the neighborhood is "SAFE" or "CURSED"
-4. **Data Crystal Phase:** Enter candy count, and your decision into the magical Google Form: [https://forms.gle/dwMLreYBN4CHmWwh8](https://forms.gle/dwMLreYBN4CHmWwh8)
+4. **Data Crystal Phase:** Enter candy count, and your decision into the magical Google Form: [https://forms.gle/apetFVW8isx5Dfn46](https://forms.gle/apetFVW8isx5Dfn46)
 
 **🏆 Rewards & Competition:**
 
