@@ -910,6 +910,8 @@ For human representation, prompt revision went from only showing white men to be
 
 Sometimes AI tries to make images look nicer by changing them from reality! Here's a real example from Sky's own AI bias research {cite}`Sheng2025LivestockAI`:
 
+Here are some example images: [https://tinyurl.com/y2npdf4r](https://tinyurl.com/y2npdf4r)
+
 🐄 **The Dairy Farm Example:**
 - When people ask AI to draw "dairy cows," it automatically does **prompt revision** to add in the details of sunshine, lush green pasture to show happy cows on green grass fields
 - But in real life, most dairy cows live only indoors in small spaces, on concrete floors, and don't get to run around outside or access pasture
